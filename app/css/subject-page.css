@@ -1,0 +1,105 @@
+/* header styles */
+.subject-page .main-header {
+    padding: 9px;
+    background: #BDC3C7;
+}
+.subject-page .header-logo {
+    max-width: 160px;
+    margin-right: 10px;
+}
+header.main-header .other-apps {
+    margin-left: 10px;
+}
+.other-apps {
+    width: 100%;
+    max-width: 200px;
+}
+.other-apps > a {
+    padding: 10px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+.other-apps > a > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.other-apps > a .img-container {
+    width: 30px;
+}
+/* header ends */
+
+/* Search bar styles */
+.subject-page .search-bar {
+    padding: 20px 10px;
+}
+.subject-page .search-bar .search-box {
+    margin: auto;
+}
+/* ends here */
+
+/* subjects header styles */
+header.subject-header .selected-grade .wrapper {
+    padding: 5px;
+}
+header.subject-header .grade-text {
+    max-width: 300px;
+    margin: 10px auto;
+    font-size: 28px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+/* ended */
+
+/* subject styles */
+.subject-section ul {
+    padding: 10px;
+}
+.subject-section ul.subjects li[data-subject='physics'] {
+    background: #8e44ad;
+}
+.subject-section ul.subjects li[data-subject='maths'] {
+    background: #34495e;
+}
+.subject-section ul.subjects li[data-subject='biology'] {
+    background: #e74c3c;
+}
+.subject-section ul.subjects li[data-subject='social'] {
+    background: #7f8c8d;
+}
+.subject-section ul.subjects li[data-subject='chemistry'] {
+    background: #BFBFBF;
+}
+.subject-section ul.subjects li[data-subject='english'] {
+    background: #BFBFBF;
+}
+.subject-section ul.subjects li[data-subject='science'] {
+    background: #5C97BF;
+}
+.subject-section ul.subjects li {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    margin: 10px;
+    background: #3498db;
+}
+.subject-section ul.subjects li .img-container {
+    margin: auto;
+    width: 140px;
+    height: 140px;
+}
+.subject-section ul.subjects li a {
+    display: block;
+    color: rgb(0, 0, 0);
+}
+.subject-section ul.subjects li img {
+    max-height: 100%;
+}
+.subject-section ul.subjects li .subject-name {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+/* ends here */

@@ -1,0 +1,284 @@
+<div class="chapter-page content-page">
+    <header class="main-header resize-mobile clear">
+        <img src="image/logo.png" alt="logo" class="header-logo left"/>
+        <div class="other-apps other-apps-bg right">
+            <a href="#/otherApps" class="a-container">
+                <div class="img-container">
+                    <img src="image/otherapps.png" alt="other apps icon"/>
+                </div>
+                <span>Other Apps</span>
+            </a>
+        </div>
+    </header>
+    <section class="main-section">
+
+        <div class="search-bar resize-mobile">
+            <div class="search-box border clear">
+                <div class="search-input left">
+                    <div class="input-container">
+                        <input type="text" class="search-input" placeholder="Search with subject, chapter"/>
+                    </div>
+                </div>
+                <div class="search-icon link right"><img src="image/search-icon.png" alt="search"/></div>
+            </div>
+        </div>
+
+        <div class="subject-container">
+            <header class="subject-header border clear">
+                <div class="selected-grade left m-no-left m-border-bottom">
+                    <div class="wrapper">
+                        <div class="grade-box t-center">
+                            <div class="grade-title">Grade</div>
+                            <a href="#/grades" class="grade-text theme-orange-bg border a-container">{{current_grade}}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="subjects-head flexible left  m-no-left">
+                    <div class="subjects-wrapper border-left">
+                        <ul class="subjects t-center">
+                            <li ng-repeat="subject in subjects" ng-class="isCurrentSubject(subject.id) ? 'selected theme-orange-bg t-center' : 't-center'">
+                                <a href="#/grades/{{current_grade}}/subject/{{subject.id}}/" class="a-container">
+                                    <div class="img-container circle">
+                                        <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}" class="subject-img circle"/>
+                                    </div>
+                                    <div class="subject-name">{{subject.name}}</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <section class="chapter-section border clear" chapter-section>
+                <div class="chapter-list-wrapper left m-no-left">
+                    <div class="wrapper">
+                        <ul class="chapter-list t-left">
+
+                            <li ng-repeat="chapter in chapters" ng-class="isCurrentChapter(chapter.id) ? 'selected theme-orange-bg t-left' : 't-left'">
+                                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/" class="a-container">
+                                    <div class="img-container circle">
+                                        <img src='images/topics/grey/g-{{chapter.id}}.png' alt="{{chapter.id}}" class="chapter-img"/>
+                                    </div>
+                                    <div class="chapter-name">{{chapter.name}}</div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-list-wrapper left m-no-left">
+                    <div class="wrapper border-left">
+                        <ul class="content-list">
+
+
+                            <li class="row app-panel only-title">
+
+                                <div class="row-header border">
+                                    <div class="wrapper clear">
+                                        <div class="header-title left">
+                                            <div class="other-apps">
+                                                <a href="" class="a-container">
+                                                    <div class="img-container">
+                                                        <img src="image/otherapps.png" alt="other apps icon"/>
+                                                    </div>
+                                                    <span>Applications</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="button-container right"></div>
+                                    </div>
+                                </div>
+
+                                <ul class="content-items border t-center">
+
+                                    <li ng-if="isApplication(content.type)" ng-repeat="content in contents" class="item border" ng-click="invokeCommand(content.exec)">
+                                        <a href="" class="a-container wrapper theme-orange-bg-hover">
+                                            <div class="img-container">
+                                                <img src="images/{{current_subject}}/{{content.id}}.png" alt="app-icon" class="subject-img">
+                                            </div>
+                                            <p class="subject-name t-center border-top">{{content.name}}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="row video-panel only-title">
+
+                                <div class="row-header border">
+                                    <div class="wrapper clear">
+                                        <div class="header-title left">
+                                            <div class="other-apps">
+                                                <a href="" class="a-container">
+                                                    <div class="img-container">
+                                                        <img src="image/otherapps.png" alt="other apps icon"/>
+                                                    </div>
+                                                    <span>Videos</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="button-container right"></div>
+                                    </div>
+                                </div>
+
+                                <ul class="content-items border t-center">
+
+                                    <li ng-if="isVideo(content.type)" ng-repeat="content in contents" class="item border" ng-click="showOverlay(content.type, content)">
+                                        <a href="" class="a-container wrapper theme-orange-bg-hover">
+                                            <div class="img-container">
+                                                <img src="images/video.png" alt="biology" class="subject-img">
+                                            </div>
+                                            <p class="subject-name t-center border-top">{{content.name}}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="row quiz-panel">
+
+                                <div class="row-header border">
+                                    <div class="wrapper clear">
+                                        <div class="header-title left m-no-left">
+                                            <div class="other-apps">
+                                                <a href="" class="a-container">
+                                                    <div class="img-container">
+                                                        <img src="image/otherapps.png" alt="other apps icon"/>
+                                                    </div>
+                                                    <span>Quiz</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="button-container left m-no-left clear">
+                                            <div class="wrapper clear">
+                                                <div class="other-apps theme-orange-bg right">
+                                                    <a href="" class="a-container">
+                                                        <div class="img-container">
+                                                            <img src="image/otherapps.png" alt="other apps icon"/>
+                                                        </div>
+                                                        <span>Upload Quiz</span>
+                                                    </a>
+                                                </div>
+                                                <div class="other-apps theme-orange-bg right" ng-click="showOverlay('quiz')">
+                                                    <a href="" class="a-container">
+                                                        <div class="img-container">
+                                                            <img src="image/otherapps.png" alt="other apps icon"/>
+                                                        </div>
+                                                        <span>Create Quiz</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="content-items border t-center">
+
+                                    <li ng-if="isQuiz(content.type)" ng-repeat="content in contents" class="item border" ng-click="showOverlay('quiz', content)">
+                                        <a href="" class="a-container wrapper theme-orange-bg-hover">
+                                            <div class="img-container">
+                                                <img src="images/subjects/{{content.subject}}.png" alt="Quiz image" class="subject-img">
+                                            </div>
+                                            <p class="subject-name t-center border-top">{{content.name}}</p>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </section>
+    <div ng-include src="'partials/quiz-overlay-content.html'" id="test"></div>
+</div>
+
+
+
+<!--<div class="contents-view view">-->
+  <!--<div class="header-content">-->
+        <!--<a id="link" href="#/otherApps" class="otherApps">-->
+          <!--<img class="otherAppImage" src="images/otherapps.png" alt="otherApps"/>-->
+          <!--<span class="otherAppText">Other apps</span>-->
+        <!--</a>-->
+        <!--<div class="search">-->
+            <!--<input type="text" ng-model="keyword" onkeypress="detectEnterKey(event)" placeholder="Search app with subject, topic" />-->
+            <!--<a href="#/search/{{keyword}}"><button id="search-icon"></button></a>-->
+        <!--</div>-->
+          <!--<a href="#/grades">-->
+              <!--<img class="main-logo" src="images/logo.png" alt="logo">-->
+          <!--</a>-->
+      <!--</div>-->
+    <!--<div class="subject-header">-->
+      <!--<div class="gradeBlock">-->
+      <!--<span class="gradeText">Grade</span>-->
+      <!--<img class="gradeBlockImage" src="images/grades/{{current_grade}}.png">-->
+    <!--</div>-->
+      <!--<div class = "subjects-main">-->
+      <!--<div ng-repeat="subject in subjects" class="header-icon">-->
+        <!--<a ng-if="isNotCurrentSubject(subject.id)" class="icon"-->
+           <!--style="background-image: url('images/subjects/{{subject.id}}.png')"-->
+           <!--href="#/grades/{{current_grade}}/subject/{{subject.id}}/"></a>-->
+        <!--<a ng-if="isCurrentSubject(subject.id)" class="icon"-->
+        <!--style="background-image: url('images/subjects/{{subject.id}}.png'); background-color:#f7941e;"-->
+        <!--href="#/grades/{{current_grade}}/subject/{{subject.id}}/"></a>-->
+        <!--<a ng-if="isNotCurrentSubject(subject.id)" class="icon-text"-->
+           <!--href="#/subjects/{{subject.id}}">{{subject.name}}</a>-->
+        <!--<a ng-if="isCurrentSubject(subject.id)" class="icon-text" style="color:#f7941e;"-->
+           <!--href="#/subjects/{{subject.id}}">{{subject.name}}</a>-->
+      <!--</div>-->
+    <!--</div>-->
+
+  <!--</div>-->
+    <!--<div class="clearfix"></div>-->
+    <!--<div class="main-content">-->
+        <!--<div class="chapters-container">-->
+            <!--<div class="clearfix"></div>-->
+            <!--<div id="side-menu">-->
+              <!--<span class="listText">List of chapters</span>-->
+              <!--<div ng-repeat="chapter in chapters" class="chapters-block">-->
+                <!--<a ng-if="isNotCurrentChapter(chapter.id)"-->
+                <!--style="background-image: url('images/topics/grey/g-{{chapter.id}}.png')"-->
+                <!--href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/" class="img-class"></a>-->
+                <!--<a ng-if="isCurrentChapter(chapter.id)"-->
+                <!--style="background-image: url('images/topics/blue/b-{{chapter.id}}.png')"-->
+                <!--href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/" class="img-class"></a>-->
+                <!--<div class="chapters-block-text">-->
+                  <!--<a ng-if="isNotCurrentChapter(chapter.id)"-->
+                   <!--href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/"-->
+                   <!--class="text-class">{{chapter.name}}</a>-->
+                   <!--<a ng-if="isCurrentChapter(chapter.id)" style="color:#f7941e;"-->
+                   <!--href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/"-->
+                   <!--class="text-class">{{chapter.name}}</a>-->
+                 <!--</div>-->
+                   <!--<hr class="lines">-->
+              <!--</div>-->
+              <!--</div>-->
+        <!--</div>-->
+        <!--<div id="topics">-->
+          <!--<div class="app-container">-->
+            <!--<div class="app-container-header">-->
+              <!--<img src="images/app.png" id="app-icon">-->
+              <!--<span class="app-text">Applications</span>-->
+            <!--</div>-->
+              <!--<div ng-repeat="app in contents | filter : {type:'apps'} "  class="app-container-body"-->
+              <!--ng-click="invokeCommand(app.exec)">-->
+                <!--<a style="background-image: url('images/{{current_subject}}/{{app.id}}.png')" href="" class="app-img"></a>-->
+                <!--<a  href="" class="text-block">{{app.name}}</a>-->
+                <!--</div>-->
+          <!--</div>-->
+          <!--<div class="video-container">-->
+            <!--<div class="video-container-header">-->
+              <!--<img src="images/video.png" id="app-icon">-->
+              <!--<span class="app-text">Multimedia</span>-->
+            <!--</div>-->
+              <!--<div ng-repeat="app in contents | filter : {type:'videos'} " class="app-container-body" ng-click="showOverlay(app.id)">-->
+                <!--<a style="background-image: url('images/{{current_subject}}/{{app.id}}.png')" href="" class="app-img"></a>-->
+                <!--<a  href="" class="text-block">{{app.name}}</a>-->
+                <!--</div>-->
+          <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->

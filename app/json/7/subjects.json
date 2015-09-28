@@ -1,0 +1,8 @@
+[
+    {
+        "name":"Science",
+        "id":"science",
+        "color": "#1c75bc",
+        "topics_present" : true
+    }
+]

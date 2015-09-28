@@ -1,0 +1,66 @@
+/* quiz overlay */
+.quiz .overlay {
+    width: 98%;
+    height: 94%;
+    background: rgb(255, 255, 255);
+}
+header.q-o-header {
+    padding: 10px;
+    background: #E1E1E1;
+}
+header.q-o-header.two-column > div:last-child > .wrapper {
+    margin-left: 0px;
+}
+header.q-o-header.two-column > div:last-child > .wrapper .title {
+    font-size: 18px;
+    margin: 12px 0px;
+}
+header.q-o-header .a-container {
+    width: 160px;
+}
+section.q-o-section ul li.question-type > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+section.q-o-section ul li.question-type {
+    padding: 10px;
+}
+section.q-o-section ul li.question-type .img-container {
+    width: 50px;
+    margin-right: 10px;
+}
+section.q-o-section ul.question-number-list {
+    padding: 15px 15px 0px 15px;
+    min-height: 197px;
+}
+section.q-o-section ul.question-number-list li {
+    display: inline-block;
+    padding: 10px 17px;
+    background: #6D6E71;
+    margin: 0px 0px 15px 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+section.q-o-section .wrapper-inner {
+    padding: 20px;
+    background: #E1E1E1;
+}
+section.q-o-section .current-question-panel .wrapper {
+    padding: 20px;
+}
+section.q-o-section .wrapper-inner .question-header .other-apps {
+    margin-bottom: 20px;
+}
+section.q-o-section .wrapper-inner .question-section .editable-area {
+    background: rgb(255, 255, 255);
+    min-height: 377px;
+    padding: 10px;
+}
+section.q-o-section .question-footer {
+    margin-top: 20px;
+}
+section.q-o-section .question-footer .other-apps:last-child {
+    margin-right: 20px;
+}
+
+

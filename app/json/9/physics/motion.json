@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Forces and Motion: Basics",
+    "id": "forces-and-motions-basics",
+    "type":"apps",
+    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
+    "subject": "physics",
+    "keywords":["",""]
+  },
+  {
+    "name": "Ramp: Forces and Motion",
+    "id": "ramp-forces-and -motion",
+    "type":"apps",
+    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "subject": "physics",
+    "keywords":["",""]
+  },
+  {
+    "name": "The Moving Man",
+    "id": "moving-man",
+    "type":"apps",
+    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
+    "subject": "physics",
+    "keywords":["",""]
+  }
+]

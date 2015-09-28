@@ -1,0 +1,71 @@
+.landing-page {
+    padding: 10px;
+}
+
+/* main page */
+.logo {
+    max-width: 300px;
+}
+.main-logo {
+    display: block;
+    margin: 20px auto;
+}
+/* ends here */
+
+/* search box styles*/
+.search-box {
+    max-width: 500px;
+    margin: 20px auto;
+}
+.search-box .search-input {
+    width: 100%;
+    margin-right: -50px;
+}
+.search-box .search-input > div {
+    background-color: rgb(255, 255, 255);
+    margin-right: 50px;
+}
+.search-box .search-icon {
+    width: 30px;
+    padding: 10px;
+    background: #3498db;
+}
+/* ends here */
+
+/* grades list */
+.grades-container {
+    max-width: 1024px;
+    margin: 20px auto;
+}
+
+.grades-container ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 180px;
+    height: 180px;
+    color: rgb(255, 255, 255);
+    font-size: 101px;
+    line-height: 180px;
+    margin: 10px;
+}
+.grades-container ul li a {
+    color: rgb(255, 255, 255);
+    display: block;
+}
+.grades-container ul li.grade-6 {
+    background-color: #16a085;
+}
+.grades-container ul li.grade-7 {
+    background-color: #3498db;
+}
+.grades-container ul li.grade-8 {
+    background-color: #e74c3c;
+}
+.grades-container ul li.grade-9 {
+    background-color: #34495e;
+}
+.grades-container ul li.grade-10 {
+    background-color: #7f8c8d;
+}
+
+/* ends here */

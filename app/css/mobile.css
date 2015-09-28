@@ -1,0 +1,114 @@
+@media (max-width: 600px) {
+    .m-border-bottom {
+        border-bottom: 1px solid darkgray;
+    }
+    .m-no-left {
+        float: none;
+        width: auto ! important;
+    }
+    .resize-mobile .header-logo {
+        max-width: 120px;
+    }
+    .resize-mobile .other-apps {
+        max-width: 170px;
+    }
+    .resize-mobile .search-box .search-input > div {
+        margin-right: 45px;
+    }
+    .resize-mobile input[type='text'] {
+        font-size: 19px;
+    }
+    .resize-mobile .search-box .search-icon {
+        width: auto;
+        padding: 7px;
+    }
+
+    /* subjects header */
+    .subjects-head .subjects-wrapper {
+        border: none;
+    }
+    .subjects-head ul.subjects li {
+        padding: 0px 8px;
+    }
+    .subjects-head ul.subjects li img {
+        width: 40px;
+        height: 40px;
+    }
+    .subjects-head ul.subjects li .subject-name {
+        font-size: 15px;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row ul li {
+        margin-right: 0px;
+    }
+
+    /* overlay styles */
+    header.q-o-header.two-column > div:last-child > .wrapper .title {
+        text-align: right;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .content-list-wrapper > .wrapper ul.content-list .row ul li {
+        max-width: 202px;
+        margin: auto !important;
+        margin-top: 20px !important;
+        display: block;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper .m-no-left, .current-question-panel .other-apps {
+        float: none;
+        width: auto !important;
+        margin: 0px !important;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper .wrapper {
+        margin: 10px 0px 0px 0px !important;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps {
+        max-width: 122px;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps:last-child {
+        float: left;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .other-apps {
+        margin-left: 0px !important;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps .img-container,
+    .current-question-panel .other-apps .img-container {
+        width: 20px;
+    }
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps span,
+    .current-question-panel .other-apps span {
+        font-size: 14px;
+    }
+    /* overlay styles */
+    .question-footer .other-apps:first-child, .question-header .other-apps {
+        margin-bottom: 20px !important;
+    }
+}
+
+/*@media (max-width: 840px) {*/
+    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps:last-child {*/
+        /*margin-top: 10px;*/
+    /*}*/
+/*}*/
+/*@media (max-width: 777px) {*/
+    /*.content-list-wrapper > .wrapper ul.content-list .row ul li:last-child {*/
+        /*margin-right: 20px;*/
+    /*}*/
+/*}*/
+/*@media (max-width: 630px) {*/
+    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container.m-no-left {*/
+        /*float: none;*/
+        /*width: auto ! important;*/
+        /*margin: 0px;*/
+    /*}*/
+    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container > div > div:first-child {*/
+        /*float: left;*/
+        /*width: 100%;*/
+        /*margin-top: 10px;*/
+    /*}*/
+    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container .wrapper {*/
+        /*margin: 0px;*/
+    /*}*/
+/*}*/
