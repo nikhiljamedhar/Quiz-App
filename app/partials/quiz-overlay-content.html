@@ -22,7 +22,7 @@
                             <div class="question-type-panel left m-no-left">
 
                                 <ul class="question-types">
-                                    <li ng-class="isSelected(currentQuestion, question.type) ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in createQuiz.questionTypes" ng-click="selectQuestion($event)">
+                                    <li ng-class="isSelected(currentQuestionType, question.type) ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in quizJson.questionTypes" ng-click="selectQuestion($event)">
                                         <div class="img-container">
                                             <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
                                         </div>
@@ -36,7 +36,7 @@
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list t-center">
-                                            <li class="question-number border" ng-repeat="question in createQuiz.questions">{{question.id}}</li>
+                                            <li class="question-number border" ng-repeat="question in quizJson.questions">{{question.id}}</li>
                                         </ul>
                                     </div>
 
@@ -44,7 +44,7 @@
                                         <div class="wrapper">
                                             <div class="wrapper-inner border">
                                                 <header class="question-header clear">
-                                                    <div ng-if="currentQuestion == 'fill-the-blanks'" class="other-apps theme-orange-bg right">
+                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'" class="other-apps theme-orange-bg right">
                                                         <a href="" class="a-container">
                                                             <div class="img-container">
                                                                 <img src="image/otherapps.png" alt="Add Blank"/>
@@ -56,17 +56,15 @@
 
                                                 <section class="question-section">
                                                     <div class="question-box border">
-                                                        <div ng-if="currentQuestion == 'fill-the-blanks'" class="editable-area question-area" contenteditable placeholder="Please enter your question" id="editable-area">
-
-                                                        </div>
-                                                        <div ng-if="currentQuestion == 'multiple-options'" class="question-area">Multiple Options</div>
-                                                        <div ng-if="currentQuestion == 'match-the-following'" class="question-area">Match the following</div>
+                                                        <div ng-include src="'partials/question-templates/fill-the-blanks.html'" ng-if="currentQuestionType == 'fill-the-blanks'"></div>
+                                                        <div ng-include src="'partials/question-templates/multiple-option.html'" ng-if="currentQuestionType == 'multiple-options'"></div>
+                                                        <div ng-include src="'partials/question-templates/fill-the-blanks.html'" ng-if="currentQuestionType == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="other-apps theme-orange-bg right">
+                                                <div class="other-apps theme-orange-bg right" ng-click="saveQuiz()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/otherapps.png" alt="Save Question"/>
@@ -74,7 +72,7 @@
                                                         <span>Save Question</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg right">
+                                                <div class="other-apps theme-orange-bg right" ng-click="downloadQuiz()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/otherapps.png" alt="Download Quiz"/>

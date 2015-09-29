@@ -23,7 +23,6 @@
     {
       "type": "fill-the-blanks",
       "id": "1",
-      "sentence": "India is my country.",
       "question": [
         {
           "type": "answer",
@@ -35,6 +34,13 @@
         }
       ]
 
+    },
+    {
+      "type": "multiple-options",
+      "id": "2",
+      "question": "My test question ?",
+      "options": [{"value": "option 1"}, {"value": "option 2"}, {"value": "option 3"}, {"value": "option 4"}],
+      "answer": 2
     }
   ]
 }

@@ -51,10 +51,28 @@ section.q-o-section .current-question-panel .wrapper {
 section.q-o-section .wrapper-inner .question-header .other-apps {
     margin-bottom: 20px;
 }
-section.q-o-section .wrapper-inner .question-section .question-box > div.question-area {
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area {
     background: rgb(255, 255, 255);
     min-height: 377px;
     padding: 10px;
+}
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .editable span.answer {
+    padding: 5px;
+}
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .options-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .options-container li,
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .options-container li > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .options-container li {
+    margin: 10px 10px 0px 0px;
+}
+section.q-o-section .wrapper-inner .question-section .question-box div.question-area .options-container li input[type='text'] {
+    font-size: 20px;
 }
 section.q-o-section .question-footer {
     margin-top: 20px;

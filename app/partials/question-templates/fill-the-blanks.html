@@ -1,0 +1,5 @@
+<div class="fill-blank question-area">
+    <div class="editable" contenteditable>
+        <span ng-class="statement.type == 'answer' ? 'answer theme-orange-bg' : 'statement'" ng-repeat="statement in currentQuestion.question">{{statement.value}}</span>
+    </div>
+</div>
