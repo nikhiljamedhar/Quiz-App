@@ -22,7 +22,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 $event.currentTarget.classList.add("highlight");
                 $scope.currentQuestionType = $event.currentTarget.dataset.type;
                 $scope.currentQuestion = $scope.getCurrentQuestionObject();
-                console.log($scope.currentQuestion)
             }
         }
         $scope.isSelected = function(current, type) {

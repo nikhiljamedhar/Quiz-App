@@ -26,10 +26,10 @@ pencilBoxApp.config(['$routeProvider',function($routeProvider){
     templateUrl:'partials/quiz-overlay-content.html',
     controller:'CreateQuizController'
   })
-  // .when('/otherApps', {
-  //   templateUrl : 'partials/other-apps.html',
-  //   controller : 'OtherAppController'
-  // })
+  .when('/otherApps', {
+     templateUrl : 'partials/other-apps.html',
+     controller : 'OtherAppController'
+  })
   .when('/search/:keyword', {
     templateUrl: 'partials/search-results-view.html',
     controller: 'SearchResultController'
