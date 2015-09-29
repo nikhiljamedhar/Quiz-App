@@ -1,7 +1,15 @@
 function Overlay(element, options) {
-    this.element = element;
     this.options = options;
-    this.createOverlay()
+    if(element) {
+        this.element = element;
+        this.decorateOverlay();
+    } else {
+        this.createOverlay()
+    }
+}
+Overlay.prototype.decorateOverlay = function() {
+    this.mask = this.element;
+    this.setDefaultOverlaySettings();
 }
 
 Overlay.prototype.createOverlay = function() {
@@ -12,6 +20,10 @@ Overlay.prototype.createOverlay = function() {
     '<div class="header"><span class="close">close</span></div></div><div class="overlay-content"></div></div></div>'
     document.body.appendChild(mask);
     this.mask = mask;
+
+    this.setDefaultOverlaySettings();
+}
+Overlay.prototype.setDefaultOverlaySettings = function() {
     this.overlay = this.mask.getElementsByClassName("overlay")[0];
     this.overlayContent = this.overlay.getElementsByClassName("overlay-content")[0];
     this.closeButton = this.overlay.getElementsByClassName("close")[0];

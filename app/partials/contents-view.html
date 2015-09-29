@@ -158,8 +158,8 @@
                                                         <span>Upload Quiz</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg right" ng-click="showOverlay('quiz')">
-                                                    <a href="" class="a-container">
+                                                <div class="other-apps theme-orange-bg right">
+                                                    <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/create-quiz/" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/otherapps.png" alt="other apps icon"/>
                                                         </div>
@@ -192,7 +192,6 @@
         </div>
 
     </section>
-    <div ng-include src="'partials/quiz-overlay-content.html'" id="test"></div>
 </div>
 
 

@@ -22,6 +22,9 @@ pencilBoxApp.config(['$routeProvider',function($routeProvider){
   .when('/grades/:gradeId/subject/:subjectId/:videoId/',{
     templateUrl:'partials/contents-view.html',
     controller:'ContentListController'
+  }).when('/grades/:gradeId/subject/:subjectId/:chapterId/create-quiz/',{
+    templateUrl:'partials/quiz-overlay-content.html',
+    controller:'CreateQuizController'
   })
   // .when('/otherApps', {
   //   templateUrl : 'partials/other-apps.html',

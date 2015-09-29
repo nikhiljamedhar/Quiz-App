@@ -1,102 +1,97 @@
-<div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
-    <header class="q-o-header two-column resize-mobile border-bottom clear">
-        <div class="a-container header-logo left">
-            <img src="image/logo.png" alt="logo"/>
-        </div>
-        <div class="flexible t-center right">
-            <div class="wrapper">
-                <p class="title">Create your Quiz here</p>
-            </div>
-        </div>
-    </header>
-    <section class="q-o-section">
-        <div class="wrapper two-column clear">
-            <div class="question-type-panel left m-no-left">
+<div ng-include src="'partials/contents-view.html'"></div>
 
-                <ul class="question-types">
-                    <!--<li class="question-type" ng-repeat="type in questions.types">-->
-                    <li class="question-type border-bottom">
-                        <div class="img-container">
-                            <img src="images/topics/grey/g-sound.png" alt="{type.image}"/>
+<div class="mask quiz" id="create-quiz-mask">
+    <div class="overlay">
+        <div class="container">
+            <div class="overlay-container">
+                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container">Close</a>
+                <!-- put your content here -->
+                <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
+                    <header class="q-o-header two-column resize-mobile border-bottom clear">
+                        <div class="a-container header-logo left">
+                            <img src="image/logo.png" alt="logo"/>
                         </div>
-                        <div class="question-name">Fill the blanks</div>
-                    </li>
-                    <li class="question-type border-bottom">
-                        <div class="img-container">
-                            <img src="images/topics/grey/g-sound.png" alt="{type.image}"/>
-                        </div>
-                        <div class="question-name">Fill the blanks</div>
-                    </li>
-                    <li class="question-type border-bottom">
-                        <div class="img-container">
-                            <img src="images/topics/grey/g-sound.png" alt="{type.image}"/>
-                        </div>
-                        <div class="question-name">Fill the blanks</div>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="question-panel left  m-no-left">
-                <div class="wrapper border-left">
-
-                    <div class="other-questions border-bottom">
-                        <ul class="question-number-list t-center">
-                            <!--<li class="question-number" ng-repeat="question in questions.questions">-->
-                            <li class="question-number border selected highlight">1</li>
-                            <li class="question-number border">2</li>
-                            <li class="question-number border">3</li>
-                            <li class="question-number border">4</li>
-                            <li class="question-number border">5</li>
-                            <li class="question-number border">6</li>
-                        </ul>
-                    </div>
-
-                    <div class="current-question-panel">
-                        <div class="wrapper">
-                            <div class="wrapper-inner border">
-                                <header class="question-header clear">
-                                    <div class="other-apps theme-orange-bg right">
-                                        <a href="" class="a-container">
-                                            <div class="img-container">
-                                                <img src="image/otherapps.png" alt="Add Blank"/>
-                                            </div>
-                                            <span>Add Blank</span>
-                                        </a>
-                                    </div>
-                                </header>
-
-                                <section class="question-section">
-                                    <div class="question-box border">
-                                        <div class="editable-area" contenteditable placeholder="Please enter your question" id="editable-area">
-
-                                        </div>
-                                    </div>
-                                </section>
+                        <div class="flexible t-center right">
+                            <div class="wrapper">
+                                <p class="title">Create your Quiz here</p>
                             </div>
-
-                            <footer class="question-footer clear">
-                                <div class="other-apps theme-orange-bg right">
-                                    <a href="" class="a-container">
-                                        <div class="img-container">
-                                            <img src="image/otherapps.png" alt="Save Question"/>
-                                        </div>
-                                        <span>Save Question</span>
-                                    </a>
-                                </div>
-                                <div class="other-apps theme-orange-bg right">
-                                    <a href="" class="a-container">
-                                        <div class="img-container">
-                                            <img src="image/otherapps.png" alt="Download Quiz"/>
-                                        </div>
-                                        <span>Download Quiz</span>
-                                    </a>
-                                </div>
-                            </footer>
-
                         </div>
-                    </div>
+                    </header>
+                    <section class="q-o-section">
+                        <div class="wrapper two-column clear">
+                            <div class="question-type-panel left m-no-left">
+
+                                <ul class="question-types">
+                                    <li ng-class="isSelected(currentQuestion, question.type) ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in createQuiz.questionTypes" ng-click="selectQuestion($event)">
+                                        <div class="img-container">
+                                            <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
+                                        </div>
+                                        <div class="question-name">{{question.name}}</div>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="question-panel left  m-no-left">
+                                <div class="wrapper border-left">
+
+                                    <div class="other-questions border-bottom">
+                                        <ul class="question-number-list t-center">
+                                            <li class="question-number border" ng-repeat="question in createQuiz.questions">{{question.id}}</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="current-question-panel">
+                                        <div class="wrapper">
+                                            <div class="wrapper-inner border">
+                                                <header class="question-header clear">
+                                                    <div ng-if="currentQuestion == 'fill-the-blanks'" class="other-apps theme-orange-bg right">
+                                                        <a href="" class="a-container">
+                                                            <div class="img-container">
+                                                                <img src="image/otherapps.png" alt="Add Blank"/>
+                                                            </div>
+                                                            <span>Add Blank</span>
+                                                        </a>
+                                                    </div>
+                                                </header>
+
+                                                <section class="question-section">
+                                                    <div class="question-box border">
+                                                        <div ng-if="currentQuestion == 'fill-the-blanks'" class="editable-area question-area" contenteditable placeholder="Please enter your question" id="editable-area">
+
+                                                        </div>
+                                                        <div ng-if="currentQuestion == 'multiple-options'" class="question-area">Multiple Options</div>
+                                                        <div ng-if="currentQuestion == 'match-the-following'" class="question-area">Match the following</div>
+                                                    </div>
+                                                </section>
+                                            </div>
+
+                                            <footer class="question-footer clear">
+                                                <div class="other-apps theme-orange-bg right">
+                                                    <a href="" class="a-container">
+                                                        <div class="img-container">
+                                                            <img src="image/otherapps.png" alt="Save Question"/>
+                                                        </div>
+                                                        <span>Save Question</span>
+                                                    </a>
+                                                </div>
+                                                <div class="other-apps theme-orange-bg right">
+                                                    <a href="" class="a-container">
+                                                        <div class="img-container">
+                                                            <img src="image/otherapps.png" alt="Download Quiz"/>
+                                                        </div>
+                                                        <span>Download Quiz</span>
+                                                    </a>
+                                                </div>
+                                            </footer>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>

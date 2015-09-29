@@ -25,6 +25,12 @@ pencilBoxApp.factory('Contents', ['$resource',
         query: {method: 'GET', isArray:true }
       });
     }]);
+pencilBoxApp.factory('CreateQuiz', ['$resource',
+    function($resource){
+      return $resource('json/create-quiz.json', {}, {
+        query: {method: 'GET', isObject:true }
+      });
+    }]);
 pencilBoxApp.factory('Apps', ['$resource',
       function($resource){
         return $resource('json/all.json', {}, {

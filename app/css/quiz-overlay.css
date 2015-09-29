@@ -51,7 +51,7 @@ section.q-o-section .current-question-panel .wrapper {
 section.q-o-section .wrapper-inner .question-header .other-apps {
     margin-bottom: 20px;
 }
-section.q-o-section .wrapper-inner .question-section .editable-area {
+section.q-o-section .wrapper-inner .question-section .question-box > div.question-area {
     background: rgb(255, 255, 255);
     min-height: 377px;
     padding: 10px;

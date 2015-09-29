@@ -30,7 +30,7 @@ html, body {
     color: white;
     font-size:40px;
 }
-.mask .header .close {
+.mask .close {
     background-color: black;
     position: absolute;
     right: 0px;

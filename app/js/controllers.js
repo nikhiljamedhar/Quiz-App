@@ -48,7 +48,6 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
     $scope.chapters = Chapters.query({ subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
     $scope.contents = Contents.query({ chapterId : $routeParams.chapterId,
     subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
-      console.log($scope.contents)
 
     $scope.showOverlay = function(type, content){
         var innerHTML = "";
@@ -67,10 +66,6 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
 
             document.getElementById("overlayContent").appendChild(document.getElementById("test"));
 
-            //var include = document.createElement("div");
-            //include.setAttribute("ng-include", true);
-            //include.setAttribute("src", "'partials/quiz-overlay-content.html'");
-            //document.getElementById("overlayContent").appendChild(include);
         }
     };
     $scope.isCurrentSubject = function(subject) {
@@ -98,6 +93,65 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         return type === "quiz";
     };
   }]);
+
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', 'Contents', 'Chapters', 'Subjects',
+    function ($scope, $routeParams, CreateQuiz, Contents, Chapters, Subjects){
+        $scope.current_grade = $routeParams.gradeId;
+        $scope.current_subject = $routeParams.subjectId;
+        $scope.current_chapter = $routeParams.chapterId;
+        $scope.subjects = Subjects.query({ gradeId : $routeParams.gradeId});
+        $scope.chapters = Chapters.query({ subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
+        $scope.contents = Contents.query({ chapterId : $routeParams.chapterId, subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
+        $scope.createQuiz = CreateQuiz.query();
+        $scope.currentQuestion = "fill-the-blanks";
+
+        $scope.showOverlay = function(element){
+            new Overlay(element);
+        };
+        $scope.selectQuestion = function($event) {
+            if(!$event.currentTarget.classList.contains("highlight")) {
+                if($event.currentTarget.parentElement.querySelector(".highlight")) {
+                    $event.currentTarget.parentElement.querySelector(".highlight").classList.remove("highlight");
+                }
+                $event.currentTarget.classList.add("highlight");
+                $scope.currentQuestion = $event.currentTarget.dataset.type;
+            }
+        }
+        $scope.isSelected = function(current, type) {
+            return current === type;
+        }
+
+
+
+
+        $scope.showOverlay(document.getElementById("create-quiz-mask"));
+
+        $scope.isCurrentSubject = function(subject) {
+          return $scope.current_subject.toLowerCase() === subject.toLowerCase();
+        };
+        $scope.isNotCurrentSubject = function(subject) {
+          return $scope.current_subject.toLowerCase() !== subject.toLowerCase();
+        };
+        $scope.isCurrentChapter = function(chapter) {
+          return $scope.current_chapter.toLowerCase() === chapter.toLowerCase();
+        };
+        $scope.isNotCurrentChapter = function(chapter) {
+          return $scope.current_chapter.toLowerCase() !== chapter.toLowerCase();
+        };
+        $scope.invokeCommand = function(command) {
+          CommandApi.invokeCommand(command);
+        };
+        $scope.isApplication = function(type) {
+            return type === "apps";
+        };
+        $scope.isVideo = function(type) {
+            return type === "videos";
+        };
+        $scope.isQuiz = function(type) {
+            return type === "quiz";
+        };
+  }]);
+
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',
       function($scope, OtherApps) {
         $scope.otherApps = OtherApps.query();
