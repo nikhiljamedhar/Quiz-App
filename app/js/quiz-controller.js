@@ -7,7 +7,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.chapters = Chapters.query({ subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
         $scope.contents = Contents.query({ chapterId : $routeParams.chapterId, subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
 
-        $scope.currentQuestionType = "fill-the-blanks";
+        CreateQuiz.query(function(response) {
+            $scope.quizJson = { questions: response.questions }
+            $scope.highlightDefault()
+        });
+
         $scope.questionTypes =  [
             {
                 "name": "Fill the blanks",
@@ -31,19 +35,33 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.showOverlay = function(element) { new Overlay(element); };
 
-        $scope.init = function(mode) { $scope.mode = mode; $scope.createQuizJson(); };
+        $scope.init = function(mode) { $scope.mode = mode; };
 
-        $scope.createQuizJson = function() {
-            if($scope.mode === "create") {
+        $scope.highlightDefault = function() {
+            $scope.selectedQuestion = 0;
+            if($scope.mode === "create" || $scope.quizJson.questions.length === 0) {
                 $scope.quizJson = { questions: [] }
+                $scope.currentQuestionType = "fill-the-blanks";
+                $scope.currentQuestion = $scope.getCurrentQuestionObject();
             } else {
-                $scope.quizJson = CreateQuiz.query();
+                $scope.currentQuestion = $scope.getCurrentQuestionObject(0);
+                $scope.currentQuestionType = $scope.currentQuestion.type;
             }
-            console.log($scope.quizJson);
         }
 
         $scope.overlayLoaded = function() {
             $scope.showOverlay(document.getElementById("create-quiz-mask"));
+        }
+
+        $scope.selectQuestionType = function($event) {
+            if(!$event.currentTarget.classList.contains("highlight") && $scope.mode === "create") {
+                if($event.currentTarget.parentElement.querySelector(".highlight")) {
+                    $event.currentTarget.parentElement.querySelector(".highlight").classList.remove("highlight");
+                }
+                $event.currentTarget.classList.add("highlight");
+                $scope.currentQuestionType = $event.currentTarget.dataset.type;
+                $scope.currentQuestion = $scope.getCurrentQuestionObject();
+            }
         }
 
         $scope.selectQuestion = function($event) {
@@ -52,8 +70,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     $event.currentTarget.parentElement.querySelector(".highlight").classList.remove("highlight");
                 }
                 $event.currentTarget.classList.add("highlight");
-                $scope.currentQuestionType = $event.currentTarget.dataset.type;
-                $scope.currentQuestion = $scope.getCurrentQuestionObject();
+
+                $scope.selectedQuestion = this.$index;
+                $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
+                $scope.currentQuestionType = $scope.currentQuestion.type;
             }
         }
 
@@ -125,8 +145,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.isQuiz = function(type) { return type === "quiz"; };
 
-        $scope.getCurrentQuestionObject = function() {
-
+        $scope.getCurrentQuestionObject = function(index) {
+            if(typeof index != "undefined") {
+                return $scope.quizJson.questions[index];
+            }
             if($scope.currentQuestionType === "fill-the-blanks") {
                 return $scope.getFIBQuestion();
             } else if($scope.currentQuestionType === "multiple-options") {
@@ -170,9 +192,5 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
 
         }
-
-        $scope.currentQuestion =  $scope.getCurrentQuestionObject();
-
-
     }
 ]);
