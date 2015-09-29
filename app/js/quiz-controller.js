@@ -47,7 +47,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             } else if($scope.currentQuestionType === "match-the-following") {
                 isValid = $scope.validateMatchTheFollowing();
             }
-            console.log("isValid", isValid)
+            if(isValid) {
+
+            }
         }
 
         $scope.validateFIB = function() {
@@ -70,7 +72,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             var textboxes = document.querySelectorAll(".multiple-options ul.options li input[type='text']");
             for(var i= 0, length = textboxes.length; i<length; i++) {
-                if(textboxes[i].value.trim().length == 0) {
+                if(!isChecked || textboxes[i].value.trim().length == 0) {
                     textboxes[i].parentElement.parentElement.classList.add("error");
                     result = false;
                 } else {
@@ -131,9 +133,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return {
                 "type": "multiple-options",
                 "id": "2",
-                "question": "My test question ?",
-                "options": [{"value": "option 1"}, {"value": "option 2"}, {"value": "option 3"}, {"value": "option 4"}],
-                "answer": 2
+                "question": "",
+                "options": [{"value": ""}, {"value": ""}, {"value": ""}, {"value": ""}],
+                "answer": -1
             }
         }
         $scope.getMatchTheFollowing = function() {
