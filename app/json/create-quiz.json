@@ -1,24 +1,4 @@
 {
-  "questionTypes" : [
-    {
-      "name": "Fill the blanks",
-      "id": "1",
-      "image": "fill-the-blanks.png",
-      "type": "fill-the-blanks"
-    },
-    {
-      "name": "Multiple options",
-      "id": "2",
-      "image": "multiple-options.png",
-      "type": "multiple-options"
-    },
-    {
-      "name": "Match the following",
-      "id": "2",
-      "image": "match-the-following.png",
-      "type": "match-the-following"
-    }
-  ],
   "questions": [
     {
       "type": "fill-the-blanks",

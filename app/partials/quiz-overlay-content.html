@@ -20,7 +20,7 @@
                             <div class="question-type-panel left m-no-left">
 
                                 <ul class="question-types">
-                                    <li ng-class="isSelected(currentQuestionType, question.type) ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in quizJson.questionTypes" ng-click="selectQuestion($event)">
+                                    <li ng-class="isSelected(currentQuestionType, question.type) ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in questionTypes" ng-click="selectQuestion($event)">
                                         <div class="img-container">
                                             <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
                                         </div>

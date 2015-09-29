@@ -4,6 +4,7 @@ function Overlay(element, options) {
         this.element = element;
         this.decorateOverlay();
     } else {
+        console.log(2, element)
         this.createOverlay()
     }
 }
