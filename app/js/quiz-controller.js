@@ -172,6 +172,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.addBlank = function(questionNo) {
             var answer = prompt("Enter the answer for blank:", '');
+            if(!answer || !answer.trim()) return;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
             var insertAt = function(mainString, insertString, index) {
                 var leftPart = mainString.substr(0, index);
