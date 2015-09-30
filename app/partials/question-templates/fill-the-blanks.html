@@ -1,5 +1,8 @@
 <div class="fill-blank question-area">
-    <div class="editable" contenteditable>
-        <span ng-class="statement.type == 'answer' ? 'answer theme-orange-bg' : 'statement'" ng-repeat="statement in currentQuestion.question">{{statement.value}}</span>
+    <h3>Question: </h3>
+    <textarea id="fill-in-the-blank-question" ng-model="currentQuestion.question" autofocus></textarea>
+    <div class="preview">
+        <h3>Student View: </h3>
+        {{fillInTheBlankPreview()}}
     </div>
 </div>

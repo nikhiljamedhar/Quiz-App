@@ -7,8 +7,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.current_chapter = $routeParams.chapterId;
 
         CreateQuiz.query(function(response) {
-            $scope.quizJson = { questions: response.questions }
-            $scope.highlightDefault()
+            console.log("Query is Initialized");
+            $scope.quizJson = { questions: response.questions };
+            $scope.highlightDefault();
         });
 
         $scope.questionTypes =  [
@@ -68,7 +69,35 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.addAnswer = function() { }
 
-        $scope.downloadQuiz = function() { return console.log($scope.quizJson); }
+        $scope.downloadQuiz = function() { return console.log($scope.currentQuestion); }
+
+        $scope.saveQuiz = function() {
+            var isValid = false;
+            if($scope.currentQuestionType === "fill-the-blanks") {
+                isValid = $scope.validateFIB();
+            } else if($scope.currentQuestionType === "multiple-options") {
+                isValid = $scope.validateMultipleOption();
+            } else if($scope.currentQuestionType === "match-the-following") {
+                isValid = $scope.validateMatchTheFollowing();
+            }
+            if(isValid) {
+
+            }
+        }
+
+        $scope.validateFIB = function() { return false; }
+
+        $scope.validateMultipleOption = function() {
+            console.log("validation in place");
+        };
+
+        $scope.validateMatchTheFollowing = function() { return true; }
+
+        $scope.isCurrentSubject = function(subject) { return $scope.current_subject.toLowerCase() === subject.toLowerCase(); }
+
+        $scope.isNotCurrentSubject = function(subject) { return $scope.current_subject.toLowerCase() !== subject.toLowerCase(); };
+
+        $scope.isCurrentChapter = function(chapter) { return $scope.current_chapter.toLowerCase() === chapter.toLowerCase(); };
 
 
         $scope.isApplication = function(type) { return type === "apps"; };
@@ -86,7 +115,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             } else if($scope.currentQuestionType === "match-the-following") {
                 return $scope.getMatchTheFollowing();
             }
-        }
+        };
 
         $scope.getFIBQuestion = function() {
 
@@ -96,7 +125,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "question": []
             }
 
-        }
+        };
 
         $scope.getMultipleOption = function() {
 
@@ -107,7 +136,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "answer": []
             }
 
-        }
+        };
 
         $scope.getMatchTheFollowing = function() {
 
@@ -116,7 +145,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "questions": [{"question": "", "answer": ""}]
             }
 
-        }
+        };
 
         $scope.addRow = function() {
             $scope.currentQuestion.questions.push({"question": "", "answer": ""});
@@ -136,6 +165,25 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.hasError = function() {
             return document.querySelectorAll(".question-box .error").length > 0;
         }
+
+        $scope.isChecked = function(checked) {
+            console.log(checked, $scope.currentQuestion.options)
+        };
+
+        $scope.addBlank = function(questionNo) {
+            var answer = prompt("Enter the answer for blank:", '');
+            var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
+            var insertAt = function(mainString, insertString, index) {
+                var leftPart = mainString.substr(0, index);
+                var rightPart = mainString.substr(index, mainString.length);
+                return leftPart + insertString + rightPart;
+            };
+            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, '__' + answer + '__', caretPosition);
+        };
+
+        $scope.fillInTheBlankPreview = function() {
+            return $scope.currentQuestion.question.replace(/__.*?__/g, '_______');
+        };
     }
 ]).directive("multipleCheckboxGroup", function() {
     return {

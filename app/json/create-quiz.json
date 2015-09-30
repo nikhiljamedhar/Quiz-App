@@ -2,17 +2,8 @@
   "questions": [
     {
       "type": "fill-the-blanks",
-      "question": [
-        {
-          "type": "answer",
-          "value": "India"
-        },
-        {
-          "type": "question",
-          "value": " is my country."
-        }
-      ]
-
+      "id": "1",
+      "question": ""
     },
     {
       "type": "multiple-options",

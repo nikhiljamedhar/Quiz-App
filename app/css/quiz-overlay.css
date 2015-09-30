@@ -80,6 +80,7 @@ section.q-o-section .question-footer {
 section.q-o-section .question-footer .other-apps:last-child {
     margin-right: 20px;
 }
+<<<<<<< HEAD
 
 
 /* match the following */
@@ -103,4 +104,8 @@ section.q-o-section .question-footer .other-apps:last-child {
     font-size: 20px;
 }
 
-
+#fill-in-the-blank-question {
+    border: #999 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+}
