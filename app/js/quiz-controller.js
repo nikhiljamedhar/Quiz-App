@@ -162,7 +162,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "type": "multiple-options",
                 "id": "2",
                 "question": "",
-                "options": [{"value": ""}, {"value": ""}, {"value": ""}, {"value": ""}],
+                "options": [{"id": 1, "value": ""}, {"id": 2, "value": ""}, {"id": 3, "value": ""}, {"id": 4, "value": ""}],
                 "answer": []
             }
 
@@ -177,6 +177,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "question": []
             }
 
+        }
+
+        $scope.isChecked = function(checked) {
+            console.log(checked, $scope.currentQuestion.options)
         }
     }
 ]);

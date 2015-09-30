@@ -19,8 +19,8 @@
       "type": "multiple-options",
       "id": "2",
       "question": "My test question ?",
-      "options": [{"value": "option 1"}, {"value": "option 2"}, {"value": "option 3"}, {"value": "option 4"}],
-      "answer": [0, 3]
+      "options": [{"id": 1, "value": "option 1"}, {"id": 2, "value": "option 2"}, {"id": 3, "value": "option 3"}, {"id": 4, "value": "option 4"}],
+      "answer": [1, 4]
     }
   ]
 }
