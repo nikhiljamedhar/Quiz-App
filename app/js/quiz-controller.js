@@ -86,31 +86,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.validateFIB = function() { return false; }
 
         $scope.validateMultipleOption = function() {
-            //var result = true, isChecked = true;
-            //var textarea = document.querySelector("textarea#question");
-            //if(textarea.value.trim().length <= 10) {
-            //    textarea.parentElement.classList.add("error");
-            //    result = false;
-            //} else {
-            //    textarea.parentElement.classList.remove("error");
-            //}
-            //
-            //if(document.querySelector(".multiple-options ul.options li input[type='checkbox']:checked") == null) {
-            //    result = false;
-            //    isChecked = false;
-            //}
-            //
-            //var textboxes = document.querySelectorAll(".multiple-options ul.options li input[type='text']");
-            //for(var i= 0, length = textboxes.length; i<length; i++) {
-            //    if(!isChecked || textboxes[i].value.trim().length == 0) {
-            //        textboxes[i].parentElement.parentElement.classList.add("error");
-            //        result = false;
-            //    } else {
-            //        textboxes[i].parentElement.parentElement.classList.remove("error");
-            //    }
-            //}
-            //
-            //return result;
+            console.log("validation in place");
         }
 
         $scope.validateMatchTheFollowing = function() { return true; }
@@ -163,7 +139,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "id": "2",
                 "question": "",
                 "options": [{"id": 1, "value": ""}, {"id": 2, "value": ""}, {"id": 3, "value": ""}, {"id": 4, "value": ""}],
-                "answer": []
+                "answer": [1, 2]
             }
 
         }
@@ -174,7 +150,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 "type": "fill-the-blanks",
                 "id": "1",
                 "sentence": "",
-                "question": []
+                "question": [1, 2]
             }
 
         }
@@ -183,4 +159,25 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             console.log(checked, $scope.currentQuestion.options)
         }
     }
-]);
+]).directive("multipleCheckboxGroup", function() {
+    return {
+        restrict: "A",
+        link: function(scope, element) {
+            if (scope.currentQuestion.answer.indexOf(scope.option.id) !== -1) {
+                element[0].checked = true;
+            }
+
+            element.bind('click', function() {
+                var index = scope.currentQuestion.answer.indexOf(scope.option.id);
+                if (element[0].checked) {
+                    if (index === -1) scope.currentQuestion.answer.push(scope.option.id);
+                } else {
+                    if (index !== -1) scope.currentQuestion.answer.splice(index, 1);
+                }
+                scope.$apply(scope.currentQuestion.answer.sort(function(a, b) {
+                    return a - b
+                }));
+            });
+        }
+    }
+});
