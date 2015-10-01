@@ -1,6 +1,7 @@
 pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', 'Contents', 'Chapters', 'Subjects',
     function ($scope, $routeParams, CreateQuiz) {
 
+        $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
@@ -120,6 +121,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
 
         $scope.addQuestion = function() {
+            if($scope.hasError()) { alert("Please give the details"); return; }
+
             if($scope.selectedQuestion == null) {
                 $scope.currentQuestion.id = $scope.quizJson.questions.length + 1;
                 $scope.quizJson.questions.push(angular.copy($scope.currentQuestion));
@@ -127,6 +130,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             $scope.selectedQuestion = null;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
+        }
+
+        $scope.hasError = function() {
+            return document.querySelectorAll(".question-box .error").length > 0;
         }
     }
 ]).directive("multipleCheckboxGroup", function() {
