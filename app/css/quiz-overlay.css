@@ -82,3 +82,25 @@ section.q-o-section .question-footer .other-apps:last-child {
 }
 
 
+/* match the following */
+.match-the-following ul li > div span {
+    display: block;
+    padding: 10px;
+}
+.match-the-following .title-row {
+    font-size: 24px;
+}
+.match-the-following .add-new-row {
+    margin-left: 20px;
+}
+.match-the-following ul li:last-child {
+    border: none;
+}
+.match-the-following ul li > div {
+    width: 50%;
+}
+.match-the-following ul li input {
+    font-size: 20px;
+}
+
+

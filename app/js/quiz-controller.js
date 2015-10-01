@@ -112,19 +112,20 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.getMatchTheFollowing = function() {
 
             return  {
-                "type": "fill-the-blanks",
-                "sentence": "",
-                "question": [1, 2]
+                "type": "match-the-following",
+                "questions": [{"question": "", "answer": ""}]
             }
 
         }
 
+        $scope.addRow = function() {
+            $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+        }
 
         $scope.addQuestion = function() {
-            if($scope.hasError()) { alert("Please give the details"); return; }
+            if($scope.hasError()) { alert("Please fill the red field"); return; }
 
             if($scope.selectedQuestion == null) {
-                $scope.currentQuestion.id = $scope.quizJson.questions.length + 1;
                 $scope.quizJson.questions.push(angular.copy($scope.currentQuestion));
             }
 
@@ -158,20 +159,3 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         }
     }
 });
-//.directive("quizPanel", function() {
-//    return {
-//        restrict: "A",
-//        link: function(scope, element) {
-//            var saveButton = angular.element(element[0].getElementsByClassName("save-question-button"))
-//            saveButton.bind("click", function() {
-//                var questionBox = element[0].getElementsByClassName("question-box")[0];
-//                if(questionBox.getElementsByClassName("error").length === 0) {
-//                    scope.addQuestion();
-//                } else {
-//
-//                    alert("Please fill the question completely")
-//                }
-//            });
-//        }
-//    }
-//})

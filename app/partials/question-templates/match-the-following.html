@@ -1,0 +1,26 @@
+<div class="match-the-following question-area">
+    <div class="clear">
+        <p class="title left">Click the button to create a row</p>
+        <div class="other-apps theme-orange-bg left add-new-row" ng-click="addRow()">
+            <a href="" class="a-container">
+                <div class="img-container">
+                    <img src="image/otherapps.png" alt="Download Quiz"/>
+                </div>
+                <span>Add a row</span>
+            </a>
+        </div>
+    </div>
+    <div class="list-container">
+        <ul class="match-list border">
+            <li class="clear border-bottom title-row t-center">
+                <div class="match-question item left"><span class="border-right">Questions</span></div>
+                <div class="match-answer item left"><span>Answer</span></div>
+            </li>
+
+            <li class="clear border-bottom" ng-repeat="row in currentQuestion.questions">
+                <div class="match-question item left"><div class="border-right"><div ng-class="!row.question.trim() ? 'input-container error border' : 'input-container border-transparent'"><input type="text" ng-model="row.question" placeholder="Enter your question"/></div></div></div>
+                <div class="match-answer item left"><div ng-class="!row.answer.trim() ? 'input-container error border' : 'input-container border-transparent'"><input type="text" ng-model="row.answer" placeholder="Enter your answer"/></div></div>
+            </li>
+        </ul>
+    </div>
+</div>

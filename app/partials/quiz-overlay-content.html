@@ -34,7 +34,7 @@
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list t-center">
-                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{question.id}}</li>
+                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{$index + 1}}</li>
                                         </ul>
                                     </div>
 
@@ -56,7 +56,7 @@
                                                     <div class="question-box border">
                                                         <div ng-include src="'partials/question-templates/fill-the-blanks.html'" ng-if="currentQuestionType == 'fill-the-blanks'"></div>
                                                         <div ng-include src="'partials/question-templates/multiple-option.html'" ng-if="currentQuestionType == 'multiple-options'"></div>
-                                                        <div ng-include src="'partials/question-templates/fill-the-blanks.html'" ng-if="currentQuestionType == 'match-the-following'"></div>
+                                                        <div ng-include src="'partials/question-templates/match-the-following.html'" ng-if="currentQuestionType == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
                                             </div>
