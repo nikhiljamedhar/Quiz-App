@@ -1,11 +1,9 @@
 pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', 'Contents', 'Chapters', 'Subjects',
-    function ($scope, $routeParams, CreateQuiz, Contents, Chapters, Subjects) {
+    function ($scope, $routeParams, CreateQuiz) {
+
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
-        $scope.subjects = Subjects.query({ gradeId : $routeParams.gradeId});
-        $scope.chapters = Chapters.query({ subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
-        $scope.contents = Contents.query({ chapterId : $routeParams.chapterId, subjectId : $routeParams.subjectId, gradeId : $routeParams.gradeId });
 
         CreateQuiz.query(function(response) {
             $scope.quizJson = { questions: response.questions }
@@ -38,16 +36,23 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.init = function(mode) { $scope.mode = mode; };
 
         $scope.highlightDefault = function() {
-            $scope.selectedQuestion = 0;
+            $scope.selectedQuestion = null;
             if($scope.mode === "create" || $scope.quizJson.questions.length === 0) {
                 $scope.quizJson = { questions: [] }
                 $scope.currentQuestionType = "fill-the-blanks";
                 $scope.currentQuestion = $scope.getCurrentQuestionObject();
             } else {
-                $scope.currentQuestion = $scope.getCurrentQuestionObject(0);
+                $scope.selectedQuestion = 0;
+                $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
                 $scope.currentQuestionType = $scope.currentQuestion.type;
             }
+
+            $scope.$watchCollection("quizJson.questions", function(o, v) {
+                console.log(o, v);
+            }, false);
+
         }
+
 
         $scope.overlayLoaded = function() {
             $scope.showOverlay(document.getElementById("create-quiz-mask"));
@@ -80,6 +85,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
             if(isValid) {
 
+
             }
         }
 
@@ -91,15 +97,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.validateMatchTheFollowing = function() { return true; }
 
-        $scope.isCurrentSubject = function(subject) { return $scope.current_subject.toLowerCase() === subject.toLowerCase(); }
-
-        $scope.isNotCurrentSubject = function(subject) { return $scope.current_subject.toLowerCase() !== subject.toLowerCase(); };
-
-        $scope.isCurrentChapter = function(chapter) { return $scope.current_chapter.toLowerCase() === chapter.toLowerCase(); };
-
-        $scope.isNotCurrentChapter = function(chapter) { return $scope.current_chapter.toLowerCase() !== chapter.toLowerCase(); };
-
-        $scope.invokeCommand = function(command) { CommandApi.invokeCommand(command); };
 
         $scope.isApplication = function(type) { return type === "apps"; };
 
@@ -125,7 +122,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return  {
                 "type": "fill-the-blanks",
-                "id": "1",
                 "sentence": "",
                 "question": []
             }
@@ -136,10 +132,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return {
                 "type": "multiple-options",
-                "id": "2",
                 "question": "",
                 "options": [{"id": 1, "value": ""}, {"id": 2, "value": ""}, {"id": 3, "value": ""}, {"id": 4, "value": ""}],
-                "answer": [1, 2]
+                "answer": []
             }
 
         }
@@ -148,15 +143,21 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return  {
                 "type": "fill-the-blanks",
-                "id": "1",
                 "sentence": "",
                 "question": [1, 2]
             }
 
         }
 
-        $scope.isChecked = function(checked) {
-            console.log(checked, $scope.currentQuestion.options)
+
+        $scope.addQuestion = function() {
+            if($scope.selectedQuestion == null) {
+                $scope.currentQuestion.id = $scope.quizJson.questions.length + 1;
+                $scope.quizJson.questions.push(angular.copy($scope.currentQuestion));
+            }
+
+            $scope.selectedQuestion = null;
+            $scope.currentQuestion = $scope.getCurrentQuestionObject();
         }
     }
 ]).directive("multipleCheckboxGroup", function() {
@@ -181,3 +182,20 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         }
     }
 });
+//.directive("quizPanel", function() {
+//    return {
+//        restrict: "A",
+//        link: function(scope, element) {
+//            var saveButton = angular.element(element[0].getElementsByClassName("save-question-button"))
+//            saveButton.bind("click", function() {
+//                var questionBox = element[0].getElementsByClassName("question-box")[0];
+//                if(questionBox.getElementsByClassName("error").length === 0) {
+//                    scope.addQuestion();
+//                } else {
+//
+//                    alert("Please fill the question completely")
+//                }
+//            });
+//        }
+//    }
+//})
