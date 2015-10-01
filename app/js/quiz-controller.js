@@ -46,11 +46,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
                 $scope.currentQuestionType = $scope.currentQuestion.type;
             }
-
-            $scope.$watchCollection("quizJson.questions", function(o, v) {
-                console.log(o, v);
-            }, false);
-
         }
 
 
@@ -59,7 +54,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         }
 
         $scope.selectQuestionType = function(type) {
-            if($scope.mode === "update") {return;}
+            if($scope.selectedQuestion != null) {return;}
             $scope.currentQuestionType = type;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
         }
@@ -72,30 +67,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.addAnswer = function() { }
 
-        $scope.downloadQuiz = function() { return console.log($scope.currentQuestion); }
-
-        $scope.saveQuiz = function() {
-            var isValid = false;
-            if($scope.currentQuestionType === "fill-the-blanks") {
-                isValid = $scope.validateFIB();
-            } else if($scope.currentQuestionType === "multiple-options") {
-                isValid = $scope.validateMultipleOption();
-            } else if($scope.currentQuestionType === "match-the-following") {
-                isValid = $scope.validateMatchTheFollowing();
-            }
-            if(isValid) {
-
-
-            }
-        }
-
-        $scope.validateFIB = function() { return false; }
-
-        $scope.validateMultipleOption = function() {
-            console.log("validation in place");
-        }
-
-        $scope.validateMatchTheFollowing = function() { return true; }
+        $scope.downloadQuiz = function() { return console.log($scope.quizJson); }
 
 
         $scope.isApplication = function(type) { return type === "apps"; };
@@ -105,9 +77,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.isQuiz = function(type) { return type === "quiz"; };
 
         $scope.getCurrentQuestionObject = function(index) {
-            if(typeof index != "undefined") {
-                return $scope.quizJson.questions[index];
-            }
+            if(typeof index != "undefined") { return $scope.quizJson.questions[index]; }
             if($scope.currentQuestionType === "fill-the-blanks") {
                 return $scope.getFIBQuestion();
             } else if($scope.currentQuestionType === "multiple-options") {
@@ -115,7 +85,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             } else if($scope.currentQuestionType === "match-the-following") {
                 return $scope.getMatchTheFollowing();
             }
-
         }
 
         $scope.getFIBQuestion = function() {
