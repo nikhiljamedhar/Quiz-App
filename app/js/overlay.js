@@ -33,12 +33,18 @@ Overlay.prototype.setDefaultOverlaySettings = function() {
 }
 Overlay.prototype.createOverlayEvents = function() {
     var self = this;
+
     this.mask.addEventListener("click", function() {
-        self.disposeOverlay()
+        if(!self.options.closeHandler) {
+            self.disposeOverlay()
+        }
     });
     this.closeButton.addEventListener("click", function() {
-        self.disposeOverlay()
+        if(!self.options.closeHandler) {
+            self.disposeOverlay()
+        }
     });
+
     this.overlay.addEventListener("click", function(e) {
         e.stopPropagation();
     });

@@ -1,6 +1,7 @@
 pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', 'Contents', 'Chapters', 'Subjects',
     function ($scope, $routeParams, CreateQuiz) {
 
+        $scope.hasChange = false;
         $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
@@ -11,6 +12,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.quizJson = { questions: response.questions };
             $scope.highlightDefault();
         });
+
+        $scope.init = function(mode) { $scope.mode = mode; };
 
         $scope.questionTypes =  [
             {
@@ -33,9 +36,25 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
         ];
 
-        $scope.showOverlay = function(element) { new Overlay(element); };
+        $scope.showOverlay = function(element) {
+            $scope.overlay = new Overlay(element, {closeHandler: true});
+        };
 
-        $scope.init = function(mode) { $scope.mode = mode; };
+        $scope.closeOverlay = function($event) {
+            if($scope.hasChange) {
+                $event.preventDefault();
+                var r = confirm("You have unsaved changes in the quiz. Do you want to download it?");
+                if (r == false) {
+                    $scope.overlay.disposeOverlay();
+                    var url = window.location.href;
+                    url = url.replace("update-quiz/", "")
+                    url = url.replace("create-quiz/", "")
+                    window.location.href = url.replace("update-quiz/", "");
+                }
+            }
+        }
+
+
 
         $scope.highlightDefault = function() {
             $scope.selectedQuestion = null;
@@ -66,32 +85,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
             $scope.currentQuestionType = $scope.currentQuestion.type;
         }
-
-        $scope.addAnswer = function() { }
-
-        $scope.downloadQuiz = function() { return console.log($scope.currentQuestion); }
-
-        $scope.saveQuiz = function() {
-            var isValid = false;
-            if($scope.currentQuestionType === "fill-the-blanks") {
-                isValid = $scope.validateFIB();
-            } else if($scope.currentQuestionType === "multiple-options") {
-                isValid = $scope.validateMultipleOption();
-            } else if($scope.currentQuestionType === "match-the-following") {
-                isValid = $scope.validateMatchTheFollowing();
-            }
-            if(isValid) {
-
-            }
-        }
-
-        $scope.validateFIB = function() { return false; }
-
-        $scope.validateMultipleOption = function() {
-            console.log("validation in place");
-        };
-
-        $scope.validateMatchTheFollowing = function() { return true; }
 
         $scope.isCurrentSubject = function(subject) { return $scope.current_subject.toLowerCase() === subject.toLowerCase(); }
 
@@ -165,6 +158,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             $scope.selectedQuestion = null;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
+            $scope.hasChange = true;
         }
 
         $scope.hasError = function() {
