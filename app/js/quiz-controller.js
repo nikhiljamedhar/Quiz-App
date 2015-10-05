@@ -187,20 +187,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return $scope.currentQuestion.question.replace(/__.*?__/g, '_______');
         };
         $scope.download = function() {
-
-            var json = JSON.stringify($scope.quizJson);
-            var blob = new Blob([json], {type: "application/json"});
-            var url  = URL.createObjectURL(blob);
-
-            //var a = document.createElement('a');
-            //a.download    = "backup.json";
-            //a.href        = url;
-            //a.textContent = "Download backup.json";
-            //
-            //document.getElementById('content').appendChild(a);
-
-
-            window.URL.revokeObjectURL(url);
+            document.getElementById("download-json").href = window.URL.createObjectURL(new Blob([JSON.stringify($scope.quizJson)], {type: "application/json"}));
         }
     }
 ]).directive("multipleCheckboxGroup", function() {
