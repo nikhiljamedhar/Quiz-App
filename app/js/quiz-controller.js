@@ -122,7 +122,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return  {
                 "type": "fill-the-blanks",
                 "sentence": "",
-                "question": []
+                "question": ""
             }
 
         };
@@ -184,7 +184,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.fillInTheBlankPreview = function() {
-            return $scope.currentQuestion.question.replace(/__.*?__/g, '_______');
+            return $scope.currentQuestion.question ? $scope.currentQuestion.question.replace(/__.*?__/g, '_______') : "";
         };
         $scope.download = function() {
             document.getElementById("download-json").href = window.URL.createObjectURL(new Blob([JSON.stringify($scope.quizJson)], {type: "application/json"}));
