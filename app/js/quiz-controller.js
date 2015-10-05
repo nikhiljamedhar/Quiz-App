@@ -148,7 +148,12 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.addRow = function() {
-            $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+            if($scope.currentQuestion.questions.length < 10) {
+                $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+            }
+        }
+        $scope.deleteRow = function(index) {
+            $scope.currentQuestion.questions.splice(index, 1);
         }
 
         $scope.addQuestion = function() {
@@ -166,10 +171,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return document.querySelectorAll(".question-box .error").length > 0;
         }
 
-        $scope.isChecked = function(checked) {
-            console.log(checked, $scope.currentQuestion.options)
-        };
-
         $scope.addBlank = function(questionNo) {
             var answer = prompt("Enter the answer for blank:", '');
             if(!answer || !answer.trim()) return;
@@ -185,6 +186,22 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.fillInTheBlankPreview = function() {
             return $scope.currentQuestion.question.replace(/__.*?__/g, '_______');
         };
+        $scope.download = function() {
+
+            var json = JSON.stringify($scope.quizJson);
+            var blob = new Blob([json], {type: "application/json"});
+            var url  = URL.createObjectURL(blob);
+
+            //var a = document.createElement('a');
+            //a.download    = "backup.json";
+            //a.href        = url;
+            //a.textContent = "Download backup.json";
+            //
+            //document.getElementById('content').appendChild(a);
+
+
+            window.URL.revokeObjectURL(url);
+        }
     }
 ]).directive("multipleCheckboxGroup", function() {
     return {

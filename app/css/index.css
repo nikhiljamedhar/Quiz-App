@@ -105,15 +105,15 @@ img {
 }
 
 /* two colum style */
-.two-column > div:first-child {
+.two-column > div.fixed {
     width: 250px;
     position: relative;
     z-index: 1;
 }
-.two-column > div:last-child {
+.two-column > div.flexible {
     width: 100%;
     margin-left: -250px;
 }
-.two-column > div:last-child > .wrapper {
+.two-column > div.flexible > .wrapper {
     margin-left: 250px;
 }

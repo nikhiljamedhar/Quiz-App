@@ -45,7 +45,7 @@ section.q-o-section .wrapper-inner {
     padding: 20px;
     background: #E1E1E1;
 }
-section.q-o-section .current-question-panel .wrapper {
+section.q-o-section .current-question-panel > .wrapper {
     padding: 20px;
 }
 section.q-o-section .wrapper-inner .question-header .other-apps {
@@ -101,6 +101,22 @@ section.q-o-section .question-footer .other-apps:last-child {
 .match-the-following ul li input {
     font-size: 20px;
 }
+.match-answer > div.fixed {
+    width: 71px;
+    position: relative;
+    z-index: 1;
+}
+.match-answer > div.flexible {
+    width: 100%;
+    margin-left: -71px;
+}
+.match-answer > div.flexible > .wrapper {
+    margin-left: 71px;
+}
+.match-answer div.fixed span {
+    padding: 11px;
+}
+
 
 #fill-in-the-blank-question {
     border: #999 1px solid;

@@ -6,7 +6,7 @@
                 <!-- put your content here -->
                 <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
                     <header class="q-o-header two-column resize-mobile border-bottom clear">
-                        <div class="a-container header-logo left">
+                        <div class="a-container header-logo fixed left">
                             <img src="image/logo.png" alt="logo"/>
                         </div>
                         <div class="flexible t-center right">
@@ -17,7 +17,7 @@
                     </header>
                     <section class="q-o-section">
                         <div class="wrapper two-column clear">
-                            <div class="question-type-panel left m-no-left">
+                            <div class="question-type-panel fixed left m-no-left">
 
                                 <ul class="question-types">
                                     <li ng-class="currentQuestionType === question.type ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in questionTypes" ng-click="selectQuestionType(question.type)">
@@ -29,7 +29,7 @@
                                 </ul>
 
                             </div>
-                            <div class="question-panel left  m-no-left">
+                            <div class="question-panel flexible left  m-no-left">
                                 <div class="wrapper border-left">
 
                                     <div class="other-questions border-bottom">
@@ -71,7 +71,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="other-apps theme-orange-bg right download-quiz-button">
-                                                    <a href="" class="a-container">
+                                                    <a href="" class="a-container" download="quiz.json" ng-click="download()">
                                                         <div class="img-container">
                                                             <img src="image/otherapps.png" alt="Download Quiz"/>
                                                         </div>
@@ -91,3 +91,5 @@
         </div>
     </div>
 </div>
+
+
