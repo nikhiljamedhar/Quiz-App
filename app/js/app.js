@@ -31,6 +31,10 @@ pencilBoxApp.config(['$routeProvider',function($routeProvider){
     templateUrl:'partials/update-quiz.html',
     controller:'CreateQuizController'
   })
+  .when('/grades/:gradeId/subject/:subjectId/:chapterId/take-quiz/', {
+    templateUrl:'partials/take-quiz.html',
+    controller:'TakeQuizController'
+  })
   .when('/otherApps', {
      templateUrl : 'partials/other-apps.html',
      controller : 'OtherAppController'
