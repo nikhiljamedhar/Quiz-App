@@ -10,7 +10,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
         });
 
         $scope.initQuiz = function() {
-            //console.log($scope.quizJson)
+            console.log($scope.quizJson)
             if($scope.quizJson.questions.length === 0) {return;}
             $scope.selectQuestion();
         }

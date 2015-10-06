@@ -125,7 +125,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return {
                 "type": "multiple-options",
                 "question": "",
-                "options": [{"id": 1, "value": ""}, {"id": 2, "value": ""}, {"id": 3, "value": ""}, {"id": 4, "value": ""}],
+                "options": [{"value": ""}, {"value": ""}],
                 "answer": []
             }
 
@@ -135,18 +135,36 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return  {
                 "type": "match-the-following",
-                "questions": [{"question": "", "answer": ""}]
+                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}]
             }
 
         };
 
         $scope.addRow = function() {
-            if($scope.currentQuestion.questions.length < 10) {
-                $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+            if($scope.currentQuestionType === "multiple-options") {
+                if($scope.currentQuestion.options.length < 5) {
+                    $scope.currentQuestion.options.push({"value": ""});
+                    console.log("add", $scope.currentQuestion, $scope.currentQuestion.options.length)
+                }
+            } else {
+                if($scope.currentQuestion.questions.length < 10) {
+                    $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+                }
             }
         }
         $scope.deleteRow = function(index) {
-            $scope.currentQuestion.questions.splice(index, 1);
+            if($scope.currentQuestionType === "multiple-options") {
+                if($scope.currentQuestion.options.length > 2) {
+                    $scope.currentQuestion.options.splice(index, 1);
+                    var ansPosition = $scope.currentQuestion.answer.indexOf(index);
+                    if(ansPosition != -1) {
+                        $scope.currentQuestion.answer.splice(ansPosition, 1);
+                    }
+                }
+            } else {
+                if($scope.currentQuestion.questions.length > 2) { $scope.currentQuestion.questions.splice(index, 1); }
+            }
+
         }
 
         $scope.addQuestion = function() {
@@ -188,14 +206,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
     return {
         restrict: "A",
         link: function(scope, element) {
-            if (scope.currentQuestion.answer.indexOf(scope.option.id) !== -1) {
-                element[0].checked = true;
-            }
+            setTimeout(function() {
+                var value = parseInt(element[0].dataset.index);
+                if (scope.currentQuestion.answer.indexOf(value) !== -1) {
+                    element[0].checked = true;
+                }
+            }, 200)
 
             element.bind('click', function() {
-                var index = scope.currentQuestion.answer.indexOf(scope.option.id);
+                var value = parseInt(element[0].dataset.index);
+                var index = scope.currentQuestion.answer.indexOf(value);
                 if (element[0].checked) {
-                    if (index === -1) scope.currentQuestion.answer.push(scope.option.id);
+                    if (index === -1) scope.currentQuestion.answer.push(value);
                 } else {
                     if (index !== -1) scope.currentQuestion.answer.splice(index, 1);
                 }
