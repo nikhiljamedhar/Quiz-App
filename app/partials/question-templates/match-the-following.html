@@ -18,11 +18,11 @@
             </li>
 
             <li class="clear border-bottom" ng-repeat="row in currentQuestion.questions">
-                <div class="match-question item left"><div class="border-right"><div ng-class="!row.question.trim() ? 'input-container error border' : 'input-container border-transparent'"><input type="text" ng-model="row.question" placeholder="Enter your question"/></div></div></div>
+                <div class="match-question item left"><div class="border-right"><div ng-class="!row.question.trim() ? 'input-container error border' : 'input-container border-transparent'"><input type="text" maxlength="100" ng-model="row.question" placeholder="Enter your question"/></div></div></div>
                 <div class="match-answer item left">
                     <div class="left flexible">
                         <div ng-class="!row.answer.trim() ? 'input-container error border wrapper' : 'input-container border-transparent wrapper'">
-                            <input type="text" ng-model="row.answer" placeholder="Enter your answer"/>
+                            <input type="text" maxlength="100" ng-model="row.answer" placeholder="Enter your answer"/>
                         </div>
                     </div>
                     <div class="right fixed"><span class="delete theme-orange-bg link" ng-click="deleteRow($index)">Delete</span></div>
