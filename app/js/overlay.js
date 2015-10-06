@@ -35,12 +35,12 @@ Overlay.prototype.createOverlayEvents = function() {
     var self = this;
 
     this.mask.addEventListener("click", function() {
-        if(!self.options.closeHandler) {
+        if(!self.options || !self.options.closeHandler) {
             self.disposeOverlay()
         }
     });
     this.closeButton.addEventListener("click", function() {
-        if(!self.options.closeHandler) {
+        if(!self.options || !self.options.closeHandler) {
             self.disposeOverlay()
         }
     });
