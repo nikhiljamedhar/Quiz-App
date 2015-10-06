@@ -45,7 +45,7 @@ section.q-o-section ul.question-number-list {
 section.q-o-section ul.question-number-list li {
     display: inline-block;
     padding: 10px 17px;
-    background: #6D6E71;
+    /*background: #6D6E71;*/
     margin: 0px 0px 15px 15px;
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -170,4 +170,16 @@ section.q-o-section .question-footer .other-apps:last-child {
     padding: .5em;
     font-size: 1.3em;
     vertical-align: middle;
+}
+.color-set li {
+    color: white;
+}
+.color-set li[data-type="fill-the-blanks"] {
+    background: #16A085;
+}
+.color-set li[data-type="multiple-options"] {
+    background: #3498DB;
+}
+.color-set li[data-type="match-the-following"] {
+    background: #e74c3c;
 }
