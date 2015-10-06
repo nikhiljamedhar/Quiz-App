@@ -3,17 +3,20 @@
     {
       "type": "fill-the-blanks",
       "id": "1",
-      "question": ""
+      "question": "",
+      "marks": 1
     },
     {
       "type": "multiple-options",
       "question": "My test question ?",
       "options": [{"id": 1, "value": "option 1"}, {"id": 2, "value": "option 2"}, {"id": 3, "value": "option 3"}, {"id": 4, "value": "option 4"}],
-      "answer": [1]
+      "answer": [1],
+      "marks": 1
     },
     {
       "type": "match-the-following",
-      "questions": [{"question": "My test Question", "answer": "My Test Anser"}]
+      "questions": [{"question": "My test Question", "answer": "My Test Anser"}],
+      "marks": 1
     }
   ]
 }
