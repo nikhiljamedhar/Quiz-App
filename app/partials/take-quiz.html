@@ -21,8 +21,8 @@
                                 <div class="wrapper border-left">
 
                                     <div class="other-questions border-bottom">
-                                        <ul class="question-number-list t-center">
-                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{$index + 1}}</li>
+                                        <ul class="question-number-list color-set t-center">
+                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" data-type="{{question.type}}" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{$index + 1}}</li>
                                         </ul>
                                     </div>
 
