@@ -51,6 +51,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     url = url.replace("create-quiz/", "")
                     window.location.href = url.replace("update-quiz/", "");
                 }
+            } else {
+                $scope.overlay.disposeOverlay();
             }
         }
 
