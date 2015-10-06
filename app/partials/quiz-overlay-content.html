@@ -2,7 +2,8 @@
     <div class="overlay">
         <div class="container">
             <div class="overlay-container">
-                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container">X</a>
+                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container">Close</a>
+                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container" id="close-overlay" ng-click="closeOverlay($event)">Close</a>
                 <!-- put your content here -->
                 <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
                     <header class="q-o-header two-column resize-mobile border-bottom clear">
@@ -65,7 +66,7 @@
                                                 <div class="other-apps theme-orange-bg save-question-button right" ng-click="addQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
-                                                            <img src="image/otherapps.png" alt="Save Question"/>
+                                                            <img src="image/savequestion.png" alt="Save Question"/>
                                                         </div>
                                                         <span>Save Question</span>
                                                     </a>
@@ -73,7 +74,7 @@
                                                 <div class="other-apps theme-orange-bg right download-quiz-button">
                                                     <a href="" class="a-container" download="quiz.json" ng-click="download()" id="download-json">
                                                         <div class="img-container">
-                                                            <img src="image/otherapps.png" alt="Download Quiz"/>
+                                                            <img src="image/download.png" alt="Download Quiz"/>
                                                         </div>
                                                         <span>Download Quiz</span>
                                                     </a>
