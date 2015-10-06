@@ -31,15 +31,17 @@ html, body {
     font-size:40px;
 }
 .mask .close {
-    background-color: black;
+    background-color: white;
     position: absolute;
     right: 0px;
     top: 0px;
     z-index: 2;
     text-align: center;
     cursor: pointer;
-    padding: 4px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 2px;
+    font-size:20px;
+    color:red;
 }
 .mask .overlay .container {
     position: relative;
