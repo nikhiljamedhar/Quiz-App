@@ -185,3 +185,49 @@ section.q-o-section .question-footer .other-apps:last-child {
 .fill-blank.question-area textarea.ng-valid.ng-dirty {
     border: solid 2px #78FA89;
 }
+.take-question-area .question-box {
+    padding: 20px;
+}
+.take-question-area .question-box input.answer-block {
+    display: inline;
+    width: auto;
+    font-size: 18px;
+    padding: 3px;
+    border-bottom: 1px solid darkgray ! important;
+}
+.take-question-area .question-box input.answer-block::-webkit-input-placeholder {
+    color: gray;
+}
+
+.take-question-area .question-box input.answer-block:-moz-placeholder { /* Firefox 18- */
+    color: gray;
+}
+
+.take-question-area .question-box input.answer-block::-moz-placeholder {  /* Firefox 19+ */
+    color: gray;
+}
+
+.take-question-area .question-box input.answer-block:-ms-input-placeholder {
+    color: gray;
+}
+
+.take-question-area table {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.take-question-area table tr {
+    border-bottom: 1px solid #d0d0d0;
+}
+.take-question-area table tr:nth-child(odd) {
+    background-color: #fff;
+}
+.take-question-area table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+.take-question-area ul li.option, .take-question-area table tr td {
+    padding: 8px;
+}
+.take-question-area table tr td {
+    text-align: left;
+    vertical-align: top;
+}

@@ -10,7 +10,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
         });
 
         $scope.initQuiz = function() {
-            console.log($scope.quizJson)
             if($scope.quizJson.questions.length === 0) {return;}
             $scope.selectQuestion();
         }
@@ -20,7 +19,25 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.quizJson.questions[$scope.selectedQuestion];
             $scope.currentQuestionType = $scope.currentQuestion.type;
+            $scope.setQuestionObject();
         }
+
+        $scope.setQuestionObject = function() {
+            if($scope.currentQuestionType === "fill-the-blanks") {
+                $scope.fillQuestion = [];
+                var result = $scope.currentQuestion.question.replace(/___.*?___/g, '__').split(" ");
+                for(var i= 0, length = result.length; i<length; i++) {
+                    if(result[i] === "__") {
+                        $scope.fillQuestion.push({type: "answer"});
+                    } else {
+                        $scope.fillQuestion.push({type: "question", value: result[i]});
+                    }
+                }
+            } else if($scope.currentQuestionType === "match-the-following") {
+
+            }
+        }
+
         $scope.navigateQuestion = function(position) {
             var index = $scope.selectedQuestion + position;
             if($scope.quizJson.questions.length > index && 0 <= index) {

@@ -1,12 +1,11 @@
-<div class="multiple-options question-area">
-    <div ng-class="currentQuestion.question.length <= 10 ? 'input-container border error' : 'input-container border'">
-        <textarea name="question" id="question" cols="30" rows="4" placeholder="Type your question here" ng-model="currentQuestion.question"></textarea>
-    </div>
+<div class="multiple-options question-area take-question-area">
+    <h2>Multiple choice</h2>
     <div class="options-container border">
+        <h4>{{currentQuestion.question}}</h4>
         <ul class="options">
-            <li ng-class="!option.value.trim() || currentQuestion.answer.length == 0 ? 'option border t heme-gray error' : 'option border theme-gray'" ng-repeat="option in currentQuestion.options">
-                <span class="input-container"><input type="text" class="input" placeholder="Type your choice here" ng-model="option.value" required ng-trim="true"/></span>
-                <span class="input-container"><input type="checkbox" class="checkbox" multiple-checkbox-group/></span>
+            <li class="option border theme-gray" ng-repeat="option in currentQuestion.options">
+                <span class="input">{{option.value}}</span>
+                <input type="checkbox" class="checkbox" multiple-checkbox-group/>
             </li>
         </ul>
     </div>

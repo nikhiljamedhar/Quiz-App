@@ -3,7 +3,7 @@
     {
       "type": "fill-the-blanks",
       "id": "1",
-      "question": "I am a __good__ boy.",
+      "question": "This is my ___Test Quiz___ second ___Test Quiz___",
       "marks": 1
     },
     {
@@ -15,7 +15,13 @@
     },
     {
       "type": "match-the-following",
-      "questions": [{"question": "My test Question", "answer": "My Test Anser"}],
+      "questions": [
+        {"question": "My test Question", "answer": "My Test Answer"},
+        {"question": "My test Question", "answer": "My Test Answer"},
+        {"question": "My test Question", "answer": "My Test Answer"},
+        {"question": "My test Question", "answer": "My Test Answer"},
+        {"question": "My test Question", "answer": "My Test Answer"}
+      ],
       "marks": 1
     }
   ]

@@ -1,8 +1,12 @@
-<div class="fill-blank question-area">
-    <h3>Question: </h3>
-    <textarea id="fill-in-the-blank-question" ng-model="currentQuestion.question" autofocus></textarea>
-    <div class="preview">
-        <h3>Student View: </h3>
-        {{fillInTheBlankPreview()}}
+<div class="fill-blank question-area take-question-area">
+    <h3>Fill in the blanks</h3>
+    <div class="question-box border">
+
+        <span ng-repeat="question in fillQuestion">
+            <input type="text" name="answer" ng-if="question.type == 'answer'"  placeholder="enter your answer" class="answer-block theme-orange-bg"/>
+            <span ng-if="question.type == 'question'">{{question.value}}</span>
+        </span>
+
+        </div>
     </div>
 </div>

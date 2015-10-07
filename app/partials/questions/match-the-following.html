@@ -1,33 +1,23 @@
-<div class="match-the-following question-area">
-    <div class="clear">
-        <p class="title left">Click the button to create a row</p>
-        <div class="other-apps theme-orange-bg left add-new-row" ng-click="addRow()">
-            <a href="" class="a-container">
-                <div class="img-container">
-                    <img src="image/otherapps.png" alt="Download Quiz"/>
-                </div>
-                <span>Add a row</span>
-            </a>
-        </div>
-    </div>
+<div class="match-the-following question-area take-question-area">
     <div class="list-container">
-        <ul class="match-list border">
-            <li class="clear border-bottom title-row t-center">
-                <div class="match-question item left"><span class="border-right">Questions</span></div>
-                <div class="match-answer item left"><span>Answer</span></div>
-            </li>
-
-            <li class="clear border-bottom" ng-repeat="row in currentQuestion.questions">
-                <div class="match-question item left"><div class="border-right"><div ng-class="!row.question.trim() ? 'input-container error border' : 'input-container border-transparent'"><input type="text" ng-model="row.question" placeholder="Enter your question"/></div></div></div>
-                <div class="match-answer item left">
-                    <div class="left flexible">
-                        <div ng-class="!row.answer.trim() ? 'input-container error border wrapper' : 'input-container border-transparent wrapper'">
-                            <input type="text" ng-model="row.answer" placeholder="Enter your answer"/>
-                        </div>
-                    </div>
-                    <div class="right fixed"><span class="delete theme-orange-bg link" ng-click="deleteRow($index)">Delete</span></div>
-                </div>
-            </li>
-        </ul>
+        <h2>Match the following</h2>
+        <table>
+            <tr>
+                <td class="index border">Index</td>
+                <td class="question border">Questions</td>
+                <td class="option-answer border">Answers</td>
+                <td class="answer border">Select your answer</td>
+            </tr>
+            <tr ng-repeat="row in currentQuestion.questions">
+                <td class="index border">{{$index + 1}}</td>
+                <td class="question border">{{row.question}}</td>
+                <td class="option-answer border">{{row.answer}}</td>
+                <td class="answer border">
+                    <select name="answer">
+                        <option ng-repeat="rowIndex in currentQuestion.questions" value="{{$index}}">{{$index + 1}}</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
