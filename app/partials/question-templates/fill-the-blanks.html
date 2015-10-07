@@ -1,6 +1,6 @@
 <div class="fill-blank question-area">
     <h3>Question: </h3>
-    <textarea id="fill-in-the-blank-question" ng-model="currentQuestion.question" autofocus></textarea>
+    	<textarea type="text" id="fill-in-the-blank-question" ng-model="currentQuestion.question" ng-minlength="5" ng-maxlength="500" ng-required="true" ng-pattern="/__[^_]+__/" ng-model-options="{allowInvalid: true}"></textarea>
     <div class="preview">
         <h3>Student View: </h3>
         {{fillInTheBlankPreview()}}

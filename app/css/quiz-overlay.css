@@ -149,12 +149,6 @@ section.q-o-section .question-footer .other-apps:last-child {
     padding: 11px;
 }
 
-#fill-in-the-blank-question {
-    border: #999 1px solid;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
 .marks {
     float: left;
 }
@@ -182,4 +176,12 @@ section.q-o-section .question-footer .other-apps:last-child {
 }
 .color-set li[data-type="match-the-following"] {
     background: #e74c3c;
+}
+
+.fill-blank.question-area textarea.ng-invalid {
+    border: solid 2px #FA787E;
+}
+
+.fill-blank.question-area textarea.ng-valid.ng-dirty {
+    border: solid 2px #78FA89;
 }
