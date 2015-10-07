@@ -5,7 +5,8 @@
         <ul class="options">
             <li class="option border theme-gray" ng-repeat="option in currentQuestion.options">
                 <span class="input">{{option.value}}</span>
-                <input type="checkbox" class="checkbox" multiple-checkbox-group/>
+                <input type="checkbox" class="checkbox" data-index="{{$index}}" multiple-checkbox-group/>
+                <!--<input type="radio" class="checkbox" multiple-checkbox-group/>-->
             </li>
         </ul>
     </div>

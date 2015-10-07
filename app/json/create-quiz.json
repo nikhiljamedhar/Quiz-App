@@ -16,11 +16,11 @@
     {
       "type": "match-the-following",
       "questions": [
-        {"question": "My test Question", "answer": "My Test Answer"},
-        {"question": "My test Question", "answer": "My Test Answer"},
-        {"question": "My test Question", "answer": "My Test Answer"},
-        {"question": "My test Question", "answer": "My Test Answer"},
-        {"question": "My test Question", "answer": "My Test Answer"}
+        {"question": "My test Question", "answer": "My Test Answer 1"},
+        {"question": "My test Question", "answer": "My Test Answer 2"},
+        {"question": "My test Question", "answer": "My Test Answer 3"},
+        {"question": "My test Question", "answer": "My Test Answer 4"},
+        {"question": "My test Question", "answer": "My Test Answer 5"}
       ],
       "marks": 1
     }
