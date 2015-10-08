@@ -13,8 +13,8 @@
                 <td class="question border">{{row.question}}</td>
                 <td class="option-answer border">{{row.answer}}</td>
                 <td class="answer border">
-                    <select name="answer">
-                        <option ng-repeat="rowIndex in currentQuestion.questions" value="{{$index}}">{{$index + 1}}</option>
+                    <select name="answer" ng-model="row.selected" ng-change="hasAnswered()">
+                        <option ng-repeat="question in currentQuestion.questions" value="{{$index}}">{{$index + 1}}</option>
                     </select>
                 </td>
             </tr>

@@ -141,8 +141,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return {
                 "type": "multiple-options",
                 "question": "",
-                "options": [{"value": ""}, {"value": ""}],
-                "answer": []
+                "options": [{"value": "", "answer": false}, {"value": "", "answer": false}]
             }
 
         };
@@ -156,10 +155,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         };
 
-        $scope.addRow = function () {
-            if ($scope.currentQuestionType === "multiple-options") {
-                if ($scope.currentQuestion.options.length < 5) {
-                    $scope.currentQuestion.options.push({"value": ""});
+        $scope.addRow = function() {
+            if($scope.currentQuestionType === "multiple-options") {
+                if($scope.currentQuestion.options.length < 5) {
+                    $scope.currentQuestion.options.push({"value": "", "answer": false});
                 }
             } else {
                 if ($scope.currentQuestion.questions.length < 10) {
@@ -246,33 +245,4 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.selectQuestion(Math.min(0, $scope.selectedIndex - 1));
         };
     }
-]).directive("multipleCheckboxGroup", function () {
-    return {
-        restrict: "A",
-        link: function (scope, element) {
-            setTimeout(function () {
-                init();
-            }, 0)
-
-            function init() {
-                var value = parseInt(element[0].dataset.index);
-                if (scope.currentQuestion.answer.indexOf(value) !== -1) {
-                    element[0].checked = true;
-                }
-
-                element.bind('click', function () {
-                    var value = parseInt(element[0].dataset.index);
-                    var index = scope.currentQuestion.answer.indexOf(value);
-                    if (element[0].checked) {
-                        if (index === -1) scope.currentQuestion.answer.push(value);
-                    } else {
-                        if (index !== -1) scope.currentQuestion.answer.splice(index, 1);
-                    }
-                    scope.$apply(scope.currentQuestion.answer.sort(function (a, b) {
-                        return a - b
-                    }));
-                });
-            }
-        }
-    }
-});
+]);

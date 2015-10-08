@@ -231,3 +231,6 @@ section.q-o-section .question-footer .other-apps:last-child {
     text-align: left;
     vertical-align: top;
 }
+li[data-answered='true'] {
+    background: red !important;
+}

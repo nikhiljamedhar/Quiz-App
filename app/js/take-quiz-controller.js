@@ -6,13 +6,29 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
 
         TakeQuiz.query(function(response) {
             $scope.quizJson = { questions: response.questions };
+            $scope.shuffleQuestions();
             $scope.preprocessJson();
             $scope.initQuiz();
             console.log($scope.quizJson)
         });
 
+        $scope.shuffleQuestions = function() {
+            $scope.quizJson.questions = shuffle($scope.quizJson.questions);
+            function shuffle(array) {
+                var currentIndex = array.length, temporaryValue, randomIndex ;
+                while (0 !== currentIndex) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex -= 1;
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+                return array;
+            }
+        }
         $scope.preprocessJson = function() {
             for(var i= 0, length = $scope.quizJson.questions.length; i<length; i++) {
+                $scope.quizJson.questions[i].hasAnswered = false;
                 if($scope.quizJson.questions[i].type === "fill-the-blanks") {
                     var collection = $scope.quizJson.questions[i].questionCollection;
                     for(var j = 0; j<collection.length; j++) {
@@ -22,15 +38,18 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                     }
                 } else if ($scope.quizJson.questions[i].type === "multiple-options") {
                     $scope.quizJson.questions[i].correctAnswer = angular.copy($scope.quizJson.questions[i].answer);
-                    $scope.quizJson.questions[i].answer = [];
+                    for(var j = 0; j<$scope.quizJson.questions[i].options.length; j++) {
+                        $scope.quizJson.questions[i].options[j].answer = false;
+                    }
                 } else if($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
                     for(var j = 0; j<questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
+                        questions[j].selected = -1;
                     }
                     $scope.quizJson.questions[i].questions = questions;
-                    $scope.quizJson.questions[i].correctAnswer = angular.copy(random);
+
                 }
             }
         }
@@ -64,6 +83,29 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                 return o;
             }
             return shuffle(numbers);
+        }
+
+        $scope.hasAnswered = function() {
+            if($scope.currentQuestion.type === "fill-the-blanks") {
+                var collection = $scope.currentQuestion.questionCollection, found = false;
+                for(var j = 0; j<collection.length; j++) {
+                    if(collection[j].type === "answer" && collection[j].value !== "") {
+                        found = true;
+                    }
+                }
+                $scope.currentQuestion.hasAnswered = found;
+            } else if ($scope.currentQuestion.type === "multiple-options") {
+                var found = false;
+                for(var j = 0; j<$scope.currentQuestion.options.length; j++) {
+                    if($scope.currentQuestion.options[j].answer === true) {
+                        found = true;
+                        break;
+                    }
+                }
+                $scope.currentQuestion.hasAnswered = found;
+            } else if($scope.currentQuestion.type === "match-the-following") {
+                $scope.currentQuestion.hasAnswered = true;
+            }
         }
     }
 ]);

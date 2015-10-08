@@ -14,7 +14,7 @@
         <ul class="options">
             <li ng-class="!option.value.trim() || currentQuestion.answer.length == 0 ? 'option border t heme-gray error' : 'option border theme-gray'" ng-repeat="option in currentQuestion.options">
                 <span class="input-container"><input type="text" maxlength="50" class="input" placeholder="Type your choice here" ng-model="option.value" required ng-trim="true"/></span>
-                <span class="input-container"><input type="checkbox" class="checkbox" data-index="{{$index}}" multiple-checkbox-group/></span>
+                <span class="input-container"><input type="checkbox" ng-model="option.answer" class="checkbox" data-index="{{$index}}"/></span>
                 <span class="input-container theme-orange-bg" ng-click="deleteRow($index)"><span class="delete">Delete</span></span>
             </li>
         </ul>
