@@ -8,11 +8,20 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
             $scope.quizJson = { questions: response.questions };
             $scope.preprocessJson();
             $scope.initQuiz();
+            console.log($scope.quizJson)
         });
 
         $scope.preprocessJson = function() {
             for(var i= 0, length = $scope.quizJson.questions.length; i<length; i++) {
-                if($scope.quizJson.questions[i].type === "fill-the-blanks" || $scope.quizJson.questions[i].type === "fill-the-blanks") {
+                if($scope.quizJson.questions[i].type === "fill-the-blanks") {
+                    var collection = $scope.quizJson.questions[i].questionCollection;
+                    for(var j = 0; j<collection.length; j++) {
+                        if(collection[j].type === "answer") {
+                            collection[j].value = "";
+                        }
+                    }
+                } else if ($scope.quizJson.questions[i].type === "multiple-options") {
+                    $scope.quizJson.questions[i].correctAnswer = angular.copy($scope.quizJson.questions[i].answer);
                     $scope.quizJson.questions[i].answer = [];
                 } else if($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
@@ -21,6 +30,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
                     }
                     $scope.quizJson.questions[i].questions = questions;
+                    $scope.quizJson.questions[i].correctAnswer = angular.copy(random);
                 }
             }
         }
@@ -35,23 +45,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.quizJson.questions[$scope.selectedQuestion];
             $scope.currentQuestionType = $scope.currentQuestion.type;
-            $scope.setQuestionObject();
-        }
-
-        $scope.setQuestionObject = function() {
-            if($scope.currentQuestionType === "fill-the-blanks") {
-                $scope.fillQuestion = [];
-                var result = $scope.currentQuestion.question.replace(/___.*?___/g, '__').split(" ");
-                for(var i= 0, length = result.length; i<length; i++) {
-                    if(result[i] === "__") {
-                        $scope.fillQuestion.push({type: "answer"});
-                    } else {
-                        $scope.fillQuestion.push({type: "question", value: result[i]});
-                    }
-                }
-            } else if($scope.currentQuestionType === "match-the-following") {
-
-            }
         }
 
         $scope.navigateQuestion = function(position) {

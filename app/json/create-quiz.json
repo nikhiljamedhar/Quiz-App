@@ -1,28 +1,3 @@
-{
-  "questions": [
-    {
-      "type": "fill-the-blanks",
-      "id": "1",
-      "question": "This is my ___Test Quiz___ second ___Test Quiz___",
-      "marks": 1
-    },
-    {
-      "type": "multiple-options",
-      "question": "My test question ?",
-      "options": [{"id": 1, "value": "option 1"}, {"id": 2, "value": "option 2"}, {"id": 3, "value": "option 3"}, {"id": 4, "value": "option 4"}],
-      "answer": [1],
-      "marks": 1
-    },
-    {
-      "type": "match-the-following",
-      "questions": [
-        {"question": "My test Question", "answer": "My Test Answer 1"},
-        {"question": "My test Question", "answer": "My Test Answer 2"},
-        {"question": "My test Question", "answer": "My Test Answer 3"},
-        {"question": "My test Question", "answer": "My Test Answer 4"},
-        {"question": "My test Question", "answer": "My Test Answer 5"}
-      ],
-      "marks": 1
-    }
-  ]
-}
+
+
+{"questions":[{"type":"fill-the-blanks","question":"__Nehru__ 's birthday is __Children__ 's day.","questionCollection":[{"type":"answer","value":"Nehru"},{"type":"question","value":"'s"},{"type":"question","value":"birthday"},{"type":"question","value":"is"},{"type":"answer","value":"Children"},{"type":"question","value":"'s"},{"type":"question","value":"day."}],"$$hashKey":"object:14"},{"type":"multiple-options","question":"What is your name of the country?","options":[{"value":"India"},{"value":"Pakistan"}],"answer":[0],"$$hashKey":"object:22"},{"type":"match-the-following","questions":[{"question":"Vinoth","answer":"Kumar"},{"question":"1","answer":"1"}, {"question":"Nikhil","answer":"Test Match"}],"$$hashKey":"object:34"}]}

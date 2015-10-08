@@ -18,19 +18,16 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.questionTypes =  [
             {
                 "name": "Fill the blanks",
-                "id": "1",
                 "image": "fill-the-blanks.png",
                 "type": "fill-the-blanks"
             },
             {
                 "name": "Multiple options",
-                "id": "2",
                 "image": "multiple-options.png",
                 "type": "multiple-options"
             },
             {
                 "name": "Match the following",
-                "id": "2",
                 "image": "match-the-following.png",
                 "type": "match-the-following"
             }
@@ -116,8 +113,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return  {
                 "type": "fill-the-blanks",
-                "sentence": "",
-                "question": ""
+                "question": "",
+                "questionCollection": []
             }
 
         };
@@ -146,7 +143,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             if($scope.currentQuestionType === "multiple-options") {
                 if($scope.currentQuestion.options.length < 5) {
                     $scope.currentQuestion.options.push({"value": ""});
-                    console.log("add", $scope.currentQuestion, $scope.currentQuestion.options.length)
                 }
             } else {
                 if($scope.currentQuestion.questions.length < 10) {
@@ -172,6 +168,22 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.addQuestion = function() {
             if($scope.hasError()) { alert("Please fill the red field"); return; }
 
+            if($scope.currentQuestionType === "fill-the-blanks") {
+                // Converting into question collection
+
+                var questArr = $scope.currentQuestion.question.replace(/__.*?__/g, '_______').split(" ");
+                var answerArr = $scope.currentQuestion.question.match(/__.*?__/g).join("").split("_").filter(Boolean);
+
+                for(var i= 0, length = questArr.length; i<length; i++) {
+                    if(questArr[i] === "_______") {
+                        $scope.currentQuestion.questionCollection.push({type: "answer", value: answerArr.shift()});
+                    } else if(questArr[i].trim().length > 0) {
+                        $scope.currentQuestion.questionCollection.push({type: "question", value: questArr[i].trim()});
+                    }
+                }
+            }
+
+
             if($scope.selectedQuestion == null) {
                 $scope.quizJson.questions.push(angular.copy($scope.currentQuestion));
             }
@@ -185,7 +197,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return document.querySelectorAll(".question-box .error").length > 0;
         }
 
-        $scope.addBlank = function(questionNo) {
+        $scope.addBlank = function() {
             var answer = prompt("Enter the answer for blank:", '');
             if(!answer || !answer.trim()) return;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
