@@ -80,12 +80,14 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
             $scope.currentQuestionType = type;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
+            $scope.isValidMultipleOption();
         }
 
         $scope.selectQuestion = function (index) {
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
             $scope.currentQuestionType = $scope.currentQuestion.type;
+            $scope.isValidMultipleOption();
         }
 
         $scope.isCurrentSubject = function (subject) {
@@ -165,22 +167,14 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     $scope.currentQuestion.questions.push({"question": "", "answer": ""});
                 }
             }
+            $scope.isValidMultipleOption();
         }
         $scope.deleteRow = function (index) {
-            if ($scope.currentQuestionType === "multiple-options") {
-                if ($scope.currentQuestion.options.length > 2) {
-                    $scope.currentQuestion.options.splice(index, 1);
-                    var ansPosition = $scope.currentQuestion.answer.indexOf(index);
-                    if (ansPosition != -1) {
-                        $scope.currentQuestion.answer.splice(ansPosition, 1);
-                    }
-                }
-            } else {
-                if ($scope.currentQuestion.questions.length > 2) {
-                    $scope.currentQuestion.questions.splice(index, 1);
-                }
+            var key = $scope.currentQuestionType === "multiple-options" ? "options" : "questions";
+            if ($scope.currentQuestion[key].length > 2) {
+                $scope.currentQuestion[key].splice(index, 1);
             }
-
+            $scope.isValidMultipleOption();
         }
 
         $scope.addQuestion = function () {
@@ -212,13 +206,14 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.selectedQuestion = null;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
             $scope.hasChange = true;
+            $scope.isValidMultipleOption();
         }
 
         $scope.hasError = function () {
             return document.querySelectorAll(".question-box .error").length > 0;
         }
 
-        $scope.addBlank = function (questionNo) {
+        $scope.addBlank = function () {
             var answer = prompt("Enter the answer for blank:", '');
             if (!answer || !answer.trim()) return;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
@@ -244,5 +239,17 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.previousQuestion = function () {
             $scope.selectQuestion(Math.min(0, $scope.selectedIndex - 1));
         };
+
+        $scope.isValidMultipleOption = function() {
+            if ($scope.currentQuestionType === "multiple-options") {
+                $scope.mcHasError = true;
+                for(var i= 0, length = $scope.currentQuestion.options.length; i<length; i++) {
+                    if($scope.currentQuestion.options[i].answer) {
+                        $scope.mcHasError = false;
+                        break;
+                    }
+                }
+            }
+        }
     }
 ]);
