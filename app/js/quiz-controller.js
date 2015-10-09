@@ -210,7 +210,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         }
 
         $scope.hasError = function () {
-            return document.querySelectorAll(".question-box .error").length > 0;
+            return document.querySelectorAll(".question-box .error, .question-box .ng-invalid").length > 0;
         }
 
         $scope.addBlank = function () {
