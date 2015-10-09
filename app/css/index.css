@@ -109,7 +109,7 @@ img {
 }
 
 .invisible {
-    visibility: hidden;
+   display: none !important;
 }
 
 /* two colum style */
