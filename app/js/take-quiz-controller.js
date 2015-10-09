@@ -37,8 +37,9 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                         }
                     }
                 } else if ($scope.quizJson.questions[i].type === "multiple-options") {
-                    $scope.quizJson.questions[i].correctAnswer = angular.copy($scope.quizJson.questions[i].answer);
+
                     for(var j = 0; j<$scope.quizJson.questions[i].options.length; j++) {
+                        $scope.quizJson.questions[i].options[j].correctAnswer = angular.copy($scope.quizJson.questions[i].options[j].answer);
                         $scope.quizJson.questions[i].options[j].answer = false;
                     }
                 } else if($scope.quizJson.questions[i].type === "match-the-following") {
@@ -47,6 +48,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                     for(var j = 0; j<questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
                         questions[j].selected = -1;
+                        questions[j].correctAnswer = random[j];
                     }
                     $scope.quizJson.questions[i].questions = questions;
 

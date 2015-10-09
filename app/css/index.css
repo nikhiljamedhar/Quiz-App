@@ -108,6 +108,10 @@ img {
     border-radius: 500px;
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 /* two colum style */
 .two-column > div.fixed {
     width: 250px;
