@@ -231,6 +231,9 @@ section.q-o-section .question-footer .other-apps:last-child {
     text-align: left;
     vertical-align: top;
 }
-li[data-answered='true'] {
-    background: red !important;
+#take-quiz-mask section.q-o-section ul.question-number-list li {
+    border-width: 5px;
+}
+#take-quiz-mask section.q-o-section ul.question-number-list li[data-answered='true'] {
+    border-color: green;
 }
