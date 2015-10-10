@@ -49,6 +49,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
                         questions[j].selected = -1;
                         questions[j].correctAnswer = random[j];
+                        questions[j].index = j+1;
                     }
                     $scope.quizJson.questions[i].questions = questions;
 
