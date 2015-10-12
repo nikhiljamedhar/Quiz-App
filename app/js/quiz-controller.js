@@ -226,6 +226,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.fillInTheBlankPreview = function () {
+            if(!$scope.currentQuestion) return '';
             return $scope.currentQuestion.question ? $scope.currentQuestion.question.replace(/__.*?__/g, '_______') : "";
         };
         $scope.download = function () {
@@ -237,7 +238,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.previousQuestion = function () {
-            $scope.selectQuestion(Math.min(0, $scope.selectedIndex - 1));
+            $scope.selectQuestion(Math.min(0, $scope.selectedQuestion - 1));
         };
 
         $scope.isValidMultipleOption = function() {
@@ -252,7 +253,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
         }
         $scope.cancelQuestion = function () {
-            $scope.selectQuestion($scope.quizJson.questions.length + 1);
+            $scope.selectQuestion();
         }
     }
 ]);
