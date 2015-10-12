@@ -37,11 +37,16 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                         }
                     }
                 } else if ($scope.quizJson.questions[i].type === "multiple-options") {
-
+                    //var answers = []
                     for(var j = 0; j<$scope.quizJson.questions[i].options.length; j++) {
                         $scope.quizJson.questions[i].options[j].correctAnswer = angular.copy($scope.quizJson.questions[i].options[j].answer);
+                        //if($scope.quizJson.questions[i].options[j].correctAnswer) {
+                        //    answers.push(true);
+                        //}
                         $scope.quizJson.questions[i].options[j].answer = false;
                     }
+                    //$scope.quizJson.questions[i].isCheckbox = answers.length > 1 ? true : false;
+                    //$scope.quizJson.questions[i].radioValue = false;
                 } else if($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
@@ -109,6 +114,10 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
             } else if($scope.currentQuestion.type === "match-the-following") {
                 $scope.currentQuestion.hasAnswered = true;
             }
+        }
+
+        $scope.submitQuiz = function() {
+
         }
     }
 ]);
