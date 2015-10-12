@@ -251,5 +251,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 }
             }
         }
+        $scope.cancelQuestion = function () {
+            $scope.selectQuestion($scope.quizJson.questions.length + 1);
+        }
     }
 ]);

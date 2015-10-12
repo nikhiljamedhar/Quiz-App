@@ -46,6 +46,14 @@
                                                         <label>Marks:</label>
                                                         <input type="number" ng-model="currentQuestion.marks" />
                                                     </div>
+                                                    <div class="other-apps theme-orange-bg right">
+                                                        <a href="" class="a-container" ng-click="cancelQuestion()">
+                                                            <div class="img-container">
+                                                                <img src="image/otherapps.png" alt="Cancel"/>
+                                                            </div>
+                                                            <span>Cancel</span>
+                                                        </a>    
+                                                    </div>
                                                     <div ng-if="currentQuestionType == 'fill-the-blanks'" class="other-apps theme-orange-bg right">
                                                         <a href="" class="a-container" ng-click="addBlank(selectedQuestion)">
                                                             <div class="img-container">
