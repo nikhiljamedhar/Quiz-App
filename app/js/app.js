@@ -1,4 +1,4 @@
-var pencilBoxApp = angular.module('pencilBoxApp',['ngResource', 'ngRoute']);
+var pencilBoxApp = angular.module('pencilBoxApp',['ngDraggable', 'ngResource', 'ngRoute']);
 
 pencilBoxApp.config(['$routeProvider',function($routeProvider){
   "use strict";

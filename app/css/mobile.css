@@ -82,33 +82,7 @@
         font-size: 14px;
     }
     /* overlay styles */
-    .question-footer .other-apps:first-child, .question-header .other-apps {
+    .question-footer .other-apps, .question-header .other-apps {
         margin-bottom: 20px !important;
     }
 }
-
-/*@media (max-width: 840px) {*/
-    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps:last-child {*/
-        /*margin-top: 10px;*/
-    /*}*/
-/*}*/
-/*@media (max-width: 777px) {*/
-    /*.content-list-wrapper > .wrapper ul.content-list .row ul li:last-child {*/
-        /*margin-right: 20px;*/
-    /*}*/
-/*}*/
-/*@media (max-width: 630px) {*/
-    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container.m-no-left {*/
-        /*float: none;*/
-        /*width: auto ! important;*/
-        /*margin: 0px;*/
-    /*}*/
-    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container > div > div:first-child {*/
-        /*float: left;*/
-        /*width: 100%;*/
-        /*margin-top: 10px;*/
-    /*}*/
-    /*.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container .wrapper {*/
-        /*margin: 0px;*/
-    /*}*/
-/*}*/

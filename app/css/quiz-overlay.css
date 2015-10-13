@@ -217,25 +217,30 @@ section.q-o-section .question-footer .other-apps {
     color: gray;
 }
 
-.take-question-area table {
-    width: 100%;
-    border: 1px solid #ccc;
+.take-question-area .table {
+    max-width: 800px;
+    margin: 20px auto;
 }
-.take-question-area table tr {
-    border-bottom: 1px solid #d0d0d0;
+.take-question-area .table > .wrapper > div {
+    width: 50%;
 }
-.take-question-area table tr:nth-child(odd) {
-    background-color: #fff;
+.take-question-area .table > .wrapper .wrapper {
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
 }
-.take-question-area table tr:nth-child(odd) {
-    background-color: #f2f2f2;
+.take-question-area .table > .wrapper:last-child .wrapper {
+    border-bottom: none;
 }
-.take-question-area ul li.option, .take-question-area table tr td {
+.take-question-area .table .dragging {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid darkgray;
+}
+.take-question-area .table .drag-enter {
+    background: rgb(225,225,225);
+}
+
+.take-question-area ul li.option {
     padding: 8px;
-}
-.take-question-area table tr td {
-    text-align: left;
-    vertical-align: top;
 }
 #take-quiz-mask section.q-o-section ul.question-number-list li {
     border-width: 5px;

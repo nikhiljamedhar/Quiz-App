@@ -1,4 +1,4 @@
-pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQuiz', 'Contents', 'Chapters', 'Subjects',
+pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQuiz', 'Contents', 'Chapters', 'Subjects', 'ngDraggable',
     function ($scope, $routeParams, TakeQuiz) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
@@ -55,9 +55,9 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
                     for(var j = 0; j<questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
-                        questions[j].selected = -1;
-                        questions[j].correctAnswer = random[j];
-                        questions[j].index = j+1;
+                        //questions[j].correctAnswer = random[j];
+                        questions[j].index = j;
+                        questions[j].correctAnswer = $scope.quizJson.questions[i].questions[j].answer;
                     }
                     $scope.quizJson.questions[i].questions = questions;
 
@@ -118,8 +118,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                     }
                 }
                 $scope.currentQuestion.hasAnswered = found;
-            } else if($scope.currentQuestion.type === "match-the-following") {
-                $scope.currentQuestion.hasAnswered = true;
             }
         }
 
@@ -134,6 +132,15 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
 
         $scope.submitQuiz = function() {
 
+        }
+
+        $scope.onDropComplete = function(index, answer) {
+            var fromAnswer = $scope.currentQuestion.questions[answer.index].answer;
+            var toAnswer = $scope.currentQuestion.questions[index].answer;
+
+            $scope.currentQuestion.questions[answer.index].answer = toAnswer;
+            $scope.currentQuestion.questions[index].answer = fromAnswer;
+            $scope.currentQuestion.hasAnswered = true;
         }
     }
 ]);
