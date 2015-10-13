@@ -252,8 +252,16 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
         };
         $scope.cancelQuestion = function () {
+            if($scope.isExistingQuestion()) {
+                $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
+            }
+
             $scope.selectQuestion();
         };
+
+        $scope.isExistingQuestion = function(){
+            return $scope.selectedQuestion;
+        }
     }
 
 ]);
