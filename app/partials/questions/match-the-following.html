@@ -2,23 +2,6 @@
     <div class="list-container">
         <h2>Match the following</h2>
 
-        <!--<table>-->
-            <!--<tr>-->
-                <!--<td class="index border">Index</td>-->
-                <!--<td class="question border">Questions</td>-->
-                <!--<td class="option-answer border">Answers</td>-->
-                <!--<td class="answer border">Select your answer</td>-->
-            <!--</tr>-->
-            <!--<tr ng-repeat="row in currentQuestion.questions">-->
-                <!--<td class="index border">{{$index + 1}}</td>-->
-                <!--<td class="question border">{{row.question}}</td>-->
-                <!--<td class="answer border">-->
-                    <!--<select name="answer" ng-model="row.selected" ng-options="question.index - 1 as question.index for question in currentQuestion.questions" ng-change="hasAnswered()"></select>-->
-                <!--</td>-->
-                <!--<td class="option-answer border">{{row.answer}}</td>-->
-            <!--</tr>-->
-        <!--</table>-->
-
         <div class="table border" dnd-list="currentQuestion.questions">
             <div class="wrapper clear bold-text">
                 <div class="left">
@@ -36,13 +19,6 @@
                     <div class="wrapper" ng-drag="true" ng-drag-data="row" draggable="false">{{row.answer}}</div>
                 </div>
             </div>
-
-            <li ng-repeat="obj in draggableObjects" ng-drop="true" ng-drop-success="onDropComplete($index, $data, $event)" class="ng-scope">
-                <div ng-drag="true" ng-drag-data="obj" ng-class="obj.name" class="ng-binding one" draggable="false">
-                    one
-                </div>
-            </li>
-
         </div>
 
     </div>
