@@ -42,7 +42,7 @@ section.q-o-section ul li.question-type .img-container {
 
 section.q-o-section ul.question-number-list {
     padding: 15px 15px 0px 15px;
-    /*min-height: 197px;*/
+    min-height: 62px;
 }
 
 #take-quiz-mask section.q-o-section ul.question-number-list li {
@@ -108,6 +108,7 @@ section.q-o-section .question-footer {
 
 section.q-o-section .question-footer .other-apps {
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 /* match the following */
@@ -230,9 +231,7 @@ section.q-o-section .question-footer .other-apps {
     height: 45px;
     overflow: hidden;
 }
-.take-question-area .table > .wrapper:first-child .wrapper {
-    height: auto;
-}
+
 .take-question-area .table > .wrapper:last-child .wrapper {
     border-bottom: none;
 }

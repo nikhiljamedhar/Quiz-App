@@ -46,7 +46,9 @@
         text-align: right;
         font-size: 15px;
     }
-
+    section.q-o-section ul.question-types {
+        height: auto;
+    }
 }
 
 @media (max-width: 800px) {
@@ -83,6 +85,14 @@
     }
     /* overlay styles */
     .question-footer .other-apps, .question-header .other-apps {
+        margin-bottom: 20px !important;
+    }
+    /* match the following */
+    .match-the-following p.title {
+        float: none;
+    }
+    .match-the-following > div > .other-apps {
+        margin-top: 20px !important;
         margin-bottom: 20px !important;
     }
 }
