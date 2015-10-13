@@ -227,6 +227,11 @@ section.q-o-section .question-footer .other-apps {
 .take-question-area .table > .wrapper .wrapper {
     padding: 10px;
     border-bottom: 1px solid darkgray;
+    height: 45px;
+    overflow: hidden;
+}
+.take-question-area .table > .wrapper:first-child .wrapper {
+    height: auto;
 }
 .take-question-area .table > .wrapper:last-child .wrapper {
     border-bottom: none;
