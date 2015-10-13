@@ -1,6 +1,5 @@
-pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', 'Contents', 'Chapters', 'Subjects',
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz',
     function ($scope, $routeParams, CreateQuiz) {
-
         $scope.hasChange = false;
         $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
@@ -251,9 +250,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     }
                 }
             }
-        }
+        };
         $scope.cancelQuestion = function () {
             $scope.selectQuestion();
-        }
+        };
     }
+
 ]);

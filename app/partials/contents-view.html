@@ -153,6 +153,7 @@
                                                 <div class="other-apps theme-orange-bg right">
                                                     <form name="uploadForm" action="/upload.php" enctype="multipart/form-data" method="post" class="upload-container">
                                                         <input type="hidden" name="grade" value="{{current_grade}}"/>
+                                                        <input type="hidden" name="return_url" value="{{currentPath()}}"/>
                                                         <input type="hidden" name="subject" value="{{current_subject}}"/>
                                                         <input type="hidden" name="chapter" value="{{current_chapter}}"/>
                                                         <input class="upload-input" type="file" name="file" onchange="document.uploadForm.submit()" />
