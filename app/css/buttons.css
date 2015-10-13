@@ -1,0 +1,15 @@
+.button {
+    padding: 5px;
+    margin-left: 10px;
+    max-width: 152px;
+    line-height: 20px;
+    background-color: #f7941e;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    font-weight: 100;
+}
+.button > .icon {
+    width: 30px;
+    vertical-align: middle;
+}

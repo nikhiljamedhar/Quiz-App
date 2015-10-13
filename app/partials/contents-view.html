@@ -151,12 +151,16 @@
                                         <div class="button-container left m-no-left clear">
                                             <div class="wrapper clear">
                                                 <div class="other-apps theme-orange-bg right">
-                                                    <a href="" class="a-container">
-                                                        <div class="img-container">
-                                                            <img src="image/upload.png" alt="other apps icon"/>
-                                                        </div>
-                                                        <span>Upload Quiz</span>
-                                                    </a>
+                                                    <form name="uploadForm" action="/upload.php" enctype="multipart/form-data" method="post" class="upload-container">
+                                                        <input type="hidden" name="grade" value="{{current_grade}}"/>
+                                                        <input type="hidden" name="subject" value="{{current_subject}}"/>
+                                                        <input type="hidden" name="chapter" value="{{current_chapter}}"/>
+                                                        <input class="upload-input" type="file" name="file" onchange="document.uploadForm.submit()" />
+                                                        <button class="button upload-button">
+                                                            <img class="icon" src="image/upload.png" alt="other apps icon"/>
+                                                            Upload Quiz
+                                                        </button>
+                                                    </form>
                                                 </div>
                                                 <div class="other-apps theme-orange-bg right">
                                                     <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/create-quiz/" class="a-container">

@@ -23,7 +23,7 @@ header.main-header .other-apps {
     display: inline-block;
     vertical-align: middle;
 }
-.other-apps > a .img-container {
+.other-apps > .a-container .img-container {
     width: 30px;
 }
 /* header ends */
