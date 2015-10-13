@@ -37,16 +37,19 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                         }
                     }
                 } else if ($scope.quizJson.questions[i].type === "multiple-options") {
-                    //var answers = []
+                    var answers = []
                     for(var j = 0; j<$scope.quizJson.questions[i].options.length; j++) {
                         $scope.quizJson.questions[i].options[j].correctAnswer = angular.copy($scope.quizJson.questions[i].options[j].answer);
-                        //if($scope.quizJson.questions[i].options[j].correctAnswer) {
-                        //    answers.push(true);
-                        //}
-                        $scope.quizJson.questions[i].options[j].answer = false;
+                        if($scope.quizJson.questions[i].options[j].correctAnswer) {
+                            answers.push(true);
+                        }
+                        $scope.quizJson.questions[i].options[j].answer = false
                     }
-                    //$scope.quizJson.questions[i].isCheckbox = answers.length > 1 ? true : false;
-                    //$scope.quizJson.questions[i].radioValue = false;
+                    $scope.quizJson.questions[i].isCheckbox = answers.length > 1 ? true : false;
+
+                    if(!$scope.quizJson.questions[i].isCheckbox) {
+                        $scope.quizJson.questions[i].selectedAnswer = -1;
+                    }
                 } else if($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
@@ -93,7 +96,11 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
             return shuffle(numbers);
         }
 
-        $scope.hasAnswered = function() {
+        $scope.hasAnswered = function(type, index) {
+            if(type) {
+                $scope.setRadioValues(index);
+            }
+
             if($scope.currentQuestion.type === "fill-the-blanks") {
                 var collection = $scope.currentQuestion.questionCollection, found = false;
                 for(var j = 0; j<collection.length; j++) {
@@ -113,6 +120,15 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQu
                 $scope.currentQuestion.hasAnswered = found;
             } else if($scope.currentQuestion.type === "match-the-following") {
                 $scope.currentQuestion.hasAnswered = true;
+            }
+        }
+
+        $scope.setRadioValues = function(index) {
+            for(var j = 0; j<$scope.currentQuestion.options.length; j++) {
+                $scope.currentQuestion.options[j].answer = false;
+                if(index == j) {
+                    $scope.currentQuestion.options[j].answer = true;
+                }
             }
         }
 

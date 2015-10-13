@@ -23,6 +23,9 @@ header.q-o-header .a-container {
     width: 160px;
 }
 
+section.q-o-section ul.question-types {
+    height: 900px;
+}
 section.q-o-section ul li.question-type > div {
     display: inline-block;
     vertical-align: middle;
@@ -39,13 +42,16 @@ section.q-o-section ul li.question-type .img-container {
 
 section.q-o-section ul.question-number-list {
     padding: 15px 15px 0px 15px;
-    min-height: 197px;
+    /*min-height: 197px;*/
 }
 
+#take-quiz-mask section.q-o-section ul.question-number-list li {
+    background: #E1E1E1;
+    color: #000;
+}
 section.q-o-section ul.question-number-list li {
     display: inline-block;
     padding: 10px 17px;
-    /*background: #6D6E71;*/
     margin: 0px 0px 15px 15px;
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -69,7 +75,7 @@ section.q-o-section .wrapper-inner .question-header {
 
 section.q-o-section .wrapper-inner .question-section .question-box div.question-area {
     background: rgb(255, 255, 255);
-    min-height: 377px;
+    min-height: 230px;
     padding: 10px;
 }
 
@@ -235,5 +241,5 @@ section.q-o-section .question-footer .other-apps {
     border-width: 5px;
 }
 #take-quiz-mask section.q-o-section ul.question-number-list li[data-answered='true'] {
-    border-color: green;
+    border-color: #6D6E71;
 }

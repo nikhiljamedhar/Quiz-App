@@ -46,6 +46,10 @@
         {
           "value": "Pakistan",
           "answer": false
+        },
+        {
+          "value": "America",
+          "answer": false
         }
       ],
       "$$hashKey": "object:22"

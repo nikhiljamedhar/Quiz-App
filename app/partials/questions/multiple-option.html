@@ -5,8 +5,8 @@
         <ul class="options">
             <li class="option border theme-gray" ng-repeat="option in currentQuestion.options">
                 <span class="input">{{option.value}}</span>
-                <input type="checkbox" class="checkbox" data-index="{{$index}}" ng-model="option.answer" ng-change="hasAnswered()"/>
-                <!--<input type="radio" name="radio" class="checkbox" data-index="{{$index}}" ng-model="option.answer" value="option.answer" ng-change="hasAnswered()" ng-if="!isCheckbox"/>-->
+                <input type="checkbox" class="checkbox" data-index="{{$index}}" ng-model="option.answer" ng-change="hasAnswered()" ng-if="currentQuestion.isCheckbox"/>
+                <input type="radio" name="radio" class="checkbox" data-index="{{$index}}" ng-model="currentQuestion.selectedAnswer" ng-value="$index" ng-change="hasAnswered('radio', $index)" ng-if="!currentQuestion.isCheckbox"/>
             </li>
         </ul>
     </div>

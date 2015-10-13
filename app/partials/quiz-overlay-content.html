@@ -19,7 +19,7 @@
                         <div class="wrapper two-column clear">
                             <div class="question-type-panel fixed left m-no-left">
 
-                                <ul class="question-types">
+                                <ul class="question-types border-right">
                                     <li ng-class="currentQuestionType === question.type ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in questionTypes" ng-click="selectQuestionType(question.type)">
                                         <div class="img-container">
                                             <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
@@ -29,8 +29,8 @@
                                 </ul>
 
                             </div>
-                            <div class="question-panel flexible left  m-no-left">
-                                <div class="wrapper border-left">
+                            <div class="question-panel flexible left m-no-left">
+                                <div class="wrapper">
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list  color-set t-center">
