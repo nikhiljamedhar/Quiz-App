@@ -2,25 +2,24 @@
     <div class="overlay">
         <div class="container">
             <div class="overlay-container">
-                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container" id="close-overlay" ng-click="closeOverlay($event)">X</a>
                 <!-- put your content here -->
                 <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
-                    <header class="q-o-header two-column resize-mobile border-bottom clear">
-                        <div class="a-container header-logo fixed left">
-                            <img src="image/logo.png" alt="logo"/>
-                        </div>
-                        <div class="flexible t-center right">
-                            <div class="wrapper">
-                                <p class="title">Create your Quiz here</p>
-                            </div>
-                        </div>
+                    <header class="q-o-header">
+                        <p><img class="logo" src="image/logo.png" alt="logo"/></p>
+
+                        <p class="title"><input type="text" ng-model="quizJson.name" placeholder="Name of Quiz"/></p>
+
+                        <p><a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/"
+                              class="button close" id="close-overlay" ng-click="closeOverlay($event)">×</a></p>
                     </header>
                     <section class="q-o-section">
                         <div class="wrapper two-column clear">
                             <div class="question-type-panel fixed left m-no-left">
 
                                 <ul class="question-types border-right">
-                                    <li ng-class="currentQuestionType === question.type ? 'question-type border-bottom highlight' : 'question-type border-bottom'" data-type="{{question.type}}" ng-repeat="question in questionTypes" ng-click="selectQuestionType(question.type)">
+                                    <li ng-class="currentQuestionType === question.type ? 'question-type border-bottom highlight' : 'question-type border-bottom'"
+                                        data-type="{{question.type}}" ng-repeat="question in questionTypes"
+                                        ng-click="selectQuestionType(question.type)">
                                         <div class="img-container">
                                             <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
                                         </div>
@@ -34,7 +33,10 @@
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list  color-set t-center">
-                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" data-type="{{question.type}}" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{$index + 1}}</li>
+                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'"
+                                                data-type="{{question.type}}" ng-repeat="question in quizJson.questions"
+                                                ng-click="selectQuestion($index)">{{$index + 1}}
+                                            </li>
                                         </ul>
                                     </div>
 
@@ -44,10 +46,12 @@
                                                 <header class="question-header">
                                                     <div class="marks">
                                                         <label>Marks:</label>
-                                                        <input type="number" ng-model="currentQuestion.marks" />
+                                                        <input type="number" ng-model="currentQuestion.marks"/>
                                                     </div>
-                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'" class="other-apps theme-orange-bg right">
-                                                        <a href="" class="a-container" ng-click="addBlank(selectedQuestion)">
+                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'"
+                                                         class="other-apps theme-orange-bg right">
+                                                        <a href="" class="a-container"
+                                                           ng-click="addBlank(selectedQuestion)">
                                                             <div class="img-container">
                                                                 <img src="image/otherapps.png" alt="Add Blank"/>
                                                             </div>
@@ -58,15 +62,22 @@
 
                                                 <section class="question-section">
                                                     <div class="question-box border">
-                                                        <div ng-include src="'partials/question-templates/fill-the-blanks.html'" ng-if="currentQuestionType == 'fill-the-blanks'"></div>
-                                                        <div ng-include src="'partials/question-templates/multiple-option.html'" ng-if="currentQuestionType == 'multiple-options'"></div>
-                                                        <div ng-include src="'partials/question-templates/match-the-following.html'" ng-if="currentQuestionType == 'match-the-following'"></div>
+                                                        <div ng-include
+                                                             src="'partials/question-templates/fill-the-blanks.html'"
+                                                             ng-if="currentQuestionType == 'fill-the-blanks'"></div>
+                                                        <div ng-include
+                                                             src="'partials/question-templates/multiple-option.html'"
+                                                             ng-if="currentQuestionType == 'multiple-options'"></div>
+                                                        <div ng-include
+                                                             src="'partials/question-templates/match-the-following.html'"
+                                                             ng-if="currentQuestionType == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="other-apps theme-orange-bg save-question-button left" ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
+                                                <div class="other-apps theme-orange-bg save-question-button left"
+                                                     ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/prev.png" alt="Previous Question"/>
@@ -74,7 +85,8 @@
                                                         <span>Previous Question</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg save-question-button right" ng-click="addQuestion()">
+                                                <div class="other-apps theme-orange-bg save-question-button right"
+                                                     ng-click="addQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Next Question"/>
@@ -91,11 +103,20 @@
                                                     </a>
                                                 </div>
                                                 <div class="other-apps theme-orange-bg right download-quiz-button">
-                                                    <a href="" class="a-container" download="quiz.json" ng-click="download()" id="download-json">
+                                                    <a href="" class="a-container" download="quiz.json"
+                                                       ng-click="download()" id="download-json">
                                                         <div class="img-container">
                                                             <img src="image/download.png" alt="Download Quiz"/>
                                                         </div>
                                                         <span>Download Quiz</span>
+                                                    </a>
+                                                </div>
+                                                <div class="other-apps theme-orange-bg right download-quiz-button">
+                                                    <a href="" class="a-container" ng-click="saveQuiz()">
+                                                        <div class="img-container">
+                                                            <img src="image/download.png" alt="Save Quiz"/>
+                                                        </div>
+                                                        <span>Save Quiz</span>
                                                     </a>
                                                 </div>
                                             </footer>

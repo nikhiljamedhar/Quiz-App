@@ -8,21 +8,13 @@
 header.q-o-header {
     padding: 10px;
     background: #E1E1E1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
-header.q-o-header.two-column > div:last-child > .wrapper {
-    margin-left: 0px;
-}
-
-header.q-o-header.two-column > div:last-child > .wrapper .title {
-    font-size: 18px;
-    margin: 12px 0px;
-}
-
-header.q-o-header .a-container {
+header.q-o-header .logo {
     width: 160px;
 }
-
 section.q-o-section ul.question-types {
     height: 900px;
 }
