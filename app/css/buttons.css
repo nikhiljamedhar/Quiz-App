@@ -1,13 +1,11 @@
 .button {
     padding: 5px;
-    margin-left: 10px;
-    max-width: 152px;
-    line-height: 20px;
-    background-color: #f7941e;
+    line-height: 31px;
     color: #fff;
     border: none;
     font-size: 1em;
     font-weight: 100;
+    background: none;
 }
 .button > .icon {
     width: 30px;
