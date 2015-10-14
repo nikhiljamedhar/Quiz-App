@@ -39,7 +39,7 @@
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="other-apps theme-orange-bg save-question-button right" ng-click="submitQuiz()">
+                                                <div class="app-button other-apps save-question-button right" ng-click="submitQuiz()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Save Question"/>
@@ -47,7 +47,7 @@
                                                         <span>Submit</span>
                                                     </a>
                                                 </div>
-                                                <div ng-class="selectedQuestion == quizJson.questions.length -1 ? 'disable other-apps theme-orange-bg save-question-button right' : 'other-apps theme-orange-bg save-question-button right'" ng-click="navigateQuestion(1)">
+                                                <div ng-class="selectedQuestion == quizJson.questions.length -1 ? 'app-button disable other-apps save-question-button right' : 'app-button other-apps save-question-button right'" ng-click="navigateQuestion(1)">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Save Question"/>
@@ -55,7 +55,7 @@
                                                         <span>Next</span>
                                                     </a>
                                                 </div>
-                                                <div ng-class="selectedQuestion == 0 ? 'other-apps theme-orange-bg right download-quiz-button disable' : 'other-apps theme-orange-bg right download-quiz-button'">
+                                                <div ng-class="selectedQuestion == 0 ? 'app-button other-apps right download-quiz-button disable' : 'app-button other-apps right download-quiz-button'">
                                                     <a href="" class="a-container" download="quiz.json" ng-click="navigateQuestion(-1)" id="download-json">
                                                         <div class="img-container">
                                                             <img src="image/previous.png" alt="Download Quiz"/>

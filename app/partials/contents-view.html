@@ -1,7 +1,7 @@
 <div class="chapter-page content-page">
     <header class="main-header resize-mobile clear">
         <a href="#/grades"><img src="image/logo.png" alt="logo" class="header-logo left"/></a>
-        <div class="other-apps other-apps-bg right">
+        <div class="app-button other-apps other-apps-bg right">
             <a href="#/otherApps" class="a-container">
                 <div class="img-container">
                     <img src="image/otherapps.png" alt="other apps icon"/>
@@ -72,15 +72,15 @@
 
                             <li class="row app-panel only-title">
 
-                                <div class="row-header border">
+                                <div class="row-header app-theme-header border">
                                     <div class="wrapper clear">
                                         <div class="header-title left">
                                             <div class="other-apps">
                                                 <a href="" class="a-container">
                                                     <div class="img-container">
-                                                        <img src="image/otherapps.png" alt="other apps icon"/>
+                                                        <img src="images/app.png" alt="other apps icon"/>
                                                     </div>
-                                                    <span>Applications</span>
+                                                    <span class="dark-text">Applications</span>
                                                 </a>
                                             </div>
                                         </div>
@@ -104,15 +104,15 @@
 
                             <li class="row video-panel only-title">
 
-                                <div class="row-header border">
+                                <div class="row-header app-theme-header border">
                                     <div class="wrapper clear">
                                         <div class="header-title left">
                                             <div class="other-apps">
                                                 <a href="" class="a-container">
                                                     <div class="img-container">
-                                                        <img src="image/videos.png" alt="other apps icon"/>
+                                                        <img src="images/video.png" alt="other apps icon"/>
                                                     </div>
-                                                    <span>Videos</span>
+                                                    <span class="dark-text">Videos</span>
                                                 </a>
                                             </div>
                                         </div>
@@ -136,21 +136,21 @@
 
                             <li class="row quiz-panel">
 
-                                <div class="row-header border">
+                                <div class="row-header app-theme-header border">
                                     <div class="wrapper clear">
                                         <div class="header-title left m-no-left">
                                             <div class="other-apps">
                                                 <a href="" class="a-container">
                                                     <div class="img-container">
-                                                        <img src="image/quiz.png" alt="other apps icon"/>
+                                                        <img src="images/quiz.png" alt="other apps icon"/>
                                                     </div>
-                                                    <span>Quiz</span>
+                                                    <span class="dark-text">Quiz</span>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="button-container left m-no-left clear">
                                             <div class="wrapper clear">
-                                                <div class="other-apps theme-orange-bg right">
+                                                <div class="app-button other-apps right">
                                                     <form name="uploadForm" action="/upload.php" enctype="multipart/form-data" method="post" class="upload-container">
                                                         <input type="hidden" name="grade" value="{{current_grade}}"/>
                                                         <input type="hidden" name="return_url" value="{{currentPath()}}"/>
@@ -163,7 +163,7 @@
                                                         </button>
                                                     </form>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg right">
+                                                <div class="app-button other-apps right">
                                                     <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/create-quiz/" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/create.png" alt="other apps icon"/>

@@ -1,0 +1,24 @@
+/* button styles */
+.app-button {
+    width: 100%;
+    max-width: 165px;
+    box-shadow: 2px 2px 2px #2F2E2E;
+    background: #777777;
+}
+.app-button > a {
+    padding: 5px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+}
+.app-button > a > *, .other-apps > a > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.app-button > a .img-container, .other-apps > a .img-container {
+    width: 30px;
+}
+.app-button:active {
+    box-shadow: none;
+    padding-top: 2px;
+}
+/* ended */

@@ -48,10 +48,9 @@
                                                         <label>Marks:</label>
                                                         <input type="number" ng-model="currentQuestion.marks"/>
                                                     </div>
-                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'"
-                                                         class="other-apps theme-orange-bg right">
-                                                        <a href="" class="a-container"
-                                                           ng-click="addBlank(selectedQuestion)">
+
+                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'" class="app-button other-apps right">
+                                                        <a href="" class="a-container" ng-click="addBlank(selectedQuestion)">
                                                             <div class="img-container">
                                                                 <img src="image/otherapps.png" alt="Add Blank"/>
                                                             </div>
@@ -76,8 +75,7 @@
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="other-apps theme-orange-bg save-question-button left"
-                                                     ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
+                                                <div class="app-button other-apps save-question-button left" ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/prev.png" alt="Previous Question"/>
@@ -85,8 +83,7 @@
                                                         <span>Previous Question</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg save-question-button right"
-                                                     ng-click="addQuestion()">
+                                                <div class="app-button other-apps save-question-button right" ng-click="addQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Next Question"/>
@@ -94,7 +91,7 @@
                                                         <span>Next Question</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg right">
+                                                <div class="app-button other-apps right">
                                                     <a href="" class="a-container" ng-click="cancelQuestion()">
                                                         <div class="img-container">
                                                             <img src="image/otherapps.png" alt="Cancel"/>
@@ -102,9 +99,8 @@
                                                         <span>Delete</span>
                                                     </a>
                                                 </div>
-                                                <div class="other-apps theme-orange-bg right download-quiz-button">
-                                                    <a href="" class="a-container" download="quiz.json"
-                                                       ng-click="download()" id="download-json">
+                                                <div class="app-button other-apps right download-quiz-button">
+                                                    <a href="" class="a-container" download="quiz.json" ng-click="download()" id="download-json">
                                                         <div class="img-container">
                                                             <img src="image/download.png" alt="Download Quiz"/>
                                                         </div>

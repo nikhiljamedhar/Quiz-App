@@ -38,6 +38,7 @@
     margin: 20px auto;
 }
 
+
 .grades-container ul li {
     display: inline-block;
     vertical-align: middle;
@@ -47,25 +48,29 @@
     font-size: 101px;
     line-height: 180px;
     margin: 10px;
+    box-shadow: 1px 1px 5px #222;
+    background-color: #6F6F6F;
 }
+
 .grades-container ul li a {
     color: rgb(255, 255, 255);
     display: block;
 }
-.grades-container ul li.grade-6 {
-    background-color: #16a085;
-}
-.grades-container ul li.grade-7 {
-    background-color: #3498db;
-}
-.grades-container ul li.grade-8 {
-    background-color: #e74c3c;
-}
-.grades-container ul li.grade-9 {
-    background-color: #34495e;
-}
-.grades-container ul li.grade-10 {
-    background-color: #7f8c8d;
-}
+
+/*.grades-container ul li.grade-6 {*/
+    /*background-color: #16a085;*/
+/*}*/
+/*.grades-container ul li.grade-7 {*/
+    /*background-color: #3498db;*/
+/*}*/
+/*.grades-container ul li.grade-8 {*/
+    /*background-color: #e74c3c;*/
+/*}*/
+/*.grades-container ul li.grade-9 {*/
+    /*background-color: #34495e;*/
+/*}*/
+/*.grades-container ul li.grade-10 {*/
+    /*background-color: #7f8c8d;*/
+/*}*/
 
 /* ends here */

@@ -24,6 +24,8 @@
 }
 .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .wrapper > div.button-container .wrapper {
     margin-left: 90px;
+    margin-top: 3px;
+    margin-right: 5px;
 }
 
 .content-list-wrapper > .wrapper ul.content-list .row .other-apps a {
@@ -35,18 +37,7 @@
 }
 
 .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .row-header .other-apps {
-    max-width: 152px;
     margin-left: 10px;
-}
-
-.content-list-wrapper > .wrapper ul.content-list .row.app-panel .row-header {
-    background: #3498db;
-}
-.content-list-wrapper > .wrapper ul.content-list .row.video-panel .row-header {
-    background: #e74c3c;
-}
-.content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .row-header {
-    background: #34495e;
 }
 
 .content-list-wrapper > .wrapper ul.content-list .row ul {

@@ -6,7 +6,6 @@ html, body {
     padding: 0;
     font-weight: 100;
     -webkit-font-smoothing: antialiased;
-    background: #ecf0f1;
 }
 
 textarea, input[type='text'] {
@@ -97,9 +96,22 @@ img {
 .theme-gray {
     background-color: #E1E1E1;
 }
-
+.app-theme-header {
+    background: #E8E8E8;
+    color: #000000 !important;
+}
+.app-theme-highlight {
+    background: #FF9735 !important;
+    color: rgb(255, 255, 255) !important;
+}
+.dark-text {
+    color: #000000 !important;
+}
+.light-text {
+    color: rgb(255, 255, 255) !important;
+}
 .theme-orange-bg, .theme-orange-bg a, .theme-orange-bg-hover:hover, .subject-list > li:hover, .highlight {
-    background-color: #f7941e !important;
+    background-color: #FF9735 !important;
     color: rgb(255, 255, 255) !important;
 }
 .other-apps-bg {
@@ -127,3 +139,17 @@ img {
 .two-column > div.flexible > .wrapper {
     margin-left: 250px;
 }
+
+.main-header {
+    background: #E8E8E8;
+    box-shadow: 1px 1px 2px darkgray;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+}
+.main-section {
+    padding-top: 68px;
+}
+

@@ -1,7 +1,6 @@
 /* header styles */
 .subject-page .main-header {
     padding: 9px;
-    background: #BDC3C7;
 }
 .subject-page .header-logo {
     max-width: 160px;
@@ -9,22 +8,8 @@
 }
 header.main-header .other-apps {
     margin-left: 10px;
-}
-.other-apps {
-    width: 100%;
-    max-width: 200px;
-}
-.other-apps > a {
-    padding: 10px;
-    line-height: 20px;
-    color: rgb(255, 255, 255);
-}
-.other-apps > a > * {
-    display: inline-block;
-    vertical-align: middle;
-}
-.other-apps > .a-container .img-container {
-    width: 30px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 /* header ends */
 
