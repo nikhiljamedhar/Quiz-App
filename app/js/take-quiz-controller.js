@@ -1,15 +1,17 @@
-pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'TakeQuiz', 'Contents', 'Chapters', 'Subjects', 'ngDraggable',
-    function ($scope, $routeParams, TakeQuiz) {
+pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', 'ngDraggable',
+    function ($scope, $routeParams, Contents) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
 
-        TakeQuiz.query(function(response) {
-            $scope.quizJson = { questions: response.questions };
+        $scope.contents = Contents.query({
+            chapterId: $routeParams.chapterId,
+            subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
+        }, function() {
+            $scope.quizJson = $scope.contents[$routeParams.id];
             $scope.shuffleQuestions();
             $scope.preprocessJson();
             $scope.initQuiz();
-            console.log($scope.quizJson)
         });
 
         $scope.shuffleQuestions = function() {
