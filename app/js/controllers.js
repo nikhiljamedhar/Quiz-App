@@ -64,13 +64,6 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                         "<video controls autoplay src='" + videoName + "' class='video'></video>" +
                         "</div>";
                 overlay.setContent(innerHTML);
-            } else if (type === "quiz") {
-                //var path = window.location.hash;
-                innerHTML = '<div id="overlayContent"></div>';
-                overlay.setContent(innerHTML);
-
-                document.getElementById("overlayContent").appendChild(document.getElementById("test"));
-
             }
         };
         $scope.isCurrentSubject = function (subject) {

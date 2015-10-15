@@ -90,8 +90,8 @@
 
                                 <ul class="content-items border t-center">
 
-                                    <li ng-if="isApplication(content.type)" ng-repeat="content in contents" class="item border" ng-click="invokeCommand(content.exec)">
-                                        <a href="" class="a-container wrapper theme-orange-bg-hover">
+                                    <li ng-if="isApplication(content.type)" ng-repeat="content in contents" class="item" ng-click="invokeCommand(content.exec)">
+                                        <a href="" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/{{current_subject}}/{{content.id}}.png" alt="app-icon" class="subject-img">
                                             </div>
@@ -122,8 +122,8 @@
 
                                 <ul class="content-items border t-center">
 
-                                    <li ng-if="isVideo(content.type)" ng-repeat="content in contents" class="item border" ng-click="showOverlay(content.type, content)">
-                                        <a href="" class="a-container wrapper theme-orange-bg-hover">
+                                    <li ng-if="isVideo(content.type)" ng-repeat="content in contents" class="item" ng-click="showOverlay(content.type, content)">
+                                        <a href="" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/video.png" alt="biology" class="subject-img">
                                             </div>
@@ -178,10 +178,10 @@
 
                                 <ul class="content-items border t-center">
 
-                                    <li ng-if="isQuiz(content.type)" ng-repeat="content in contents" class="item border">
-                                        <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/take-quiz/" class="a-container wrapper theme-orange-bg-hover">
+                                    <li ng-if="isQuiz(content.type)" ng-repeat="content in contents" class="item">
+                                        <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/take-quiz/" class="a-container wrapper">
                                             <div class="img-container">
-                                                <img src="images/subjects/{{content.subject}}.png" alt="Quiz image" class="subject-img">
+                                                <img src="images/quiz.png" alt="Quiz image" class="subject-img">
                                             </div>
                                             <p class="subject-name t-center border-top">{{content.name}}</p>
                                         </a>

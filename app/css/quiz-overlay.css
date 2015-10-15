@@ -12,6 +12,9 @@ header.q-o-header {
     justify-content: space-between;
     align-items: center;
 }
+header.q-o-header p {
+    margin: 0px;
+}
 header.q-o-header .logo {
     width: 160px;
 }

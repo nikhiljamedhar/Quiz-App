@@ -1,1 +1,39 @@
-[{"name":"Capacitor Lab","id":"capacitor-lab","exec":"java -jar \/opt\/phet\/physics\/capacitor-lab_en.jar","type":"apps","keywords":["",""]},{"name":"Circuit Construction Kit (DC Only)","id":"circuit-construction- kit","exec":"java -jar \/opt\/phet\/physics\/circuit-construction-kit-dc_en.jar","type":"apps","keywords":["",""]},{"name":"Circuit Construction Kit (AC+DC)","id":"circuit-construction- kit","exec":"java -jar \/opt\/phet\/physics\/circuit-construction-kit-ac_en.jar","type":"apps","keywords":["",""]},{"name":"Ohm's Law","id":"ohms-law","type":"videos","keywords":["",""]},{"name":"Battery-Resistor Circuit","id":"battery-resistor","type":"videos","keywords":["",""]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"name":"My Test Quiz","id":"tester","type":"quiz","keywords":["1","2"]},{"type":"quiz","questions":[]},{"type":"quiz","questions":[]},{"type":"quiz","questions":[]},{"questions":[],"type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"name":"Sattar","type":"quiz"},{"questions":[],"type":"quiz"},{"questions":[],"name":"sattar","type":"quiz"},{"questions":[],"type":"quiz"},{"questions":[],"type":"quiz"},{"questions":[],"name":"sattar","type":"quiz"}]
+[{
+  "name": "Capacitor Lab",
+  "id": "capacitor-lab",
+  "exec": "java -jar \/opt\/phet\/physics\/capacitor-lab_en.jar",
+  "type": "apps",
+  "keywords": ["", ""]
+}, {
+  "name": "Circuit Construction Kit (DC Only)",
+  "id": "circuit-construction- kit",
+  "exec": "java -jar \/opt\/phet\/physics\/circuit-construction-kit-dc_en.jar",
+  "type": "apps",
+  "keywords": ["", ""]
+}, {
+  "name": "Circuit Construction Kit (AC+DC)",
+  "id": "circuit-construction- kit",
+  "exec": "java -jar \/opt\/phet\/physics\/circuit-construction-kit-ac_en.jar",
+  "type": "apps",
+  "keywords": ["", ""]
+}, {
+  "name": "Ohm's Law",
+  "id": "ohms-law",
+  "type": "videos",
+  "keywords": ["", ""]
+}, {
+  "name": "Battery-Resistor Circuit",
+  "id": "battery-resistor",
+  "type": "videos",
+  "keywords": ["", ""]
+}, {
+  "name": "My Test Quiz",
+  "id": "tester",
+  "type": "quiz",
+  "keywords": ["1", "2"]
+}, {
+  "name": "Circuit Quiz",
+  "id": "tester",
+  "type": "quiz",
+  "keywords": ["1", "2"]
+}]

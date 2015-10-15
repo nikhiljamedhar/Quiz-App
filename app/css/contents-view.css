@@ -54,7 +54,7 @@
     margin-right: 0px;
 }
 .content-list-wrapper > .wrapper ul.content-list .row ul li a {
-    background: #65C6BB;
+    /*background: #65C6BB;*/
     color: rgb(255, 255, 255)
 }
 .content-list-wrapper > .wrapper ul.content-list .row ul li .img-container {
@@ -65,14 +65,15 @@
 .content-list-wrapper > .wrapper ul.content-list .row ul li img {
     width: inherit;
     height: inherit;
+    border-radius: 10px;
 }
 .content-list-wrapper > .wrapper ul.content-list .row ul li .subject-name {
-    padding: 10px 0px 10px 0px;
     margin: 0px;
     max-width: 202px;
     max-height: 26px;
     line-height: 29px;
     overflow: hidden;
+    color: #000000;
 }
 
 .upload-container {
