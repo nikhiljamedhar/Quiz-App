@@ -39,15 +39,9 @@ html, body {
     text-align: center;
     cursor: pointer;
     padding: 10px;
-<<<<<<< HEAD
     border-radius: 2px;
     font-size:20px;
     color:red;
-=======
-    border-radius: 3px;
-    color: red;
-    font-size: 20px;
->>>>>>> 2a41c8d649cb531f5da28fd394adcfb76e4d69b0
 }
 .mask .overlay .container {
     position: relative;

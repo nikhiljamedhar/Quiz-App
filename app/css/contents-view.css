@@ -65,7 +65,7 @@
 .content-list-wrapper > .wrapper ul.content-list .row ul li img {
     width: inherit;
     height: inherit;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .content-list-wrapper > .wrapper ul.content-list .row ul li .subject-name {
     margin: 0px;
