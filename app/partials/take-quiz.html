@@ -1,10 +1,11 @@
 <div class="mask quiz" id="take-quiz-mask" quiz-panel>
-    <div class="overlay">
+    <div class="overlay" ng-class="{'score-overlay': showScore}">
         <div class="container">
             <div class="overlay-container">
-                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="close a-container" id="close-overlay" ng-click="closeOverlay($event)">X</a>
+                <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/"
+                   class="close a-container" id="close-overlay" ng-click="closeOverlay($event)">X</a>
                 <!-- put your content here -->
-                <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
+                <div id="add-new-quiz-content" class="c-q-overlay border-left border-right" ng-hide="showScore">
                     <header class="q-o-header two-column resize-mobile border-bottom clear">
                         <div class="a-container header-logo fixed left">
                             <img src="image/logo.png" alt="logo"/>
@@ -22,7 +23,11 @@
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list t-center">
-                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'" data-answered="{{question.hasAnswered}}" data-type="{{question.type}}" ng-repeat="question in quizJson.questions" ng-click="selectQuestion($index)">{{$index + 1}}</li>
+                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'"
+                                                data-answered="{{question.hasAnswered}}" data-type="{{question.type}}"
+                                                ng-repeat="question in quizJson.questions"
+                                                ng-click="selectQuestion($index)">{{$index + 1}}
+                                            </li>
                                         </ul>
                                     </div>
 
@@ -31,15 +36,20 @@
                                             <div class="wrapper-inner border">
                                                 <section class="question-section">
                                                     <div class="question-box border">
-                                                        <div ng-include src="'partials/questions/fill-the-blanks.html'" ng-if="currentQuestionType == 'fill-the-blanks'"></div>
-                                                        <div ng-include src="'partials/questions/multiple-option.html'" ng-if="currentQuestionType == 'multiple-options'"></div>
-                                                        <div ng-include src="'partials/questions/match-the-following.html'" ng-if="currentQuestionType == 'match-the-following'"></div>
+                                                        <div ng-include src="'partials/questions/fill-the-blanks.html'"
+                                                             ng-if="currentQuestionType == 'fill-the-blanks'"></div>
+                                                        <div ng-include src="'partials/questions/multiple-option.html'"
+                                                             ng-if="currentQuestionType == 'multiple-options'"></div>
+                                                        <div ng-include
+                                                             src="'partials/questions/match-the-following.html'"
+                                                             ng-if="currentQuestionType == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="app-button other-apps save-question-button right" ng-click="submitQuiz()">
+                                                <div class="app-button other-apps save-question-button right"
+                                                     ng-click="submitQuiz()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Save Question"/>
@@ -47,7 +57,8 @@
                                                         <span>Submit</span>
                                                     </a>
                                                 </div>
-                                                <div ng-class="selectedQuestion == quizJson.questions.length -1 ? 'app-button disable other-apps save-question-button right' : 'app-button other-apps save-question-button right'" ng-click="navigateQuestion(1)">
+                                                <div ng-class="selectedQuestion == quizJson.questions.length -1 ? 'app-button disable other-apps save-question-button right' : 'app-button other-apps save-question-button right'"
+                                                     ng-click="navigateQuestion(1)">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Save Question"/>
@@ -56,7 +67,8 @@
                                                     </a>
                                                 </div>
                                                 <div ng-class="selectedQuestion == 0 ? 'app-button other-apps right download-quiz-button disable' : 'app-button other-apps right download-quiz-button'">
-                                                    <a href="" class="a-container" download="quiz.json" ng-click="navigateQuestion(-1)" id="download-json">
+                                                    <a href="" class="a-container" download="quiz.json"
+                                                       ng-click="navigateQuestion(-1)" id="download-json">
                                                         <div class="img-container">
                                                             <img src="image/previous.png" alt="Download Quiz"/>
                                                         </div>
@@ -71,6 +83,14 @@
                             </div>
                         </div>
                     </section>
+                </div>
+                <div id="score" ng-show="showScore">
+                    <p>Your score is</p>
+
+                    <p class="marks">
+                        <span>{{marks}}</span>
+                        <span>{{totalMarks}}</span>
+                    </p>
                 </div>
             </div>
         </div>

@@ -7,17 +7,17 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
         $scope.contents = Contents.query({
             chapterId: $routeParams.chapterId,
             subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
-        }, function() {
+        }, function () {
             $scope.quizJson = $scope.contents[$routeParams.id];
             $scope.shuffleQuestions();
             $scope.preprocessJson();
             $scope.initQuiz();
         });
 
-        $scope.shuffleQuestions = function() {
+        $scope.shuffleQuestions = function () {
             $scope.quizJson.questions = shuffle($scope.quizJson.questions);
             function shuffle(array) {
-                var currentIndex = array.length, temporaryValue, randomIndex ;
+                var currentIndex = array.length, temporaryValue, randomIndex;
                 while (0 !== currentIndex) {
                     randomIndex = Math.floor(Math.random() * currentIndex);
                     currentIndex -= 1;
@@ -28,34 +28,35 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                 return array;
             }
         }
-        $scope.preprocessJson = function() {
-            for(var i= 0, length = $scope.quizJson.questions.length; i<length; i++) {
+        $scope.preprocessJson = function () {
+            for (var i = 0, length = $scope.quizJson.questions.length; i < length; i++) {
                 $scope.quizJson.questions[i].hasAnswered = false;
-                if($scope.quizJson.questions[i].type === "fill-the-blanks") {
+                if ($scope.quizJson.questions[i].type === "fill-the-blanks") {
                     var collection = $scope.quizJson.questions[i].questionCollection;
-                    for(var j = 0; j<collection.length; j++) {
-                        if(collection[j].type === "answer") {
+                    for (var j = 0; j < collection.length; j++) {
+                        if (collection[j].type === "answer") {
+                            collection[j].correctAnswer = collection[j].value;
                             collection[j].value = "";
                         }
                     }
                 } else if ($scope.quizJson.questions[i].type === "multiple-options") {
                     var answers = []
-                    for(var j = 0; j<$scope.quizJson.questions[i].options.length; j++) {
+                    for (var j = 0; j < $scope.quizJson.questions[i].options.length; j++) {
                         $scope.quizJson.questions[i].options[j].correctAnswer = angular.copy($scope.quizJson.questions[i].options[j].answer);
-                        if($scope.quizJson.questions[i].options[j].correctAnswer) {
+                        if ($scope.quizJson.questions[i].options[j].correctAnswer) {
                             answers.push(true);
                         }
                         $scope.quizJson.questions[i].options[j].answer = false
                     }
                     $scope.quizJson.questions[i].isCheckbox = answers.length > 1 ? true : false;
 
-                    if(!$scope.quizJson.questions[i].isCheckbox) {
+                    if (!$scope.quizJson.questions[i].isCheckbox) {
                         $scope.quizJson.questions[i].selectedAnswer = -1;
                     }
-                } else if($scope.quizJson.questions[i].type === "match-the-following") {
+                } else if ($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
-                    for(var j = 0; j<questions.length; j++) {
+                    for (var j = 0; j < questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
                         //questions[j].correctAnswer = random[j];
                         questions[j].index = j;
@@ -67,54 +68,57 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             }
         }
 
-        $scope.initQuiz = function() {
-            if($scope.quizJson.questions.length === 0) {return;}
+        $scope.initQuiz = function () {
+            if ($scope.quizJson.questions.length === 0) {
+                return;
+            }
             $scope.selectQuestion();
         }
 
-        $scope.selectQuestion = function(index) {
+        $scope.selectQuestion = function (index) {
             index = typeof index != 'undefined' && index != null ? index : 0;
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.quizJson.questions[$scope.selectedQuestion];
             $scope.currentQuestionType = $scope.currentQuestion.type;
         }
 
-        $scope.navigateQuestion = function(position) {
+        $scope.navigateQuestion = function (position) {
             var index = $scope.selectedQuestion + position;
-            if($scope.quizJson.questions.length > index && 0 <= index) {
+            if ($scope.quizJson.questions.length > index && 0 <= index) {
                 $scope.selectQuestion(index);
             }
         }
 
-        $scope.generateRandom = function(max) {
+        $scope.generateRandom = function (max) {
             var numbers = [];
-            for(var i= 0; i<max; i++) {
+            for (var i = 0; i < max; i++) {
                 numbers.push(i);
             }
             function shuffle(o) {
-                for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
                 return o;
             }
+
             return shuffle(numbers);
         }
 
-        $scope.hasAnswered = function(type, index) {
-            if(type) {
+        $scope.hasAnswered = function (type, index) {
+            if (type) {
                 $scope.setRadioValues(index);
             }
 
-            if($scope.currentQuestion.type === "fill-the-blanks") {
+            if ($scope.currentQuestion.type === "fill-the-blanks") {
                 var collection = $scope.currentQuestion.questionCollection, found = false;
-                for(var j = 0; j<collection.length; j++) {
-                    if(collection[j].type === "answer" && collection[j].value !== "") {
+                for (var j = 0; j < collection.length; j++) {
+                    if (collection[j].type === "answer" && collection[j].value !== "") {
                         found = true;
                     }
                 }
                 $scope.currentQuestion.hasAnswered = found;
             } else if ($scope.currentQuestion.type === "multiple-options") {
                 var found = false;
-                for(var j = 0; j<$scope.currentQuestion.options.length; j++) {
-                    if($scope.currentQuestion.options[j].answer === true) {
+                for (var j = 0; j < $scope.currentQuestion.options.length; j++) {
+                    if ($scope.currentQuestion.options[j].answer === true) {
                         found = true;
                         break;
                     }
@@ -123,20 +127,62 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             }
         }
 
-        $scope.setRadioValues = function(index) {
-            for(var j = 0; j<$scope.currentQuestion.options.length; j++) {
+        $scope.setRadioValues = function (index) {
+            for (var j = 0; j < $scope.currentQuestion.options.length; j++) {
                 $scope.currentQuestion.options[j].answer = false;
-                if(index == j) {
+                if (index == j) {
                     $scope.currentQuestion.options[j].answer = true;
                 }
             }
         }
 
-        $scope.submitQuiz = function() {
+        var getMarksFor = function (question) {
+            var answered;
+            if (question.type == "fill-the-blanks") {
+                answered = question.questionCollection
+                        .filter(function (q) {
+                            return q.type === 'answer'
+                        })
+                        .map(function (q) {
+                            if (!q.value) return false;
+                            return q.value.toLowerCase() === q.correctAnswer.toLowerCase();
+                        }).reduce(function (res, i) {
+                            return res && i
+                        }, true);
+            } else if (question.type == "multiple-options") {
+                answered = question.options.map(function (q) {
+                    return q.answer === q.correctAnswer;
+                }).reduce(function (res, i) {
+                    return res && i
+                }, true);
+            } else if (question.type == "match-the-following") {
+                answered = question.questions.map(function (q) {
+                    return q.answer.toLowerCase() === q.correctAnswer.toLowerCase();
+                }).reduce(function (res, i) {
+                    return res && i
+                }, true);
+            }
+            return answered ? question.marks : 0;
+        };
 
-        }
+        $scope.submitQuiz = function () {
+            if (!confirm("Are you sure?")) return;
+            $scope.totalMarks = $scope.quizJson.questions.map(function (question) {
+                return question.marks;
+            }).reduce(function (sum, i) {
+                return sum + i
+            }, 0);
 
-        $scope.onDropComplete = function(index, answer) {
+            $scope.marks = $scope.quizJson.questions.map(function (question) {
+                return getMarksFor(question);
+            }).reduce(function (sum, i) {
+                return sum + i
+            }, 0);
+
+            $scope.showScore = true;
+        };
+
+        $scope.onDropComplete = function (index, answer) {
             var fromAnswer = $scope.currentQuestion.questions[answer.index].answer;
             var toAnswer = $scope.currentQuestion.questions[index].answer;
 

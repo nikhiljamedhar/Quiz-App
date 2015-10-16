@@ -7,20 +7,28 @@
 
 header.q-o-header {
     padding: 10px;
+<<<<<<< HEAD
     background: #f1f2f2;
+=======
+    background: #e1e1e1;
+>>>>>>> Show Score in a modal
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 header.q-o-header p {
     margin: 0px;
 }
+
 header.q-o-header .logo {
     width: 160px;
 }
+
 section.q-o-section ul.question-types {
     height: 900px;
 }
+
 section.q-o-section ul li.question-type > div {
     display: inline-block;
     vertical-align: middle;
@@ -41,9 +49,10 @@ section.q-o-section ul.question-number-list {
 }
 
 #take-quiz-mask section.q-o-section ul.question-number-list li {
-    background: #E1E1E1;
+    background: #e1e1e1;
     color: #000;
 }
+
 section.q-o-section ul.question-number-list li {
     display: inline-block;
     padding: 10px 17px;
@@ -54,7 +63,11 @@ section.q-o-section ul.question-number-list li {
 
 section.q-o-section .wrapper-inner {
     padding: 20px;
+<<<<<<< HEAD
     background: #f1f2f2;
+=======
+    background: #e1e1e1;
+>>>>>>> Show Score in a modal
 }
 
 section.q-o-section .current-question-panel > .wrapper {
@@ -154,6 +167,7 @@ section.q-o-section .question-footer .other-apps {
 .marks {
     float: left;
 }
+
 .marks label {
     vertical-align: middle;
     font-weight: bold;
@@ -167,29 +181,35 @@ section.q-o-section .question-footer .other-apps {
     font-size: 1.3em;
     vertical-align: middle;
 }
+
 .color-set li {
     color: white;
 }
+
 .color-set li[data-type="fill-the-blanks"] {
-    background: #16A085;
+    background: #16a085;
 }
+
 .color-set li[data-type="multiple-options"] {
-    background: #3498DB;
+    background: #3498db;
 }
+
 .color-set li[data-type="match-the-following"] {
     background: #e74c3c;
 }
 
 .fill-blank.question-area textarea.ng-invalid {
-    border: solid 2px #FA787E;
+    border: solid 2px #fa787e;
 }
 
 .fill-blank.question-area textarea.ng-valid.ng-dirty {
-    border: solid 2px #78FA89;
+    border: solid 2px #78fa89;
 }
+
 .take-question-area .question-box {
     padding: 20px;
 }
+
 .take-question-area .question-box input.answer-block {
     display: inline;
     width: auto;
@@ -197,15 +217,18 @@ section.q-o-section .question-footer .other-apps {
     padding: 3px;
     border-bottom: 1px solid darkgray ! important;
 }
+
 .take-question-area .question-box input.answer-block::-webkit-input-placeholder {
     color: gray;
 }
 
-.take-question-area .question-box input.answer-block:-moz-placeholder { /* Firefox 18- */
+.take-question-area .question-box input.answer-block:-moz-placeholder {
+    /* Firefox 18- */
     color: gray;
 }
 
-.take-question-area .question-box input.answer-block::-moz-placeholder {  /* Firefox 19+ */
+.take-question-area .question-box input.answer-block::-moz-placeholder {
+    /* Firefox 19+ */
     color: gray;
 }
 
@@ -217,9 +240,11 @@ section.q-o-section .question-footer .other-apps {
     max-width: 800px;
     margin: 20px auto;
 }
+
 .take-question-area .table > .wrapper > div {
     width: 50%;
 }
+
 .take-question-area .table > .wrapper .wrapper {
     padding: 10px;
     border-bottom: 1px solid darkgray;
@@ -230,17 +255,68 @@ section.q-o-section .question-footer .other-apps {
 .take-question-area .table > .wrapper:last-child .wrapper {
     border-bottom: none;
 }
+
 .take-question-area .table .dragging {
     background: rgba(255, 255, 255, 0.5);
     border: 1px solid darkgray;
 }
+
 .take-question-area .table .drag-enter {
-    background: rgb(225,225,225);
+    background: rgb(225, 225, 225);
 }
 
 .take-question-area ul li.option {
     padding: 8px;
 }
 #take-quiz-mask section.q-o-section ul.question-number-list li[data-answered='true'] {
-    background: #51B73A;
+    background: #51b73a;
+}
+
+.quiz .score-overlay {
+    width: 50%;
+    height: 50%;
+}
+
+.score-overlay > .container {
+    height: 100%;
+}
+
+.score-overlay > .container > .overlay-container {
+    height: 100%;
+}
+
+#score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#score > p {
+    font-size: 3em;
+}
+
+#score > p.marks {
+    margin-left: 20px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 999px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#score > p.marks > span {
+    color: #fff;
+}
+
+#score > p.marks > span:first-child {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: solid 2px #fff;
+    width: 100px;
+    text-align: center;
 }
