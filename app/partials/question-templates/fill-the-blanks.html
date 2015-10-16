@@ -1,4 +1,12 @@
 <div class="fill-blank question-area">
+    <div class="app-button other-apps left" style="margin-right: 10px;">
+        <a href="" class="a-container" ng-click="addBlank(selectedQuestion)">
+            <div class="img-container">
+                <img src="image/blank.png" alt="Add Blank"/>
+            </div>
+            <span>Add Blank</span>
+        </a>
+    </div>
     <h3>Question: </h3>
     	<textarea type="text" id="fill-in-the-blank-question" ng-model="currentQuestion.question" ng-minlength="5" ng-maxlength="500" ng-required="true" ng-pattern="/__[^_]+__/" ng-model-options="{allowInvalid: true}" placeholder="Enter your question here ..."></textarea>
     <div class="preview">

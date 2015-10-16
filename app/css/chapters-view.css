@@ -58,15 +58,20 @@
 .subjects-head ul.subjects li a {
     padding: 6px 0px 0px 0px;
     /*background: #3498db;*/
-    color: rgb(0, 0, 0);
+    color: #6d6e71;
 }
 .subjects-head ul.subjects li img {
     width: 50px;
     height: 50px;
     padding: 5px;
-    background: slategrey;
+    background: #939598;
 }
-
+.subjects-head ul.subjects li.selected img {
+    background: #ff9735;
+}
+.subjects-head ul.subjects li.selected .subject-name {
+    color: #ff9735;
+}
 /* ends here */
 section.chapter-section {
     border-top: none;

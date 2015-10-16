@@ -1,9 +1,10 @@
 /* button styles */
 .app-button {
     width: 100%;
-    max-width: 165px;
-    box-shadow: 2px 2px 2px #2F2E2E;
-    background: #777777;
+    max-width: 190px;
+    box-shadow: 2px 2px 2px #585858;
+    background: #2a88d4;
+    border-radius: 3px;
 }
 .app-button > a {
     padding: 5px;

@@ -39,7 +39,7 @@
                     <div class="subjects-wrapper border-left">
                         <ul class="subjects t-center">
                             <li ng-repeat="subject in subjects"
-                                ng-class="isCurrentSubject(subject.id) ? 'selected theme-orange-bg t-center' : 't-center'">
+                                ng-class="isCurrentSubject(subject.id) ? 'selected t-center' : 't-center'">
                                 <a href="#/grades/{{current_grade}}/subject/{{subject.id}}/" class="a-container">
                                     <div class="img-container circle">
                                         <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}"
@@ -198,7 +198,7 @@
 
                                     <li ng-if="isQuiz(content.type)" ng-repeat="content in contents" class="item">
                                         <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/take-quiz/{{$index}}"
-                                           class="a-container wrapper theme-orange-bg-hover">
+                                           class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/quiz.png" alt="Quiz image" class="subject-img">
                                             </div>

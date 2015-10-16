@@ -40,25 +40,25 @@ header.subject-header .grade-text {
     padding: 10px;
 }
 .subject-section ul.subjects li[data-subject='physics'] {
-    background: #8e44ad;
+    background: #6F6F6F;
 }
-.subject-section ul.subjects li[data-subject='maths'] {
-    background: #34495e;
+.subject-section ul.subjects li[data-subject='mathematics'] {
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li[data-subject='biology'] {
-    background: #e74c3c;
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li[data-subject='social'] {
-    background: #7f8c8d;
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li[data-subject='chemistry'] {
-    background: #BFBFBF;
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li[data-subject='english'] {
-    background: #BFBFBF;
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li[data-subject='science'] {
-    background: #5C97BF;
+    background: #6F6F6F;
 }
 .subject-section ul.subjects li {
     display: inline-block;
@@ -68,6 +68,7 @@ header.subject-header .grade-text {
     padding: 10px;
     margin: 10px;
     background: #3498db;
+    border-radius: 5px;
 }
 .subject-section ul.subjects li .img-container {
     margin: auto;

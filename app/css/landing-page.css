@@ -28,7 +28,7 @@
 .search-box .search-icon {
     width: 30px;
     padding: 10px;
-    background: #777777;
+    background: #27aae1;
 }
 /* ends here */
 
@@ -50,6 +50,7 @@
     margin: 10px;
     box-shadow: 1px 1px 5px #222;
     background-color: #6F6F6F;
+    border-radius: 5px;
 }
 
 .grades-container ul li a {

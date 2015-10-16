@@ -36,7 +36,7 @@
                 <div class="subjects-head flexible left  m-no-left">
                     <div class="subjects-wrapper border-left">
                         <ul class="subjects t-center">
-                            <li ng-repeat="subject in subjects" ng-class="isCurrentSubject(subject.id) ? 'selected theme-orange-bg t-center' : 't-center'">
+                            <li ng-repeat="subject in subjects" ng-class="isCurrentSubject(subject.id) ? 'selected t-center' : 't-center'">
                                 <a href="#/grades/{{current_grade}}/subject/{{subject.id}}/" class="a-container">
                                     <div class="img-container circle">
                                         <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}" class="subject-img circle"/>
@@ -75,7 +75,7 @@
                                 <ul class="content-items border t-center">
 
                                     <li ng-if="isApplication(content.type)" ng-repeat="content in contents" class="item border">
-                                        <a href="{content.exec}" class="a-container wrapper theme-orange-bg-hover">
+                                        <a href="{content.exec}" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/subjects/{{content.subject}}.png" alt="biology" class="subject-img">
                                             </div>
@@ -90,7 +90,7 @@
                                 <ul class="content-items border t-center">
 
                                     <li ng-if="isVideo(content.type)" ng-repeat="content in contents" class="item border">
-                                        <a href="{content.exec}" class="a-container wrapper theme-orange-bg-hover">
+                                        <a href="{content.exec}" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/subjects/{{content.subject}}.png" alt="biology" class="subject-img">
                                             </div>
@@ -105,7 +105,7 @@
                                 <ul class="content-items border t-center">
 
                                     <li ng-if="isQuiz(content.type)" ng-repeat="content in contents" class="item border">
-                                        <a href="{content.exec}" class="a-container wrapper theme-orange-bg-hover">
+                                        <a href="{content.exec}" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/subjects/{{content.subject}}.png" alt="biology" class="subject-img">
                                             </div>

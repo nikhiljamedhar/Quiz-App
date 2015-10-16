@@ -49,14 +49,6 @@
                                                         <input type="number" ng-model="currentQuestion.marks"/>
                                                     </div>
 
-                                                    <div ng-if="currentQuestionType == 'fill-the-blanks'" class="app-button other-apps right">
-                                                        <a href="" class="a-container" ng-click="addBlank(selectedQuestion)">
-                                                            <div class="img-container">
-                                                                <img src="image/otherapps.png" alt="Add Blank"/>
-                                                            </div>
-                                                            <span>Add Blank</span>
-                                                        </a>
-                                                    </div>
                                                 </header>
 
                                                 <section class="question-section">
@@ -78,7 +70,7 @@
                                                 <div class="app-button other-apps save-question-button left" ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
-                                                            <img src="image/prev.png" alt="Previous Question"/>
+                                                            <img src="image/previous.png" alt="Previous Question"/>
                                                         </div>
                                                         <span>Previous Question</span>
                                                     </a>
@@ -94,7 +86,7 @@
                                                 <div class="app-button other-apps right">
                                                     <a href="" class="a-container" ng-click="cancelQuestion()">
                                                         <div class="img-container">
-                                                            <img src="image/otherapps.png" alt="Cancel"/>
+                                                            <img src="image/delete.png" alt="Cancel"/>
                                                         </div>
                                                         <span>Delete</span>
                                                     </a>
@@ -110,7 +102,7 @@
                                                 <div class="app-button other-apps right download-quiz-button">
                                                     <a href="" class="a-container" ng-click="saveQuiz()">
                                                         <div class="img-container">
-                                                            <img src="image/download.png" alt="Save Quiz"/>
+                                                            <img src="image/savequestion.png" alt="Save Quiz"/>
                                                         </div>
                                                         <span>Save Quiz</span>
                                                     </a>
