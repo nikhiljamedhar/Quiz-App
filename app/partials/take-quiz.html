@@ -85,12 +85,22 @@
                     </section>
                 </div>
                 <div id="score" ng-show="showScore">
-                    <p>Your score is</p>
+                    <div class="scorecard">
+                        <p>Your score is</p>
 
-                    <p class="marks">
-                        <span>{{marks}}</span>
-                        <span>{{totalMarks}}</span>
-                    </p>
+                        <p class="marks">
+                            <span>{{marks}}</span>
+                            <span>{{totalMarks}}</span>
+                        </p>
+                    </div>
+
+                    <div class="answers">
+                        <div class="navigation">
+                            <div class="question-no" ng-repeat="question in quizJson.questions" ng-class="{correct: question.correct, incorrect: !question.correct}">
+                                {{$index + 1}}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

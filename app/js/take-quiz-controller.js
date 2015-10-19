@@ -162,6 +162,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                     return res && i
                 }, true);
             }
+            question.correct = answered;
             return answered ? question.marks : 0;
         };
 

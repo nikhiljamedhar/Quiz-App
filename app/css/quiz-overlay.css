@@ -303,17 +303,21 @@ section.q-o-section .question-footer .other-apps {
 }
 
 #score {
+    height: 100%;
+}
+
+#score > .scorecard {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
 
-#score > p {
+#score > .scorecard > p {
     font-size: 3em;
 }
 
-#score > p.marks {
+#score > .scorecard > p.marks {
     margin-left: 20px;
     background-color: red;
     padding: 10px;
@@ -326,14 +330,42 @@ section.q-o-section .question-footer .other-apps {
     justify-content: center;
 }
 
-#score > p.marks > span {
+#score > .scorecard > p.marks > span {
     color: #fff;
 }
 
-#score > p.marks > span:first-child {
+#score > .scorecard > p.marks > span:first-child {
     margin-bottom: 15px;
     padding-bottom: 15px;
     border-bottom: solid 2px #fff;
     width: 100px;
     text-align: center;
+}
+
+#score > .answers > .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score > .answers > .navigation > .question-no {
+    padding: 10px;
+    background-color: #ddd;
+    border: solid 2px #999;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+}
+
+#score > .answers > .navigation > .question-no.correct {
+    background-color: #4A904A;
+    border-color: #016901;
+}
+
+#score > .answers > .navigation > .question-no.incorrect {
+    background-color: #C74141;
+    border-color: #793C3C;
 }
