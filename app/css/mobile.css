@@ -1,4 +1,7 @@
 @media (max-width: 600px) {
+    .main-section {
+        padding-top: 57px;
+    }
     .m-border-bottom {
         border-bottom: 1px solid darkgray;
     }
@@ -11,6 +14,7 @@
     }
     .resize-mobile .other-apps {
         max-width: 170px;
+        margin: 0px 0px 0px 5px !important;
     }
     .resize-mobile .search-box .search-input > div {
         margin-right: 45px;
@@ -76,7 +80,8 @@
         margin-left: 0px !important;
     }
     .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps .img-container,
-    .current-question-panel .other-apps .img-container {
+    .current-question-panel .other-apps .img-container,
+    .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps img {
         width: 20px;
     }
     .content-list-wrapper > .wrapper ul.content-list .row.quiz-panel .button-container .other-apps span,
@@ -94,5 +99,19 @@
     .match-the-following > div > .other-apps {
         margin-top: 20px !important;
         margin-bottom: 20px !important;
+    }
+    .app-button.upload-button, .app-button.upload-button form {
+        height: 32px;
+    }
+    .app-button.upload-button, .app-button.upload-button form .button {
+        padding: 0px;
+        top: 7px;
+        left: 5px;
+        line-height: normal;
+        font-size: 14px;
+        text-align: left;
+    }
+    .app-button.upload-button, .app-button.upload-button form .upload-input {
+        max-width: 122px;
     }
 }
