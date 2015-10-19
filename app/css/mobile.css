@@ -47,11 +47,13 @@
 
     /* overlay styles */
     header.q-o-header.two-column > div:last-child > .wrapper .title {
-        text-align: right;
         font-size: 15px;
     }
     section.q-o-section ul.question-types {
         height: auto;
+    }
+    header.q-o-header .title input {
+        font-size: 18px;
     }
 }
 

@@ -130,7 +130,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return {
                 "type": "fill-the-blanks",
                 "question": "",
-                "questionCollection": []
+                "questionCollection": [],
+                "marks": 1
             }
 
         };
@@ -140,7 +141,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return {
                 "type": "multiple-options",
                 "question": "",
-                "options": [{"value": "", "answer": false}, {"value": "", "answer": false}]
+                "options": [{"value": "", "answer": false}, {"value": "", "answer": false}],
+                "marks": 1
             }
 
         };
@@ -149,7 +151,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return {
                 "type": "match-the-following",
-                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}]
+                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}],
+                "marks": 1
             }
 
         };

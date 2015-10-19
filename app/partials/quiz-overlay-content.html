@@ -4,7 +4,7 @@
             <div class="overlay-container">
                 <!-- put your content here -->
                 <div id="add-new-quiz-content" class="c-q-overlay border-left border-right">
-                    <header class="q-o-header">
+                    <header class="q-o-header border-bottom">
                         <p><img class="logo" src="image/logo.png" alt="logo"/></p>
 
                         <p class="title"><input type="text" ng-model="quizJson.name" placeholder="Name of Quiz"/></p>
@@ -46,7 +46,7 @@
                                                 <header class="question-header">
                                                     <div class="marks">
                                                         <label>Marks:</label>
-                                                        <input type="number" ng-model="currentQuestion.marks"/>
+                                                        <input type="number" ng-model="currentQuestion.marks" min="1" max="10"/>
                                                     </div>
 
                                                 </header>

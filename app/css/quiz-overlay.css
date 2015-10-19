@@ -7,18 +7,38 @@
 
 header.q-o-header {
     padding: 10px;
-<<<<<<< HEAD
     background: #f1f2f2;
-=======
-    background: #e1e1e1;
->>>>>>> Show Score in a modal
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+header.q-o-header .fixed {
+    width: 150px;
+}
+header.q-o-header .flexible {
+    margin-left: -150px;
+}
+header.q-o-header .flexible > .wrapper{
+    margin-left: 100px;
+}
 
 header.q-o-header p {
     margin: 0px;
+}
+a#close-overlay {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    z-index: 2;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 10px;
+    width: 17px;
+    height: 15px;
+    background: silver;
+    color: black;
+    line-height: 16px;
 }
 
 header.q-o-header .logo {
@@ -63,11 +83,8 @@ section.q-o-section ul.question-number-list li {
 
 section.q-o-section .wrapper-inner {
     padding: 20px;
-<<<<<<< HEAD
     background: #f1f2f2;
-=======
-    background: #e1e1e1;
->>>>>>> Show Score in a modal
+    box-shadow: 1px 1px 2px darkgray;
 }
 
 section.q-o-section .current-question-panel > .wrapper {
