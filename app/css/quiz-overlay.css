@@ -12,19 +12,23 @@ header.q-o-header {
     justify-content: space-between;
     align-items: center;
 }
+
 header.q-o-header .fixed {
     width: 150px;
 }
+
 header.q-o-header .flexible {
     margin-left: -150px;
 }
-header.q-o-header .flexible > .wrapper{
+
+header.q-o-header .flexible > .wrapper {
     margin-left: 100px;
 }
 
 header.q-o-header p {
     margin: 0px;
 }
+
 a#close-overlay {
     position: absolute;
     right: 15px;
@@ -285,6 +289,7 @@ section.q-o-section .question-footer .other-apps {
 .take-question-area ul li.option {
     padding: 8px;
 }
+
 #take-quiz-mask section.q-o-section ul.question-number-list li[data-answered='true'] {
     background: #51b73a;
 }
@@ -304,6 +309,10 @@ section.q-o-section .question-footer .other-apps {
 
 #score {
     height: 100%;
+}
+
+#score h4 {
+    margin: 0 0 10px 0;
 }
 
 #score > .scorecard {
@@ -368,4 +377,23 @@ section.q-o-section .question-footer .other-apps {
 #score > .answers > .navigation > .question-no.incorrect {
     background-color: #C74141;
     border-color: #793C3C;
+}
+
+#score > .answers > .answered-list {
+    display: flex;
+    border-bottom: solid 2px #999;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+#score > .answers > .answered-list:last-child {
+    border-bottom: none;
+}
+
+#score > .answers > .answered-list > .question-no {
+    width: 100px;
+    text-align: center;
+}
+
+#score > .answers > .answered-list .blank {
+    text-decoration: underline;
 }

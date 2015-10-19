@@ -96,8 +96,70 @@
 
                     <div class="answers">
                         <div class="navigation">
-                            <div class="question-no" ng-repeat="question in quizJson.questions" ng-class="{correct: question.correct, incorrect: !question.correct}">
+                            <div class="question-no" ng-repeat="question in quizJson.questions"
+                                 ng-class="{correct: question.correct, incorrect: !question.correct}">
                                 {{$index + 1}}
+                            </div>
+                        </div>
+
+                        <div class="answered-list" ng-repeat="question in quizJson.questions">
+                            <h3 class="question-no">
+                                {{$index + 1}}
+                            </h3>
+
+                            <div ng-show="question.type == 'fill-the-blanks'">
+                                <h4>Your Answer:</h4>
+
+                                <p class="student-answer">
+                                    <span ng-repeat="q in question.questionCollection"
+                                          ng-class="{blank: q.type == 'answer'}" ng-trim="false">
+                                        {{q.value || '____'}}
+                                    </span>
+                                </p>
+
+                                <h4>Expected Answer:</h4>
+
+                                <p class="expected-answer">
+                                    <span ng-repeat="q in question.questionCollection"
+                                          ng-class="{blank: q.type == 'answer'}">
+                                        {{q.type === 'answer' ? q.correctAnswer : q.value}}
+                                    </span>
+                                </p>
+                            </div>
+                            <div ng-show="question.type == 'multiple-options'">
+                                <p>{{question.question}}</p>
+                                <h4>Your Answer:</h4>
+
+                                <p>
+                                    <span ng-repeat="q in filteredAnswers = (question.options | filter:{answer: true})">
+                                        {{q.answer}}
+                                    </span>
+
+                                <p ng-hide="filteredAnswers.length">You haven't answered!</p>
+                                </p>
+                                <h4>Expected Answer:</h4>
+
+                                <ul>
+                                    <li ng-repeat="q in question.options | filter:{correctAnswer: true}">
+                                        {{q.value}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="question.type == 'match-the-following'">
+                                <h4>Your Answer:</h4>
+                                <table class="table">
+                                    <tr ng-repeat="q in question.questions">
+                                        <td>{{q.question}}</td>
+                                        <td>{{q.answer}}</td>
+                                    </tr>
+                                </table>
+                                <h4>Expected Answer:</h4>
+                                <table class="table">
+                                    <tr ng-repeat="q in question.questions">
+                                        <td>{{q.question}}</td>
+                                        <td>{{q.correctAnswer}}</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>
