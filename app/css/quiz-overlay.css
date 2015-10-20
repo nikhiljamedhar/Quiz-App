@@ -396,6 +396,12 @@ section.q-o-section .question-footer .other-apps {
     font-weight: bold;
     color: #fff;
     margin: 0 20px;
+    cursor: pointer;
+    box-shadow: #333 3px 3px 8px;
+}
+
+#score > .navigation > .question-no:hover {
+    box-shadow: none;
 }
 
 #score > .navigation > .question-no.correct {

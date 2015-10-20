@@ -95,13 +95,13 @@
                     </div>
                     <div class="navigation">
                         <div class="question-no" ng-repeat="question in quizJson.questions"
-                             ng-class="{correct: question.correct, incorrect: !question.correct}">
+                             ng-class="{correct: question.correct, incorrect: !question.correct}" scroll-to container="answers" target="answer-no-{{$index + 1}}">
                             {{$index + 1}}
                         </div>
                     </div>
-                    <div class="answers">
+                    <div class="answers" id="answers">
 
-                        <div class="answered-list" ng-repeat="question in quizJson.questions">
+                        <div class="answered-list" ng-repeat="question in quizJson.questions" id="answer-no-{{$index + 1}}">
                             <h3 class="question-no" ng-class="{correct: question.correct, incorrect: !question.correct}">
                                 {{$index + 1}}
                             </h3>
