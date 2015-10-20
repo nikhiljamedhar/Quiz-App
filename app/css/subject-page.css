@@ -69,6 +69,7 @@ header.subject-header .grade-text {
     margin: 10px;
     background: #3498db;
     border-radius: 5px;
+    box-shadow: 1px 1px 5px #222;
 }
 .subject-section ul.subjects li .img-container {
     margin: auto;

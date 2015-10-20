@@ -39,7 +39,7 @@
                             <li ng-repeat="subject in subjects" ng-class="isCurrentSubject(subject.id) ? 'selected t-center' : 't-center'">
                                 <a href="#/grades/{{current_grade}}/subject/{{subject.id}}/" class="a-container">
                                     <div class="img-container circle">
-                                        <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}" class="subject-img circle"/>
+                                        <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}" class="subject-img circle theme-orange-bg-hover"/>
                                     </div>
                                     <div class="subject-name">{{subject.name}}</div>
                                 </a>
@@ -53,7 +53,7 @@
                     <div class="wrapper">
                         <ul class="chapter-list t-left">
 
-                            <li ng-repeat="chapter in chapters" ng-class="isCurrentChapter(chapter.id) ? 'selected theme-orange-bg t-left' : 't-left'">
+                            <li ng-repeat="chapter in chapters" ng-class="isCurrentChapter(chapter.id) ? 'selected theme-orange-bg t-left theme-orange-bg-hover' : 't-left theme-orange-bg-hover'">
                                 <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{chapter.id}}/" class="a-container">
                                     <div class="img-container circle">
                                         <img src='images/topics/grey/g-{{chapter.id}}.png' alt="{{chapter.id}}" class="chapter-img"/>
