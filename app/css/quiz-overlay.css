@@ -328,7 +328,7 @@ section.q-o-section .question-footer .other-apps {
 
 #score > .scorecard > p.marks {
     margin-left: 20px;
-    background-color: red;
+    background-color: #eee;
     padding: 10px;
     border-radius: 999px;
     width: 100px;
@@ -337,16 +337,13 @@ section.q-o-section .question-footer .other-apps {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    color: #000;
+    border: solid 3px #000;
 }
-
-#score > .scorecard > p.marks > span {
-    color: #fff;
-}
-
 #score > .scorecard > p.marks > span:first-child {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: solid 2px #fff;
+    border-bottom: solid 2px #000;
     width: 100px;
     text-align: center;
 }
