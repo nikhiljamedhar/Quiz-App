@@ -92,8 +92,10 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
         $scope.verifyPassword = function ( $event) {
             var password = prompt("Enter the Master Password", '');
-            if ( password !== "admin" )
+            if ( password !== "admin" ) {
                 $event.preventDefault();
+                alert("Wrong Master Password");
+            }
         };
     }]);
 
