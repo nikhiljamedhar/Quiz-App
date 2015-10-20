@@ -93,17 +93,10 @@
                             <span>{{totalMarks}}</span>
                         </p>
                     </div>
-
                     <div class="answers">
-                        <div class="navigation">
-                            <div class="question-no" ng-repeat="question in quizJson.questions"
-                                 ng-class="{correct: question.correct, incorrect: !question.correct}">
-                                {{$index + 1}}
-                            </div>
-                        </div>
 
                         <div class="answered-list" ng-repeat="question in quizJson.questions">
-                            <h3 class="question-no">
+                            <h3 class="question-no" ng-class="{correct: question.correct, incorrect: !question.correct}">
                                 {{$index + 1}}
                             </h3>
 
@@ -130,13 +123,13 @@
                                 <p>{{question.question}}</p>
                                 <h4>Your Answer:</h4>
 
-                                <p>
-                                    <span ng-repeat="q in filteredAnswers = (question.options | filter:{answer: true})">
-                                        {{q.answer}}
-                                    </span>
-
+                                <ul>
+                                    <li ng-repeat="q in filteredAnswers = (question.options | filter:{answer: true})">
+                                        {{q.value}}
+                                    </li>
+                                </ul>
                                 <p ng-hide="filteredAnswers.length">You haven't answered!</p>
-                                </p>
+                                
                                 <h4>Expected Answer:</h4>
 
                                 <ul>

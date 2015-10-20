@@ -307,20 +307,8 @@ section.q-o-section .question-footer .other-apps {
 }
 
 .quiz .score-overlay {
-    width: 50%;
-    height: 50%;
-}
-
-.score-overlay > .container {
-    height: 100%;
-}
-
-.score-overlay > .container > .overlay-container {
-    height: 100%;
-}
-
-#score {
-    height: 100%;
+    width: 95%;
+    height: 90%;
 }
 
 #score h4 {
@@ -363,34 +351,6 @@ section.q-o-section .question-footer .other-apps {
     text-align: center;
 }
 
-#score > .answers > .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#score > .answers > .navigation > .question-no {
-    padding: 10px;
-    background-color: #ddd;
-    border: solid 2px #999;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-    margin-right: 10px;
-}
-
-#score > .answers > .navigation > .question-no.correct {
-    background-color: #4A904A;
-    border-color: #016901;
-}
-
-#score > .answers > .navigation > .question-no.incorrect {
-    background-color: #C74141;
-    border-color: #793C3C;
-}
-
 #score > .answers > .answered-list {
     display: flex;
     border-bottom: solid 2px #999;
@@ -402,8 +362,26 @@ section.q-o-section .question-footer .other-apps {
 }
 
 #score > .answers > .answered-list > .question-no {
-    width: 100px;
+    padding: 10px;
+    background-color: #ddd;
+    border: solid 2px #999;
+    width: 25px;
+    height: 25px;
     text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 20px;
+    border-radius: 9999px;
+}
+
+#score > .answers > .answered-list > .question-no.correct {
+    background-color: #4A904A;
+    border-color: #016901;
+}
+
+#score > .answers > .answered-list > .question-no.incorrect {
+    background-color: #C74141;
+    border-color: #793C3C;
 }
 
 #score > .answers > .answered-list .blank {
