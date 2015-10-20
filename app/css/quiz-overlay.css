@@ -309,8 +309,22 @@ section.q-o-section .question-footer .other-apps {
 .quiz .score-overlay {
     width: 95%;
     height: 90%;
+    overflow: hidden;
 }
 
+.quiz .score-overlay .container {
+    height: 100%;
+}
+
+.quiz .score-overlay .container .overlay-container {
+    height: 100%;
+}
+
+#score {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 #score h4 {
     margin: 0 0 10px 0;
 }
@@ -319,11 +333,10 @@ section.q-o-section .question-footer .other-apps {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 #score > .scorecard > p {
-    font-size: 3em;
+    font-size: 1.3em;
 }
 
 #score > .scorecard > p.marks {
@@ -331,21 +344,27 @@ section.q-o-section .question-footer .other-apps {
     background-color: #eee;
     padding: 10px;
     border-radius: 999px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     color: #000;
-    border: solid 3px #000;
+    border: solid 2px #000;
 }
 #score > .scorecard > p.marks > span:first-child {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
     border-bottom: solid 2px #000;
-    width: 100px;
+    width: 50px;
     text-align: center;
+}
+
+#score > .answers {
+    flex: 2;
+    overflow-y: auto;
+    padding-top: 20px;
 }
 
 #score > .answers > .answered-list {
@@ -356,6 +375,37 @@ section.q-o-section .question-footer .other-apps {
 }
 #score > .answers > .answered-list:last-child {
     border-bottom: none;
+}
+
+#score > .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: solid 3px #999;
+    box-shadow: #ddd 3px 3px 3px;
+}
+
+#score > .navigation > .question-no {
+    padding: 10px;
+    background-color: #ddd;
+    border: solid 2px #999;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    margin: 0 20px;
+}
+
+#score > .navigation > .question-no.correct {
+    background-color: #4A904A;
+    border-color: #016901;
+}
+
+#score > .navigation > .question-no.incorrect {
+    background-color: #C74141;
+    border-color: #793C3C;
 }
 
 #score > .answers > .answered-list > .question-no {

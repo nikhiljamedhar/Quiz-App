@@ -93,6 +93,12 @@
                             <span>{{totalMarks}}</span>
                         </p>
                     </div>
+                    <div class="navigation">
+                        <div class="question-no" ng-repeat="question in quizJson.questions"
+                             ng-class="{correct: question.correct, incorrect: !question.correct}">
+                            {{$index + 1}}
+                        </div>
+                    </div>
                     <div class="answers">
 
                         <div class="answered-list" ng-repeat="question in quizJson.questions">
