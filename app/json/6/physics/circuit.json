@@ -127,41 +127,5 @@
         "$$hashKey": "object:34"
       }
     ]
-  },
-  {
-    "questions": [],
-    "type": "quiz"
-  },
-  {
-    "questions": [
-      {
-        "type": "fill-the-blanks",
-        "question": "Sattar is a good __boy__",
-        "questionCollection": [
-          {
-            "type": "question",
-            "value": "Sattar"
-          },
-          {
-            "type": "question",
-            "value": "is"
-          },
-          {
-            "type": "question",
-            "value": "a"
-          },
-          {
-            "type": "question",
-            "value": "good"
-          },
-          {
-            "type": "answer",
-            "value": "boy"
-          }
-        ],
-        "marks": 3
-      }
-    ],
-    "type": "quiz"
   }
 ]

@@ -21,7 +21,7 @@
                                         data-type="{{question.type}}" ng-repeat="question in questionTypes"
                                         ng-click="selectQuestionType(question.type)">
                                         <div class="img-container">
-                                            <img src="images/topics/grey/g-sound.png" alt="{question.image}"/>
+                                            <img src="image/{{question.type}}.png" alt="{question.image}"/>
                                         </div>
                                         <div class="question-name">{{question.name}}</div>
                                     </li>

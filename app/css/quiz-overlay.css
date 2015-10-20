@@ -257,6 +257,16 @@ section.q-o-section .question-footer .other-apps {
     color: gray;
 }
 
+.take-question-area .table > div:first-child {
+    background: #f1f2f2;
+}
+.take-question-area .table .question-row:hover .drag-hint {
+    opacity: 1;
+}
+.take-question-area .table .question-row:hover .draggable > div {
+    background: #2a88d4;
+    color: white;
+}
 .take-question-area .table {
     max-width: 800px;
     margin: 20px auto;
@@ -267,6 +277,7 @@ section.q-o-section .question-footer .other-apps {
 }
 
 .take-question-area .table > .wrapper .wrapper {
+    position: relative;
     padding: 10px;
     border-bottom: 1px solid darkgray;
     height: 45px;
@@ -291,7 +302,8 @@ section.q-o-section .question-footer .other-apps {
 }
 
 #take-quiz-mask section.q-o-section ul.question-number-list li[data-answered='true'] {
-    background: #51b73a;
+    background: #6F6F6F;
+    color: white;
 }
 
 .quiz .score-overlay {
