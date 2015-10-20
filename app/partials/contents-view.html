@@ -172,7 +172,7 @@
                                                         <input type="hidden" name="chapter"
                                                                value="{{current_chapter}}"/>
                                                         <input class="upload-input" type="file" name="file"
-                                                               onchange="document.uploadForm.submit()"/>
+                                                               ng-click="verifyPassword($event);" onchange="document.uploadForm.submit()" />
                                                         <button class="button upload-button">
                                                             <img class="icon" src="image/upload.png"
                                                                  alt="other apps icon"/>
@@ -180,7 +180,7 @@
                                                         </button>
                                                     </form>
                                                 </div>
-                                                <div class="app-button other-apps right">
+                                                <div class="app-button other-apps right" ng-click="verifyPassword($event);">
                                                     <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/create-quiz/"
                                                        class="a-container">
                                                         <div class="img-container">

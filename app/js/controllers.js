@@ -90,6 +90,11 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.isQuiz = function (type) {
             return type === "quiz";
         };
+        $scope.verifyPassword = function ( $event) {
+            var password = prompt("Enter the Master Password", '');
+            if ( password !== "admin" )
+                $event.preventDefault();
+        };
     }]);
 
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',
