@@ -109,6 +109,17 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 window.location.reload();
             });
         };
+
+        $scope.deleteQuiz = function(index) {
+            $http.delete('delete.php', {data: {
+                grade: $scope.current_grade,
+                subject: $scope.current_subject,
+                chapter: $scope.current_chapter,
+                name: $scope.contents[index].name
+            }}).then(function() {
+                window.location.reload();
+            });
+        }
     }]);
 
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',
