@@ -4,8 +4,8 @@
 //     $scope.subjects = Subjects.query();
 //   }]);
 
-pencilBoxApp.controller('GradeListController', ['$scope', 'Grades',
-    function ($scope, Grades) {
+pencilBoxApp.controller('GradeListController', ['$scope', 'Grades', '$http',
+    function ($scope, Grades, $http) {
         $scope.grades = Grades.query();
         console.log($scope.grades)
     }]);
@@ -39,12 +39,12 @@ pencilBoxApp.controller('ChapterListController', ['$scope', '$routeParams', 'Cha
         };
     }]);
 
-pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location',
-    function ($scope, $routeParams, Contents, Chapters, Subjects, $location) {
+pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location','$http',
+    function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
-        $scope.currentPath = function() {
+        $scope.currentPath = function () {
             return $location.path();
         };
         $scope.subjects = Subjects.query({gradeId: $routeParams.gradeId});
@@ -90,12 +90,24 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.isQuiz = function (type) {
             return type === "quiz";
         };
-        $scope.verifyPassword = function ( $event) {
+        $scope.verifyPassword = function ($event) {
             var password = prompt("Enter the Master Password", '');
-            if ( password !== "admin" ) {
+            if (password !== "admin") {
                 $event.preventDefault();
                 alert("Wrong Master Password");
             }
+        };
+
+        $scope.uploadFile = function (data) {
+            var requestJson = {
+                grade: $scope.current_grade,
+                subject: $scope.current_subject,
+                chapter: $scope.current_chapter,
+                quiz: data
+            };
+            $http.post('/save.php', requestJson).then(function(){
+                window.location.reload();
+            });
         };
     }]);
 

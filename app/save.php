@@ -1,4 +1,5 @@
 <?php
+
 function redirect($url = '/') {
     http_response_code(301);
     header("Location: $url");
