@@ -93,9 +93,11 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.verifyPassword = function ($event) {
             var password = prompt("Enter the Master Password", '');
             if (password !== "admin") {
-                $event.preventDefault();
+                $event && $event.preventDefault();
                 alert("Wrong Master Password");
+                return false;
             }
+            return true;
         };
 
         $scope.uploadFile = function (data) {
@@ -111,7 +113,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.deleteQuiz = function(index) {
-            if(!confirm("Are you sure you want to delete this Quiz?")) return;
+            if(!$scope.verifyPassword()) return;
             $http.delete('delete.php', {data: {
                 grade: $scope.current_grade,
                 subject: $scope.current_subject,
