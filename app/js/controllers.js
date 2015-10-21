@@ -111,6 +111,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.deleteQuiz = function(index) {
+            if(!confirm("Are you sure you want to delete this Quiz?")) return;
             $http.delete('delete.php', {data: {
                 grade: $scope.current_grade,
                 subject: $scope.current_subject,
