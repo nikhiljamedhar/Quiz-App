@@ -369,12 +369,12 @@ section.q-o-section .question-footer .other-apps {
 
 #score > .answers > .answered-list {
     display: flex;
-    border-bottom: solid 2px #999;
+    border-top: solid 2px #999;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
-#score > .answers > .answered-list:last-child {
-    border-bottom: none;
+#score > .answers > .answered-list:first-child {
+    border-top: none;
 }
 
 #score > .navigation {
@@ -439,4 +439,8 @@ section.q-o-section .question-footer .other-apps {
 
 #score > .answers > .answered-list .blank {
     text-decoration: underline;
+}
+
+.empty-space {
+    height: 300px;
 }
