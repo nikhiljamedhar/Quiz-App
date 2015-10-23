@@ -12,13 +12,14 @@
                     </ul>
                 </div>
             </div>
+
             <!--<div class="answer-block left">-->
                 <!--<div class="wrapper">-->
                     <!--<h4 class="title t-center">Answer</h4>-->
                     <!--<ul class="list">-->
                         <!--<li class="question-row content" ng-repeat="row in currentQuestion.questions">-->
                             <!--<ul class="drop-list" dnd-list="currentQuestion.answers">-->
-                                <!--<li class="question-row content" data-i="{{$index}}" data-p="{{$parent.$index}}" ng-if="$index == $parent.$index" ng-repeat="item in currentQuestion.answers" dnd-draggable="item" dnd-moved="currentQuestion.answers.splice($index, 1)" dnd-effect-allowed="move">{{item.answer}}</li>-->
+                                <!--<li class="question-row content" ng-if="item.index == $parent.$index" ng-repeat="item in currentQuestion.answers" dnd-draggable="item" dnd-drop="item.index = $index" dnd-moved="currentQuestion.answers.splice($index, 1)" dnd-effect-allowed="move">{{item.answer}}</li>-->
                             <!--</ul>-->
                         <!--</li>-->
                     <!--</ul>-->

@@ -30,7 +30,7 @@ html, body {
     color: white;
     font-size:40px;
 }
-.mask .close {
+.mask header .close {
     background-color: white;
     position: absolute;
     right: 0px;
@@ -48,4 +48,56 @@ html, body {
 }
 .mask .overlay .video {
   width:100%;
+}
+
+.custom-dialog-mask {
+    background: rgba(0, 0, 0 , 0.05);
+}
+.custom-dialog-mask .overlay {
+    background: #ffffff;
+    max-width: 380px;
+    max-height: 227px;
+    box-shadow: 0 0 6px rgba(0,0,0, 0.3);
+    border: 1px solid silver;
+    border-radius: 3px;
+}
+.custom-dialog-mask .overlay header, .custom-dialog-mask .overlay footer {
+    background: lightgray;
+}
+.custom-dialog-mask .overlay header, .custom-dialog-mask .overlay section, .custom-dialog-mask .overlay footer {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid silver;
+}
+.custom-dialog-mask .overlay footer {
+    border-bottom: none;
+}
+.custom-dialog-mask .overlay header .title, .custom-dialog-mask .overlay section .description {
+    margin: 0px;
+}
+.custom-dialog-mask .overlay section .description {
+    margin-bottom: 10px;
+    height: 50px;
+    overflow: hidden;
+}
+.custom-dialog-mask .overlay section .input-container {
+    border: 1px solid silver;
+}
+.custom-dialog-mask .overlay section input {
+    font-size: 16px;
+}
+.custom-dialog-mask .overlay footer input {
+    -webkit-appearance: none;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 100px;
+    background: darkgray;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.custom-dialog-mask .overlay footer input:active {
+    box-shadow: none;
+    padding-top: 11px;
 }
