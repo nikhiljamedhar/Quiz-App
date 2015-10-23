@@ -92,31 +92,35 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.adminPasswordDialog = function ($event) {
+            $event.preventDefault();
             var options = {
                 title: "Alert",
                 description: "Enter your master password",
                 className: "master-password",
                 callback: function(event) {
-                    if(event.context.inputText !== "admin") {
-                        $event.preventDefault();
+                    if(event.context.inputText === "admin") {
+                        event.context.disposeOverlay();
+                        var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
+                        window.open(url, "_self");
                     }
                 },
                 type: 'input',
                 placeholder: 'Enter your password'
             }
             new CustomDialog(options);
+            return true;
         };
 
         $scope.verifyPassword = function ($event) {
-            //$scope.adminPasswordDialog($event);
-            var password = prompt("Enter the Master Password");
-            if(password == null) return false;
-            if (password !== "admin") {
-                $event && $event.preventDefault();
-                alert("Wrong Master Password");
-                return false;
-            }
-            return true;
+            $scope.adminPasswordDialog($event);
+            //var password = prompt("Enter the Master Password");
+            //if(password == null) return false;
+            //if (password !== "admin") {
+            //    $event && $event.preventDefault();
+            //    alert("Wrong Master Password");
+            //    return false;
+            //}
+            //return true;
         };
 
         $scope.uploadFile = function (data) {
