@@ -1,4 +1,4 @@
-pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', 'ngDraggable',
+pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents',
     function ($scope, $routeParams, Contents) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
@@ -9,6 +9,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
         }, function () {
             $scope.quizJson = $scope.contents[$routeParams.id];
+            console.log($scope.quizJson.questions, $routeParams.id)
             $scope.shuffleQuestions();
             $scope.preprocessJson();
             $scope.initQuiz();
@@ -16,6 +17,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
 
         $scope.shuffleQuestions = function () {
             $scope.quizJson.questions = shuffle($scope.quizJson.questions);
+
             function shuffle(array) {
                 var currentIndex = array.length, temporaryValue, randomIndex;
                 while (0 !== currentIndex) {
@@ -59,10 +61,12 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                     for (var j = 0; j < questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
                         //questions[j].correctAnswer = random[j];
-                        questions[j].index = j;
                         questions[j].correctAnswer = $scope.quizJson.questions[i].questions[j].answer;
                     }
                     $scope.quizJson.questions[i].questions = questions;
+                    $scope.quizJson.questions[i].answerBucket = angular.copy(questions);
+                    //$scope.quizJson.questions[i].selected = null;
+                    $scope.quizJson.questions[i].answers = [];
 
                 }
             }
@@ -183,13 +187,24 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             $scope.showScore = true;
         };
 
-        $scope.onDropComplete = function (index, answer) {
-            var fromAnswer = $scope.currentQuestion.questions[answer.index].answer;
-            var toAnswer = $scope.currentQuestion.questions[index].answer;
+        $scope.dragged = function(type) {
+            console.log($scope.currentQuestion)
+            if(type) {
 
-            $scope.currentQuestion.questions[answer.index].answer = toAnswer;
-            $scope.currentQuestion.questions[index].answer = fromAnswer;
-            $scope.currentQuestion.hasAnswered = true;
+            } else {
+
+            }
+            //$scope.currentQuestion.answers.splice($index, 1)
+            //console.log($scope.currentQuestion);
         }
+        //$scope.onDropComplete = function (index, answer) {
+        //    var fromAnswer = $scope.currentQuestion.questions[answer.index].answer;
+        //    var toAnswer = $scope.currentQuestion.questions[index].answer;
+        //
+        //    $scope.currentQuestion.questions[answer.index].answer = toAnswer;
+        //    $scope.currentQuestion.questions[index].answer = fromAnswer;
+        //    $scope.currentQuestion.hasAnswered = true;
+        //}
+        //console.log($scope)
     }
 ]);

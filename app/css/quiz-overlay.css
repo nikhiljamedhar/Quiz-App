@@ -257,7 +257,7 @@ section.q-o-section .question-footer .other-apps {
     color: gray;
 }
 
-.take-question-area .table > div:first-child {
+.take-question-area .table > div:first-child .left {
     background: #f1f2f2;
 }
 .take-question-area .table .question-row:hover .drag-hint {
@@ -267,35 +267,50 @@ section.q-o-section .question-footer .other-apps {
     background: #2a88d4;
     color: white;
 }
-.take-question-area .table {
-    max-width: 800px;
+
+.mtf-container {
+    max-width: 1000px;
     margin: 20px auto;
 }
 
-.take-question-area .table > .wrapper > div {
-    width: 50%;
+.mtf-container > div {
+    width: 33.33333333333333333%;
+    min-height: 100px;
 }
-
-.take-question-area .table > .wrapper .wrapper {
-    position: relative;
+.mtf-container > div > div.wrapper {
+    margin: 20px;
+}
+.mtf-container .content ul {
+    width: inherit;
+    height: inherit;
+}
+.mtf-container .list {
+    min-height: 310px;
+}
+.mtf-container .list > .content {
     padding: 10px;
-    border-bottom: 1px solid darkgray;
-    height: 45px;
+    text-align: center;
+    box-shadow: 2px 2px 2px #2d2d2d;
+    margin-bottom: 20px;
+    background: #888888;
+    color: #ffffff;
+    height: 70px;
     overflow: hidden;
 }
-
-.take-question-area .table > .wrapper:last-child .wrapper {
-    border-bottom: none;
+.mtf-container .answer-bucket .content {
+    background: #417AAE;
+}
+.mtf-container > div > div.wrapper .content:last-child {
+    margin-bottom: 0px;
+}
+.mtf-container .drop-list.dndDragover {
+    background: #FF9735;
 }
 
-.take-question-area .table .dragging {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid darkgray;
-}
 
-.take-question-area .table .drag-enter {
-    background: rgb(225, 225, 225);
-}
+
+
+
 
 .take-question-area ul li.option {
     padding: 8px;
@@ -440,7 +455,6 @@ section.q-o-section .question-footer .other-apps {
 #score > .answers > .answered-list .blank {
     text-decoration: underline;
 }
-
 .empty-space {
     height: 300px;
 }
