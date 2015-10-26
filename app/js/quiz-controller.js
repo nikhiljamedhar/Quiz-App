@@ -186,7 +186,12 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.addQuestion = function () {
             if ($scope.hasError()) {
-                alert("Please fill the red field");
+                var options = {
+                    title: "Alert",
+                    description: "Please fill the red field",
+                    buttons: ["ok"]
+                }
+                new CustomDialog(options);
                 return;
             }
 
@@ -273,13 +278,21 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.saveQuiz = function () {
-            var data = {
-                grade: $scope.current_grade,
-                subject: $scope.current_subject,
-                chapter: $scope.current_chapter,
-                quiz: $scope.quizJson
-            };
-            $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
+            if ($scope.hasError()) {
+                var options = {
+                    title: "Alert",
+                    description: "Please fill the red field",
+                    buttons: ["ok"]
+                }
+                new CustomDialog(options);
+            } else {
+                var data = {
+                    grade: $scope.current_grade,
+                    subject: $scope.current_subject,
+                    chapter: $scope.current_chapter,
+                    quiz: $scope.quizJson
+                };
+                $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
                     then(function (response) {
                         $scope.hasChange = false;
                         $scope.closeOverlay({
@@ -289,10 +302,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     }, function () {
                         console.log(arguments);
                     });
+            }
         };
 
         $scope.validateInput = function(obj, limit) {
-            console.log(obj.length, limit)
             if(obj.length >= limit) {
                 var options = {
                     title: "Alert",
