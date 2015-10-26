@@ -104,3 +104,7 @@ html, body {
 .mask.no-input .overlay {
     max-height: 185px;
 }
+.mask.ok-only footer input {
+    margin: auto;
+    float: none;
+}

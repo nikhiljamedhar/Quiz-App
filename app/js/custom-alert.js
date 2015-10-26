@@ -16,6 +16,7 @@ CustomDialog.prototype.decorateOverlay = function() {
 CustomDialog.prototype.createOverlay = function() {
     var mask = document.createElement("div");
     mask.className = this.options.inputCheck ? "mask custom-dialog-mask" : "mask custom-dialog-mask no-input";
+    if(this.options.buttons.length === 1) { mask.classList.add("ok-only"); }
     mask.id = "mask";
 
     var input = this.options.inputCheck ? '<div class="input-container">' + '<input type="text" name="input" placeholder="'+ this.options.placeholder  +'" class="input"/>' +'</div>' : '';
