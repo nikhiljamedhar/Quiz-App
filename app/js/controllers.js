@@ -97,6 +97,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 title: "Alert",
                 description: "Enter your master password",
                 className: "master-password",
+                buttons: ["ok", "cancel"],
                 callback: function(event) {
                     if(event.context.inputText === "admin") {
                         event.context.disposeOverlay();

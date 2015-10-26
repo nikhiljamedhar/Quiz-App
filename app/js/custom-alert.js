@@ -19,6 +19,8 @@ CustomDialog.prototype.createOverlay = function() {
     mask.id = "mask";
 
     var input = this.options.inputCheck ? '<div class="input-container">' + '<input type="text" name="input" placeholder="'+ this.options.placeholder  +'" class="input"/>' +'</div>' : '';
+    var ok = this.options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
+    var cancel = this.options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
 
     mask.innerHTML = '<div class="overlay">' +
         '<div class="wrapper">' +
@@ -32,8 +34,7 @@ CustomDialog.prototype.createOverlay = function() {
 
             '</section>' +
             '<footer class="clear">' +
-                '<input type="button" name="button" value="Ok" class="ok left"/>' +
-                '<input type="button" name="button" value="Cancel" class="close right"/>' +
+            ok + cancel +
             '</footer>' +
         '</div>' +
     '</div>';
@@ -61,14 +62,23 @@ CustomDialog.prototype.createOverlayEvents = function() {
             self.inputText = this.value;
         });
     }
-    this.okButton.addEventListener("click", function() {
-        if(self.options.callback) {
-            self.options.callback(self.getEvent('ok'));
-        }
-    });
+    if(this.okButton) {
+        this.okButton.addEventListener("click", function() {
+            if(self.options.callback) {
+                self.options.callback(self.getEvent('ok'));
+            } else {
+                self.disposeOverlay();
+            }
+        });
+    }
+
     document.addEventListener("keyup", function(e) {
-        if(self.options.callback && e.keyCode === 13) {
-            self.options.callback(self.getEvent('ok'));
+        if(self.options.callback) {
+            if(e.keyCode === 13) {
+                self.options.callback(self.getEvent('ok'));
+            }
+        } else {
+            self.disposeOverlay();
         }
     });
     document.addEventListener("keyup", function(e) {
@@ -76,9 +86,11 @@ CustomDialog.prototype.createOverlayEvents = function() {
             self.disposeOverlay();
         }
     });
-    this.closeButton.addEventListener("click", function() {
-        self.disposeOverlay();
-    });
+    if(this.closeButton) {
+        this.closeButton.addEventListener("click", function() {
+            self.disposeOverlay();
+        });
+    }
 }
 CustomDialog.prototype.disposeOverlay = function() {
     this.mask.parentElement.removeChild(this.mask);

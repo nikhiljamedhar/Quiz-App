@@ -161,6 +161,13 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             if ($scope.currentQuestionType === "multiple-options") {
                 if ($scope.currentQuestion.options.length < 5) {
                     $scope.currentQuestion.options.push({"value": "", "answer": false});
+                } else {
+                    var options = {
+                        title: "Alert",
+                        description: "Cannot add more than 5 options",
+                        buttons: ["ok"]
+                    }
+                    new CustomDialog(options);
                 }
             } else {
                 if ($scope.currentQuestion.questions.length < 10) {
