@@ -127,14 +127,5 @@
         "$$hashKey": "object:34"
       }
     ]
-  },
-  {
-    "name": "My Test Quiz",
-    "id": "tester",
-    "type": "quiz",
-    "keywords": [
-      "1",
-      "2"
-    ]
   }
 ]
