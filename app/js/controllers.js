@@ -116,15 +116,15 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.verifyPassword = function ($event, redirect) {
-            $scope.adminPasswordDialog($event, redirect);
-            //var password = prompt("Enter the Master Password");
-            //if(password == null) return false;
-            //if (password !== "admin") {
-            //    $event && $event.preventDefault();
-            //    alert("Wrong Master Password");
-            //    return false;
-            //}
-            //return true;
+            //$scope.adminPasswordDialog($event, redirect);
+            var password = prompt("Enter the Master Password");
+            if(password == null) return false;
+            if (password !== "admin") {
+                $event && $event.preventDefault();
+                alert("Wrong Master Password");
+                return false;
+            }
+            return true;
         };
 
         $scope.uploadFile = function (data) {
