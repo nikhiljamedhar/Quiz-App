@@ -23,5 +23,4 @@ $remainingApps = array_filter($apps, function ($app) use ($quizName) {
     return !($app['name'] === $quizName && $app['type'] === 'quiz');
 });
 file_put_contents($fileName, json_encode(array_values($remainingApps)));
-
 ?>

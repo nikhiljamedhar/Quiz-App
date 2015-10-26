@@ -39,7 +39,7 @@ pencilBoxApp.controller('ChapterListController', ['$scope', '$routeParams', 'Cha
         };
     }]);
 
-pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location','$http',
+pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location', '$http',
     function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
@@ -116,10 +116,9 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return true;
         };
 
-        $scope.verifyPassword = function ($event, redirect) {
-            //$scope.adminPasswordDialog($event, redirect);
-            var password = prompt("Enter the Master Password");
-            if(password == null) return false;
+        $scope.verifyPassword = function ($event) {
+            var password = prompt("Enter the Master Password", '');
+            if (password == null) return false;
             if (password !== "admin") {
                 $event && $event.preventDefault();
                 alert("Wrong Master Password");
@@ -135,19 +134,22 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 chapter: $scope.current_chapter,
                 quiz: data
             };
-            $http.post('/save.php', requestJson).then(function(){
+            $http.post('/save.php', requestJson).then(function () {
                 window.location.reload();
             });
         };
 
-        $scope.deleteQuiz = function(index) {
-            if(!$scope.verifyPassword()) return;
-            $http.delete('delete.php', {data: {
-                grade: $scope.current_grade,
-                subject: $scope.current_subject,
-                chapter: $scope.current_chapter,
-                name: $scope.contents[index].name
-            }}).then(function() {
+        $scope.deleteQuiz = function (index) {
+            if (!$scope.verifyPassword()) return;
+            var requestJson = {
+                data: {
+                    grade: $scope.current_grade,
+                    subject: $scope.current_subject,
+                    chapter: $scope.current_chapter,
+                    name: $scope.contents[index].name
+                }
+            };
+            $http.delete('/delete.php', requestJson).then(function () {
                 window.location.reload();
             });
         }
