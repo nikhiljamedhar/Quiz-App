@@ -290,6 +290,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                         console.log(arguments);
                     });
         };
+
+        $scope.validateInput = function(obj, limit) {
+            console.log(obj.length, limit)
+            if(obj.length >= limit) {
+                var options = {
+                    title: "Alert",
+                    description: "You cannot add more than " + limit + " characters",
+                    buttons: ["ok"]
+                }
+                new CustomDialog(options);
+            }
+        }
     }
 
 ]);

@@ -60,6 +60,7 @@ html, body {
     box-shadow: 0 0 6px rgba(0,0,0, 0.3);
     border: 1px solid silver;
     border-radius: 3px;
+    overflow: hidden;
 }
 .custom-dialog-mask .overlay header, .custom-dialog-mask .overlay footer {
     background: lightgray;

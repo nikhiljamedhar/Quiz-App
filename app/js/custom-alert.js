@@ -79,15 +79,13 @@ CustomDialog.prototype.createOverlayEvents = function() {
     }
 
     document.addEventListener("keyup", function(e) {
-        if(self.options.callback) {
-            if(e.keyCode === 13) {
+        if(e.keyCode === 13) {
+            if(self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
-                if(!self.options.closeHandler) {
-                    self.disposeOverlay();
-                }
             }
-        } else {
-            self.disposeOverlay();
+            if(!self.options.closeHandler) {
+                self.disposeOverlay();
+            }
         }
     });
 
@@ -104,7 +102,9 @@ CustomDialog.prototype.createOverlayEvents = function() {
     });
 }
 CustomDialog.prototype.disposeOverlay = function() {
-    this.mask.parentElement.removeChild(this.mask);
+    if(this.mask) {
+        this.mask.parentElement.removeChild(this.mask);
+    }
     document.body.style.overflow = "auto";
 }
 CustomDialog.prototype.setContent = function(overlayContent) {
