@@ -1,6 +1,7 @@
 function CustomDialog(options, element) {
     this.options = options;
     this.options.inputCheck = this.options.inputCheck || false;
+    this.options.closeHandler = this.options.closeHandler || false;
     if(element) {
         this.element = element;
         this.decorateOverlay();
@@ -59,6 +60,7 @@ CustomDialog.prototype.createOverlayEvents = function() {
     self.inputText = "";
 
     if(this.input) {
+        this.input.focus();
         this.input.addEventListener("keyup", function() {
             self.inputText = this.value;
         });
@@ -67,6 +69,9 @@ CustomDialog.prototype.createOverlayEvents = function() {
         this.okButton.addEventListener("click", function() {
             if(self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
+                if(!self.options.closeHandler) {
+                    self.disposeOverlay();
+                }
             } else {
                 self.disposeOverlay();
             }
@@ -77,21 +82,26 @@ CustomDialog.prototype.createOverlayEvents = function() {
         if(self.options.callback) {
             if(e.keyCode === 13) {
                 self.options.callback(self.getEvent('ok'));
+                if(!self.options.closeHandler) {
+                    self.disposeOverlay();
+                }
             }
         } else {
             self.disposeOverlay();
         }
     });
-    document.addEventListener("keyup", function(e) {
-        if(e.keyCode === 27) {
-            self.disposeOverlay();
-        }
-    });
+
     if(this.closeButton) {
         this.closeButton.addEventListener("click", function() {
             self.disposeOverlay();
         });
     }
+
+    document.addEventListener("keyup", function(e) {
+        if(e.keyCode === 27) {
+            self.disposeOverlay();
+        }
+    });
 }
 CustomDialog.prototype.disposeOverlay = function() {
     this.mask.parentElement.removeChild(this.mask);
