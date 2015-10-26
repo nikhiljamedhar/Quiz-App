@@ -9,7 +9,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
         }, function () {
             $scope.quizJson = $scope.contents[$routeParams.id];
-            console.log($scope.quizJson.questions, $routeParams.id)
             $scope.shuffleQuestions();
             $scope.preprocessJson();
             $scope.initQuiz();
@@ -58,16 +57,15 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                 } else if ($scope.quizJson.questions[i].type === "match-the-following") {
                     var random = $scope.generateRandom($scope.quizJson.questions[i].questions.length);
                     var questions = angular.copy($scope.quizJson.questions[i].questions);
+
+                    $scope.quizJson.questions[i].answers = [];
                     for (var j = 0; j < questions.length; j++) {
                         questions[j].answer = $scope.quizJson.questions[i].questions[random[j]].answer;
-                        //questions[j].correctAnswer = random[j];
                         questions[j].correctAnswer = $scope.quizJson.questions[i].questions[j].answer;
+                        $scope.quizJson.questions[i].answers.push([]);
                     }
                     $scope.quizJson.questions[i].questions = questions;
                     $scope.quizJson.questions[i].answerBucket = angular.copy(questions);
-                    //$scope.quizJson.questions[i].selected = null;
-                    $scope.quizJson.questions[i].answers = [];
-
                 }
             }
         }
@@ -84,6 +82,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.quizJson.questions[$scope.selectedQuestion];
             $scope.currentQuestionType = $scope.currentQuestion.type;
+            console.log($scope.currentQuestion)
         }
 
         $scope.navigateQuestion = function (position) {
@@ -187,24 +186,13 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             $scope.showScore = true;
         };
 
-        $scope.dragged = function(type) {
-            console.log($scope.currentQuestion)
-            if(type) {
-
-            } else {
-
+        $scope.droppedAnswer = function() {
+            //drop event is not fired so we created the function.. If it is fired then simply remove this function..
+            for(var i = 0, length = $scope.currentQuestion.answers.length; i< length; i++) {
+                if($scope.currentQuestion.answers[i].length > 0) {
+                    $scope.currentQuestion.questions[i].answer = $scope.currentQuestion.answers[i][0].answer;
+                }
             }
-            //$scope.currentQuestion.answers.splice($index, 1)
-            //console.log($scope.currentQuestion);
         }
-        //$scope.onDropComplete = function (index, answer) {
-        //    var fromAnswer = $scope.currentQuestion.questions[answer.index].answer;
-        //    var toAnswer = $scope.currentQuestion.questions[index].answer;
-        //
-        //    $scope.currentQuestion.questions[answer.index].answer = toAnswer;
-        //    $scope.currentQuestion.questions[index].answer = fromAnswer;
-        //    $scope.currentQuestion.hasAnswered = true;
-        //}
-        //console.log($scope)
     }
 ]);

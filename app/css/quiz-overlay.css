@@ -297,6 +297,14 @@ section.q-o-section .question-footer .other-apps {
     height: 70px;
     overflow: hidden;
 }
+.mtf-container .list.answer-list > .content {
+    padding: 0px;
+    height: 90px;
+}
+.mtf-container .list.answer-list > .content li {
+    padding: 10px;
+    height: 70px;
+}
 .mtf-container .answer-bucket .content {
     background: #417AAE;
 }
@@ -457,4 +465,7 @@ section.q-o-section .question-footer .other-apps {
 }
 .empty-space {
     height: 300px;
+}
+.dndDragging {
+    background: #52B4C3 !important;
 }

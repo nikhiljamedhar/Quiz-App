@@ -13,24 +13,15 @@
                 </div>
             </div>
 
-            <!--<div class="answer-block left">-->
-                <!--<div class="wrapper">-->
-                    <!--<h4 class="title t-center">Answer</h4>-->
-                    <!--<ul class="list">-->
-                        <!--<li class="question-row content" ng-repeat="row in currentQuestion.questions">-->
-                            <!--<ul class="drop-list" dnd-list="currentQuestion.answers">-->
-                                <!--<li class="question-row content" ng-if="item.index == $parent.$index" ng-repeat="item in currentQuestion.answers" dnd-draggable="item" dnd-drop="item.index = $index" dnd-moved="currentQuestion.answers.splice($index, 1)" dnd-effect-allowed="move">{{item.answer}}</li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-
             <div class="answer-block left">
                 <div class="wrapper">
                     <h4 class="title t-center">Answer</h4>
-                    <ul class="drop-list list" dnd-list="currentQuestion.answers">
-                        <li class="question-row content" ng-repeat="item in currentQuestion.answers" dnd-draggable="item" dnd-moved="currentQuestion.answers.splice($index, 1)" dnd-effect-allowed="move">{{item.answer}}</li>
+                    <ul class="list answer-list">
+                        <li class="question-row content" ng-repeat="row in currentQuestion.questions">
+                            <ul class="drop-list" dnd-list="currentQuestion.answers[$index]">
+                                <li class="question-row content" dnd-draggable="currentQuestion.answers[$index][0]" dnd-inserted="currentQuestion.questions[$index].answer = currentQuestion.answers[$index][0].answer" dnd-moved="currentQuestion.questions[$index].answer = ''; currentQuestion.answers[$index].splice(0, 1)" dnd-effect-allowed="move">{{currentQuestion.answers[$index][0].answer}}</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -39,7 +30,7 @@
                 <div class="wrapper">
                     <h4 class="title t-center">Bucket</h4>
                     <ul class="list" dnd-list="currentQuestion.answerBucket">
-                        <li class="question-row content" ng-repeat="item in currentQuestion.answerBucket" dnd-draggable="item" dnd-moved="currentQuestion.answerBucket.splice($index, 1)" dnd-effect-allowed="move">{{item.answer}}</li>
+                        <li class="question-row content" ng-repeat="item in currentQuestion.answerBucket" dnd-draggable="item" dnd-moved="currentQuestion.answerBucket.splice($index, 1); currentQuestion.hasAnswered = true; droppedAnswer()" dnd-effect-allowed="move">{{item.answer}}</li>
                     </ul>
                 </div>
             </div>
