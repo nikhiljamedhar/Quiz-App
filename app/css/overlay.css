@@ -101,3 +101,6 @@ html, body {
     box-shadow: none;
     padding-top: 11px;
 }
+.mask.no-input .overlay {
+    max-height: 185px;
+}

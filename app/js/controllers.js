@@ -91,7 +91,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return type === "quiz";
         };
 
-        $scope.adminPasswordDialog = function ($event) {
+        $scope.adminPasswordDialog = function ($event, redirect) {
             $event.preventDefault();
             var options = {
                 title: "Alert",
@@ -100,19 +100,23 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 callback: function(event) {
                     if(event.context.inputText === "admin") {
                         event.context.disposeOverlay();
-                        var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
-                        window.open(url, "_self");
+                        if(redirect) {
+                            var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
+                            window.open(url, "_self");
+                        }
+                    } else {
+                        alert("Wrong password");
                     }
                 },
-                type: 'input',
+                inputCheck: true,
                 placeholder: 'Enter your password'
             }
             new CustomDialog(options);
             return true;
         };
 
-        $scope.verifyPassword = function ($event) {
-            $scope.adminPasswordDialog($event);
+        $scope.verifyPassword = function ($event, redirect) {
+            $scope.adminPasswordDialog($event, redirect);
             //var password = prompt("Enter the Master Password");
             //if(password == null) return false;
             //if (password !== "admin") {

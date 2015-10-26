@@ -1,5 +1,6 @@
 function CustomDialog(options, element) {
     this.options = options;
+    this.options.inputCheck = this.options.inputCheck || false;
     if(element) {
         this.element = element;
         this.decorateOverlay();
@@ -14,8 +15,11 @@ CustomDialog.prototype.decorateOverlay = function() {
 
 CustomDialog.prototype.createOverlay = function() {
     var mask = document.createElement("div");
-    mask.className = "mask custom-dialog-mask";
+    mask.className = this.options.inputCheck ? "mask custom-dialog-mask" : "mask custom-dialog-mask no-input";
     mask.id = "mask";
+
+    var input = this.options.inputCheck ? '<div class="input-container">' + '<input type="text" name="input" placeholder="'+ this.options.placeholder  +'" class="input"/>' +'</div>' : '';
+
     mask.innerHTML = '<div class="overlay">' +
         '<div class="wrapper">' +
             '<header>' +
@@ -23,9 +27,9 @@ CustomDialog.prototype.createOverlay = function() {
             '</header>' +
             '<section>' +
                 '<p class="description">'+ this.options.description +'</p>' +
-                '<div class="input-container">' +
-                    '<input type="text" name="input" placeholder="'+ this.options.placeholder  +'" class="input"/>' +
-                '</div>' +
+
+                input +
+
             '</section>' +
             '<footer class="clear">' +
                 '<input type="button" name="button" value="Ok" class="ok left"/>' +
@@ -52,18 +56,27 @@ CustomDialog.prototype.createOverlayEvents = function() {
     var self = this;
     self.inputText = "";
 
-    this.input.addEventListener("keyup", function() {
-        self.inputText = this.value;
-    });
+    if(this.input) {
+        this.input.addEventListener("keyup", function() {
+            self.inputText = this.value;
+        });
+    }
     this.okButton.addEventListener("click", function() {
         if(self.options.callback) {
             self.options.callback(self.getEvent('ok'));
         }
     });
-    this.closeButton.addEventListener("click", function() {
-        if(self.options.callback) {
-            self.options.callback(self.getEvent());
+    document.addEventListener("keyup", function(e) {
+        if(self.options.callback && e.keyCode === 13) {
+            self.options.callback(self.getEvent('ok'));
         }
+    });
+    document.addEventListener("keyup", function(e) {
+        if(e.keyCode === 27) {
+            self.disposeOverlay();
+        }
+    });
+    this.closeButton.addEventListener("click", function() {
         self.disposeOverlay();
     });
 }
