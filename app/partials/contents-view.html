@@ -42,7 +42,8 @@
                                 ng-class="isCurrentSubject(subject.id) ? 'selected t-center' : 't-center'">
                                 <a href="#/grades/{{current_grade}}/subject/{{subject.id}}/" class="a-container">
                                     <div class="img-container circle">
-                                        <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}" class="subject-img circle theme-orange-bg-hover"/>
+                                        <img src="images/subjects/{{subject.id}}.png" alt="{{subject.id}}"
+                                             class="subject-img circle theme-orange-bg-hover"/>
                                     </div>
                                     <div class="subject-name">{{subject.name}}</div>
                                 </a>
@@ -97,7 +98,7 @@
                                 <ul class="content-items border t-center">
 
                                     <li ng-if="isApplication(content.type)" ng-repeat="content in contents" class="item"
-                                        ng-click="invokeCommand(content.exec)">
+                                        ng-click="selectApp(content)">
                                         <a href="" class="a-container wrapper">
                                             <div class="img-container">
                                                 <img src="images/{{current_subject}}/{{content.id}}.png" alt="app-icon"
@@ -170,8 +171,10 @@
                                                                value="{{current_subject}}"/>
                                                         <input type="hidden" name="chapter"
                                                                value="{{current_chapter}}"/>
-                                                        <input id="upload-input" class="upload-input" type="file" name="file"
-                                                               ng-click="verifyPassword($event);" file-upload on-file-load="uploadFile" />
+                                                        <input id="upload-input" class="upload-input" type="file"
+                                                               name="file"
+                                                               ng-click="verifyPassword($event);" file-upload
+                                                               on-file-load="uploadFile"/>
                                                         <button class="button upload-button">
                                                             <img class="icon" src="image/upload.png"
                                                                  alt="other apps icon"/>
@@ -179,7 +182,8 @@
                                                         </button>
                                                     </form>
                                                 </div>
-                                                <div class="app-button other-apps right" ng-click="adminPasswordDialog($event, 'redirect');">
+                                                <div class="app-button other-apps right"
+                                                     ng-click="adminPasswordDialog($event, 'redirect');">
                                                     <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/create-quiz/"
                                                        class="a-container">
                                                         <div class="img-container">
@@ -205,8 +209,6 @@
                                         </a>
                                         <button class="delete-quiz" ng-click="deleteQuiz($index)">×</button>
                                     </li>
-
-
                                 </ul>
                             </li>
 
@@ -215,6 +217,19 @@
                 </div>
             </section>
         </div>
-
     </section>
+
+    <div class="modal app-modal" ng-show="!!selectedApp" ng-click="deselectApp()">
+        <div class="modal-body" ng-click="handleModalContentClick($event)">
+            <header class="modal-header">
+                <h3 class="modal-title">{{selectedApp.name}}</h3>
+                <button class="modal-close" ng-click="deselectApp()">×</button>
+            </header>
+            <main class="modal-content app-modal">
+                <img src="images/{{current_subject}}/{{selectedApp.id}}.png" alt="app-icon"
+                     class="subject-img">
+                <a ng-click="invokeCommand(content.exec)">{{selectedApp.name}}</a>
+            </main>
+        </div>
+    </div>
 </div>

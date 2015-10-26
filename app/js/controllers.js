@@ -53,6 +53,13 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             chapterId: $routeParams.chapterId,
             subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
         });
+        $scope.selectedApp = null;
+        $scope.selectApp = function (app) {
+            $scope.selectedApp = app;
+        };
+        $scope.deselectApp = function () {
+            $scope.selectedApp = null;
+        };
 
         $scope.showOverlay = function (type, content) {
             var innerHTML = "";
@@ -102,7 +109,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 callback: function(event) {
                     if(event.context.inputText === "admin") {
                         event.context.disposeOverlay();
-                        if(redirect) {
+                        if (redirect) {
                             var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
                             window.open(url, "_self");
                         }
@@ -153,7 +160,11 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             $http.delete('/delete.php', requestJson).then(function () {
                 window.location.reload();
             });
-        }
+        };
+
+        $scope.handleModalContentClick =function(e) {
+            e.stopPropagation();
+        };
     }]);
 
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',

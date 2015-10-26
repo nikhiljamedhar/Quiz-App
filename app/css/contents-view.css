@@ -114,3 +114,7 @@
 .item > .delete-quiz:hover {
     font-size: 1.4em;
 }
+
+.app-modal {
+    padding: 10px;
+}
