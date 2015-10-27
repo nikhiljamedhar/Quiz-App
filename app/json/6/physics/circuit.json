@@ -22,7 +22,7 @@
       "",
       ""
     ],
-    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view."
+    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
     "manuals": [
       {"title":"Introduction", "src":"/manuals/circuit-directions.pdf"},
       {"title":"Series and Parallel", "src":"/manuals/circuit-series-parallel.doc"}
@@ -37,7 +37,7 @@
       "",
       ""
     ],
-    "description": "This new version of the CCK adds capacitors, inductors and AC voltage sources to your toolbox! Now you can graph the current and voltage as a function of time."
+    "description": "This new version of the CCK adds capacitors, inductors and AC voltage sources to your toolbox! Now you can graph the current and voltage as a function of time.",
     "manuals": [
       {"title":"Introduction", "src":"/manuals/circuit-directions.pdf"},
       {"title":"Series and Parallel", "src":"/manuals/circuit-series-parallel.doc"}
