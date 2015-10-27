@@ -3,132 +3,242 @@
         "name": "Bending Light",
         "id": "bending-light",
         "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Molecules and Light",
         "id": "molecules-and-lights",
         "exec": "java -jar /opt/phet/physics/molecules-and-light_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""] ,
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Streching DNA",
         "id": "streching-dna",
         "exec": "java -jar /opt/phet/biology/stretching-dna_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Color Vision",
         "id": "color-vision",
         "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
-        "keywords":["",""]  
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Molecular Motors",
         "id": "molecular-motors",
         "exec": "java -jar /opt/phet/physics/molecular-motors_en.jar",
-        "keywords":["",""]  
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Geometric Optics",
         "id": "geometric-optics",
         "exec": "java -jar /opt/phet/physics/geometric-optics_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Optical Tweezers and Applications",
         "id": "quantum-tunneling- wave",
         "exec": "java -jar /opt/phet/physics/quantum-tunneling_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Blackbody Spectrum",
         "id": "black-body-spectrum",
         "exec": "java -jar /opt/phet/physics/blackbody-spectrum_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Fourier: Making Waves",
         "id": "fourier",
         "exec": "java -jar /opt/phet/physics/fourier_en.jar",
-        "keywords":["",""]  
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "The Greenhouse Effect",
         "id": "greenhouse",
         "exec": "java -jar /opt/phet/chemistry/greenhouse_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Lasers",
         "id": "lasers",
         "exec": "java -jar /opt/phet/physics/lasers_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Neon Lights & Other Discharge Lamps",
         "id": "neon-lights-and-other-discharge-lamps",
         "exec": "java -jar /opt/phet/chemistry/discharge-lamps_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Photoelectric Effect",
         "id": "photoelectric-effect",
         "exec": "java -jar /opt/phet/chemistry/photoelectric_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Radio Waves & Electromagnetic Fields",
         "id": "radio-waves",
         "exec": "java -jar /opt/phet/physics/radio-waves_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Wave Interference",
         "id": "wave-interference",
         "exec": "java -jar /opt/phet/physics/wave-interference_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Microwaves",
         "id": "microwaves",
         "exec": "java -jar /opt/phet/physics/microwaves_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Quantum Wave Interference ",
         "id": "wave-interference",
         "exec": "java -jar /opt/phet/chemistry/quantum-wave-interference_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Simplified MRI",
         "id": "mri",
         "exec": "java -jar /opt/phet/biology/mri_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Models of the Hydrogen Atom",
         "id": "models-of-hydrogen-atom",
         "exec": "java -jar /opt/phet/chemistry/hydrogen-atom_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Beta Decay",
         "id": "beta-decay",
         "exec": "java -jar /opt/phet/chemistry/beta-decay_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Nuclear Fission",
         "id": "nuclear-fission",
         "exec": "java -jar /opt/phet/physics/nuclear-fission_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     },
     {
         "name": "Alpha Decay",
         "id": "alpha-decay",
         "exec": "java -jar /opt/phet/chemistry/alpha-decay_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+        ]
     }
 ]
