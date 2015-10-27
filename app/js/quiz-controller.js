@@ -172,6 +172,13 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             } else {
                 if ($scope.currentQuestion.questions.length < 10) {
                     $scope.currentQuestion.questions.push({"question": "", "answer": ""});
+                } else {
+                    var options = {
+                        title: "Alert",
+                        description: "Cannot add more than 10 options",
+                        buttons: ["ok"]
+                    }
+                    new CustomDialog(options);
                 }
             }
             $scope.isValidMultipleOption();
