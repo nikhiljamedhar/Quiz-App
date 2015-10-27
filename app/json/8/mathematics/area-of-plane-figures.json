@@ -6,5 +6,32 @@
     "exec": "firefox --new-window /opt/phet/maths/area-builder_en.html",
     "subject": "mathematics",
     "keywords":["",""]
-  }
+  },
+  	{
+        "name": "Rectangle : Area and Perimeter",
+        "id": "area-and-perimeter-of-rectangle",
+        "type": "videos",
+        "keywords": [
+            "",
+            ""
+            ]
+    },
+	{
+        "name": "Area and Perimeter",
+        "id": "area-and-perimeter",
+        "type": "videos",
+        "keywords": [
+            "",
+            ""
+        ]
+    },
+    {
+        "name": "Parallelogram : Area",
+        "id": "Area-of-square-and-parallelogram",
+        "type": "videos",
+        "keywords": [
+            "",
+            ""
+        ]
+    }
 ]
