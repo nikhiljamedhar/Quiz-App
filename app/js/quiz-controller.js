@@ -151,7 +151,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return {
                 "type": "match-the-following",
-                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}],
+                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}, {"question": "", "answer": ""}],
                 "marks": 1
             }
 
@@ -303,11 +303,27 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return $scope.selectedQuestion;
         };
 
+        $scope.getErrorMessage = function () {
+            var msg = "";
+            if($scope.currentQuestionType === "fill-the-blanks") {
+                msg = $scope.currentQuestion.question.trim().length === 0 ? "Please fill the question" : !$scope.currentQuestion.question.trim().match(/__[^_]+__/) ? "Please provide answer" : "";
+            } else if($scope.currentQuestionType === "match-the-following") {
+                msg = "Please fill the questions and answers";
+            } else {
+                msg = $scope.currentQuestion.question.trim().length === 0 ? "Please fill the question" :
+                        $scope.currentQuestion.question.trim().length < 10 ? "Please provide atleast 10 characters" :
+                            $scope.currentQuestion.options.map(function(item) {return item.value.trim() === ""}) ? "Please fill the answer options" :
+                                $scope.currentQuestion.options.map(function(item) {return item.answer === false}) ? "Please set answer to the question" : "";
+            }
+            return msg;
+        }
+
         $scope.saveQuiz = function () {
             if ($scope.hasError()) {
+                var errorMsg = $scope.getErrorMessage();
                 var options = {
                     title: "Alert",
-                    description: "Please fill the red field",
+                    description: errorMsg || "Please fill the red field",
                     buttons: ["ok"]
                 }
                 new CustomDialog(options);
