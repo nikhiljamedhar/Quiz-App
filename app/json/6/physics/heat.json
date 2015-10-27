@@ -3,60 +3,111 @@
         "name": "Blackbody Spectrum",
         "id": "black-body-spectrum",
         "exec": "java -jar /opt/phet/physics/blackbody-spectrum_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "How does the blackbody spectrum of the sun compare to visible light? Learn about the blackbody spectrum of the sun, a light bulb, an oven, and the earth. Adjust the temperature to see the wavelength and intensity of the spectrum change. View the color of the peak of the spectral curve.",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/blackbody-lab.docx"}
+        ]
     },
     {
         "name": "Friction",
         "id": "friction",
         "exec": "java -jar /opt/phet/physics/friction_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Learn how friction causes a material to heat up and melt. What happens on an atomic level when you rub two objects together?",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/friction.doc"}
+        ]
     },
     {
         "name": "Ballons & Buoyancy",
-        "id": "ballons-buoyancy",
+        "id": "buoyancy",
+        "type":"apps",
         "exec": "java -jar /opt/phet/physics/balloons-and-buoyancy_en.jar",
-        "keywords":["",""]
+        "keywords":["",""],
+        "description": "Experiment with a helium balloon, a hot air balloon, or a rigid sphere filled with different gases. Discover what makes some balloons float and others sink.",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/balloon-introduction.pdf"}
+        ]
     },
     {
         "name": "The Greenhouse Effect",
         "id": "greenhouse",
         "exec": "java -jar /opt/phet/chemistry/greenhouse_en.jar",
-        "keywords":["",""]  
+        "keywords":["",""],
+        "type": "apps",
+        "description": "How do greenhouse gases affect the climate? Explore the atmosphere during the ice age and today. What happens when you add clouds? Change the greenhouse gas concentration and see how the temperature changes. Then compare to the effect of glass panes. Zoom in and see how light interacts with molecules. Do all atmospheric gases contribute to the greenhouse effect?",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/greenhouse-effect.doc"}
+        ]
     },
     {
         "name": "Microwaves",
         "id": "microwaves",
         "exec": "java -jar /opt/phet/physics/microwaves_en.jar",
-        "keywords":["",""]  
+        "keywords":["",""],
+        "type": "apps",
+        "description": "How do microwaves heat up your coffee? Adjust the frequency and amplitude of microwaves. Watch water molecules rotating and bouncing around. View the microwave field as a wave, a single line of vectors, or the entire field.",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/microwaves.doc"}
+        ]
     },
     {
         "name": "Reversible Reactions",
         "id": "reversable-reactions",
         "exec": "java -jar /opt/phet/chemistry/reversible-reactions_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Watch a reaction proceed over time. How does total energy affect a reaction rate? Vary temperature, barrier height, and potential energies. Record concentrations and time in order to extract rate coefficients. Do temperature dependent studies to extract Arrhenius parameters. This simulation is best used with teacher guidance because it presents an analogy of chemical reactions.",
+        "manuals": [
+            {"title":"Questions", "src":"/manuals/reversible-reactions.pdf"}
+        ]
     },
     {
         "name": "States of Matter",
         "id": "states-of-matter",
         "exec": "java -jar /opt/phet/chemistry/states-of-matter_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""] ,
+        "type": "apps",
+        "description": "Watch different types of molecules form a solid, liquid, or gas. Add or remove heat and watch the phase change. Change the temperature or volume of a container and see a pressure-temperature diagram respond in real time. Relate the interaction potential to the forces between molecules.",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/states-of-matter.doc"}
+        ]
     },
     {
         "name": "States of Matter: Basics",
         "id": "states-of-matter-basics",
         "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Heat, cool and compress atoms and molecules and watch as they change between solid, liquid and gas phases.",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/states-of-matter-basics.pptx"}
+        ]
     },
     {
         "name": "Reactions & Rates",
         "id": "reactions-and-rates",
         "exec": "java -jar /opt/phet/chemistry/reactions-and-rates_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Explore what makes a reaction happen by colliding atoms and molecules. Design experiments with different reactions, concentrations, and temperatures. When are reactions reversible? What affects the rate of a reaction?",
+        "manuals": [
+            {"title":"Collision Theory", "src":"/manuals/collision-theory.pdf"}
+        ]
     },
     {
         "name": "Gas Properties",
         "id": "gas-properties",
         "exec": "java -jar /opt/phet/physics/gas-properties_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Pump gas molecules to a box and see what happens as you change the volume, add or remove heat, change gravity, and more. Measure the temperature and pressure, and discover how the properties of the gas vary in relation to each other.",
+        "manuals": [
+            {"title":"Collision Theory", "src":"/manuals/collision-theory.pdf"},
+            {"title":"Questions", "src":"/manuals/gas-properties.doc"}
+        ]
     }
 ]
