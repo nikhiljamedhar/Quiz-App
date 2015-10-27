@@ -3,13 +3,21 @@
         "name": "Balloons and Static Electricity",
         "id": "balloons-static-energy",
         "exec": "java -jar /opt/phet/physics/balloons_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/magnets.pdf"}
+        ]
     },
     {
         "name": "Generator",
         "id": "generator",
         "exec": "java -jar /opt/phet/physics/generator_en.jar",
-        "keywords":["",""] 
+        "keywords":["",""],
+        "description": "Generate electricity with a bar magnet! Discover the physics behind the phenomena by exploring magnets and how you can use them to make a bulb light.",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/magnets.pdf"}
+        ]
     },
     {
         "name": "Electric Field Hockey",
