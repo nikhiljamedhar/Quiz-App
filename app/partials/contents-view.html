@@ -226,9 +226,22 @@
                 <button class="modal-close" ng-click="deselectApp()">×</button>
             </header>
             <main class="modal-content app-modal">
-                <img src="images/{{current_subject}}/{{selectedApp.id}}.png" alt="app-icon"
-                     class="subject-img">
-                <a ng-click="invokeCommand(content.exec)">{{selectedApp.name}}</a>
+                <button class="image" ng-click="invokeCommand(content.exec)">
+                    <img src="images/{{current_subject}}/{{selectedApp.id}}.png" alt="app-icon"
+                         class="subject-img">
+                    <span>Launch App</span>
+                </button>
+                <div class="description">
+                    <p>
+                        {{selectedApp.description}}
+                    </p>
+                    <h3>Manuals</h3>
+                    <ul class="manual-list">
+                        <li ng-repeat="manual in selectedApp.manuals">
+                            <a href="{{manual.src}}" target="_blank">{{manual.title}}</a>
+                        </li>
+                    </ul>
+                </div>
             </main>
         </div>
     </div>

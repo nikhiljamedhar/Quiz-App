@@ -117,4 +117,40 @@
 
 .app-modal {
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.app-modal > .image {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.app-modal > .image:hover {
+    background-color: #ccc;
+}
+
+.app-modal > .image > img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.app-modal > .image > span {
+    font-size: 1.2em;
+}
+
+.app-modal .description {
+    padding: 10px;
+}
+
+.app-modal .description p {
+    margin-top: 0;
+}
+
+.app-modal .manual-list li {
+    list-style-type: disc;
+    margin-left: 20px;
 }
