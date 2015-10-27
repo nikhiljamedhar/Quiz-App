@@ -96,7 +96,7 @@ section.q-o-section .current-question-panel > .wrapper {
 }
 
 section.q-o-section .wrapper-inner .question-header {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -468,4 +468,12 @@ section.q-o-section .question-footer .other-apps {
 }
 .dndDragging {
     background: #52B4C3 !important;
+}
+header .navigation {
+    width: 100px;
+}
+header .navigation img {
+    width: 40px;
+    cursor: pointer;
+    background: #2a88d4;
 }

@@ -43,10 +43,14 @@
                                     <div class="current-question-panel">
                                         <div class="wrapper">
                                             <div class="wrapper-inner border">
-                                                <header class="question-header">
-                                                    <div class="marks">
+                                                <header class="question-header clear">
+                                                    <div class="marks left">
                                                         <label>Marks:</label>
                                                         <input type="number" ng-model="currentQuestion.marks" min="1" max="10" onkeydown="return false"/>
+                                                    </div>
+                                                    <div class="navigation right clear" ng-if="quizJson.questions.length > 1">
+                                                        <img src="image/previous.png" alt="prev" class="left circle" ng-click="previousQuestion()"/>
+                                                        <img src="image/next.png" alt="prev" class="right circle" ng-click="nextQuestion()"/>
                                                     </div>
 
                                                 </header>
@@ -67,20 +71,13 @@
                                             </div>
 
                                             <footer class="question-footer clear">
-                                                <div class="app-button other-apps save-question-button left" ng-click="previousQuestion()" ng-hide="isFirstQuestion()">
-                                                    <a href="" class="a-container">
-                                                        <div class="img-container">
-                                                            <img src="image/previous.png" alt="Previous Question"/>
-                                                        </div>
-                                                        <span>Previous Question</span>
-                                                    </a>
-                                                </div>
+
                                                 <div class="app-button other-apps save-question-button right" ng-click="addQuestion()">
                                                     <a href="" class="a-container">
                                                         <div class="img-container">
                                                             <img src="image/next.png" alt="Next Question"/>
                                                         </div>
-                                                        <span>Next Question</span>
+                                                        <span>Save Question</span>
                                                     </a>
                                                 </div>
                                                 <div class="app-button other-apps right">
@@ -107,6 +104,7 @@
                                                         <span>Save Quiz</span>
                                                     </a>
                                                 </div>
+                                                
                                             </footer>
 
                                         </div>

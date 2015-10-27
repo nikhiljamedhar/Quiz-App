@@ -257,7 +257,26 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.previousQuestion = function () {
-            $scope.selectQuestion(Math.min(0, $scope.selectedQuestion - 1));
+            var index = $scope.selectedQuestion;
+            if($scope.selectedQuestion == null) {
+                index = 0;
+            } else {
+                if($scope.selectedQuestion !== 0) {
+                    index = $scope.selectedQuestion - 1;
+                }
+            }
+            $scope.selectQuestion(index);
+        };
+        $scope.nextQuestion = function () {
+            var index = $scope.selectedQuestion;
+            if($scope.selectedQuestion == null) {
+                index = $scope.quizJson.questions.length - 1;
+            } else {
+                if($scope.selectedQuestion !== $scope.quizJson.questions.length - 1) {
+                    index = $scope.selectedQuestion + 1;
+                }
+            }
+            $scope.selectQuestion(index);
         };
 
         $scope.isValidMultipleOption = function () {
