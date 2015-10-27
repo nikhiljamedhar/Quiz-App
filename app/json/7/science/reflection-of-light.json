@@ -6,5 +6,15 @@
     "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
     "subject": "physics",
     "keywords":["",""]
-  }
+  },
+  {
+    "name": "Law of Reflection",
+    "id": "reflection-and-mirrors",
+    "type": "videos",
+    "keywords": [
+        "",
+        ""
+    ]
+   }
+
 ]

@@ -130,5 +130,5 @@
         "id": "alpha-decay",
         "exec": "java -jar /opt/phet/chemistry/alpha-decay_en.jar",
         "keywords":["",""] 
-    }
+    },
 ]

@@ -14,5 +14,14 @@
     "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
     "subject": "chemistry",
     "keywords":["",""]
-  }
+  },
+  {
+    "name": "Acid and Bases",
+    "id": "acid-base-and-salts",
+    "type": "videos",
+    "keywords": [
+        "",
+        ""
+    ]
+   }
 ]
