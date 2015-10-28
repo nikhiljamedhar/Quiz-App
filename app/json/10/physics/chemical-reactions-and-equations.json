@@ -5,7 +5,11 @@
         "type":"apps",
         "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
         "subject": "chemistry",
-        "keywords":["",""]
+        "keywords":["",""],
+        "description": "How do you know if a chemical equation is balanced? What can you change to balance an equation? Play a game to test your ideas!",
+        "manuals": [
+            {"title":"Activity", "src":"/manuals/BalancingChemicalEquations_Student.docx"}
+        ]
     },
     {
         "name": "Reactants, Products and Leftovers",
@@ -13,7 +17,11 @@
         "type":"apps",
         "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
         "subject": "chemistry",
-        "keywords":["",""]
+        "keywords":["",""],
+        "description": "Create your own sandwich and then see how many sandwiches you can make with different amounts of ingredients. Do the same with chemical reactions. See how many products you can make with different amounts of reactants. Play a game to test your understanding of reactants, products and leftovers. Can you get a perfect score on each level?",
+        "manuals": [
+            {"title":"Introduction", "src":"/manuals/RPAL-Student_directions1_intro.pdf"}
+        ]
     },
     {
         "name": "Kalzium",

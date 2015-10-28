@@ -2,9 +2,12 @@
     {
         "name": "Bending Light",
         "id": "bending-light",
-        "type":"apps",
         "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
-        "subject": "physics",
-        "keywords":["",""]
+        "keywords":["",""],
+        "type": "apps",
+        "description": "Explore bending of light between two media with different indices of refraction. See how changing from air to water to glass changes the bending angle. Play with prisms of different shapes and make rainbows.",
+        "manuals": [
+            {"title":"Reflection of Light", "src":"/manuals/refraction-of-light.pdf"}
+        ]
     }
 ]
