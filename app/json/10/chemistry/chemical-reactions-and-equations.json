@@ -13,14 +13,21 @@
     "type":"apps",
     "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
     "subject": "chemistry",
-    "keywords":["",""]
+    "keywords":["",""],
+    "description": "How do you know if a chemical equation is balanced? What can you change to balance an equation? Play a game to test your ideas!",
+    "manuals": [
+      {"title":"Activity", "src":"/manuals/BalancingChemicalEquations_Student.docx"}
+    ]
   },
   {
     "name": "Reactions & Rates",
     "id": "reactions-and-rates",
-    "type":"apps",
     "exec": "java -jar /opt/phet/chemistry/reactions-and-rates_en.jar",
-    "subject": "physics",
-    "keywords":["",""]
+    "keywords":["",""],
+    "type": "apps",
+    "description": "Explore what makes a reaction happen by colliding atoms and molecules. Design experiments with different reactions, concentrations, and temperatures. When are reactions reversible? What affects the rate of a reaction?",
+    "manuals": [
+      {"title":"Collision Theory", "src":"/manuals/collision-theory.pdf"}
+    ]
   }
 ]
