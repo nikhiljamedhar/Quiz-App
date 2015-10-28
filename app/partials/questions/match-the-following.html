@@ -18,7 +18,7 @@
                     <h4 class="title t-center">Answer</h4>
                     <ul class="list answer-list">
                         <li class="question-row content" ng-repeat="row in currentQuestion.questions">
-                            <ul dnd-allowed-types="['bucket']" class="drop-list" dnd-list="currentQuestion.answers[$index]">
+                            <ul dnd-allowed-types="['bucket']" class="drop-list" dnd-list="currentQuestion.answers[$index]" dnd-disable-if="currentQuestion.answers[$index].length > 0">
                                 <li dnd-type="'answer'" class="question-row content" dnd-draggable="currentQuestion.answers[$index][0]" dnd-inserted="currentQuestion.questions[$index].answer = currentQuestion.answers[$index][0].answer" dnd-moved="currentQuestion.questions[$index].answer = ''; currentQuestion.answers[$index].splice(0, 1)" dnd-effect-allowed="move">{{currentQuestion.answers[$index][0].answer}}</li>
                             </ul>
                         </li>
