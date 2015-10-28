@@ -5,7 +5,11 @@
     "type":"apps",
     "exec": "java -jar /opt/phet/chemistry/gravity-and-orbits_en.jar",
     "subject": "chemistry",
-    "keywords":["",""]
+    "keywords":["",""],
+    "description": "Move the sun, earth, moon and space station to see how it affects their gravitational forces and orbital paths. Visualize the sizes and distances between different heavenly bodies, and turn off gravity to see what would happen without it!",
+    "manuals": [
+      {"title":"Activity", "src":"/manuals/GravityAndOrbits-StudentActivity.doc"}
+    ]
   },
   {
     "name": "Gravity Force Lab",
@@ -13,7 +17,11 @@
     "type":"apps",
     "exec": "java -jar /opt/phet/physics/gravity-force-lab_en.jar",
     "subject": "physics",
-    "keywords":["",""]
+    "keywords":["",""],
+    "description": "Visualize the gravitational force that two objects exert on each other. Adjust properties of the objects to see how changing the properties affects the gravitational attraction.",
+    "manuals": [
+      {"title":"Exploring Gravity", "src":"/manuals/Exploring_Gravity.pdf"}
+    ]
   },
   {
     "name": "Freefall Tower",
