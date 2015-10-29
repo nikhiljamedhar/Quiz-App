@@ -312,7 +312,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.getErrorMessage = function () {
             var msg = "";
-            if ($scope.currentQuestionType === "fill-the-blanks") {
+            if(!$scope.quizJson.name) {
+                msg = "Please give a name to the Quiz";
+            } else if ($scope.currentQuestionType === "fill-the-blanks") {
                 msg = $scope.currentQuestion.question.trim().length === 0 ? "Please fill the question" : !$scope.currentQuestion.question.trim().match(/__[^_]+__/) ? "Please provide answer" : "";
             } else if ($scope.currentQuestionType === "match-the-following") {
                 msg = "Please fill the questions and answers";

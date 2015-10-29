@@ -477,3 +477,7 @@ header .navigation img {
     cursor: pointer;
     background: #2a88d4;
 }
+
+input.ng-invalid {
+    border: solid 2px #fa787e;
+}
