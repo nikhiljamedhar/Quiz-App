@@ -68,24 +68,33 @@
                                                              ng-if="currentQuestionType == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
+                                                <div class="question-footer clear">
+                                                    <div class="question-button other-apps save-question-button right" ng-click="addQuestion()">
+                                                        <a href="" class="a-container">
+                                                            <div class="img-container">
+                                                                <img src="image/next.png" alt="Next Question"/>
+                                                            </div>
+                                                            <span>Save</span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="question-button other-apps right">
+                                                        <a href="" class="a-container" ng-click="cancelQuestion()">
+                                                            <div class="img-container">
+                                                                <img src="image/delete.png" alt="Cancel"/>
+                                                            </div>
+                                                            <span>Cancel</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
 
                                             <footer class="question-footer clear">
-
-                                                <div class="app-button other-apps save-question-button right" ng-click="addQuestion()">
-                                                    <a href="" class="a-container">
-                                                        <div class="img-container">
-                                                            <img src="image/next.png" alt="Next Question"/>
-                                                        </div>
-                                                        <span>Add Question</span>
-                                                    </a>
-                                                </div>
                                                 <div class="app-button other-apps right">
-                                                    <a href="" class="a-container" ng-click="cancelQuestion()">
+                                                    <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="a-container" ng-click="closeOverlay($event)">
                                                         <div class="img-container">
                                                             <img src="image/delete.png" alt="Cancel"/>
                                                         </div>
-                                                        <span>Delete</span>
+                                                        <span>Canel Quiz </span>
                                                     </a>
                                                 </div>
                                                 <div class="app-button other-apps right download-quiz-button">
