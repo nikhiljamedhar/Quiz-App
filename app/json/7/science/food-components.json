@@ -12,5 +12,14 @@
       {"title":"Lesson", "src":"/manuals/eating-and-exercise-simulation-project-lesson.docx"},
       {"title":"Exercises", "src":"/manuals/eating-and-exercise-simulation-project-exercises.docx"}
     ]
-}
+  },
+  {
+    "name": "Nutrition",
+    "id": "food-component",
+    "type": "videos",
+    "keywords": [
+        "",
+        ""
+    ]
+  }
 ]

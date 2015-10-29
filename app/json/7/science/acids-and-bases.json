@@ -34,5 +34,14 @@
         "src": "/manuals/ph-lesson.docx"
       }
     ]
+  },
+  {
+    "name": "Acids Bases and Salts",
+    "id": "acid-base-and-salts",
+    "type": "videos",
+    "keywords": [
+        "",
+        ""
+    ]
   }
 ]
