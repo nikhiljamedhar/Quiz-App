@@ -332,13 +332,13 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         }
 
         $scope.saveQuiz = function () {
-            if ($scope.hasError()) {
+            if ($scope.getErrorMessage()) {
                 var errorMsg = $scope.getErrorMessage();
                 var options = {
                     title: "Alert",
                     description: errorMsg || "Please fill the red field",
                     buttons: ["ok"]
-                }
+                };
                 new CustomDialog($q, options);
             } else {
                 var data = {
@@ -353,7 +353,13 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                             $scope.closeOverlay({
                                 preventDefault: function () {
                                 }
-                            })
+                            });
+                            var options = {
+                                title: "Success",
+                                description: "Successfully saved the quiz.",
+                                buttons: ["ok"]
+                            };
+                            new CustomDialog($q, options);
                         }, function () {
                             console.log(arguments);
                         });
