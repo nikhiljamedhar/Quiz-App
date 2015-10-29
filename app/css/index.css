@@ -8,7 +8,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
-textarea, input[type='text'] {
+textarea, input[type='text'], input[type='password'] {
     border: none;
     outline: none;
     width: 100%;
@@ -152,4 +152,3 @@ img {
 .main-section {
     padding-top: 68px;
 }
-
