@@ -1,5 +1,5 @@
-pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', '$http',
-    function ($scope, $routeParams, CreateQuiz, $http) {
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', '$http', '$q',
+    function ($scope, $routeParams, CreateQuiz, $http, $q) {
         $scope.hasChange = false;
         $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
@@ -292,10 +292,17 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.cancelQuestion = function () {
-            if ($scope.isExistingQuestion()) {
+          console.log('here');
+             var dialogInstance = new CustomDialog($q, {
+                title: "Alert",
+                description: "Are you sure you want to delete this question?",
+                buttons: ["ok", "cancel"]
+            }).show();
+            dialogInstance
+              .then(function(result){
                 $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
-            }
-
+              })
+              .catch(function(e){});
             $scope.selectQuestion();
         };
 
