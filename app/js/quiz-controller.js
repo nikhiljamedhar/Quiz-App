@@ -208,16 +208,14 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             if ($scope.currentQuestionType === "fill-the-blanks") {
                 // Converting into question collection
 
-                var questArr = $scope.currentQuestion.question.replace(/__.*?__/g, '_______').split(" ");
-                var answerArr = $scope.currentQuestion.question.match(/__.*?__/g).join("").split("_").filter(Boolean);
-
-                for (var i = 0, length = questArr.length; i < length; i++) {
-                    if (questArr[i] === "_______") {
-                        $scope.currentQuestion.questionCollection.push({type: "answer", value: answerArr.shift()});
-                    } else if (questArr[i].trim().length > 0) {
-                        $scope.currentQuestion.questionCollection.push({type: "question", value: questArr[i].trim()});
+                var splits = $scope.currentQuestion.question.split('__');
+                $scope.currentQuestion.questionCollection = splits.map(function(el, i) {
+                    if(i % 2 == 0) {
+                        return {type: "question", value: el.trim()};
+                    } else {
+                        return {type: "answer", value: el.trim()};
                     }
-                }
+                });
             }
 
 

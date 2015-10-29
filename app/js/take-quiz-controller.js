@@ -1,3 +1,6 @@
+function processFib(question) {
+
+}
 pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents',
     function ($scope, $routeParams, Contents) {
         $scope.current_grade = $routeParams.gradeId;
@@ -33,6 +36,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             for (var i = 0, length = $scope.quizJson.questions.length; i < length; i++) {
                 $scope.quizJson.questions[i].hasAnswered = false;
                 if ($scope.quizJson.questions[i].type === "fill-the-blanks") {
+                    processFib($scope.quizJson.questions[i]);
                     var collection = $scope.quizJson.questions[i].questionCollection;
                     for (var j = 0; j < collection.length; j++) {
                         if (collection[j].type === "answer") {
