@@ -151,7 +151,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
             return {
                 "type": "match-the-following",
-                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}, {"question": "", "answer": ""}],
+                "questions": [{"question": "", "answer": ""}, {"question": "", "answer": ""}, {
+                    "question": "",
+                    "answer": ""
+                }],
                 "marks": 1
             }
 
@@ -258,10 +261,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.previousQuestion = function () {
             var index = $scope.selectedQuestion;
-            if($scope.selectedQuestion == null) {
+            if ($scope.selectedQuestion == null) {
                 index = 0;
             } else {
-                if($scope.selectedQuestion !== 0) {
+                if ($scope.selectedQuestion !== 0) {
                     index = $scope.selectedQuestion - 1;
                 }
             }
@@ -269,10 +272,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
         $scope.nextQuestion = function () {
             var index = $scope.selectedQuestion;
-            if($scope.selectedQuestion == null) {
+            if ($scope.selectedQuestion == null) {
                 index = $scope.quizJson.questions.length - 1;
             } else {
-                if($scope.selectedQuestion !== $scope.quizJson.questions.length - 1) {
+                if ($scope.selectedQuestion !== $scope.quizJson.questions.length - 1) {
                     index = $scope.selectedQuestion + 1;
                 }
             }
@@ -292,17 +295,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.cancelQuestion = function () {
-          console.log('here');
-             var dialogInstance = new CustomDialog($q, {
+            console.log('here');
+            var dialogInstance = new CustomDialog($q, {
                 title: "Alert",
                 description: "Are you sure you want to delete this question?",
                 buttons: ["ok", "cancel"]
             }).show();
             dialogInstance
-              .then(function(result){
-                $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
-              })
-              .catch(function(e){});
+                    .then(function (result) {
+                        $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
+                    })
+                    .catch(function (e) {
+                    });
             $scope.selectQuestion();
         };
 
@@ -312,15 +316,19 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.getErrorMessage = function () {
             var msg = "";
-            if($scope.currentQuestionType === "fill-the-blanks") {
+            if ($scope.currentQuestionType === "fill-the-blanks") {
                 msg = $scope.currentQuestion.question.trim().length === 0 ? "Please fill the question" : !$scope.currentQuestion.question.trim().match(/__[^_]+__/) ? "Please provide answer" : "";
-            } else if($scope.currentQuestionType === "match-the-following") {
+            } else if ($scope.currentQuestionType === "match-the-following") {
                 msg = "Please fill the questions and answers";
             } else {
                 msg = $scope.currentQuestion.question.trim().length === 0 ? "Please fill the question" :
                         $scope.currentQuestion.question.trim().length < 10 ? "Please provide atleast 10 characters" :
-                            $scope.currentQuestion.options.map(function(item) {return item.value.trim() === ""}) ? "Please fill the answer options" :
-                                $scope.currentQuestion.options.map(function(item) {return item.answer === false}) ? "Please set answer to the question" : "";
+                                $scope.currentQuestion.options.map(function (item) {
+                                    return item.value.trim() === ""
+                                }) ? "Please fill the answer options" :
+                                        $scope.currentQuestion.options.map(function (item) {
+                                            return item.answer === false
+                                        }) ? "Please set answer to the question" : "";
             }
             return msg;
         }
@@ -342,20 +350,20 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     quiz: $scope.quizJson
                 };
                 $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
-                    then(function (response) {
-                        $scope.hasChange = false;
-                        $scope.closeOverlay({
-                            preventDefault: function () {
-                            }
-                        })
-                    }, function () {
-                        console.log(arguments);
-                    });
+                        then(function (response) {
+                            $scope.hasChange = false;
+                            $scope.closeOverlay({
+                                preventDefault: function () {
+                                }
+                            })
+                        }, function () {
+                            console.log(arguments);
+                        });
             }
         };
 
-        $scope.validateInput = function(obj, limit) {
-            if(obj.length >= limit) {
+        $scope.validateInput = function (obj, limit) {
+            if (obj.length >= limit) {
                 var options = {
                     title: "Alert",
                     description: "You cannot add more than " + limit + " characters",
