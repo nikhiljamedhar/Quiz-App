@@ -115,6 +115,21 @@
     font-size: 1.4em;
 }
 
+.item > a > .download-quiz {
+    background-color: #2A88D4;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 2px;
+    border: none;
+    color:white;
+    box-shadow: 1px 1px 1px #585858;
+}
+
+.item > a > .download-quiz:active {
+    box-shadow: none;
+    background-color: #2A88D4;
+}
+
 .app-modal {
     padding: 10px;
     display: flex;

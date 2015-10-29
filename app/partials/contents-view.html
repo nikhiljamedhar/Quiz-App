@@ -208,6 +208,9 @@
                                             <p class="subject-name t-center border-top">{{content.name}}</p>
                                         </a>
                                         <button class="delete-quiz" ng-click="deleteQuiz($index)">×</button>
+                                        <a href="" download="{{content.name}}.bsquiz" ng-click="downloadQuiz($index)" id="quiz-download-{{$index}}">
+                                            <button class="download-quiz">Download Quiz</button>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>

@@ -162,6 +162,10 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             });
         };
 
+        $scope.downloadQuiz = function(index){
+            document.getElementById("quiz-download-"+index).href = window.URL.createObjectURL(new Blob([JSON.stringify($scope.contents[index])], {type: "application/json"}));
+        };
+
         $scope.handleModalContentClick =function(e) {
             e.stopPropagation();
         };

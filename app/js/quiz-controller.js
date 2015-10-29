@@ -251,9 +251,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             if (!$scope.currentQuestion) return '';
             return $scope.currentQuestion.question ? $scope.currentQuestion.question.replace(/__.*?__/g, '_______') : "";
         };
-        $scope.download = function () {
-            document.getElementById("download-json").href = window.URL.createObjectURL(new Blob([JSON.stringify($scope.quizJson)], {type: "application/json"}));
-        };
 
         $scope.isFirstQuestion = function () {
             return $scope.quizJson.questions.indexOf($scope.currentQuestion) <= 0;
