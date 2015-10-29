@@ -39,8 +39,8 @@ pencilBoxApp.controller('ChapterListController', ['$scope', '$routeParams', 'Cha
         };
     }]);
 
-pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location', '$http',
-    function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http) {
+pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location', '$http', '$q',
+    function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http, $q) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
@@ -120,7 +120,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 inputCheck: true,
                 placeholder: 'Enter your password'
             }
-            new CustomDialog(options);
+            new CustomDialog($q, options);
             return true;
         };
 

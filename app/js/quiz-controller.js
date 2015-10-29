@@ -170,7 +170,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                         description: "Cannot add more than 5 options",
                         buttons: ["ok"]
                     }
-                    new CustomDialog(options);
+                    new CustomDialog($q, options);
                 }
             } else {
                 if ($scope.currentQuestion.questions.length < 10) {
@@ -181,7 +181,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                         description: "Cannot add more than 10 options",
                         buttons: ["ok"]
                     }
-                    new CustomDialog(options);
+                    new CustomDialog($q, options);
                 }
             }
             $scope.isValidMultipleOption();
@@ -201,7 +201,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     description: "Please fill the red field",
                     buttons: ["ok"]
                 }
-                new CustomDialog(options);
+                new CustomDialog($q, options);
                 return;
             }
 
@@ -295,7 +295,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.cancelQuestion = function () {
-            console.log('here');
             var dialogInstance = new CustomDialog($q, {
                 title: "Alert",
                 description: "Are you sure you want to delete this question?",
@@ -304,10 +303,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             dialogInstance
                     .then(function (result) {
                         $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
+                        $scope.selectQuestion();
                     })
                     .catch(function (e) {
                     });
-            $scope.selectQuestion();
         };
 
         $scope.isExistingQuestion = function () {
@@ -341,7 +340,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     description: errorMsg || "Please fill the red field",
                     buttons: ["ok"]
                 }
-                new CustomDialog(options);
+                new CustomDialog($q, options);
             } else {
                 var data = {
                     grade: $scope.current_grade,
@@ -369,7 +368,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     description: "You cannot add more than " + limit + " characters",
                     buttons: ["ok"]
                 }
-                new CustomDialog(options);
+                new CustomDialog($q, options);
             }
         }
     }

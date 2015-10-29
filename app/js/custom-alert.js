@@ -97,7 +97,7 @@ CustomDialog.prototype.createOverlayEvents = function() {
 
     if(this.closeButton) {
         this.closeButton.addEventListener("click", function() {
-            self.deferred.rejected(self.getEvent('cancel'));
+            self.deferred.reject(self.getEvent('cancel'));
             self.disposeOverlay();
         });
     }
