@@ -10,5 +10,11 @@
         "id":"mathematics",
         "color": "#1c75bc",
         "topics_present" : true
+    },
+    {
+        "name":"Social",
+        "id":"social",
+        "color": "#1c75bc",
+        "topics_present" : true
     }
 ]
