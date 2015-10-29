@@ -185,14 +185,5 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
 
             $scope.showScore = true;
         };
-
-        $scope.droppedAnswer = function() {
-            //drop event is not fired so we created the function.. If it is fired then simply remove this function..
-            for(var i = 0, length = $scope.currentQuestion.answers.length; i< length; i++) {
-                if($scope.currentQuestion.answers[i].length > 0) {
-                    $scope.currentQuestion.questions[i].answer = $scope.currentQuestion.answers[i][0].answer;
-                }
-            }
-        }
     }
 ]);

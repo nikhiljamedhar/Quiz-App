@@ -30,5 +30,13 @@
     {
         "name": "Structure of Atom",
         "id": "structure-of-atom"
+    },
+    {
+        "name": "Electric Current",
+        "id": "electric-current"
+    },
+    {
+        "name": "Electromagnetism",
+        "id": "electromagnetism"
     }
 ]

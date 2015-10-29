@@ -5,7 +5,11 @@
     "type":"apps",
     "exec": "java -jar /opt/phet/chemistry/build-a-molecule_en.jar",
     "subject": "chemistry",
-    "keywords":["",""]
+    "keywords":["",""],
+    "description": "Starting from atoms, see how many molecules you can build. Collect your molecules and see them in 3D!",
+    "manuals": [
+      {"title":"Activity", "src":"/manuals/BuildAMolecule-Activity.doc"}
+    ]
   },
   {
     "name": "Element Builder",
@@ -13,6 +17,10 @@
     "type":"apps",
     "exec": "chromium-browser --app=file:///opt/phet/chemistry/ElementBuilder/index.html",
     "subject": "chemistry",
-    "keywords":["",""]
+    "keywords":["",""],
+    "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
+    "manuals": [
+      {"title":"Activity", "src":"/manuals/Build An Atom Exercises.pdf"}
+    ]
   }
 ]

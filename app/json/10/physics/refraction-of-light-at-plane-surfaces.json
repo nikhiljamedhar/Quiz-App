@@ -5,6 +5,10 @@
     "type":"apps",
     "exec": "java -jar /opt/phet/physics/geometric-optics_en.jar",
     "subject": "physics",
-    "keywords":["",""]
-}
+    "keywords":["",""],
+    "description": "How does a lens form an image? See how light rays are refracted by a lens. Watch how the image changes when you adjust the focal length of the lens, move the object, move the lens, or move the screen.",
+    "manuals": [
+      {"title":"Reflection of Light", "src":"/manuals/geometric optics_phet.doc"}
+    ]
+  }
 ]
