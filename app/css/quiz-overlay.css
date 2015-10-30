@@ -478,6 +478,6 @@ header .navigation img {
     background: #2a88d4;
 }
 
-input.ng-invalid {
+p.title > input.ng-invalid {
     border: solid 2px #fa787e;
 }
