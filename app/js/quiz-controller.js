@@ -174,7 +174,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return document.querySelectorAll(".question-box .error, .question-box .ng-invalid").length > 0;
         };
 
-        $scope.selectQuestion = function(index) {
+        $scope.selectQuestion = function (index) {
             $scope.currentQuestionIndex = index;
         };
 
@@ -214,11 +214,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             }
         };
 
-        $scope.canDeleteQuestion = function() {
+        $scope.canDeleteQuestion = function () {
             return $scope.quizJson.questions.length > 1;
         };
         $scope.deleteQuestion = function () {
-            if(!$scope.canDeleteQuestion()) return;
+            if (!$scope.canDeleteQuestion()) return;
             var dialogInstance = new CustomDialog($q, {
                 title: "Alert",
                 description: "Are you sure you want to delete this question?",
@@ -227,7 +227,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             dialogInstance
                     .then(function () {
                         $scope.quizJson.questions.splice($scope.currentQuestionIndex, 1);
-                        if($scope.currentQuestionIndex > $scope.quizJson.questions.length - 1) {
+                        if ($scope.currentQuestionIndex > $scope.quizJson.questions.length - 1) {
                             $scope.currentQuestionIndex = $scope.quizJson.questions.length - 1;
                         } else {
                             refreshCurrentQuestion();
@@ -242,25 +242,32 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.errorsForQuestion = function (question) {
-            var msg = '';
             if (question.type === "fill-the-blanks") {
-                msg = question.question.trim().length === 0 ? "Please fill the question" : !question.question.trim().match(/__[^_]+__/) ? "Please provide answer" : "";
+                if(question.question.trim().length === 0) {
+                    return "Please fill the question";
+                } else if(!question.question.trim().match(/__[^_]+__/)) {
+                    return "Please provide answer";
+                }
             } else if (question.type === "match-the-following") {
-                msg = "Please fill the questions and answers";
+                return "Please fill the questions and answers";
             } else {
-                msg = question.question.trim().length === 0 ? "Please fill the question" :
-                        question.question.trim().length < 10 ? "Please provide atleast 10 characters" :
-                                question.options.map(function (item) {
-                                    return item.value.trim() === ""
-                                }) ? "Please fill the answer options" :
-                                        question.options.map(function (item) {
-                                            return item.answer === false
-                                        }) ? "Please set answer to the question" : "";
+                if (question.question.trim().length === 0) {
+                    return "Please fill the question";
+                }
+                else if (question.options.filter(function (option) {
+                            return option.value.trim() === ''
+                        }).length > 0) {
+                    return "Please fill all the answer options.";
+                }
+                else if (question.options.filter(function (option) {
+                            return option.answer
+                        }).length <= 0) {
+                    return "Please set answer to the question";
+                }
             }
-            return msg;
         };
 
-        var processFib = function() {
+        var processFib = function () {
             $scope.quizJson.questions.forEach(function () {
                 if ($scope.currentQuestion.type !== "fill-the-blanks") return;
 
@@ -277,11 +284,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             if (!$scope.quizJson.name) {
                 error = "Please give a name to the Quiz";
             } else {
-                var firstInvalidQuestionIndex = $scope.quizJson.questions.findIndex(function(question) {
-                    return $scope.errorsForQuestion(question) != '';
+                var firstInvalidQuestionIndex = $scope.quizJson.questions.findIndex(function (question) {
+                    return $scope.errorsForQuestion(question) !== undefined;
                 });
 
-                if(firstInvalidQuestionIndex == undefined && firstInvalidQuestionIndex !== -1) {
+                if (firstInvalidQuestionIndex !== undefined && firstInvalidQuestionIndex !== -1) {
                     $scope.currentQuestionIndex = firstInvalidQuestionIndex;
                     error = $scope.errorsForQuestion($scope.quizJson.questions[firstInvalidQuestionIndex])
                 }
@@ -335,7 +342,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             var setType = function () {
                 $scope.currentQuestion = $scope.quizJson.questions[$scope.currentQuestionIndex] = getDefaultQuestion(questionType);
             };
-            if($scope.currentQuestion.question) {
+            if ($scope.currentQuestion.question) {
                 new CustomDialog($q, {
                     title: "Confirm",
                     description: "You have entered some question details. If you change the type, they'll be lost. Are you sure, you want to change the type?",
