@@ -196,10 +196,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.previousQuestion = function () {
-            $scope.currentQuestionIndex = Math.min(0, $scope.currentQuestionIndex - 1);
+            $scope.currentQuestionIndex = Math.max(0, $scope.currentQuestionIndex - 1);
         };
         $scope.nextQuestion = function () {
-            $scope.currentQuestionIndex = Math.max($scope.quizJson.questions.length - 1, $scope.currentQuestionIndex + 1);
+            $scope.currentQuestionIndex = Math.min($scope.quizJson.questions.length - 1, $scope.currentQuestionIndex + 1);
         };
 
         $scope.isValidMultipleOption = function () {
@@ -260,6 +260,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             return msg;
         };
 
+        var processFib = function() {
+            $scope.quizJson.questions.forEach(function () {
+                if ($scope.currentQuestion.type !== "fill-the-blanks") return;
+
+                // Converting into question collection
+                var splits = $scope.currentQuestion.question.split('__');
+                $scope.currentQuestion.questionCollection = splits.map(function (el, i) {
+                    return i % 2 == 0 ? {type: "question", value: el.trim()} : {type: "answer", value: el.trim()};
+                });
+            });
+        };
+
         $scope.saveQuiz = function () {
             var error = "";
             if (!$scope.quizJson.name) {
@@ -269,7 +281,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     return $scope.errorsForQuestion(question) != '';
                 });
 
-                if(firstInvalidQuestionIndex !== undefined) {
+                if(firstInvalidQuestionIndex == undefined && firstInvalidQuestionIndex !== -1) {
                     $scope.currentQuestionIndex = firstInvalidQuestionIndex;
                     error = $scope.errorsForQuestion($scope.quizJson.questions[firstInvalidQuestionIndex])
                 }
@@ -282,6 +294,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 };
                 new CustomDialog($q, options);
             } else {
+                processFib();
                 var data = {
                     grade: $scope.current_grade,
                     subject: $scope.current_subject,
