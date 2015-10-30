@@ -56,7 +56,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         $scope.highlightDefault = function () {
             $scope.selectedQuestion = null;
             if ($scope.mode === "create" || $scope.quizJson.questions.length === 0) {
-                $scope.quizJson = {questions: []}
+                $scope.quizJson = {questions: []};
                 $scope.currentQuestionType = "fill-the-blanks";
                 $scope.currentQuestion = $scope.getCurrentQuestionObject();
             } else {
@@ -64,12 +64,12 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
                 $scope.currentQuestionType = $scope.currentQuestion.type;
             }
-        }
+        };
 
 
         $scope.overlayLoaded = function () {
             $scope.showOverlay(document.getElementById("create-quiz-mask"));
-        }
+        };
 
         $scope.selectQuestionType = function (type) {
             if ($scope.selectedQuestion != null) {
@@ -78,18 +78,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.currentQuestionType = type;
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
             $scope.isValidMultipleOption();
-        }
+        };
 
         $scope.selectQuestion = function (index) {
             $scope.selectedQuestion = index;
             $scope.currentQuestion = $scope.getCurrentQuestionObject($scope.selectedQuestion);
             $scope.currentQuestionType = $scope.currentQuestion.type;
             $scope.isValidMultipleOption();
-        }
+        };
 
         $scope.isCurrentSubject = function (subject) {
             return $scope.current_subject.toLowerCase() === subject.toLowerCase();
-        }
+        };
 
         $scope.isNotCurrentSubject = function (subject) {
             return $scope.current_subject.toLowerCase() !== subject.toLowerCase();
@@ -169,30 +169,30 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                         title: "Alert",
                         description: "Cannot add more than 5 options",
                         buttons: ["ok"]
-                    }
+                    };
                     new CustomDialog($q, options);
                 }
             } else {
                 if ($scope.currentQuestion.questions.length < 10) {
                     $scope.currentQuestion.questions.push({"question": "", "answer": ""});
                 } else {
-                    var options = {
+                    options = {
                         title: "Alert",
                         description: "Cannot add more than 10 options",
                         buttons: ["ok"]
-                    }
+                    };
                     new CustomDialog($q, options);
                 }
             }
             $scope.isValidMultipleOption();
-        }
+        };
         $scope.deleteRow = function (index) {
             var key = $scope.currentQuestionType === "multiple-options" ? "options" : "questions";
             if ($scope.currentQuestion[key].length > 2) {
                 $scope.currentQuestion[key].splice(index, 1);
             }
             $scope.isValidMultipleOption();
-        }
+        };
 
         $scope.addQuestion = function () {
             if ($scope.hasError()) {
@@ -200,7 +200,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     title: "Alert",
                     description: "Please fill the red field",
                     buttons: ["ok"]
-                }
+                };
                 new CustomDialog($q, options);
                 return;
             }
@@ -227,11 +227,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.currentQuestion = $scope.getCurrentQuestionObject();
             $scope.hasChange = true;
             $scope.isValidMultipleOption();
-        }
+        };
 
         $scope.hasError = function () {
             return document.querySelectorAll(".question-box .error, .question-box .ng-invalid").length > 0;
-        }
+        };
 
         $scope.addBlank = function () {
             var answer = prompt("Enter the answer for blank:", '');
@@ -296,7 +296,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 buttons: ["ok", "cancel"]
             }).show();
             dialogInstance
-                    .then(function (result) {
+                    .then(function () {
                         $scope.quizJson.questions.splice($scope.selectedQuestion, 1);
                         $scope.selectQuestion();
                     })
@@ -327,7 +327,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                                         }) ? "Please set answer to the question" : "";
             }
             return msg;
-        }
+        };
 
         $scope.saveQuiz = function () {
             if ($scope.getErrorMessage()) {
@@ -346,7 +346,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     quiz: $scope.quizJson
                 };
                 $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
-                        then(function (response) {
+                        then(function () {
                             $scope.hasChange = false;
                             $scope.closeOverlay({
                                 preventDefault: function () {
@@ -370,7 +370,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     title: "Alert",
                     description: "You cannot add more than " + limit + " characters",
                     buttons: ["ok"]
-                }
+                };
                 new CustomDialog($q, options);
             }
         }
