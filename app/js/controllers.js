@@ -99,7 +99,9 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.adminPasswordDialog = function ($event, redirect) {
-            $event.preventDefault();
+            if($event) {
+                $event.preventDefault();
+            }
             var options = {
                 title: "Alert",
                 description: "Enter your master password",
@@ -124,13 +126,38 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return true;
         };
 
+        $scope.adminPasswordDialogFn = function ($event, callback) {
+            if($event) {
+                $event.preventDefault();
+            }
+            var options = {
+                title: "Alert",
+                description: "Enter your master password",
+                className: "master-password",
+                buttons: ["ok", "cancel"],
+                closeHandler: true,
+                callback: function(event) {
+                    if(event.context.inputText === "admin") {
+                        event.context.disposeOverlay();
+                        if(callback) callback();
+                    } else {
+                        alert("Wrong password");
+                    }
+                },
+                inputCheck: true,
+                placeholder: 'Enter your password'
+            }
+            new CustomDialog($q, options);
+            return true;
+        };
+
         $scope.verifyPassword = function ($event) {
             var password = prompt("Enter the Master Password", '');
             if (password == null) {
                 $event && $event.preventDefault();
                 return false;
             }
-            if (passwopassword !== "admin") {
+            if (password !== "admin") {
                 $event && $event.preventDefault();
                 alert("Wrong Master Password");
                 return false;
@@ -151,17 +178,18 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.deleteQuiz = function (index) {
-            if (!$scope.verifyPassword()) return;
-            var requestJson = {
-                data: {
-                    grade: $scope.current_grade,
-                    subject: $scope.current_subject,
-                    chapter: $scope.current_chapter,
-                    name: $scope.contents[index].name
-                }
-            };
-            $http.delete('/delete.php', requestJson).then(function () {
-                window.location.reload();
+            $scope.adminPasswordDialogFn(null, function() {
+                var requestJson = {
+                    data: {
+                        grade: $scope.current_grade,
+                        subject: $scope.current_subject,
+                        chapter: $scope.current_chapter,
+                        name: $scope.contents[index].name
+                    }
+                };
+                $http.delete('/delete.php', requestJson).then(function () {
+                    window.location.reload();
+                });
             });
         };
 
