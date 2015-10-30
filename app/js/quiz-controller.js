@@ -249,7 +249,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                     return "Please provide answer";
                 }
             } else if (question.type === "match-the-following") {
-                return "Please fill the questions and answers";
+                if (question.questions.filter(function (option) {
+                            return option.question.trim() === '' && option.answer.trim() === ''
+                        }).length > 0) {
+                    return "Please fill all the fields.";
+                }
             } else {
                 if (question.question.trim().length === 0) {
                     return "Please fill the question";

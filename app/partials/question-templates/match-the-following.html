@@ -25,7 +25,7 @@
                             <input type="text" maxlength="100" ng-model="row.answer" ng-change="validateInput(row.answer, 100)" placeholder="Enter your answer"/>
                         </div>
                     </div>
-                    <div ng-class="currentQuestion.questions.length == 3 ? 'right fixed invisible' : 'right fixed'"><span class="delete theme-orange-bg link" ng-click="deleteRow($index)">Delete</span></div>
+                    <div ng-class="currentQuestion.questions.length < 3 ? 'right fixed invisible' : 'right fixed'"><span class="delete theme-orange-bg link" ng-click="deleteRow($index)">Delete</span></div>
                 </div>
             </li>
         </ul>
