@@ -17,13 +17,13 @@
                             <div class="question-type-panel fixed left m-no-left">
 
                                 <ul class="question-types border-right">
-                                    <li ng-class="currentQuestionType === question.type ? 'question-type border-bottom highlight' : 'question-type border-bottom'"
-                                        data-type="{{question.type}}" ng-repeat="question in questionTypes"
-                                        ng-click="selectQuestionType(question.type)">
+                                    <li class="question-type border-bottom" ng-class="{highlight: (currentQuestion.type === questionType.type)}"
+                                        ng-repeat="questionType in questionTypes"
+                                        ng-click="setQuestionType(questionType.type)">
                                         <div class="img-container">
-                                            <img src="image/{{question.type}}.png" alt="{question.image}"/>
+                                            <img src="image/{{questionType.type}}.png" alt="{questionType.image}"/>
                                         </div>
-                                        <div class="question-name">{{question.name}}</div>
+                                        <div class="question-name">{{questionType.name}}</div>
                                     </li>
                                 </ul>
 
@@ -33,7 +33,7 @@
 
                                     <div class="other-questions border-bottom">
                                         <ul class="question-number-list  color-set t-center">
-                                            <li ng-class="$index == selectedQuestion ? 'question-number highlight border' : 'question-number border'"
+                                            <li ng-class="$index == currentQuestionIndex ? 'question-number highlight border' : 'question-number border'"
                                                 data-type="{{question.type}}" ng-repeat="question in quizJson.questions"
                                                 ng-click="selectQuestion($index)">{{$index + 1}}
                                             </li>
@@ -59,30 +59,30 @@
                                                     <div class="question-box border">
                                                         <div ng-include
                                                              src="'partials/question-templates/fill-the-blanks.html'"
-                                                             ng-if="currentQuestionType == 'fill-the-blanks'"></div>
+                                                             ng-if="currentQuestion.type == 'fill-the-blanks'"></div>
                                                         <div ng-include
                                                              src="'partials/question-templates/multiple-option.html'"
-                                                             ng-if="currentQuestionType == 'multiple-options'"></div>
+                                                             ng-if="currentQuestion.type == 'multiple-options'"></div>
                                                         <div ng-include
                                                              src="'partials/question-templates/match-the-following.html'"
-                                                             ng-if="currentQuestionType == 'match-the-following'"></div>
+                                                             ng-if="currentQuestion.type == 'match-the-following'"></div>
                                                     </div>
                                                 </section>
                                                 <div class="question-footer clear">
                                                     <div class="question-button other-apps save-question-button right" ng-click="addQuestion()">
                                                         <a href="" class="a-container">
                                                             <div class="img-container">
-                                                                <img src="image/next.png" alt="Next Question"/>
+                                                                <img src="image/addoption.png" alt="Add Question"/>
                                                             </div>
-                                                            <span>Next</span>
+                                                            <span>Add Question</span>
                                                         </a>
                                                     </div>
                                                     <div class="question-button other-apps right">
-                                                        <a href="" class="a-container" ng-click="cancelQuestion()">
+                                                        <a href="" class="a-container" ng-click="cancelQuestion()" ng-disabled="!canDeleteQuestion()">
                                                             <div class="img-container">
-                                                                <img src="image/delete.png" alt="Cancel"/>
+                                                                <img src="image/delete.png" alt="Delete Question"/>
                                                             </div>
-                                                            <span>Cancel</span>
+                                                            <span>Delete Question</span>
                                                         </a>
                                                     </div>
                                                 </div>

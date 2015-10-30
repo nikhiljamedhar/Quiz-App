@@ -33,7 +33,7 @@
     vertical-align: middle;
 }
 .app-button > a .img-container, .other-apps > a .img-container {
-    width: 30px;
+    width: 24px;
 }
 .app-button:active {
     box-shadow: none;
