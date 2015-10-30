@@ -1,10 +1,19 @@
 [
-  {
-    "name": "K Geography",
-    "id": "kgeography",
-    "type":"apps",
-    "exec": "kgeography",
-    "subject": "social",
-    "keywords":["",""]
-}
+  	{
+	    "name": "K Geography",
+	    "id": "kgeography",
+	    "type":"apps",
+	    "exec": "kgeography",
+	    "subject": "social",
+	    "keywords":["",""]
+	},
+	{
+        "name": "Reading Map",
+        "id": "reading-maps",
+        "type": "videos",
+        "keywords": [
+            "",
+            ""
+        ]
+    }
 ]
