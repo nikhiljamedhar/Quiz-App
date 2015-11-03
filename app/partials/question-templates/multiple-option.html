@@ -1,5 +1,5 @@
 <div class="multiple-options question-area">
-    <div ng-class="currentQuestion.question.length <= 10 ? 'input-container border error' : 'input-container border'">
+    <div ng-class="currentQuestion.question.length < 1 ? 'input-container border error' : 'input-container border'">
         <textarea name="question" id="question" cols="30" rows="4" maxlength="500" placeholder="Type your question here" ng-model="currentQuestion.question" ng-change="validateInput(currentQuestion.question, 500)"></textarea>
     </div>
     <div class="options-container border">

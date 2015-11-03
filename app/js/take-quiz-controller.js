@@ -1,6 +1,3 @@
-function processFib(question) {
-
-}
 pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents',
     function ($scope, $routeParams, Contents) {
         $scope.current_grade = $routeParams.gradeId;
@@ -36,7 +33,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             for (var i = 0, length = $scope.quizJson.questions.length; i < length; i++) {
                 $scope.quizJson.questions[i].hasAnswered = false;
                 if ($scope.quizJson.questions[i].type === "fill-the-blanks") {
-                    processFib($scope.quizJson.questions[i]);
                     var collection = $scope.quizJson.questions[i].questionCollection;
                     for (var j = 0; j < collection.length; j++) {
                         if (collection[j].type === "answer") {
@@ -53,7 +49,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                         }
                         $scope.quizJson.questions[i].options[j].answer = false
                     }
-                    $scope.quizJson.questions[i].isCheckbox = answers.length > 1 ? true : false;
+                    $scope.quizJson.questions[i].isCheckbox = answers.length > 1;
 
                     if (!$scope.quizJson.questions[i].isCheckbox) {
                         $scope.quizJson.questions[i].selectedAnswer = -1;
@@ -164,6 +160,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                 }, true);
             } else if (question.type == "match-the-following") {
                 answered = question.questions.map(function (q) {
+                    debugger;
                     return q.answer.toLowerCase() === q.correctAnswer.toLowerCase();
                 }).reduce(function (res, i) {
                     return res && i
