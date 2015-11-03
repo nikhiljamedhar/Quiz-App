@@ -160,20 +160,13 @@
                                         </div>
                                         <div class="button-container left m-no-left clear">
                                             <div class="wrapper clear">
-                                                <div class="app-button upload-button other-apps right">
-                                                    <form name="uploadForm" action="/upload.php"
+                                                <div class="app-button upload-button other-apps right" ng-click="verifyPassword($event);">
+                                                    <form name="uploadForm" action=""
                                                           enctype="multipart/form-data" method="post"
                                                           class="upload-container">
-                                                        <input type="hidden" name="grade" value="{{current_grade}}"/>
-                                                        <input type="hidden" name="return_url"
-                                                               value="{{currentPath()}}"/>
-                                                        <input type="hidden" name="subject"
-                                                               value="{{current_subject}}"/>
-                                                        <input type="hidden" name="chapter"
-                                                               value="{{current_chapter}}"/>
                                                         <input id="upload-input" class="upload-input" type="file"
                                                                name="file"
-                                                               ng-click="verifyPassword($event);" file-upload
+                                                                file-upload
                                                                on-file-load="uploadFile"/>
                                                         <button class="button upload-button">
                                                             <img class="icon" src="image/upload.png"

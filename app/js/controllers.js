@@ -128,7 +128,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
 
         $scope.adminPasswordDialogFn = function ($event, callback) {
             if($event) {
-                $event.preventDefault();
+                $event.stopPropagation();
             }
             var options = {
                 title: "Alert",
@@ -152,17 +152,21 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.verifyPassword = function ($event) {
-            var password = prompt("Enter the Master Password", '');
-            if (password == null) {
-                $event && $event.preventDefault();
-                return false;
-            }
-            if (password !== "admin") {
-                $event && $event.preventDefault();
-                alert("Wrong Master Password");
-                return false;
-            }
-            return true;
+            debugger;
+            var continuea= $scope.adminPasswordDialogFn($event)
+            console.log(continuea);
+            return continuea;
+            // var password = prompt("Enter the Master Password", '');
+            // if (password == null) {
+            //     $event && $event.preventDefault();
+            //     return false;
+            // }
+            // if (password !== "admin") {
+            //     $event && $event.preventDefault();
+            //     alert("Wrong Master Password");
+            //     return false;
+            // }
+            // return true;
         };
 
         $scope.uploadFile = function (data) {
