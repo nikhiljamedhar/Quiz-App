@@ -1,23 +1,24 @@
 function CustomDialog($q, options, element) {
-    this.deferred = $q.defer();
+    this.customPromise = $q.defer();
     this.options = options;
     this.options.inputCheck = this.options.inputCheck || false;
     this.options.closeHandler = this.options.closeHandler || false;
-    if(element) {
-        this.element = element;
-        this.decorateOverlay();
-    } else {
-        this.createOverlay()
-    }
-}
+    this.createOverlay();
+//    if(element) {
+//        this.element = element;
+//        this.decorateOverlay();
+//    } else {
+//        this.createOverlay()
+//    }
+};
+//CustomDialog.prototype.decorateOverlay = function() {
+//    this.mask = this.element;
+//    this.setDefaultOverlaySettings();
+//}
 
 CustomDialog.prototype.show = function() {
-  return this.deferred.promise;
+    return this.customPromise.promise;
 };
-CustomDialog.prototype.decorateOverlay = function() {
-    this.mask = this.element;
-    this.setDefaultOverlaySettings();
-}
 
 CustomDialog.prototype.createOverlay = function() {
     var mask = document.createElement("div");
@@ -50,7 +51,9 @@ CustomDialog.prototype.createOverlay = function() {
     this.mask = mask;
 
     this.setDefaultOverlaySettings();
-}
+};
+
+
 CustomDialog.prototype.setDefaultOverlaySettings = function() {
     this.overlay = this.mask.getElementsByClassName("overlay")[0];
     this.input = this.overlay.getElementsByClassName("input")[0];
@@ -58,7 +61,9 @@ CustomDialog.prototype.setDefaultOverlaySettings = function() {
     this.closeButton = this.overlay.getElementsByClassName("close")[0];
     document.body.style.overflow = "hidden";
     this.createOverlayEvents();
-}
+};
+
+
 CustomDialog.prototype.createOverlayEvents = function() {
 
     var self = this;
@@ -72,7 +77,7 @@ CustomDialog.prototype.createOverlayEvents = function() {
     }
     if(this.okButton) {
         this.okButton.addEventListener("click", function() {
-          self.deferred.resolve(self.getEvent('ok'));
+          self.customPromise.resolve(self.getEvent('ok'));
             if(self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
                 if(!self.options.closeHandler) {
@@ -97,7 +102,7 @@ CustomDialog.prototype.createOverlayEvents = function() {
 
     if(this.closeButton) {
         this.closeButton.addEventListener("click", function() {
-            self.deferred.reject(self.getEvent('cancel'));
+            self.customPromise.reject(self.getEvent('cancel'));
             self.disposeOverlay();
         });
     }
