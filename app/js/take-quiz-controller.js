@@ -66,6 +66,9 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                     }
                     $scope.quizJson.questions[i].questions = questions;
                     $scope.quizJson.questions[i].answerBucket = angular.copy(questions);
+                    for (var j = 0; j < questions.length; j++) {
+                        $scope.quizJson.questions[i].questions[j].answer = '';
+                    }
                 }
             }
         }
@@ -160,7 +163,6 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
                 }, true);
             } else if (question.type == "match-the-following") {
                 answered = question.questions.map(function (q) {
-                    debugger;
                     return q.answer.toLowerCase() === q.correctAnswer.toLowerCase();
                 }).reduce(function (res, i) {
                     return res && i
@@ -170,8 +172,19 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             return answered ? question.marks : 0;
         };
 
+        $scope.processMatchTheFollowing = function () {
+            $scope.quizJson.questions
+                    .forEach(function (question) {
+                        if(question.type !== 'match-the-following') return;
+                        question.questions.forEach(function(q, i){
+                            q.answer = question.answers[i][0] ? question.answers[i][0].answer : '';
+                        });
+                    });
+        };
+
         $scope.submitQuiz = function () {
             if (!confirm("Are you sure?")) return;
+            $scope.processMatchTheFollowing();
             $scope.totalMarks = $scope.quizJson.questions.map(function (question) {
                 return question.marks;
             }).reduce(function (sum, i) {
@@ -186,5 +199,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
 
             $scope.showScore = true;
         };
+
+
     }
 ]);
