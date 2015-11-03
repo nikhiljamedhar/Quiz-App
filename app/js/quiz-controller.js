@@ -272,12 +272,12 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         var processFib = function () {
-            $scope.quizJson.questions.forEach(function () {
-                if ($scope.currentQuestion.type !== "fill-the-blanks") return;
+            $scope.quizJson.questions.forEach(function (question) {
+                if (question.type !== "fill-the-blanks") return;
 
                 // Converting into question collection
-                var splits = $scope.currentQuestion.question.split('__');
-                $scope.currentQuestion.questionCollection = splits.map(function (el, i) {
+                var splits = question.question.split('__');
+                question.questionCollection = splits.map(function (el, i) {
                     return i % 2 == 0 ? {type: "question", value: el.trim()} : {type: "answer", value: el.trim()};
                 });
             });
