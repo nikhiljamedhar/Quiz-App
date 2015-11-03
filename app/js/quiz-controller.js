@@ -187,7 +187,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 var rightPart = mainString.substr(index, mainString.length);
                 return leftPart + insertString + rightPart;
             };
-            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, '__' + answer + '__', caretPosition);
+            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
         };
 
         $scope.fillInTheBlankPreview = function () {
