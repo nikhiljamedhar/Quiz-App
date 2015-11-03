@@ -5,35 +5,35 @@
     },
     {
         "name": "Rain and Rivers",
-        "id": ""
+        "id": "rain-and-rivers"
     },
     {
         "name": "Tanks and Ground Water",
-        "id": ""
+        "id": "tanks-and-ground-water"
     },
     {
         "name": "Oceans and Fishing",
-        "id": ""
+        "id": "oceans-and-fishing"
     },
     {
         "name": "Europe",
-        "id": ""
+        "id": "europe"
     },
     {
         "name": "France - A European Country",
-        "id": ""
+        "id": "france-a-european-country"
     },
     {
         "name": "Africa",
-        "id": ""
+        "id": "africa"
     },
     {
         "name": "Nigeria - An African Country",
-        "id": ""
+        "id": "nigeria-an-african-country"
     },
     {
         "name": "Handicrafts and Handlooms",
-        "id": ""
+        "id": "handicrafts-and-handlooms"
     },
     {
         "name": "Industrial Revolution",
@@ -41,7 +41,7 @@
     },
     {
         "name" : "Importance of Transport System",
-        "id" : ""
+        "id" : "importance-of-transport-system"
     },
     {
         "name" : "New Kings and Kingdoms",
@@ -57,7 +57,7 @@
     },
     {
         "name" : "Mughal Empire",
-        "id" : ""
+        "id" : "mughal-empire"
     },
     {
         "name" : "Establishment of British Empire in India",
@@ -69,26 +69,26 @@
     },
     {
         "name" : "Implementation of Laws in the District",
-        "id" : ""
+        "id" : "implementation-of-laws-in-the-district"
     },
     {
         "name" : "Caste Discrimination and the Struggle for Equality",
-        "id" : ""
+        "id" : "caste-descrimination-and-the-struggle-for-equality"
     },
     {
         "name" : "Livelihood and Struggles of Urban Workers",
-        "id" : ""
+        "id" : "livelihood-and-struggles-of-urban-workers"
     },
     {
         "name" : "Folk Religion",
-        "id" : ""
+        "id" : "folk-religion"
     },
     {
         "name" : "Devotional Paths to the Divine",
-        "id" : ""
+        "id" : "devotional-paths-to-the-divine"
     },
     {
         "name" : "Rulers and Buildings",
-        "id" : ""
+        "id" : "rulers-and-buildings"
     }
 ]
