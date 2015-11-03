@@ -20,23 +20,28 @@ CustomDialog.prototype.show = function() {
     return this.customPromise.promise;
 };
 
-CustomDialog.prototype.createOverlay = function() {
-    var mask = document.createElement("div");
-    mask.className = this.options.inputCheck ? "mask custom-dialog-mask" : "mask custom-dialog-mask no-input";
-    if(this.options.buttons.length === 1) { mask.classList.add("ok-only"); }
-    mask.id = "mask";
+var addInputCheckClass = function(inputCheck, mask){
+    mask.className = inputCheck ? "mask custom-dialog-mask" : "mask custom-dialog-mask no-input";
+};
 
-    var input = this.options.inputCheck ? '<div class="input-container">' + '<input type="password" name="input" placeholder="'+ this.options.placeholder  +'" class="input"/>' +'</div>' : '';
-    var ok = this.options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
-    var cancel = this.options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
+var addOneButtonClass = function (length, mask){
+    if(length === 1) {
+        mask.classList.add("ok-only");
+    }
+};
+
+var addInnerHtml = function(options, mask){
+    var input = options.inputCheck ? '<div class="input-container">' + '<input type="password" name="input" placeholder="'+ options.placeholder  +'" class="input"/>' +'</div>' : '';
+    var ok = options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
+    var cancel = options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
 
     mask.innerHTML = '<div class="overlay">' +
         '<div class="wrapper">' +
             '<header>' +
-                '<h4 class="title">'+ this.options.title +'</h4>' +
+                '<h4 class="title">'+ options.title +'</h4>' +
             '</header>' +
             '<section>' +
-                '<p class="description">'+ this.options.description +'</p>' +
+                '<p class="description">'+ options.description +'</p>' +
 
                 input +
 
@@ -46,6 +51,16 @@ CustomDialog.prototype.createOverlay = function() {
             '</footer>' +
         '</div>' +
     '</div>';
+};
+
+CustomDialog.prototype.createOverlay = function() {
+    var mask = document.createElement("div");
+    mask.id = "mask";
+
+    addInputCheckClass(this.options.inputCheck, mask);
+    addOneButtonClass(this.options.buttons.length, mask);
+
+    addInnerHtml(this.options, mask);
 
     document.body.appendChild(mask);
     this.mask = mask;
