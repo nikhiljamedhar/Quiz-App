@@ -187,7 +187,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 var rightPart = mainString.substr(index, mainString.length);
                 return leftPart + insertString + rightPart;
             };
-            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, '__' + answer + '__', caretPosition);
+            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
         };
 
         $scope.fillInTheBlankPreview = function () {
@@ -346,10 +346,11 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             var setType = function () {
                 $scope.currentQuestion = $scope.quizJson.questions[$scope.currentQuestionIndex] = getDefaultQuestion(questionType);
             };
-            if ($scope.currentQuestion.question) {
+            if (($scope.currentQuestion.question && $scope.currentQuestion.question.trim())
+                    || ($scope.currentQuestion.questions && $scope.currentQuestion.questions.filter(function(q) {return q.question || q.answer;}).length > 0)) {
                 new CustomDialog($q, {
                     title: "Confirm",
-                    description: "You have entered some question details. If you change the type, they'll be lost. Are you sure, you want to change the type?",
+                    description: "You have entered question details. If you change the type, they'll be lost. Do you want to continue?",
                     buttons: ["ok", "cancel"]
                 }).show().then(setType);
             } else {
