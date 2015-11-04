@@ -482,7 +482,11 @@ p.title > input.ng-invalid {
     border: solid 2px #fa787e;
 }
 .navigation{
-    margin-top: -570px;
+  margin-top: -650px;
+  margin-left:15px;
+}
+.pointer1 {
+  width:180px;
 }
 .pointerText {
     font-size: 20px;
