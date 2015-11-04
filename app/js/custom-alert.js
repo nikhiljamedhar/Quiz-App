@@ -4,46 +4,45 @@ function CustomDialog($q, options, element) {
     this.options.inputCheck = this.options.inputCheck || false;
     this.options.closeHandler = this.options.closeHandler || false;
     this.createOverlay();
-};
-
-CustomDialog.prototype.show = function() {
+}
+CustomDialog.prototype.show = function () {
     return this.customPromise.promise;
 };
 
-var addInputCheckClass = function(inputCheck, mask){
+var addInputCheckClass = function (inputCheck, mask) {
     mask.className = inputCheck ? "mask custom-dialog-mask" : "mask custom-dialog-mask no-input";
 };
 
-var addOneButtonClass = function (length, mask){
-    if(length === 1) {
+var addOneButtonClass = function (length, mask) {
+    if (length === 1) {
         mask.classList.add("ok-only");
     }
 };
 
-var addInnerHtml = function(options, mask){
-    var input = options.inputCheck ? '<div class="input-container">' + '<input type="password" name="input" placeholder="'+ options.placeholder  +'" class="input"/>' +'</div>' : '';
+var addInnerHtml = function (options, mask) {
+    var input = options.inputCheck ? '<div class="input-container">' + '<input type="password" name="input" placeholder="' + options.placeholder + '" class="input"/>' + '</div>' : '';
     var ok = options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
     var cancel = options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
 
     mask.innerHTML = '<div class="overlay">' +
-        '<div class="wrapper">' +
+            '<div class="wrapper">' +
             '<header>' +
-                '<h4 class="title">'+ options.title +'</h4>' +
+            '<h4 class="title">' + options.title + '</h4>' +
             '</header>' +
             '<section>' +
-                '<p class="description">'+ options.description +'</p>' +
+            '<p class="description">' + options.description + '</p>' +
 
-                input +
+            input +
 
             '</section>' +
             '<footer class="clear">' +
             ok + cancel +
             '</footer>' +
-        '</div>' +
-    '</div>';
+            '</div>' +
+            '</div>';
 };
 
-CustomDialog.prototype.createOverlay = function() {
+CustomDialog.prototype.createOverlay = function () {
     var mask = document.createElement("div");
     mask.id = "mask";
 
@@ -59,7 +58,7 @@ CustomDialog.prototype.createOverlay = function() {
 };
 
 
-CustomDialog.prototype.setDefaultOverlaySettings = function() {
+CustomDialog.prototype.setDefaultOverlaySettings = function () {
     this.overlay = this.mask.getElementsByClassName("overlay")[0];
     this.input = this.overlay.getElementsByClassName("input")[0];
     this.okButton = this.overlay.getElementsByClassName("ok")[0];
@@ -69,7 +68,7 @@ CustomDialog.prototype.setDefaultOverlaySettings = function() {
 };
 
 
-CustomDialog.prototype.createOverlayEvents = function() {
+CustomDialog.prototype.createOverlayEvents = function () {
 
     var escCode = 27;
     var enterCode = 13;
@@ -77,71 +76,68 @@ CustomDialog.prototype.createOverlayEvents = function() {
     var self = this;
     self.inputText = "";
 
-    if(this.input) {
+    if (this.input) {
         this.input.focus();
-        this.input.addEventListener("keyup", function() {
+        this.input.addEventListener("keyup", function () {
             self.inputText = this.value;
         });
-    };
-
-    if(this.okButton) {
-        this.okButton.addEventListener("click", function() {
-          self.customPromise.resolve(self.getEvent('ok'));
-            if(self.options.callback) {
+    }
+    if (this.okButton) {
+        this.okButton.addEventListener("click", function () {
+            self.customPromise.resolve(self.getEvent('ok'));
+            if (self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
-                if(!self.options.closeHandler) {
+                if (!self.options.closeHandler) {
                     self.disposeOverlay();
                 }
             } else {
                 self.disposeOverlay();
             }
         });
-    };
-
-    document.addEventListener("keyup", function(e) {
-        if(e.keyCode === enterCode) {
-            if(self.options.callback) {
+    }
+    document.addEventListener("keyup", function (e) {
+        if (e.keyCode === enterCode) {
+            if (self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
             }
-            if(!self.options.closeHandler) {
+            if (!self.options.closeHandler) {
                 self.disposeOverlay();
             }
         }
     });
 
-    if(this.closeButton) {
-        this.closeButton.addEventListener("click", function() {
+    if (this.closeButton) {
+        this.closeButton.addEventListener("click", function () {
             self.customPromise.reject(self.getEvent('cancel'));
             self.disposeOverlay();
         });
-    };
-
-    document.addEventListener("keyup", function(e) {
-        if(e.keyCode === escCode) {
+    }
+    document.addEventListener("keyup", function (e) {
+        if (e.keyCode === escCode) {
             self.disposeOverlay();
         }
     });
-}
-CustomDialog.prototype.disposeOverlay = function() {
-    if(this.mask) {
+};
+CustomDialog.prototype.disposeOverlay = function () {
+    if (this.mask) {
         this.mask.parentElement.removeChild(this.mask);
     }
     document.body.style.overflow = "auto";
-}
-CustomDialog.prototype.setContent = function(overlayContent) {
-    if(typeof overlayContent === "string") {
+};
+CustomDialog.prototype.setContent = function (overlayContent) {
+    if (typeof overlayContent === "string") {
         this.overlay.innerHTML = overlayContent;
     } else {
         this.overlay.appendChild(overlayContent);
     }
-}
-CustomDialog.prototype.setMaskClassName = function(className) {
+};
+CustomDialog.prototype.setMaskClassName = function (className) {
     this.mask.classList.add(className);
-}
-CustomDialog.prototype.getEvent = function(type) {
+};
+CustomDialog.prototype.getEvent = function (type) {
     return {
         type: type,
-        result: type === "ok" ? true : false,
+        result: type === "ok",
         context: this
     }
-}
+};
