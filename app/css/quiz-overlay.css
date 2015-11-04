@@ -481,3 +481,10 @@ header .navigation img {
 p.title > input.ng-invalid {
     border: solid 2px #fa787e;
 }
+.navigation{
+    margin-top: -570px;
+}
+.pointerText {
+    font-size: 20px;
+    margin-left: 15px;
+}

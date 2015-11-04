@@ -15,7 +15,6 @@
                     <section class="q-o-section">
                         <div class="wrapper two-column clear">
                             <div class="question-type-panel fixed left m-no-left">
-
                                 <ul class="question-types border-right">
                                     <li class="question-type border-bottom" ng-class="{highlight: (currentQuestion.type === questionType.type)}"
                                         ng-repeat="questionType in questionTypes"
@@ -26,7 +25,10 @@
                                         <div class="question-name">{{questionType.name}}</div>
                                     </li>
                                 </ul>
-
+                                <div class="navigation">
+                                <img class ="pointer1" src="images/arrow1.png" alt="pointer">
+                                        <span class="pointerText">Select a question type</span>
+                                    </div>
                             </div>
                             <div class="question-panel flexible left m-no-left">
                                 <div class="wrapper">
