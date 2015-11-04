@@ -4,17 +4,7 @@ function CustomDialog($q, options, element) {
     this.options.inputCheck = this.options.inputCheck || false;
     this.options.closeHandler = this.options.closeHandler || false;
     this.createOverlay();
-//    if(element) {
-//        this.element = element;
-//        this.decorateOverlay();
-//    } else {
-//        this.createOverlay()
-//    }
 };
-//CustomDialog.prototype.decorateOverlay = function() {
-//    this.mask = this.element;
-//    this.setDefaultOverlaySettings();
-//}
 
 CustomDialog.prototype.show = function() {
     return this.customPromise.promise;
@@ -81,6 +71,9 @@ CustomDialog.prototype.setDefaultOverlaySettings = function() {
 
 CustomDialog.prototype.createOverlayEvents = function() {
 
+    var escCode = 27;
+    var enterCode = 13;
+
     var self = this;
     self.inputText = "";
 
@@ -89,7 +82,8 @@ CustomDialog.prototype.createOverlayEvents = function() {
         this.input.addEventListener("keyup", function() {
             self.inputText = this.value;
         });
-    }
+    };
+
     if(this.okButton) {
         this.okButton.addEventListener("click", function() {
           self.customPromise.resolve(self.getEvent('ok'));
@@ -102,10 +96,10 @@ CustomDialog.prototype.createOverlayEvents = function() {
                 self.disposeOverlay();
             }
         });
-    }
+    };
 
     document.addEventListener("keyup", function(e) {
-        if(e.keyCode === 13) {
+        if(e.keyCode === enterCode) {
             if(self.options.callback) {
                 self.options.callback(self.getEvent('ok'));
             }
@@ -120,10 +114,10 @@ CustomDialog.prototype.createOverlayEvents = function() {
             self.customPromise.reject(self.getEvent('cancel'));
             self.disposeOverlay();
         });
-    }
+    };
 
     document.addEventListener("keyup", function(e) {
-        if(e.keyCode === 27) {
+        if(e.keyCode === escCode) {
             self.disposeOverlay();
         }
     });
