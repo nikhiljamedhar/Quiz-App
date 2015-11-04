@@ -1,5 +1,5 @@
-pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents',
-    function ($scope, $routeParams, Contents) {
+pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents', '$q',
+    function ($scope, $routeParams, Contents, $q) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
@@ -175,31 +175,37 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
         $scope.processMatchTheFollowing = function () {
             $scope.quizJson.questions
                     .forEach(function (question) {
-                        if(question.type !== 'match-the-following') return;
-                        question.questions.forEach(function(q, i){
+                        if (question.type !== 'match-the-following') return;
+                        question.questions.forEach(function (q, i) {
                             q.answer = question.answers[i][0] ? question.answers[i][0].answer : '';
                         });
                     });
         };
 
         $scope.submitQuiz = function () {
-            if (!confirm("Are you sure?")) return;
-            $scope.processMatchTheFollowing();
-            $scope.totalMarks = $scope.quizJson.questions.map(function (question) {
-                return question.marks;
-            }).reduce(function (sum, i) {
-                return sum + i
-            }, 0);
+            var options = {
+                title: "Confirm",
+                description: "Are you sure?",
+                className: "master-password",
+                buttons: ["ok", "cancel"],
+                closeHandler: true
+            };
+            new CustomDialog($q, options).show().then(function () {
+                $scope.processMatchTheFollowing();
+                $scope.totalMarks = $scope.quizJson.questions.map(function (question) {
+                    return question.marks;
+                }).reduce(function (sum, i) {
+                    return sum + i
+                }, 0);
 
-            $scope.marks = $scope.quizJson.questions.map(function (question) {
-                return getMarksFor(question);
-            }).reduce(function (sum, i) {
-                return sum + i
-            }, 0);
-
-            $scope.showScore = true;
+                $scope.marks = $scope.quizJson.questions.map(function (question) {
+                    return getMarksFor(question);
+                }).reduce(function (sum, i) {
+                    return sum + i
+                }, 0);
+                $scope.showScore = true;
+            }).catch(function () {
+            });
         };
-
-
     }
 ]);

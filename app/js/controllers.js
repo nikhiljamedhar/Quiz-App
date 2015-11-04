@@ -98,7 +98,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return type === "quiz";
         };
 
-        $scope.adminPasswordDialog = function ($event, redirect) {
+        $scope.adminPasswordDialog = function ($event, redirect, callback) {
             if($event) {
                 $event.preventDefault();
             }
@@ -115,38 +115,20 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                             var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
                             window.open(url, "_self");
                         }
-                    } else {
-                        alert("Wrong password");
-                    }
-                },
-                inputCheck: true,
-                placeholder: 'Enter your password'
-            }
-            new CustomDialog($q, options);
-            return true;
-        };
-
-        $scope.adminPasswordDialogFn = function ($event, callback) {
-            if($event) {
-                $event.preventDefault();
-            }
-            var options = {
-                title: "Alert",
-                description: "Enter your master password",
-                className: "master-password",
-                buttons: ["ok", "cancel"],
-                closeHandler: true,
-                callback: function(event) {
-                    if(event.context.inputText === "admin") {
-                        event.context.disposeOverlay();
                         if(callback) callback();
                     } else {
-                        alert("Wrong password");
+                        var error = document.createElement('p');
+                        error.className = 'error';
+                        error.innerHTML="Incorrect password";
+                        var container = event.context.input.parentElement.parentElement;
+                        if(!container.querySelector('.error')) {
+                            container.appendChild(error);
+                        }
                     }
                 },
                 inputCheck: true,
                 placeholder: 'Enter your password'
-            }
+            };
             new CustomDialog($q, options);
             return true;
         };
@@ -178,7 +160,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.deleteQuiz = function (index) {
-            $scope.adminPasswordDialogFn(null, function() {
+            $scope.adminPasswordDialog(null, null, function() {
                 var requestJson = {
                     data: {
                         grade: $scope.current_grade,

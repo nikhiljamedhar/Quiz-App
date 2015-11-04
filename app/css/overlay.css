@@ -56,7 +56,9 @@ html, body {
 .custom-dialog-mask .overlay {
     background: #ffffff;
     max-width: 380px;
-    max-height: 227px;
+    height: auto;
+    bottom: auto;
+    top: 20%;
     box-shadow: 0 0 6px rgba(0,0,0, 0.3);
     border: 1px solid silver;
     border-radius: 3px;

@@ -72,17 +72,24 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
         };
 
         $scope.closeOverlay = function ($event) {
-            if ($scope.hasChange) {
-                $event.preventDefault();
-                var r = confirm("You have unsaved changes in the quiz. Do you want to save it?");
-                if (r) return;
-            }
+            $event.preventDefault();
+            var options = {
+                title: "Changes not saved",
+                description: "You have unsaved changes in the quiz. Do you want to save it?",
+                className: "master-password",
+                buttons: ["ok", "cancel"],
+                closeHandler: true
+            };
+            new CustomDialog($q, options).show().then(function () {
+                $scope.saveQuiz()
+            }).catch(function() {
+                $scope.overlay.disposeOverlay();
+                var url = window.location.href;
+                url = url.replace("update-quiz/", "");
+                url = url.replace("create-quiz/", "");
+                window.location.href = url.replace("update-quiz/", "");
 
-            $scope.overlay.disposeOverlay();
-            var url = window.location.href;
-            url = url.replace("update-quiz/", "");
-            url = url.replace("create-quiz/", "");
-            window.location.href = url.replace("update-quiz/", "");
+            });
         };
 
         $scope.overlayLoaded = function () {
@@ -243,9 +250,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
 
         $scope.errorsForQuestion = function (question) {
             if (question.type === "fill-the-blanks") {
-                if(question.question.trim().length === 0) {
+                if (question.question.trim().length === 0) {
                     return "Please fill the question";
-                } else if(!question.question.trim().match(/__[^_]+__/)) {
+                } else if (!question.question.trim().match(/__[^_]+__/)) {
                     return "Please provide answer";
                 }
             } else if (question.type === "match-the-following") {
@@ -347,7 +354,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 $scope.currentQuestion = $scope.quizJson.questions[$scope.currentQuestionIndex] = getDefaultQuestion(questionType);
             };
             if (($scope.currentQuestion.question && $scope.currentQuestion.question.trim())
-                    || ($scope.currentQuestion.questions && $scope.currentQuestion.questions.filter(function(q) {return q.question || q.answer;}).length > 0)) {
+                    || ($scope.currentQuestion.questions && $scope.currentQuestion.questions.filter(function (q) {
+                        return q.question || q.answer;
+                    }).length > 0)) {
                 new CustomDialog($q, {
                     title: "Confirm",
                     description: "You have entered question details. If you change the type, they'll be lost. Do you want to continue?",
