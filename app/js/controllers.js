@@ -68,9 +68,10 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             if (type === "videos") {
                 var videoName = 'videos/' + content.id + '.mp4';
                 innerHTML = "<div id='overlayContent'>" +
-                        "<video controls autoplay src='" + videoName + "' class='video'></video>" +
+                        "<video id='video' controls autoplay src='" + videoName + "' class='video'></video>" +
                         "</div>";
                 overlay.setContent(innerHTML);
+                document.getElementById('video').style.height = (document.querySelector('#mask .overlay').offsetHeight - 25) + 'px';
             }
         };
         $scope.isCurrentSubject = function (subject) {

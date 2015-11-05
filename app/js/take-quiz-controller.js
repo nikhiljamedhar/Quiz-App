@@ -224,7 +224,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             $event.preventDefault();
             var options = {
                 title: "Changes not saved",
-                description: "You have unsaved changes in the quiz. Do you want to save it?",
+                description: "All your data will be lost. Are you sure you want to close the quiz?",
                 className: "master-password",
                 buttons: ["ok", "cancel"],
                 buttonName: ["yes", "no"],

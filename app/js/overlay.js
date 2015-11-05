@@ -18,7 +18,7 @@ Overlay.prototype.createOverlay = function() {
     mask.className = "mask";
     mask.id = "mask";
     mask.innerHTML = '<div class="overlay"><div class="container"><div class="overlay-container">'+
-    '<div class="header"><span class="close">close</span></div></div><div class="overlay-content"></div></div></div>'
+    '<div class="header"><span class="close">Close</span></div></div><div class="overlay-content"></div></div></div>'
     document.body.appendChild(mask);
     this.mask = mask;
 
