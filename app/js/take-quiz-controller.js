@@ -185,7 +185,7 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
         $scope.submitQuiz = function () {
             var options = {
                 title: "Confirm",
-                description: "Are you sure?",
+                description: "Are you sure you want to submit quiz?",
                 className: "master-password",
                 buttons: ["ok", "cancel"],
                 closeHandler: true
