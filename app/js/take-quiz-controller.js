@@ -1,5 +1,5 @@
-pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents', '$q',
-    function ($scope, $routeParams, Contents, $q) {
+pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Contents', '$q', '$timeout',
+    function ($scope, $routeParams, Contents, $q, $timeout) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
@@ -207,5 +207,17 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
             }).catch(function () {
             });
         };
+
+        $scope.onInsert = function (index, droppedAnswer) {
+            if ($scope.currentQuestion.answers[index].length <= 1) return;
+            console.log(droppedAnswer);
+            var replacedAnswers = $scope.currentQuestion.answers[index].filter(function(answer) {
+                return answer !== droppedAnswer;
+            });
+            $scope.currentQuestion.answers[index] = [droppedAnswer];
+            $timeout(function() {
+                $scope.currentQuestion.answerBucket = $scope.currentQuestion.answerBucket.concat(replacedAnswers);
+            },100);
+        }
     }
 ]);
