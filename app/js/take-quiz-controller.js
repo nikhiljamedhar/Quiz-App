@@ -211,13 +211,30 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
         $scope.onInsert = function (index, droppedAnswer) {
             if ($scope.currentQuestion.answers[index].length <= 1) return;
             console.log(droppedAnswer);
-            var replacedAnswers = $scope.currentQuestion.answers[index].filter(function(answer) {
+            var replacedAnswers = $scope.currentQuestion.answers[index].filter(function (answer) {
                 return answer !== droppedAnswer;
             });
             $scope.currentQuestion.answers[index] = [droppedAnswer];
-            $timeout(function() {
+            $timeout(function () {
                 $scope.currentQuestion.answerBucket = $scope.currentQuestion.answerBucket.concat(replacedAnswers);
-            },100);
+            }, 100);
         }
+
+        $scope.closeOverlay = function ($event) {
+            $event.preventDefault();
+            var options = {
+                title: "Changes not saved",
+                description: "You have unsaved changes in the quiz. Do you want to save it?",
+                className: "master-password",
+                buttons: ["ok", "cancel"],
+                buttonName: ["yes", "no"],
+                closeHandler: true
+            };
+            new CustomDialog($q, options).show().then(function () {
+                window.location.href = "#/grades/" + $scope.current_grade + "/subject/" + $scope.current_subject + "/" + $scope.current_chapter + "/";
+            }).catch(function () {
+
+            });
+        };
     }
 ]);

@@ -196,8 +196,6 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             var answer;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
             $scope.promptDialog(null, null, function(inputText){
-                console.log("Called");
-                debugger;
                 answer = inputText;
                 $timeout(function() {
                     $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
