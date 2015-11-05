@@ -1,10 +1,14 @@
-pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', '$http', '$q','$timeout',
-    function ($scope, $routeParams, CreateQuiz, $http, $q, $timeout) {
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Contents','CreateQuiz', '$http', '$q','$timeout',
+    function ($scope, $routeParams, Contents, CreateQuiz, $http, $q, $timeout) {
         $scope.hasChange = false;
         $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
+        $scope.contents = Contents.query({
+            chapterId: $routeParams.chapterId,
+            subjectId: $routeParams.subjectId, gradeId: $routeParams.gradeId
+        });
 
         $scope.questionTypes = {
             "fill-the-blanks": {
@@ -301,6 +305,10 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             var error = "";
             if (!$scope.quizJson.name) {
                 error = "Please give a name to the Quiz";
+            } else if($scope.contents.filter(function(c) {
+                        return c.type === 'quiz' && (c.name || '').toLowerCase().trim() === $scope.quizJson.name.toLowerCase().trim();
+                    }).length > 0) {
+                error = "Another quiz exists with this name, please choose another name.";
             } else {
                 var firstInvalidQuestionIndex = $scope.quizJson.questions.findIndex(function (question) {
                     return $scope.errorsForQuestion(question) !== undefined;
