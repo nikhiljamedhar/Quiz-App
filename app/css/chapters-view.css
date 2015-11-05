@@ -99,17 +99,17 @@ section.chapter-section ul.chapter-list li .chapter-name {
 .chapter-page ul.content-list .row {
  visibility: hidden;
 }
-.chapter-page .pointerText{
+.chapter-page .navigation-chapter .pointerText{
   font-family:sans-serif;
   font-size:24px;
   font-weight:bold;
 }
-.chapter-page .pointer1{
+.chapter-page .navigation-chapter .pointer1{
   margin-top: -77px;
   margin-left:40px;
   width:150px;
 }
-.chapter-page .navigation{
+.chapter-page .navigation-chapter{
     margin-top: 200px;
 }
 
