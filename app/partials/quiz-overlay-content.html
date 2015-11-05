@@ -25,10 +25,7 @@
                                         <div class="question-name">{{questionType.name}}</div>
                                     </li>
                                 </ul>
-                                <div class="navigation">
-                                <img class ="pointer1" src="images/arrow1.png" alt="pointer">
-                                        <span class="pointerText">Select a question type</span>
-                                    </div>
+
                             </div>
                             <div class="question-panel flexible left m-no-left">
                                 <div class="wrapper">
@@ -40,6 +37,10 @@
                                                 ng-click="selectQuestion($index)">{{$index + 1}}
                                             </li>
                                         </ul>
+                                        <div class="navigation-arrow">
+                                                <img class ="pointer1" src="images/arrow.png" alt="pointer">
+                                                <span class="pointerText">Select a question type</span>
+                                        </div>
                                     </div>
 
                                     <div class="current-question-panel">
@@ -47,7 +48,7 @@
                                             <div class="wrapper-inner border">
                                                 <header class="question-header clear">
                                                     <div class="marks left">
-                                                        <label>Marks:</label>
+                                                        <label>Assign Marks:</label>
                                                         <input type="number" ng-model="currentQuestion.marks" min="1" max="10" onkeydown="return false"/>
                                                     </div>
                                                     <div class="navigation right clear" ng-if="quizJson.questions.length > 1">
@@ -121,5 +122,3 @@
         </div>
     </div>
 </div>
-
-
