@@ -31,11 +31,11 @@ img {
     vertical-align: top;
     width: 100%;
 }
- ul, li {
-     list-style-type: none;
-     padding: 0px;
-     margin: 0px;
- }
+ul, li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
 .bold-text {
     font-weight: bold;
 }
@@ -77,7 +77,7 @@ img {
     border-left: 1px solid darkgray;
 }
 /*.border-top {*/
-    /*border-top: 1px solid darkgray;*/
+/*border-top: 1px solid darkgray;*/
 /*}*/
 .border-right {
     border-right: 1px solid darkgray;
@@ -123,7 +123,7 @@ img {
 }
 
 .invisible {
-   display: none !important;
+    display: none !important;
 }
 
 /* two colum style */

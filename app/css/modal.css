@@ -21,7 +21,13 @@
 .modal > .modal-body > .modal-header {
     background-color: #f1f2f2;
     padding: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .modal > .modal-body > .modal-header > .modal-title {
