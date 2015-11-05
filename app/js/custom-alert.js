@@ -23,7 +23,8 @@ var addOneButtonClass = function (length, mask) {
 var getBtnName = function(options,btnName){
     debugger;
     var okBtnIndex = options.buttons.indexOf(btnName);
-    return okBtnIndex != -1?options.buttonName?options.buttonName[okBtnIndex]:btnName:'';
+    var buttonName = okBtnIndex != -1?options.buttonName?options.buttonName[okBtnIndex]:btnName:'';
+    return buttonName[0].toUpperCase()+buttonName.substring(1,buttonName.length);
 };
 
 var addInnerHtml = function (options, mask) {
