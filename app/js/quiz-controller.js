@@ -1,5 +1,5 @@
-pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', '$http', '$q',
-    function ($scope, $routeParams, CreateQuiz, $http, $q) {
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'CreateQuiz', '$http', '$q','$timeout',
+    function ($scope, $routeParams, CreateQuiz, $http, $q, $timeout) {
         $scope.hasChange = false;
         $scope.hasError = false;
         $scope.current_grade = $routeParams.gradeId;
@@ -185,16 +185,24 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
             $scope.currentQuestionIndex = index;
         };
 
+        var insertAt = function (mainString, insertString, index) {
+            var leftPart = mainString.substr(0, index);
+            var rightPart = mainString.substr(index, mainString.length);
+            return leftPart + insertString + rightPart;
+        };
+
         $scope.addBlank = function () {
-            var answer = prompt("Enter the answer for blank:", '');
-            if (!answer || !answer.trim()) return;
+            var answer;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
-            var insertAt = function (mainString, insertString, index) {
-                var leftPart = mainString.substr(0, index);
-                var rightPart = mainString.substr(index, mainString.length);
-                return leftPart + insertString + rightPart;
-            };
-            $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
+            $scope.promptDialog(null, null, function(inputText){
+                console.log("Called");
+                debugger;
+                answer = inputText;
+                $timeout(function() {
+                    $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
+                },0);
+                
+            });
         };
 
         $scope.fillInTheBlankPreview = function () {
@@ -366,6 +374,27 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 setType();
             }
         }
+
+        $scope.promptDialog = function ($event, redirect, callbackFn) {
+            if($event) {
+                $event.preventDefault();
+            }
+            var options = {
+                title: "Alert",
+                description: "Enter the answer for the blank.",
+                plainText: true,
+                buttons: ["ok", "cancel"],
+                closeHandler: true,
+                callback: function(event){
+                    callbackFn(event.context.inputText);
+                    event.context.disposeOverlay();
+                },
+                inputCheck: true,
+                placeholder: 'Enter correct answer'
+            };
+            new CustomDialog($q, options);
+            return true;
+        };
     }
 
 ]);

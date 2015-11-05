@@ -20,7 +20,8 @@ var addOneButtonClass = function (length, mask) {
 };
 
 var addInnerHtml = function (options, mask) {
-    var input = options.inputCheck ? '<div class="input-container">' + '<input type="password" name="input" placeholder="' + options.placeholder + '" class="input"/>' + '</div>' : '';
+    var type = options.plainText?'text':'password';
+    var input = options.inputCheck ? '<div class="input-container">' + '<input type="'+type+'" name="input" placeholder="' + options.placeholder + '" class="input"/>' + '</div>' : '';
     var ok = options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
     var cancel = options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
 
