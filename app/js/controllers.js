@@ -190,7 +190,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             }).length > 0;
         }
 
-        $scope.hasVideos = function(){
+        $scope.hasVideos = function(contents){
             return contents.filter(function(content){
                 return (content.type === 'videos');
             }).length > 0;
