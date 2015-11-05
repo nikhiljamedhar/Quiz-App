@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Geo Gebra",
+    "id": "geo-gebra",
+    "type":"apps",
+    "exec": "geogebra",
+    "subject": "Mathematics",
+    "keywords":["",""]
+  }
+]

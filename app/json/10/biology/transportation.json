@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Human Atlas",
+    "id": "human-atlas",
+    "type":"apps",
+    "exec": "/opt/applications-bin/humanatlas",
+    "subject": "Biology",
+    "keywords":["",""]
+  }
+]

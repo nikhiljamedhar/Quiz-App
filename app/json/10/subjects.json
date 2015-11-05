@@ -10,5 +10,17 @@
         "id":"chemistry",
         "color": "#f8941e",
         "topics_present" : false
+    },
+    {
+        "name":"Mathematics",
+        "id":"mathematics",
+        "color": "#1c75bc",
+        "topics_present" : false
+    },
+    {
+        "name":"Biology",
+        "id":"biology",
+        "color": "#f8941e",
+        "topics_present" : false
     }
 ]
