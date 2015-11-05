@@ -182,6 +182,18 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.handleModalContentClick =function(e) {
             e.stopPropagation();
         };
+
+        $scope.hasApplications = function(contents){
+            return contents.filter(function(content){
+                return (content.type === 'apps');
+            }).length > 0;
+        }
+
+        $scope.hasVideos = function(){
+            return contents.filter(function(content){
+                return (content.type === 'videos');
+            }).length > 0;
+        }
     }]);
 
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',
