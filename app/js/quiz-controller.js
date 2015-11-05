@@ -78,6 +78,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Crea
                 description: "You have unsaved changes in the quiz. Do you want to save it?",
                 className: "master-password",
                 buttons: ["ok", "cancel"],
+                buttonName: ["yes", "no"],
                 closeHandler: true
             };
             new CustomDialog($q, options).show().then(function () {

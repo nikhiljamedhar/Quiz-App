@@ -5,6 +5,7 @@ function CustomDialog($q, options, element) {
     this.options.closeHandler = this.options.closeHandler || false;
     this.createOverlay();
 }
+
 CustomDialog.prototype.show = function () {
     return this.customPromise.promise;
 };
@@ -19,11 +20,17 @@ var addOneButtonClass = function (length, mask) {
     }
 };
 
+var getBtnName = function(options,btnName){
+    debugger;
+    var okBtnIndex = options.buttons.indexOf(btnName);
+    return okBtnIndex != -1?options.buttonName?options.buttonName[okBtnIndex]:btnName:'';
+};
+
 var addInnerHtml = function (options, mask) {
     var type = options.plainText?'text':'password';
     var input = options.inputCheck ? '<div class="input-container">' + '<input type="'+type+'" name="input" placeholder="' + options.placeholder + '" class="input"/>' + '</div>' : '';
-    var ok = options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="Ok" class="ok left"/>' : '';
-    var cancel = options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="Cancel" class="close right"/>' : '';
+    var ok = options.buttons.indexOf("ok") != -1 ? '<input type="button" name="button" value="'+getBtnName(options,'ok')+'" class="ok left"/>' : '';
+    var cancel = options.buttons.indexOf("cancel") != -1 ? '<input type="button" name="button" value="'+getBtnName(options,'cancel')+'" class="close right"/>' : '';
 
     mask.innerHTML = '<div class="overlay">' +
             '<div class="wrapper">' +
