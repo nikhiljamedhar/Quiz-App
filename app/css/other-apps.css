@@ -9,35 +9,6 @@
     float: left;
 }
 
-.other-apps-view .header-content .search {
-    display: inline-block;
-    margin-left: 200px;
-    padding: 27px;
-}
-
-.other-apps-view .header-content .search input {
-    display: inline-block;
-    float: left;
-    border-radius: 10px 0px 0px 10px;
-    font-family: sans-serif;
-    border: 1px solid #656467;
-    padding-left: 10px;
-    width: 440px;
-    height: 45px;
-    font-size: 21px;
-}
-.other-apps-view .header-content .search button {
-    display: inline-block;
-    float: left;
-    background-image: url("../images/search.png");
-    border: none;
-    background-position: -5px -1px;
-    border-radius: 0px 5px 5px 0px;
-    margin-left: -10px;
-    background-size: 80px 55px;
-    width: 75px;
-    height: 49px;
-}
 .other-app-container {
     width:70%;
     border: 1px solid black;

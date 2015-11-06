@@ -11,27 +11,9 @@
     margin: 20px auto;
 }
 /* ends here */
-
-/* search box styles*/
-.search-box {
-    max-width: 500px;
+.search {
     margin: 20px auto;
 }
-.search-box .search-input {
-    width: 100%;
-    margin-right: -50px;
-}
-.search-box .search-input > div {
-    background-color: rgb(255, 255, 255);
-    margin-right: 50px;
-}
-.search-box .search-icon {
-    width: 30px;
-    padding: 10px;
-    background: #27aae1;
-}
-/* ends here */
-
 /* grades list */
 .grades-container {
     max-width: 1024px;

@@ -1,5 +1,10 @@
-function detectEnterKey(event) {
-	if(event.keyCode == 13) {
-		document.getElementById('search-icon').click();
-	}
-}
+pencilBoxApp.directive('search', function () {
+    return {
+        templateUrl: '../partials/search.html',
+        link: function(scope){
+            scope.$watch('keyword', function() {
+                scope.url = '/#search/' + scope.keyword;
+            })
+        }
+    };
+});
