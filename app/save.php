@@ -18,7 +18,7 @@ $existingJson = json_decode(file_get_contents($fileName));
 $quizJson['quiz']['type'] = 'quiz';
 array_push($existingJson, $quizJson['quiz']);
 file_put_contents($fileName, json_encode($existingJson));
-http_response_code(201);
+header('HTTP/1.1 201 Created');
 header('Content-Type: application/json');
 echo json_encode($quizJson);
 /*
