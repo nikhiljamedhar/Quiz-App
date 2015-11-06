@@ -1,7 +1,7 @@
 <?php
 
 function redirect($url = '/') {
-    http_response_code(301);
+    header('HTTP/1.1 302 Found');
     header("Location: $url");
 }
 if($_SERVER['REQUEST_METHOD'] !== 'POST') {
