@@ -25,6 +25,17 @@
     ]
   },
   {
+    "name": "Pulleys",
+    "id": "pulleys",
+    "exec": "chromium-browser --app=file:///opt/phet/chemistry/Pulleys/index.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps"
+  },
+  {
     "name": "Masses & Springs",
     "id": "masses-springs",
     "type":"apps",

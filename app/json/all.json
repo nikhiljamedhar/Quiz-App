@@ -1431,7 +1431,7 @@
   },
   {
     "name": "Radioactive Dating Game",
-    "id": "radio-active-dating- game",
+    "id": "radio-active-dating-game",
     "exec": "java -jar /opt/phet/chemistry/radioactive-dating-game_en.jar",
     "subject": "chemistry",
     "keywords": [

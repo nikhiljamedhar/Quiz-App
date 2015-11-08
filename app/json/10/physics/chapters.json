@@ -4,6 +4,22 @@
         "id": "heat"
     },
     {
+        "name": "Classification of Elements",
+        "id": "classification-of-elements"
+    },
+    {
+        "name": "The Periodic Table",
+        "id": "the-periodic-table"
+    },
+    {
+        "name": "Priciples of Metallurgy",
+        "id": "principles-of-metallurgy"
+    },
+    {
+        "name": "Carbon and it's Compunds",
+        "id": "carbon-and-its-compunds"
+    },
+    {
         "name": "Chemical Reactions & Equations",
         "id": "chemical-reactions-and-equations"
     },
