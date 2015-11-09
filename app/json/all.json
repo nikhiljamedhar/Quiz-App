@@ -1,1433 +1,208 @@
 [
   {
-    "name": "Geo Gebra",
-    "id": "geo-gebra",
-    "exec": "geogebra",
+    "name": "Cell Structure",
+    "id": "cell-structure",
     "type": "apps",
-    "subject": "mathematics",
+    "exec": "",
+    "subject": "Biology",
     "keywords": [
       "",
       ""
     ]
   },
   {
-    "name": "Tux Math",
-    "id": "tux-math",
-    "exec": "tuxmath",
-    "type": "apps",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ]
-  },
-  {
-    "name": "KBruch",
-    "id": "KBruch",
-    "exec": "kbruch",
-    "type": "apps",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ]
-  },
-  {
-    "name": "Balloons and Static Electricity",
-    "id": "balloons-static-energy",
-    "exec": "java -jar /opt/phet/physics/balloons_en.jar",
-    "type": "apps",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ]
-  },
-  {
-    "name": "Generator",
-    "id": "generator",
-    "exec": "java -jar /opt/phet/physics/generator_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Electric Field Hockey",
-    "id": "electric-field-hockey",
-    "exec": "java -jar /opt/phet/physics/electric-hockey_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Charges and Fields",
-    "id": "charges-and-fields",
-    "exec": "java -jar /opt/phet/physics/charges-and-fields_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Battery Voltage",
-    "id": "battery-voltage",
-    "exec": "java -jar /opt/phet/physics/battery-voltage_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Electric Field of Dreams",
-    "id": "electric-field-of- dreams",
-    "exec": "java -jar /opt/phet/physics/efield_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Capacitor Lab",
-    "id": "capacitor-lab",
-    "exec": "java -jar /opt/phet/physics/capacitor-lab_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Ohm's Law",
-    "id": "ohms-law",
-    "exec": "java -jar /opt/phet/physics/ohms-law_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Battery-Resistor Circuit",
-    "id": "battery-resistor",
-    "exec": "java -jar /opt/phet/physics/battery-resistor-circuit_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Resistance in a Wire",
-    "id": "resistance-in-a-wire",
-    "exec": "java -jar /opt/phet/physics/resistance-in-a-wire_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Conductivity",
-    "id": "conductivity",
-    "exec": "java -jar /opt/phet/physics/conductivity_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Circuit Construction Kit (AC+DC), Virtual Lab",
-    "id": "circuit-construction- kit",
-    "exec": "java -jar /opt/phet/physics/circuit-construction-kit-ac-virtual-lab_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Circuit Construction Kit (DC Only), Virtual Lab",
-    "id": "circuit-construction- kit",
-    "exec": "java -jar /opt/phet/physics/circuit-construction-kit-dc-virtual-lab_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Signal Circuit",
-    "id": "signal-circuit",
-    "exec": "java -jar /opt/phet/physics/signal-circuit_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Energy Forms and Changes",
-    "id": "energy-froms-and- charges",
-    "exec": "java -jar /opt/phet/physics/energy-forms-and-changes_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Friction",
-    "id": "friction",
-    "exec": "java -jar /opt/phet/physics/friction_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Reversible Reactions",
-    "id": "reversable-reactions",
-    "exec": "java -jar /opt/phet/chemistry/reversible-reactions_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "States of Matter",
-    "id": "states-of-matter",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "States of Matter: Basics",
-    "id": "states-of-matter-basics",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Reactions & Rates",
-    "id": "reactions-and-rates",
-    "exec": "java -jar /opt/phet/chemistry/reactions-and-rates_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gas Properties",
-    "id": "gas-properties",
-    "exec": "java -jar /opt/phet/physics/gas-properties_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Bending Light",
-    "id": "bending-light",
-    "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Molecules and Light",
-    "id": "molecules-and-lights",
-    "exec": "java -jar /opt/phet/physics/molecules-and-light_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Streching DNA",
-    "id": "streching-dna",
-    "exec": "java -jar /opt/phet/biology/stretching-dna_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Color Vision",
-    "id": "color-vision",
-    "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Molecular Motors",
-    "id": "molecular-motors",
-    "exec": "java -jar /opt/phet/physics/molecular-motors_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Geometric Optics",
-    "id": "geometric-optics",
-    "exec": "java -jar /opt/phet/physics/geometric-optics_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Blackbody Spectrum",
-    "id": "black-body-spectrum",
-    "exec": "java -jar /opt/phet/physics/blackbody-spectrum_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Fourier: Making Waves",
-    "id": "fourier",
-    "exec": "java -jar /opt/phet/physics/fourier_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "The Greenhouse Effect",
-    "id": "greenhouse",
-    "exec": "java -jar /opt/phet/chemistry/greenhouse_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Lasers",
-    "id": "lasers",
-    "exec": "java -jar /opt/phet/physics/lasers_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Wave Interference",
-    "id": "wave-interference",
-    "exec": "java -jar /opt/phet/physics/wave-interference_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Microwaves",
-    "id": "microwaves",
-    "exec": "java -jar /opt/phet/physics/microwaves_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Magnet and Compass",
-    "id": "magnets-and- compass",
-    "exec": "java -jar /opt/phet/physics/magnet-and-compass_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Magnets and Electromagnets",
-    "id": "magnets-and-electromagnets",
-    "exec": "java -jar /opt/phet/physics/magnets-and-electromagnets_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Faraday's Electromagnetic Lab",
-    "id": "faradays-electromagnetic-lab",
-    "exec": "java -jar /opt/phet/physics/faraday_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Balancing Act",
-    "id": "balancing-act",
-    "exec": "java -jar /opt/phet/physics/balancing-act_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Buoyancy",
-    "id": "buoyancy",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-buoyancy/buoyancy_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Collision Lab",
-    "id": "collision-lab",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Energy stake Park",
-    "id": "energy-skate-park",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Energy stake Park:Basics",
-    "id": "energy-skate-park-basics",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park-basics_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Fluid Pressure and Flow",
-    "id": "fluid-pressure-and-flow",
-    "exec": "java -jar /opt/phet/physics/fluid-pressure-and-flow_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Forces and Motion",
-    "id": "forces-and-motion",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Forces and Motion: Basics",
-    "id": "forces-and-motions-basics",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Forces in 1 Dimension",
-    "id": "forces-in-1-dimension",
-    "exec": "java -jar /opt/phet/physics/forces-1d_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Friction",
-    "id": "friction",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-friction/friction_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gravity and Orbits",
-    "id": "gravity-and-orbits",
-    "exec": "java -jar /opt/phet/physics/gravity-and-orbits_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gravity Force Lab",
-    "id": "gravity-force-lab",
-    "exec": "java -jar /opt/phet/physics/gravity-force-lab_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Ladybug Motion 2D",
-    "id": "ladybug-motion-2d",
-    "exec": "java -jar /opt/phet/physics/ladybug-motion-2d_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Ladybug Revolution",
-    "id": "lady-bug-revolution",
-    "exec": "java -jar /opt/phet/physics/rotation_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Lunar Lander",
-    "id": "lunar-lander",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-lunar-lander/lunar-lander_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Masses & Springs",
-    "id": "masses-springs",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Maze Game",
-    "id": "maze-game",
-    "exec": "java -jar /opt/phet/physics/maze-game_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Motion in 2D",
-    "id": "motion-in-2d",
-    "exec": "java -jar /opt/phet/physics/motion-2d_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "The Moving Man",
-    "id": "moving-man",
-    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "My Solar System",
-    "id": "my-solar-system",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-my-solar-system/my-solar-system_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Normal Modes",
-    "id": "normal-mode",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-normal-modes/normal-modes_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Pendulum Lab",
-    "id": "pendulum-lab",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-pendulum-lab/pendulum-lab_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Projectile Motion",
-    "id": "projectile-motion",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-projectile-motion/projectile-motion_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "The Ramp",
-    "id": "the-ramp",
-    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Ramp: Forces and Motion",
-    "id": "ramp-forces-and -motion",
-    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Resonance",
-    "id": "resonance",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-resonance/resonance_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Torque",
-    "id": "torque",
-    "exec": "java -jar /opt/phet/physics/torque_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Density",
-    "id": "density",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-density/density_en.html",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Density",
-    "id": "Density",
-    "exec": "/opt/applications-bin/Density",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Step",
-    "id": "step",
-    "exec": "step",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Stellarium",
-    "id": "stellarium",
-    "exec": "stellarium",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Celestia",
-    "id": "celestia",
-    "exec": "celestia",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "My Solar System",
-    "id": "my-solar-system",
-    "exec": "java -jar /opt/phet/physics/my-solar-system_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Photoelectric Effect",
-    "id": "photoelectric-effect",
-    "exec": "java -jar /opt/phet/chemistry/photoelectric_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Quantum Tunneling and Wave Packets",
-    "id": "quantum-tunneling- wave",
-    "exec": "java -jar /opt/phet/physics/quantum-tunneling_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Quantum Bound States",
-    "id": "quantum-bound-states",
-    "exec": "java -jar /opt/phet/physics/bound-states_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Lasers",
-    "id": "lasers",
-    "exec": "java -jar /opt/phet/physics/lasers_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Neon Lights & Other Discharge Lamps",
-    "id": "neon-lights-and-other-discharge-lamps",
-    "exec": "java -jar /opt/phet/chemistry/discharge-lamps_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Stern-Gerlach Experiment",
-    "id": "stern-gerlach",
-    "exec": "java -jar /opt/phet/physics/stern-gerlach_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Rutherford Scattering",
-    "id": "rutherfford-scattering",
-    "exec": "java -jar /opt/phet/chemistry/rutherford-scattering_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Double Wells and Covalent Bonds",
-    "id": "covalent-bonds",
-    "exec": "java -jar /opt/phet/chemistry/covalent-bonds_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Band Structure",
-    "id": "band-structure",
-    "exec": "java -jar /opt/phet/physics/band-structure_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Beta Decay",
-    "id": "beta-decay",
-    "exec": "java -jar /opt/phet/chemistry/beta-decay_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Radiating Charge",
-    "id": "radiating-charge",
-    "exec": "java -jar /opt/phet/physics/radiating-charge_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Normal Modes",
-    "id": "normal-mode",
-    "exec": "java -jar /opt/phet/physics/normal-modes_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Optical Tweezers and Applications",
-    "id": "optical-tweezers",
-    "exec": "java -jar /opt/phet/physics/optical-tweezers_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Wave on a String",
-    "id": "wave-on-a-string",
-    "exec": "java -jar /opt/phet/physics/wave-on-a-string_en.jar",
-    "subject": "physics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Human Atlas ",
+    "name": "Human Atlas",
     "id": "human-atlas",
+    "type": "apps",
     "exec": "/opt/applications-bin/humanatlas",
-    "subject": "biology",
+    "subject": "Biology",
     "keywords": [
       "",
       ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gene Expression - The Basics",
-    "id": "gene-expression-basics",
-    "exec": "java -jar /opt/phet/biology/gene-expression-basics_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gene Machine: The Lac Operon",
-    "id": "gene-expression-lac-operon",
-    "exec": "java -jar /opt/phet/biology/gene-machine-lac-operon_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Membrane Channels",
-    "id": "membrane-channel",
-    "exec": "java -jar /opt/phet/biology/membrane-channels_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Molecular Motors",
-    "id": "molecular-motors",
-    "exec": "java -jar /opt/phet/biology/molecular-motors_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Natural Selection",
-    "id": "natural-selection",
-    "exec": "java -jar /opt/phet/biology/natural-selection_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Simplified MRI",
-    "id": "mri",
-    "exec": "java -jar /opt/phet/biology/mri_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Eating & Exercise",
-    "id": "eating-exercise",
-    "exec": "java -jar /opt/phet/biology/eating-and-exercise_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Neuron",
-    "id": "neuron",
-    "exec": "java -jar /opt/phet/biology/neuron_en.jar",
-    "subject": "biology",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Element Builder",
-    "id": "element-builder",
-    "exec": "chromium-browser --app=file:///opt/phet/chemistry/ElementBuilder/index.html",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Kalzium",
-    "id": "kalzium",
-    "exec": "kalzium",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Alpha Decay",
-    "id": "alpha-decay",
-    "exec": "java -jar /opt/phet/chemistry/alpha-decay_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Molecule Motors",
-    "id": "molecular-motors",
-    "exec": "java -jar /opt/phet/chemistry/molecular-motors_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Models of the Hydrogen Atom",
-    "id": "models-of-hydrogen-atom",
-    "exec": "java -jar /opt/phet/chemistry/hydrogen-atom_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Plinko Probability",
-    "id": "plinko",
-    "exec": "java -jar /opt/phet/chemistry/plinko-probability_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Semiconductors",
-    "id": "semiconductor",
-    "exec": "java -jar /opt/phet/chemistry/semiconductor_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Salts & Solubility",
-    "id": "salts-solubility",
-    "exec": "java -jar /opt/phet/chemistry/soluble-salts_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Sound",
-    "id": "sound",
-    "exec": "java -jar /opt/phet/chemistry/sound_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Sugar and Salt Solutions",
-    "id": "sugar-salt-solutions",
-    "exec": "java -jar /opt/phet/chemistry/sugar-and-salt-solutions_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Acid - Base Solutions",
-    "id": "acid-base-solutions",
-    "exec": "java -jar /opt/phet/chemistry/acid-base-solutions_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Atomic Interactions",
-    "id": "atomic-interactions",
-    "exec": "java -jar /opt/phet/chemistry/atomic-interactions_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Balancing Chemical Equations",
-    "id": "balancing-chemical-equations",
-    "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Beer's Law Lab",
-    "id": "beers-law",
-    "exec": "java -jar /opt/phet/chemistry/beers-law-lab_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Build a Molecule",
-    "id": "build-a-molecule",
-    "exec": "java -jar /opt/phet/chemistry/build-a-molecule_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Build an Atom",
-    "id": "build-an-atom",
-    "exec": "java -jar /opt/phet/chemistry/build-an-atom_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Concentration",
-    "id": "concentration",
-    "exec": "java -jar /opt/phet/chemistry/concentration_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Davisson-Germer: Electron Diffraction",
-    "id": "davission-germer",
-    "exec": "java -jar /opt/phet/chemistry/davisson-germer_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Molarity",
-    "id": "molarity",
-    "exec": "java -jar /opt/phet/chemistry/molarity_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Isotopes & Atomic Mass",
-    "id": "isotopes-and-atomic mass",
-    "exec": "java -jar /opt/phet/chemistry/isotopes-and-atomic-mass_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Nuclear Fission",
-    "id": "nuclear-fission",
-    "exec": "java -jar /opt/phet/chemistry/nuclear-fission_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
+    ]
   },
   {
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
+    "type": "apps",
     "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Test the pH of everyday liquids such as coffee, spit, and soap to determine whether each is acidic, basic, or neutral. Investigate how adding more of a liquid or diluting with water affects pH.",
+    "manuals": [
+      {
+        "title": "Lesson",
+        "src": "doc-reader doc-reader /manuals/ph-lesson.docx"
+      }
+    ]
   },
   {
-    "name": "Radio Waves & Electromagnetic Fields",
-    "id": "radio-waves",
-    "exec": "java -jar /opt/phet/chemistry/radio-waves_en.jar",
+    "name": "Salts & Solubility",
+    "id": "salts-solubility",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/soluble-salts_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Add different salts to water, then watch them dissolve and achieve a dynamic equilibrium with solid precipitate. Compare the number of ions in solution for highly soluble NaCl to other slightly soluble salts. Relate the charges on ions to the number of ions in the formula of a salt. Calculate Ksp values.",
+    "manuals": [
+      {
+        "title": "Salts and Solubility Activities",
+        "src": "/manuals/Salts and Solubility five activities.PDF"
+      }
+    ]
   },
   {
-    "name": "Reactants, Products and Leftovers",
-    "id": "reactants-products-leftovers",
-    "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
+    "name": "Acid - Base Solutions",
+    "id": "acid-base-solutions",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/acid-base-solutions_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "How do strong and weak acids differ? Use lab tools on your computer to find out! Dip the paper or the probe into solution to measure the pH, or put in the electrodes to measure the conductivity. Then see how concentration and strength affect pH. Can a weak acid solution have the same pH as a strong acid solution?",
+    "manuals": [
+      {
+        "title": "Acid Base Investigation",
+        "src": "doc-reader /manuals/acid-base-investigation.docx"
+      }
+    ]
   },
   {
-    "name": "States of Matter",
-    "id": "states-of-matter",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter_en.jar",
+    "name": "Kalzium",
+    "id": "kalzium",
+    "exec": "kalzium",
+    "type": "apps",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Balancing Chemical Equations",
+    "id": "balancing-chemical-equations",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "How do you know if a chemical equation is balanced? What can you change to balance an equation? Play a game to test your ideas!",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader /manuals/BalancingChemicalEquations_Student.docx"
+      }
+    ]
   },
   {
-    "name": "States of Matter: Basics",
-    "id": "states-of-matter -basics",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
+    "name": "Reactions & Rates",
+    "id": "reactions-and-rates",
+    "exec": "java -jar /opt/phet/chemistry/reactions-and-rates_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Explore what makes a reaction happen by colliding atoms and molecules. Design experiments with different reactions, concentrations, and temperatures. When are reactions reversible? What affects the rate of a reaction?",
+    "manuals": [
+      {
+        "title": "Collision Theory",
+        "src": "pdf-reader /manuals/collision-theory.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Models of the Hydrogen Atom",
+    "id": "models-of-hydrogen-atom",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/hydrogen-atom_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "How did scientists figure out the structure of atoms without looking at them? Try out different models by shooting light at the atom. Check how the prediction of the model matches the experimental results.",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader /manuals/Models of the Hydrogen Atom Handout.doc"
+      }
+    ]
   },
   {
-    "name": "Quantum Wave Interference ",
-    "id": "wave-interference",
-    "exec": "java -jar /opt/phet/chemistry/quantum-wave-interference_en.jar",
+    "name": "Build an Atom",
+    "id": "build-an-atom",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/build-an-atom_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "pdf-reader /manuals/Build An Atom Exercises.pdf"
+      }
+    ]
   },
   {
-    "name": "Fluid Pressure and Flow",
-    "id": "fluid-pressure-and-flow",
-    "exec": "java -jar /opt/phet/chemistry/fluid-pressure-and-flow_en.jar",
+    "name": "Element Builder",
+    "id": "element-builder",
+    "type": "apps",
+    "exec": "chromium-browser --app=file:///opt/phet/chemistry/ElementBuilder/index.html",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "pdf-reader /manuals/Build An Atom Exercises.pdf"
+      }
+    ]
   },
   {
-    "name": "Under Pressure",
-    "id": "under-pressure",
-    "exec": "java -jar /opt/phet/chemistry/under-pressure_en.jar",
+    "name": "Isotopes & Atomic Mass",
+    "id": "isotopes-and-atomic mass",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/isotopes-and-atomic-mass_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Are all atoms of an element the same? How can you tell one isotope from another? Use the sim to learn about isotopes and how abundance relates to the average atomic mass of an element.",
+    "manuals": [
+      {
+        "title": "Exploring Average Atomic Mass",
+        "src": "doc-reader /manuals/Exploring Average Atomic Mass.docx"
+      }
+    ]
   },
   {
-    "name": "Gravity and Orbits",
-    "id": "gravity-and-orbits",
-    "exec": "java -jar /opt/phet/chemistry/gravity-and-orbits_en.jar",
-    "subject": "chemistry",
+    "name": "Geo Gebra",
+    "id": "geo-gebra",
+    "type": "apps",
+    "exec": "geogebra",
+    "subject": "Mathematics",
     "keywords": [
       "",
       ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Glaciers",
-    "id": "glaciers",
-    "exec": "java -jar /opt/phet/chemistry/glaciers_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Balloons & Buoyancy",
-    "id": "ballons-buoyancy",
-    "exec": "java -jar /opt/phet/chemistry/balloons-and-buoyancy_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Gas Properties",
-    "id": "gas-properties",
-    "exec": "java -jar /opt/phet/chemistry/gas-properties_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Wave on a String",
-    "id": "wave-on-a- string",
-    "exec": "java -jar /opt/phet/chemistry/wave-on-a-string_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "My Solar System",
-    "id": "my-solar-system",
-    "exec": "java -jar /opt/phet/chemistry/my-solar-system_en.jar",
-    "subject": "chemistry",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
+    ]
   },
   {
     "name": "Radioactive Dating Game",
@@ -1441,207 +216,1646 @@
     "type": "apps"
   },
   {
-    "name": "Artha ",
-    "id": "artha",
-    "exec": "artha",
-    "subject": "english",
+    "name": "Reactants, Products and Leftovers",
+    "id": "reactants-products-leftovers",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
+    "subject": "chemistry",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Create your own sandwich and then see how many sandwiches you can make with different amounts of ingredients. Do the same with chemical reactions. See how many products you can make with different amounts of reactants. Play a game to test your understanding of reactants, products and leftovers. Can you get a perfect score on each level?",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/RPAL-Student_directions1_intro.pdf"
+      }
+    ]
   },
   {
-    "name": "Hangman Game",
-    "id": "khangman",
-    "exec": "khangman",
-    "subject": "english",
+    "name": "Color Vision",
+    "id": "color-vision",
+    "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "type": "apps",
+    "description": "Make a whole rainbow by mixing red, green, and blue light. Change the wavelength of a monochromatic beam or filter white light. View the light as a solid beam, or see the individual photons.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/seeing-colors-activity.docx"
+      }
+    ]
   },
   {
-    "name": "Word Quiz",
-    "id": "kwordquiz",
-    "exec": "kwordquiz",
-    "subject": "english",
+    "name": "Electric Field Hockey",
+    "id": "electric-field-hockey",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/electric-hockey_en.jar",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Play hockey with electric charges. Place charges on the ice, then hit start to try to get the puck in the goal. View the electric field. Trace the puck's motion. Make the game harder by placing walls in front of the goal. This is a clone of the popular simulation of the same name marketed by Physics Academic Software and written by Prof. Ruth Chabay of the Dept of Physics at North Carolina State University.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/electric-field-hockey-lesson-plan.doc"
+      }
+    ]
   },
   {
-    "name": "Stardict",
-    "id": "stardict",
-    "exec": "stardict",
-    "subject": "english",
+    "name": "Electric Field of Dreams",
+    "id": "electric-field-of- dreams",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/efield_en.jar",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Play ball! Add charges to the Field of Dreams and see how they react to the electric field. Turn on a background electric field and adjust the direction and magnitude. (Kevin Costner not included).",
+    "manuals": [
+      {
+        "title": "Assignments",
+        "src": "doc-reader /manuals/field-of-dreams-tasks.doc"
+      }
+    ]
+  },
+  {
+    "name": "Charges and Fields",
+    "id": "charges-and-fields",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/charges-and-fields_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Move point charges around on the playing field and then view the electric field, voltages, equipotential lines, and more. It's colorful, it's dynamic, it's free.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/electric-field-lab.doc"
+      }
+    ]
+  },
+  {
+    "name": "Ohm's Law",
+    "id": "ohms-law",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/ohms-law_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "See how the equation form of Ohm's law relates to a simple circuit. Adjust the voltage and resistance, and see the current change according to Ohm's law.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/ohms-law.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Resistance in a Wire",
+    "id": "resistance-in-wire",
+    "exec": "firefox --new-window file:///opt/phet/physics/resistance-in-a-wire_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Learn about the physics of resistance in a wire. Change its resistivity, length, and area to see how they affect the wire's resistance.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/ResistanceWireAP_Student.docx"
+      }
+    ]
+  },
+  {
+    "name": "Circuit Construction Kit (DC Only)",
+    "id": "circuit-construction- kit",
+    "exec": "java -jar /opt/phet/physics/circuit-construction-kit-dc_en.jar",
+    "type": "apps",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/circuit-directions.pdf"
+      },
+      {
+        "title": "Series and Parallel",
+        "src": "doc-reader /manuals/circuit-series-parallel.doc"
+      }
+    ]
+  },
+  {
+    "name": "Faraday's Electromagnetic Lab",
+    "id": "faradays-electromagnetic-lab",
+    "exec": "java -jar /opt/phet/physics/faraday_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Play with a bar magnet and coils to learn about Faraday's law. Move a bar magnet near one or two coils to make a light bulb glow. View the magnetic field lines. A meter shows the direction and magnitude of the current. View the magnetic field lines or use a meter to show the direction and magnitude of the current. You can also play with electromagnets, generators and transformers!",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/Energy - Faraday.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Magnets and Electromagnets",
+    "id": "magnets-and-electromagnets",
+    "exec": "java -jar /opt/phet/physics/magnets-and-electromagnets_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Explore the interactions between a compass and bar magnet. Discover how you can use a battery and wire to make a magnet! Can you make it a stronger magnet? Can you make the magnetic field reverse?",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/Energy - Faraday.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Faraday's Law",
+    "id": "faradays-law",
+    "exec": "firefox --new-window file:///opt/phet/physics/faradays-law_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Investigate Faraday's law and how a changing magnetic flux can produce a flow of electricity!",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/Energy - Faraday.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Bending Light",
+    "id": "bending-light",
+    "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Explore bending of light between two media with different indices of refraction. See how changing from air to water to glass changes the bending angle. Play with prisms of different shapes and make rainbows.",
+    "manuals": [
+      {
+        "title": "Reflection of Light",
+        "src": "pdf-reader /manuals/refraction-of-light.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Geometric Optics",
+    "id": "geometric-optics",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/geometric-optics_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "How does a lens form an image? See how light rays are refracted by a lens. Watch how the image changes when you adjust the focal length of the lens, move the object, move the lens, or move the screen.",
+    "manuals": [
+      {
+        "title": "Reflection of Light",
+        "src": "doc-reader /manuals/geometric optics_phet.doc"
+      }
+    ]
+  },
+  {
+    "name": "Blackbody Spectrum",
+    "id": "black-body-spectrum",
+    "exec": "java -jar /opt/phet/physics/blackbody-spectrum_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "How does the blackbody spectrum of the sun compare to visible light? Learn about the blackbody spectrum of the sun, a light bulb, an oven, and the earth. Adjust the temperature to see the wavelength and intensity of the spectrum change. View the color of the peak of the spectral curve.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/blackbody-lab.docx"
+      }
+    ]
+  },
+  {
+    "name": "Capacitor Lab",
+    "id": "capacitor-lab",
+    "exec": "java -jar /opt/phet/physics/capacitor-lab_en.jar",
+    "type": "apps",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore how a capacitor works! Change the size of the plates and add a dielectric to see how it affects capacitance. Change the voltage and see charges built up on the plates. Shows the electric field in the capacitor. Measure voltage and electric field.",
+    "manuals": [
+      {
+        "title": "Using PhET in Electricity Unit",
+        "src": "pdf-reader /manuals/electricity-unit.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Balloons and Static Electricity",
+    "id": "balloons-static-energy",
+    "exec": "java -jar /opt/phet/physics/balloons_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/magnets.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Generator",
+    "id": "generator",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/generator_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Generate electricity with a bar magnet! Discover the physics behind the phenomena by exploring magnets and how you can use them to make a bulb light.",
+    "manuals": [
+      {
+        "title": "Introduction to Induction",
+        "src": "pdf-reader /manuals/induction.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Battery Voltage",
+    "id": "battery-voltage",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/battery-voltage_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Look inside a battery to see how it works. Select the battery voltage and little stick figures move charges from one end of the battery to the other. A voltmeter tells you the resulting battery voltage.",
+    "manuals": [
+      {
+        "title": "Introduction to Batteries",
+        "src": "doc-reader /manuals/batteries.doc"
+      }
+    ]
+  },
+  {
+    "name": "Energy Forms and Changes",
+    "id": "energy-froms-and- charges",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/energy-forms-and-changes_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore how heating and cooling iron, brick, and water adds or removes energy. See how energy is transferred between objects. Build your own system, with energy sources, changers, and users. Track and visualize how energy flows and changes through your system.",
+    "manuals": [
+      {
+        "title": "Introduction to Batteries",
+        "src": "doc-reader /manuals/energy-forms-and-changes.docx"
+      }
+    ]
+  },
+  {
+    "name": "Energy stake Park",
+    "id": "energy-skate-park",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Learn about conservation of energy with a skater dude! Build tracks, ramps and jumps for the skater and view the kinetic energy, potential energy and friction as he moves. You can also take the skater to different planets or even space!",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/energy-forms-and-changes.docx"
+      }
+    ]
+  },
+  {
+    "name": "Energy stake Park:Basics",
+    "id": "energy-skate-park-basics",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/energy-skate-park-basics_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Learn about conservation of energy with a skater gal! Explore different tracks and view the kinetic energy, potential energy and friction as she moves. Build your own tracks, ramps, and jumps for the skater.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/energy-skate-park-basics.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Masses & Springs",
+    "id": "masses-springs",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/mass-spring-lab_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "A realistic mass and spring laboratory. Hang masses from springs and adjust the spring stiffness and damping. You can even slow time. Transport the lab to different planets. A chart shows the kinetic, potential, and thermal energy for each spring.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/masses-and-springs.pdf"
+      }
+    ]
+  },
+  {
+    "name": "The Ramp",
+    "id": "the-ramp",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore forces, energy and work as you push household objects up and down a ramp. Lower and raise the ramp to see how the angle of inclination affects the parallel forces acting on the file cabinet. Graphs show forces, energy and work.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/the-ramp-intro.docx"
+      },
+      {
+        "title": "Work Energy on Ramp",
+        "src": "doc-reader /manuals/work-energy-on-ramp.docx"
+      }
+    ]
+  },
+  {
+    "name": "Nuclear Fission",
+    "id": "nuclear-fission",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/nuclear-fission_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      },
+      {
+        "title": "Questions 2",
+        "src": "doc-reader /manuals/nuclear-fission-questions-2.doc"
+      }
+    ]
+  },
+  {
+    "name": "Ballons & Buoyancy",
+    "id": "buoyancy",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/balloons-and-buoyancy_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Experiment with a helium balloon, a hot air balloon, or a rigid sphere filled with different gases. Discover what makes some balloons float and others sink.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader /manuals/balloon-introduction.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Friction",
+    "id": "friction",
+    "exec": "java -jar /opt/phet/physics/friction_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Learn how friction causes a material to heat up and melt. What happens on an atomic level when you rub two objects together?",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/friction.doc"
+      }
+    ]
+  },
+  {
+    "name": "The Greenhouse Effect",
+    "id": "greenhouse",
+    "exec": "java -jar /opt/phet/chemistry/greenhouse_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "How do greenhouse gases affect the climate? Explore the atmosphere during the ice age and today. What happens when you add clouds? Change the greenhouse gas concentration and see how the temperature changes. Then compare to the effect of glass panes. Zoom in and see how light interacts with molecules. Do all atmospheric gases contribute to the greenhouse effect?",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/greenhouse-effect.doc"
+      }
+    ]
+  },
+  {
+    "name": "Microwaves",
+    "id": "microwaves",
+    "exec": "java -jar /opt/phet/physics/microwaves_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "How do microwaves heat up your coffee? Adjust the frequency and amplitude of microwaves. Watch water molecules rotating and bouncing around. View the microwave field as a wave, a single line of vectors, or the entire field.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/microwaves.doc"
+      }
+    ]
+  },
+  {
+    "name": "Reversible Reactions",
+    "id": "reversable-reactions",
+    "exec": "java -jar /opt/phet/chemistry/reversible-reactions_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Watch a reaction proceed over time. How does total energy affect a reaction rate? Vary temperature, barrier height, and potential energies. Record concentrations and time in order to extract rate coefficients. Do temperature dependent studies to extract Arrhenius parameters. This simulation is best used with teacher guidance because it presents an analogy of chemical reactions.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/reversible-reactions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "States of Matter",
+    "id": "states-of-matter",
+    "exec": "java -jar /opt/phet/chemistry/states-of-matter_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Watch different types of molecules form a solid, liquid, or gas. Add or remove heat and watch the phase change. Change the temperature or volume of a container and see a pressure-temperature diagram respond in real time. Relate the interaction potential to the forces between molecules.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/states-of-matter.doc"
+      }
+    ]
+  },
+  {
+    "name": "States of Matter: Basics",
+    "id": "states-of-matter-basics",
+    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Heat, cool and compress atoms and molecules and watch as they change between solid, liquid and gas phases.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "/manuals/states-of-matter-basics.pptx"
+      }
+    ]
+  },
+  {
+    "name": "Gas Properties",
+    "id": "gas-properties",
+    "exec": "java -jar /opt/phet/physics/gas-properties_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Pump gas molecules to a box and see what happens as you change the volume, add or remove heat, change gravity, and more. Measure the temperature and pressure, and discover how the properties of the gas vary in relation to each other.",
+    "manuals": [
+      {
+        "title": "Collision Theory",
+        "src": "pdf-reader /manuals/collision-theory.pdf"
+      },
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/gas-properties.doc"
+      }
+    ]
+  },
+  {
+    "name": "Molecules and Light",
+    "id": "molecules-and-lights",
+    "exec": "java -jar /opt/phet/physics/molecules-and-light_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Do you ever wonder how a greenhouse gas affects the climate, or why the ozone layer is important? Use the sim to explore how light interacts with molecules in our atmosphere.",
+    "manuals": [
+      {
+        "title": "Reflection of Light",
+        "src": "pdf-reader /manuals/refraction-of-light.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Stretching DNA",
+    "id": "stretching-dna",
+    "exec": "java -jar /opt/phet/biology/stretching-dna_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Explore stretching just a single strand of DNA using optical tweezers or fluid flow. Experiment with the forces involved and measure the relationship between the stretched DNA length and the force required to keep it stretched. Is DNA more like a rope or like a spring?",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader /manuals/natural-selection.docx"
+      }
+    ]
+  },
+  {
+    "name": "Molecular Motors",
+    "id": "molecular-motors",
+    "exec": "java -jar /opt/phet/physics/molecular-motors_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Discover what controls how fast tiny molecular motors in our body pull through a single strand of DNA. How hard can the motor pull in a tug of war with the optical tweezers? Discover what helps it pull harder. Do all molecular motors behave the same?",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Optical Tweezers and Applications",
+    "id": "quantum-tunneling- wave",
+    "exec": "java -jar /opt/phet/physics/quantum-tunneling_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Fourier: Making Waves",
+    "id": "fourier",
+    "exec": "java -jar /opt/phet/physics/fourier_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Lasers",
+    "id": "lasers",
+    "exec": "java -jar /opt/phet/physics/lasers_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Neon Lights & Other Discharge Lamps",
+    "id": "neon-lights-and-other-discharge-lamps",
+    "exec": "java -jar /opt/phet/chemistry/discharge-lamps_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Photoelectric Effect",
+    "id": "photoelectric-effect",
+    "exec": "java -jar /opt/phet/chemistry/photoelectric_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Radio Waves & Electromagnetic Fields",
+    "id": "radio-waves",
+    "exec": "java -jar /opt/phet/physics/radio-waves_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wave Interference",
+    "id": "wave-interference",
+    "exec": "java -jar /opt/phet/physics/wave-interference_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Simplified MRI",
+    "id": "mri",
+    "exec": "java -jar /opt/phet/biology/mri_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Beta Decay",
+    "id": "beta-decay",
+    "exec": "java -jar /opt/phet/chemistry/beta-decay_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Alpha Decay",
+    "id": "alpha-decay",
+    "exec": "java -jar /opt/phet/chemistry/alpha-decay_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Magnet and Compass",
+    "id": "magnets-and- compass",
+    "exec": "java -jar /opt/phet/physics/magnet-and-compass_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Freefall Tower",
+    "id": "freefall-tower",
+    "exec": "/opt/applications-bin/freefalltower",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Balancing Act",
+    "id": "balancing-act",
+    "exec": "java -jar /opt/phet/physics/balancing-act_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Calculus Grapher",
+    "id": "calculus-grapher",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-calculus-grapher/calculus-grapher_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Collision Lab",
+    "id": "collision-lab",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Fluid Pressure and Flow",
+    "id": "fluid-pressure-and-flow",
+    "exec": "java -jar /opt/phet/physics/fluid-pressure-and-flow_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Forces and Motion",
+    "id": "forces-and-motion",
+    "exec": "java -jar /opt/phet/physics/forces-and-motion_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Forces and Motion: Basics",
+    "id": "forces-and-motions-basics",
+    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Forces in 1 Dimension",
+    "id": "forces-in-1-dimension",
+    "exec": "java -jar /opt/phet/physics/forces-1d_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gravity and Orbits",
+    "id": "gravity-and-orbits",
+    "exec": "java -jar /opt/phet/physics/gravity-and-orbits_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Gravity Force Lab",
+    "id": "gravity-force-lab",
+    "exec": "java -jar /opt/phet/physics/gravity-force-lab_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Ladybug Motion 2D",
+    "id": "ladybug-motion-2d",
+    "exec": "java -jar /opt/phet/physics/ladybug-motion-2d_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Ladybug Revolution",
+    "id": "lady-bug-revolution",
+    "exec": "java -jar /opt/phet/physics/rotation_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Lunar Lander",
+    "id": "lunar-lander",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-lunar-lander/lunar-lander_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Maze Game",
+    "id": "maze-game",
+    "exec": "java -jar /opt/phet/physics/maze-game_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Motion in 2D",
+    "id": "motion-in-2d",
+    "exec": "java -jar /opt/phet/physics/motion-2d_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "The Moving Man",
+    "id": "moving-man",
+    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "My Solar System",
+    "id": "my-solar-system",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-my-solar-system/my-solar-system_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Normal Modes",
+    "id": "normal-mode",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-normal-modes/normal-modes_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pendulum Lab",
+    "id": "pendulum-lab",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-pendulum-lab/pendulum-lab_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Projectile Motion",
+    "id": "projectile-motion",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-projectile-motion/projectile-motion_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Ramp: Forces and Motion",
+    "id": "ramp-forces-and -motion",
+    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Resonance",
+    "id": "resonance",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-resonance/resonance_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Torque",
+    "id": "torque",
+    "exec": "java -jar /opt/phet/physics/torque_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Density",
+    "id": "density",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-density/density_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Density",
+    "id": "Density",
+    "exec": "/opt/applications-bin/Density",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Step",
+    "id": "step",
+    "exec": "step",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Stellarium",
+    "id": "stellarium",
+    "exec": "stellarium",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Celestia",
+    "id": "celestia",
+    "exec": "celestia",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Quantum Bound States",
+    "id": "quantum-bound-states",
+    "exec": "java -jar /opt/phet/physics/bound-states_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Stern-Gerlach Experiment",
+    "id": "stern-gerlach",
+    "exec": "java -jar /opt/phet/physics/stern-gerlach_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Conductivity",
+    "id": "conductivity",
+    "exec": "java -jar /opt/phet/physics/conductivity_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Semiconductors ",
+    "id": "semi-conductors",
+    "exec": "java -jar /opt/phet/physics/semiconductor_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Davisson-Germer: Electron Diffraction",
+    "id": "davission-germer",
+    "exec": "java -jar /opt/phet/chemistry/davisson-germer_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Rutherford Scattering",
+    "id": "rutherfford-scattering",
+    "exec": "java -jar /opt/phet/chemistry/rutherford-scattering_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Double Wells and Covalent Bonds",
+    "id": "covalent-bonds",
+    "exec": "java -jar /opt/phet/chemistry/covalent-bonds_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Band Structure",
+    "id": "band-structure",
+    "exec": "java -jar /opt/phet/physics/band-structure_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Radiating Charge",
+    "id": "radiating-charge",
+    "exec": "java -jar /opt/phet/physics/radiating-charge_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Sound",
+    "id": "sound",
+    "exec": "java -jar /opt/phet/chemistry/sound_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Optical Tweezers and Applications",
+    "id": "optical-tweezers",
+    "exec": "java -jar /opt/phet/physics/optical-tweezers_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Wave on a String",
+    "id": "wave-on-a-string",
+    "exec": "java -jar /opt/phet/physics/wave-on-a-string_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "pdf-reader /manuals/nuclear-fission-questions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Eating & Exercise",
+    "id": "eating-exercise",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/biology/eating-and-exercise_en.jar",
+    "subject": "biology",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "How many calories are in your favorite foods? How much exercise would you have to do to burn off these calories? What is the relationship between calories and weight? Explore these issues by choosing diet and exercise and keeping an eye on your weight.",
+    "manuals": [
+      {
+        "title": "Lesson",
+        "src": "doc-reader /manuals/eating-and-exercise-simulation-project-lesson.docx"
+      },
+      {
+        "title": "Exercises",
+        "src": "doc-reader /manuals/eating-and-exercise-simulation-project-exercises.docx"
+      }
+    ]
+  },
+  {
+    "name": "Natural Selection",
+    "id": "natural-selection",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/biology/natural-selection_en.jar",
+    "subject": "biology",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore natural selection by controlling the environment and causing mutations in bunnies.",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader /manuals/Activity Natural Selection.docx"
+      }
+    ]
   },
   {
     "name": "Area Builder",
     "id": "area-builder",
+    "type": "apps",
     "exec": "firefox --new-window /opt/phet/maths/area-builder_en.html",
     "subject": "mathematics",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
+    "description": "Create your own shapes using colorful blocks and explore the relationship between perimeter and area. Compare the area and perimeter of two shapes side-by-side. Challenge yourself in the game screen to build shapes or find the area of funky figures. Try to collect lots of stars!",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader /manuals/AreaBuilder.docx"
+      }
+    ]
   },
   {
-    "name": "Arithmetic",
-    "id": "arithmetic",
-    "exec": "java -jar /opt/phet/maths/arithmetic_en.jar",
+    "name": "KBruch",
+    "id": "KBruch",
+    "type": "apps",
+    "exec": "kbruch",
     "subject": "mathematics",
     "keywords": [
       "",
       ""
-    ],
-    "type": "apps"
+    ]
   },
   {
-    "name": "Build a Fraction",
-    "id": "build-a-fraction",
-    "exec": "java -jar /opt/phet/maths/build-a-fraction_en.jar",
-    "subject": "mathematics",
+    "name": "Electrolysis",
+    "id": "electrolysis",
+    "type": "apps",
+    "exec": "chromium-browser --new-window file:///opt/phet/physics/phet-electrolysis/electrolyis.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "John Travoltage",
+    "id": "hohn-travoltage",
+    "exec": "java -jar /opt/phet/physics/balloons_en.jar",
     "keywords": [
       "",
       ""
     ],
-    "type": "apps"
-  },
-  {
-    "name": "Calculus Grapher",
-    "id": "calculus-grapher",
-    "exec": "java -jar /opt/phet/maths/calculus-grapher_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Curve Fitting",
-    "id": "curve-fitting",
-    "exec": "java -jar /opt/phet/maths/curve-fitting_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Equation Grapher",
-    "id": "equation-grapher",
-    "exec": "java -jar /opt/phet/maths/equation-grapher_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Estimation",
-    "id": "estimation",
-    "exec": "java -jar /opt/phet/maths/estimation_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Fractions Intro",
-    "id": "fractions-intro",
-    "exec": "java -jar /opt/phet/maths/fractions-intro_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Fraction Matcher",
-    "id": "fraction-matcher",
-    "exec": "java -jar /opt/phet/maths/fraction-matcher_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Graphing Lines",
-    "id": "graphing-lines",
-    "exec": "java -jar /opt/phet/maths/graphing-lines_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Least-Squares Regression",
-    "id": "least-squares-regression",
-    "exec": "firefox --new-window /opt/phet/maths/least-squares-regression_en.html",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "Vector Addition",
-    "id": "vector-addition",
-    "exec": "java -jar /opt/phet/maths/vector-addition_en.jar",
-    "subject": "mathematics",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
-  },
-  {
-    "name": "OpenTeacher",
-    "id": "openteacher",
-    "exec": "openteacher",
-    "subject": "social",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps"
+    "type": "apps",
+    "description": "Make sparks fly with John Travoltage. Explore how charging Johnnie up and moving his hand changes how he gets shocked!",
+    "manuals": []
   },
   {
     "name": "K Geography",
     "id": "kgeography",
+    "type": "apps",
     "exec": "kgeography",
     "subject": "social",
     "keywords": [
       "",
       ""
-    ],
-    "type": "apps"
+    ]
   },
   {
-    "name": "Freefall Tower",
-    "id": "freefall-tower",
-    "exec": "/opt/applications-bin/freefalltower",
+    "name": "Build a Molecule",
+    "id": "build-a-molecule",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/build-a-molecule_en.jar",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Starting from atoms, see how many molecules you can build. Collect your molecules and see them in 3D!",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader /manuals/BuildAMolecule-Activity.doc"
+      }
+    ]
+  },
+  {
+    "name": "Under Pressure",
+    "id": "under-pressure",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/under-pressure_en.jar",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "pdf-reader /manuals/UnderPressure_Student_directions.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Concentration",
+    "id": "concentration",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/concentration_en.jar",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Watch your solution change color as you mix chemicals with water. Then check molarity with the concentration meter. What are all the ways you can change the concentration of your solution? Switch solutes to compare different chemicals and find out how concentrated you can go before you hit saturation!",
+    "manuals": [
+      {
+        "title": "Saturated solutions",
+        "src": "pdf-reader /manuals/Saturated solutions-Lecture Demo Guide.pdf"
+      }
+    ]
+  },
+  {
+    "name": "Pulleys",
+    "id": "pulleys",
+    "exec": "chromium-browser --app=file:///opt/phet/chemistry/Pulleys/index.html",
     "subject": "physics",
     "keywords": [
       "",
