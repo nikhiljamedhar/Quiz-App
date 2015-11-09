@@ -222,6 +222,10 @@ pencilBoxApp.controller('TakeQuizController', ['$scope', '$routeParams', 'Conten
 
         $scope.closeOverlay = function ($event) {
             $event.preventDefault();
+            if($scope.showScore){
+                window.location.href = "#/grades/" + $scope.current_grade + "/subject/" + $scope.current_subject + "/" + $scope.current_chapter + "/";
+                return;
+            }
             var options = {
                 title: "Changes not saved",
                 description: "All your data will be lost. Are you sure you want to close the quiz?",
