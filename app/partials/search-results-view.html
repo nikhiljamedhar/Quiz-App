@@ -1,20 +1,19 @@
 <div class="other-apps-view view">
     <div class="header-content">
-        <a id="link" href="#/search" class="otherApps">
-            <img class="otherAppImage" src="images/otherapps.png" alt="otherApps"/>
-            <span class="otherAppText">All Apps</span>
-        </a>
-
-        <div class="search">
-            <input type="text" ng-model="keyword" onkeypress="detectEnterKey(event)"
-                   placeholder="Search app with subject, topic"/>
-            <a href="#/search/{{keyword}}">
-                <button id="search-icon"></button>
-            </a>
-        </div>
         <a href="#/grades">
             <img class="main-logo" src="images/logo.png" alt="logo">
         </a>
+        <div class="app-button other-apps other-apps-bg right">
+            <a href="#/search" class="a-container">
+                <div class="img-container">
+                    <img src="image/otherapps.png" alt="other apps icon"/>
+                </div>
+                <span>All Apps</span>
+            </a>
+        </div>
+        <div class="search-container">
+            <search></search>
+        </div>
     </div>
     <div class="other-apps-content">
         <div class="other-app-container">

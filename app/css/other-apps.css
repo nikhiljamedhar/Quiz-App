@@ -9,6 +9,12 @@
     float: left;
 }
 
+.other-apps-view .search-container {
+    overflow: hidden;
+}
+.header-content > .other-apps {
+    margin-top: 30px;
+}
 .other-app-container {
     width:70%;
     border: 1px solid black;
