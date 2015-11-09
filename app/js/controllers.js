@@ -105,7 +105,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             }
             var options = {
                 title: "Alert",
-                description: "If you are sure to delete the quiz enter the master password",
+                description: "Please enter the master password",
                 className: "master-password",
                 buttons: ["ok", "cancel"],
                 closeHandler: true,
