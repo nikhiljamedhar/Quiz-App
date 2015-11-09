@@ -80,7 +80,7 @@
                                                             <span>Add Question</span>
                                                         </a>
                                                     </div>
-                                                    <div class="question-button other-apps right">
+                                                    <div class="question-button other-apps right" ng-if="quizJson.questions.length > 1">
                                                         <a href="" class="a-container" ng-click="deleteQuestion()" ng-disabled="!canDeleteQuestion()">
                                                             <div class="img-container">
                                                                 <img src="image/delete.png" alt="Delete Question"/>
