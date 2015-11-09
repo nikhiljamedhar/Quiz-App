@@ -39,7 +39,7 @@ pencilBoxApp.config(['$routeProvider',function($routeProvider){
      templateUrl : 'partials/other-apps.html',
      controller : 'OtherAppController'
   })
-  .when('/search/:keyword', {
+  .when('/search/:keyword?', {
     templateUrl: 'partials/search-results-view.html',
     controller: 'SearchResultController'
   })

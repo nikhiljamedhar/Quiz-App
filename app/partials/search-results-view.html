@@ -1,52 +1,40 @@
 <div class="other-apps-view view">
     <div class="header-content">
-          <a id="link" href="#/otherApps" class="otherApps">
+        <a id="link" href="#/otherApps" class="otherApps">
             <img class="otherAppImage" src="images/otherapps.png" alt="otherApps"/>
             <span class="otherAppText">Other apps</span>
-          </a>
-          <div class="search">
-              <input type="text" ng-model="keyword" onkeypress="detectEnterKey(event)" placeholder="Search app with subject, topic"/>
-              <a href="#/search/{{keyword}}"><button id="search-icon"></button></a>
-          </div>
-            <a href="#/grades">
-                <img class="main-logo" src="images/logo.png" alt="logo">
+        </a>
+
+        <div class="search">
+            <input type="text" ng-model="keyword" onkeypress="detectEnterKey(event)"
+                   placeholder="Search app with subject, topic"/>
+            <a href="#/search/{{keyword}}">
+                <button id="search-icon"></button>
             </a>
         </div>
-        <div class="other-apps-content">
-          <div class="other-app-container">
+        <a href="#/grades">
+            <img class="main-logo" src="images/logo.png" alt="logo">
+        </a>
+    </div>
+    <div class="other-apps-content">
+        <div class="other-app-container">
             <div class="other-app-container-header">
-              <img src="images/app.png" class="app-icon"/>
-              <span class="container-name">Applications </span>
+                <img src="images/app.png" class="app-icon"/>
+                <span class="container-name">Applications </span>
             </div>
             <div class="apps-list">
-             <div class="app-details" ng-click="invokeCommand(app.exec)" ng-repeat="app in apps | filter:{name:keyword, type:'apps'}">
-                <a href="">
-                  <img src="images/{{app.subject}}/{{app.id}}.png"/>
-                    <div class="app-name">
-                      {{app.name}}
-                    </div>
-                </a>
-            </div>
-          </div>
-          </div>
+                <div class="app-details" ng-click="invokeCommand(app.exec)"
+                     ng-repeat="app in apps | filter:{name:keyword, type:'apps'}">
+                    <a href="">
+                        <img src="images/{{app.subject}}/{{app.id}}.png"/>
 
-          <!-- <div class="other-app-container">
-            <div class="other-app-container-header">
-              <img src="images/video.png" class="app-icon"/>
-              <span class="container-name">Multimedia </span>
-            </div>
-            <div class="apps-list">
-             <div class="app-details" ng-repeat="app in apps | filter:{name:keyword, type:'videos'}">
-                <a href="">
-                <img src="images/{{app.subject}}/{{app.id}}.png"/>
-                <div class="app-name">
-                  {{app.name}}
+                        <div class="app-name">
+                            {{app.name}}
+                        </div>
+                    </a>
                 </div>
-                </a>
             </div>
-          </div>
-          </div> -->
-
         </div>
+    </div>
 
 </div>
