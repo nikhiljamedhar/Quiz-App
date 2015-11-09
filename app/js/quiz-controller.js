@@ -305,6 +305,28 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
         };
 
         $scope.saveQuiz = function () {
+            var data = {
+                    grade: $scope.current_grade,
+                    subject: $scope.current_subject,
+                    chapter: $scope.current_chapter,
+                    quiz: $scope.quizJson
+                };
+            $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
+                then(function () {
+                    $scope.hasChange = false;
+                    $scope.closeOverlay();
+                    var options = {
+                        title: "Success",
+                        description: "Successfully saved the quiz.",
+                        buttons: ["ok"]
+                    };
+                    new CustomDialog($q, options);
+                }, function () {
+                    console.log(arguments);
+                });
+        };
+
+        $scope.verifySaveQuiz = function(){
             var error = "";
             if (!$scope.quizJson.name) {
                 error = "Please give a name to the Quiz";
@@ -331,41 +353,14 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 new CustomDialog($q, options);
             } else {
                 processFib();
-                var data = {
-                    grade: $scope.current_grade,
-                    subject: $scope.current_subject,
-                    chapter: $scope.current_chapter,
-                    quiz: $scope.quizJson
-                };
-                $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
-                        then(function () {
-                            $scope.hasChange = false;
-                            $scope.closeOverlay();
-                            var options = {
-                                title: "Success",
-                                description: "Successfully saved the quiz.",
-                                buttons: ["ok"]
-                            };
-                            new CustomDialog($q, options);
-                        }, function () {
-                            console.log(arguments);
-                        });
-            }
-        };
-
-        $scope.verifySaveQuiz = function(){
-            var dialogInstance = new CustomDialog($q, {
-                title: "Alert",
-                description: "Once you save the quiz you cannot make any changes. Do you want to continue?",
-                buttons: ["ok", "cancel"],
-                buttonName: ["yes","no"]
-            }).show();
-            dialogInstance
-                    .then(function () {
-                        $scope.saveQuiz();
-                    })
-                    .catch(function (e) {
-                    });
+                var dialogInstance = new CustomDialog($q, {
+                    title: "Alert",
+                    description: "Once you save the quiz you cannot make any changes. Do you want to continue?",
+                    buttons: ["ok", "cancel"],
+                    buttonName: ["yes","no"]
+                }).show();
+                dialogInstance.then(function () {$scope.saveQuiz();}).catch(function (e) {});  
+            }            
         };
 
         $scope.validateInput = function (obj, limit) {
