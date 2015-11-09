@@ -14,7 +14,12 @@ $grade = $quizJson['grade'];
 $subject = $quizJson['subject'];
 $chapter = $quizJson['chapter'];
 $fileName = "json/$grade/$subject/$chapter.json";
-$existingJson = json_decode(file_get_contents($fileName));
+
+if(file_exists($fileName)) {
+    $existingJson = json_decode(file_get_contents($fileName));
+} else {
+    $existingJson = [];
+}
 $quizJson['quiz']['type'] = 'quiz';
 array_push($existingJson, $quizJson['quiz']);
 file_put_contents($fileName, json_encode($existingJson));
