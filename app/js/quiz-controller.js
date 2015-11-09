@@ -353,6 +353,20 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
             }
         };
 
+        $scope.verifySaveQuiz = function(){
+            var dialogInstance = new CustomDialog($q, {
+                title: "Alert",
+                description: "Once you save the quiz you cannot make any changes. Do you want to continue?",
+                buttons: ["yes", "no"]
+            }).show();
+            dialogInstance
+                    .then(function () {
+                        $scope.saveQuiz();
+                    })
+                    .catch(function (e) {
+                    });
+        };
+
         $scope.validateInput = function (obj, limit) {
             if (obj.length >= limit) {
                 var options = {
