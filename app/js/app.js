@@ -35,10 +35,6 @@ pencilBoxApp.config(['$routeProvider',function($routeProvider){
     templateUrl:'partials/take-quiz.html',
     controller:'TakeQuizController'
   })
-  .when('/otherApps', {
-     templateUrl : 'partials/other-apps.html',
-     controller : 'OtherAppController'
-  })
   .when('/search/:keyword?', {
     templateUrl: 'partials/search-results-view.html',
     controller: 'SearchResultController'
