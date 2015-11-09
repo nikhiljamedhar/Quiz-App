@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Electrolysis",
+    "id": "electrolysis",
+    "type":"apps",
+    "exec": "chromium-browser --new-window file:///opt/phet/physics/phet-electrolysis/electrolyis.html",
+    "subject": "physics",
+    "keywords":["",""]
+  }
+]

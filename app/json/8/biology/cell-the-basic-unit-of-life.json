@@ -1,5 +1,15 @@
 [
 	{
+    "name": "Cell Structure",
+    "id": "cell-structure",
+    "type": "apps",
+		"exec":"chromium-browser --new-window file:///opt/phet/biology/phet-cellStructure/cell_structure.html",
+    "keywords": [
+        "",
+        ""
+    ]
+	},
+	{
     "name": "The Cell",
     "id": "cell-basic-unit-of-life",
     "type": "videos",
