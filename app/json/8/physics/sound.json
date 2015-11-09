@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "This simulation lets you see sound waves. Adjust the frequency or volume and you can see and hear how the wave changes. Move the listener around and hear what she hears.",
     "manuals": [
-      {"title":"Sound and Wave Basics", "src":"/manuals/Sound and Wave Basics.pdf"}
+      {"title":"Sound and Wave Basics", "src":"pdf-reader /manuals/Sound and Wave Basics.pdf" }
     ]
   }
 ]

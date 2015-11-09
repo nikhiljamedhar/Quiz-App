@@ -7,7 +7,7 @@
     "type": "apps",
     "description": "Make a whole rainbow by mixing red, green, and blue light. Change the wavelength of a monochromatic beam or filter white light. View the light as a solid beam, or see the individual photons.",
     "manuals": [
-      {"title":"Questions", "src":"/manuals/seeing-colors-activity.docx"}
+      {"title":"Questions", "src":"doc-reader /manuals/seeing-colors-activity.docx"}
     ]
   },
   {
@@ -18,7 +18,7 @@
     "keywords":["",""],
     "description": "Play hockey with electric charges. Place charges on the ice, then hit start to try to get the puck in the goal. View the electric field. Trace the puck's motion. Make the game harder by placing walls in front of the goal. This is a clone of the popular simulation of the same name marketed by Physics Academic Software and written by Prof. Ruth Chabay of the Dept of Physics at North Carolina State University.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/electric-field-hockey-lesson-plan.doc"}
+      {"title":"Introduction", "src":"doc-reader /manuals/electric-field-hockey-lesson-plan.doc"}
     ]
   },
   {
@@ -29,7 +29,7 @@
     "keywords":["",""],
     "description": "Play ball! Add charges to the Field of Dreams and see how they react to the electric field. Turn on a background electric field and adjust the direction and magnitude. (Kevin Costner not included).",
     "manuals": [
-      {"title":"Assignments", "src":"/manuals/field-of-dreams-tasks.doc"}
+      {"title":"Assignments", "src":"doc-reader /manuals/field-of-dreams-tasks.doc"}
     ]
   },
   {
@@ -40,7 +40,7 @@
     "keywords":["",""],
     "description": "Move point charges around on the playing field and then view the electric field, voltages, equipotential lines, and more. It's colorful, it's dynamic, it's free.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/electric-field-lab.doc"}
+      {"title":"Introduction", "src":"doc-reader /manuals/electric-field-lab.doc"}
     ]
   },
   {
@@ -51,7 +51,7 @@
     "keywords":["",""],
     "description": "See how the equation form of Ohm's law relates to a simple circuit. Adjust the voltage and resistance, and see the current change according to Ohm's law.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/ohms-law.pdf"}
+      {"title":"Introduction", "src":"pdf-reader /manuals/ohms-law.pdf" }
     ]
   },
   {
@@ -62,7 +62,7 @@
     "type": "apps",
     "description": "Learn about the physics of resistance in a wire. Change its resistivity, length, and area to see how they affect the wire's resistance.",
     "manuals": [
-      {"title":"Questions", "src":"/manuals/ResistanceWireAP_Student.docx"}
+      {"title":"Questions", "src":"doc-reader /manuals/ResistanceWireAP_Student.docx"}
     ]
   },
   {
@@ -76,8 +76,8 @@
     ],
     "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/circuit-directions.pdf"},
-      {"title":"Series and Parallel", "src":"/manuals/circuit-series-parallel.doc"}
+      {"title":"Introduction", "src":"pdf-reader /manuals/circuit-directions.pdf" },
+      {"title":"Series and Parallel", "src":"doc-reader /manuals/circuit-series-parallel.doc"}
     ]
   }
 ]

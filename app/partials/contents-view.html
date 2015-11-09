@@ -231,7 +231,7 @@
                     <h3>Manuals</h3>
                     <ul class="manual-list">
                         <li ng-repeat="manual in selectedApp.manuals">
-                            <a href="{{manual.src}}" target="_blank">{{manual.title}}</a>
+                            <a href="#" ng-click="invokeCommand(manual.src)">{{manual.title}}</a>
                         </li>
                     </ul>
                 </div>

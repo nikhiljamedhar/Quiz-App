@@ -7,7 +7,7 @@
         "type": "apps",
         "description": "Explore bending of light between two media with different indices of refraction. See how changing from air to water to glass changes the bending angle. Play with prisms of different shapes and make rainbows.",
         "manuals": [
-            {"title":"Reflection of Light", "src":"/manuals/refraction-of-light.pdf"}
+            {"title":"Reflection of Light", "src":"pdf-reader /manuals/refraction-of-light.pdf" }
         ]
     },
     {
@@ -18,7 +18,7 @@
         "type": "apps",
         "description": "Do you ever wonder how a greenhouse gas affects the climate, or why the ozone layer is important? Use the sim to explore how light interacts with molecules in our atmosphere.",
         "manuals": [
-            {"title":"Reflection of Light", "src":"/manuals/refraction-of-light.pdf"}
+            {"title":"Reflection of Light", "src":"pdf-reader /manuals/refraction-of-light.pdf" }
         ]
     },
     {
@@ -29,7 +29,7 @@
         "type": "apps",
         "description": "Explore stretching just a single strand of DNA using optical tweezers or fluid flow. Experiment with the forces involved and measure the relationship between the stretched DNA length and the force required to keep it stretched. Is DNA more like a rope or like a spring?",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/natural-selection.docx"}
+            {"title":"Questions", "src":"doc-reader /manuals/natural-selection.docx"}
         ]
     },
     {
@@ -40,7 +40,7 @@
         "type": "apps",
         "description": "Make a whole rainbow by mixing red, green, and blue light. Change the wavelength of a monochromatic beam or filter white light. View the light as a solid beam, or see the individual photons.",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/seeing-colors-activity.docx"}
+            {"title":"Questions", "src":"doc-reader /manuals/seeing-colors-activity.docx"}
         ]
     },
     {
@@ -51,7 +51,7 @@
         "type": "apps",
         "description": "Discover what controls how fast tiny molecular motors in our body pull through a single strand of DNA. How hard can the motor pull in a tug of war with the optical tweezers? Discover what helps it pull harder. Do all molecular motors behave the same?",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -62,7 +62,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -73,7 +73,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -84,7 +84,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -95,7 +95,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -106,7 +106,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -117,7 +117,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -128,7 +128,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -139,7 +139,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -150,7 +150,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -161,7 +161,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -172,7 +172,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -183,7 +183,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -194,7 +194,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -205,7 +205,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -216,7 +216,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -227,7 +227,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     },
     {
@@ -238,7 +238,7 @@
         "type": "apps",
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" }
         ]
     }
 ]

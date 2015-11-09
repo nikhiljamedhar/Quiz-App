@@ -7,7 +7,7 @@
     "type":"apps",
     "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/magnets.pdf"}
+      {"title":"Introduction", "src":"pdf-reader /manuals/magnets.pdf" }
     ]
   },
   {

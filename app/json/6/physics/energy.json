@@ -7,7 +7,7 @@
         "keywords":["",""],
         "description": "Explore how heating and cooling iron, brick, and water adds or removes energy. See how energy is transferred between objects. Build your own system, with energy sources, changers, and users. Track and visualize how energy flows and changes through your system.",
         "manuals": [
-            {"title":"Introduction to Batteries", "src":"/manuals/energy-forms-and-changes.docx"}
+            {"title":"Introduction to Batteries", "src":"doc-reader /manuals/energy-forms-and-changes.docx"}
         ]
     },
     {
@@ -18,7 +18,7 @@
         "keywords":["",""],
         "description": "Learn about conservation of energy with a skater dude! Build tracks, ramps and jumps for the skater and view the kinetic energy, potential energy and friction as he moves. You can also take the skater to different planets or even space!",
         "manuals": [
-            {"title":"Introduction", "src":"/manuals/energy-forms-and-changes.docx"}
+            {"title":"Introduction", "src":"doc-reader /manuals/energy-forms-and-changes.docx"}
         ]
     },
     {
@@ -29,7 +29,7 @@
         "keywords":["",""],
         "description": "Learn about conservation of energy with a skater gal! Explore different tracks and view the kinetic energy, potential energy and friction as she moves. Build your own tracks, ramps, and jumps for the skater.",
         "manuals": [
-            {"title":"Introduction", "src":"/manuals/energy-skate-park-basics.pdf"}
+            {"title":"Introduction", "src":"pdf-reader /manuals/energy-skate-park-basics.pdf" }
         ]
     },
     {
@@ -40,7 +40,7 @@
         "keywords":["",""],
         "description": "A realistic mass and spring laboratory. Hang masses from springs and adjust the spring stiffness and damping. You can even slow time. Transport the lab to different planets. A chart shows the kinetic, potential, and thermal energy for each spring.",
         "manuals": [
-            {"title":"Introduction", "src":"/manuals/masses-and-springs.pdf"}
+            {"title":"Introduction", "src":"pdf-reader /manuals/masses-and-springs.pdf" }
         ]
     },
     {
@@ -51,8 +51,8 @@
         "keywords":["",""],
         "description": "Explore forces, energy and work as you push household objects up and down a ramp. Lower and raise the ramp to see how the angle of inclination affects the parallel forces acting on the file cabinet. Graphs show forces, energy and work.",
         "manuals": [
-            {"title":"Introduction", "src":"/manuals/the-ramp-intro.docx"},
-            {"title":"Work Energy on Ramp", "src":"/manuals/work-energy-on-ramp.docx"}
+            {"title":"Introduction", "src":"doc-reader /manuals/the-ramp-intro.docx"},
+            {"title":"Work Energy on Ramp", "src":"doc-reader /manuals/work-energy-on-ramp.docx"}
         ]
     },
     {
@@ -63,8 +63,8 @@
         "keywords":["",""],
         "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
         "manuals": [
-            {"title":"Questions", "src":"/manuals/nuclear-fission-questions.pdf"},
-            {"title":"Questions 2", "src":"/manuals/nuclear-fission-questions-2.doc"}
+            {"title":"Questions", "src":"pdf-reader /manuals/nuclear-fission-questions.pdf" },
+            {"title":"Questions 2", "src":"doc-reader /manuals/nuclear-fission-questions-2.doc"}
         ]
     },
     {
@@ -75,7 +75,7 @@
         "keywords":["",""],
         "description": "Experiment with a helium balloon, a hot air balloon, or a rigid sphere filled with different gases. Discover what makes some balloons float and others sink.",
         "manuals": [
-            {"title":"Introduction", "src":"/manuals/balloon-introduction.pdf"}
+            {"title":"Introduction", "src":"pdf-reader /manuals/balloon-introduction.pdf" }
         ]
     }
 ]

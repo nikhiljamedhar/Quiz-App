@@ -8,8 +8,8 @@
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/the-ramp-intro.docx"},
-      {"title":"Work Energy on Ramp", "src":"/manuals/work-energy-on-ramp.docx"}
+      {"title":"Introduction", "src":"doc-reader /manuals/the-ramp-intro.docx"},
+      {"title":"Work Energy on Ramp", "src":"doc-reader /manuals/work-energy-on-ramp.docx"}
     ]
   },
   {
@@ -21,7 +21,7 @@
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Introduction", "src":"/manuals/energy-skate-park-basics.pdf"}
+      {"title":"Introduction", "src":"pdf-reader /manuals/energy-skate-park-basics.pdf" }
     ]
   },
   {
@@ -44,8 +44,8 @@
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Conservation of Energy", "src":"/manuals/conservation of energy.doc"},
-      {"title":"Hooke's Law", "src":"/manuals/MassesandSpringsAP_Student.docx"}
+      {"title":"Conservation of Energy", "src":"doc-reader /manuals/conservation of energy.doc"},
+      {"title":"Hooke's Law", "src":"doc-reader /manuals/MassesandSpringsAP_Student.docx"}
     ]
   }
 ]
