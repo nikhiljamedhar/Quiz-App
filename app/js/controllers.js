@@ -219,4 +219,12 @@ pencilBoxApp.controller('SearchResultController', ['$scope', '$routeParams', 'Ap
         $scope.invokeCommand = function (command) {
             CommandApi.invokeCommand(command);
         };
+
+        $scope.selectedApp = null;
+        $scope.selectApp = function (app) {
+            $scope.selectedApp = app;
+        };
+        $scope.deselectApp = function () {
+            $scope.selectedApp = null;
+        };
     }]);
