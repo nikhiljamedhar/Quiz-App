@@ -54,5 +54,9 @@
     {
         "name": "Playing with Numbers",
         "id": "playing-with-numbers"
+    },
+    {
+      "name":"Frequency Distribution Tables and Graphs",
+      "id": "frequency-distribution-tables-and-graphs"
     }
 ]

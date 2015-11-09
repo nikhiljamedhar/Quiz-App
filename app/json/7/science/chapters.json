@@ -42,5 +42,21 @@
     {
         "name" : "Reproduction in plants`",
         "id" : "reproduction-in-plants"
+    },
+    {
+        "name": "Water - Too little to Waste",
+        "id": "water-too-little-to-waste"
+    },
+    {
+        "name": "Soil - Our Life",
+        "id": "soil-our-life"
+    },
+    {
+        "name" : "Forest - Our Life",
+        "id" : "forest-our-life"
+    },
+    {
+      "name":"changes around us",
+      "id":"changes-around-us"
     }
 ]
