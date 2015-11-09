@@ -271,7 +271,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 }
             } else if (question.type === "match-the-following") {
                 if (question.questions.filter(function (option) {
-                            return option.question.trim() === '' && option.answer.trim() === ''
+                            return option.question.trim() === '' || option.answer.trim() === ''
                         }).length > 0) {
                     return "Please fill all the fields.";
                 }
