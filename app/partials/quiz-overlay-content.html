@@ -10,7 +10,7 @@
                         <p class="title"><input type="text" ng-required="true" ng-model="quizJson.name" placeholder="Name of Quiz"/></p>
 
                         <p><a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/"
-                              class="button close" id="close-overlay" ng-click="closeOverlay($event)">×</a></p>
+                              class="button close" id="close-overlay" ng-click="closeQuiz($event)">×</a></p>
                     </header>
                     <section class="q-o-section">
                         <div class="wrapper two-column clear">
@@ -93,7 +93,7 @@
 
                                             <footer class="question-footer clear">
                                                 <div class="app-button other-apps right">
-                                                    <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="a-container" ng-click="closeOverlay($event)">
+                                                    <a href="#/grades/{{current_grade}}/subject/{{current_subject}}/{{current_chapter}}/" class="a-container" ng-click="closeQuiz($event)">
                                                         <div class="img-container">
                                                             <img src="image/delete.png" alt="Cancel"/>
                                                         </div>

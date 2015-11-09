@@ -75,7 +75,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
             $scope.overlay = new Overlay(element, {closeHandler: true});
         };
 
-        $scope.closeOverlay = function ($event) {
+        $scope.closeQuiz = function($event) {
             $event.preventDefault();
             var options = {
                 title: "Changes not saved",
@@ -86,15 +86,18 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 closeHandler: true
             };
             new CustomDialog($q, options).show().then(function () {
-                $scope.saveQuiz()
+                $scope.saveQuiz();
             }).catch(function() {
-                $scope.overlay.disposeOverlay();
-                var url = window.location.href;
-                url = url.replace("update-quiz/", "");
-                url = url.replace("create-quiz/", "");
-                window.location.href = url.replace("update-quiz/", "");
-
+                $scope.closeOverlay();
             });
+        };
+
+        $scope.closeOverlay = function ($event) {
+            $scope.overlay.disposeOverlay();
+            var url = window.location.href;
+            url = url.replace("update-quiz/", "");
+            url = url.replace("create-quiz/", "");
+            window.location.href = url.replace("update-quiz/", "");
         };
 
         $scope.overlayLoaded = function () {
@@ -337,10 +340,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
                         then(function () {
                             $scope.hasChange = false;
-                            $scope.closeOverlay({
-                                preventDefault: function () {
-                                }
-                            });
+                            $scope.closeOverlay();
                             var options = {
                                 title: "Success",
                                 description: "Successfully saved the quiz.",

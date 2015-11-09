@@ -155,9 +155,20 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 chapter: $scope.current_chapter,
                 quiz: data
             };
-            $http.post('/save.php', requestJson).then(function () {
-                window.location.reload();
-            });
+            if($scope.contents.filter(function(c) {
+                        return c.type === 'quiz' && (c.name || '').toLowerCase().trim() === data.name.toLowerCase().trim();
+                    }).length > 0) {
+                var options = {
+                                title: "Alert",
+                                description: "Quiz with same name already present cannot upload the quiz.",
+                                buttons: ["ok"]
+                            };
+                            new CustomDialog($q, options);
+            } else{
+                $http.post('/save.php', requestJson).then(function () {
+                    window.location.reload();
+                });
+            }
         };
 
         $scope.deleteQuiz = function (index) {
