@@ -1,0 +1,37 @@
+<div class="subsection-view">
+  <div id="head">
+    <div style="width:100%">
+      <a id="link" href="/">
+	<img id="logo" src="images/Balaswecha.png" alt="logo" align="center">
+      </a>
+    </div>
+
+    <div id="icons">
+      <div ng-repeat="subject in subjects" id="{{subject.name | lowercase}}-block" class="sub-block">
+        <a style="background-image: url('images/white/{{subject.id}}.png')" href="#/subjects/{{subject.topics_present ? '': 'single/'}}{{subject.name}}" class="sub-img"></a>
+        <a href="#/subjects/{{subject.topics_present ? '': 'single/'}}{{subject.name}}" class="sub-text">{{subject.name}}</a>
+      </div>
+    </div>
+
+    <div id="search">
+      <input type="text" id="search" ng-model="keyword" name="search" placeholder="Search app with subject, topic" />
+      <a href="#/search/{{keyword}}"><button type="submit" id="search-icon" value="submit"></button></a>
+    </div>
+
+  </div>
+
+  <div class="subsection-container">
+    <div id="select">
+      <label id="text">Apps matching "{{queryString}}"</label>
+    </div>
+
+    <div id="topics">
+      <div ng-repeat="item in apps | filter:queryString" id="{{item.id}}-block" class="div-block" ng-click="invokeCommand(item.exec)">
+      <a style="background-image:url('images/{{item.subject}}/{{item.id}}.png')" href="" class="app-img">
+      </a>
+      <a href="" class="text-block">{{item.name}}</a>
+      </div>
+    </div>
+
+  </div>
+</div>

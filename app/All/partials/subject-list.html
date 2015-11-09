@@ -1,0 +1,19 @@
+<div class="home-view">
+  <div>
+    <a href="/">
+    <img id="logo" src="images/Balaswecha.png" alt="logo"></a>
+  </div>
+  <div id="search">
+    <input type="text" id="search" ng-model="keyword" name="search" placeholder="Search app with subject, topic" />
+    <a href="#/search/{{keyword}}"><button type="submit" id="search-icon" value="submit"></button></a>
+  </div>
+
+  <div id="blocks">
+    <div id="subject">
+      <label id="text">Choose a subject</label>
+    </div>
+    <div ng-repeat="subject in subjects" id="buttons-{{subject.name | lowercase}}-block">
+      <a href="#/subjects/{{subject.topics_present ? '': 'single/'}}{{subject.name}}" class="phy" id="{{subject.name | lowercase}}">{{subject.name}}</a>
+    </div>
+  </div>
+</div>

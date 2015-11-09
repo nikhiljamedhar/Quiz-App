@@ -1,0 +1,426 @@
+.topics-view div#head
+{
+	background-color: #f1f2f2;
+	height: 230px;
+	border-style: solid;
+	border-bottom-width: 1px;
+	width: 100%;
+}
+.topics-view img#logo
+{
+	width: 210px;
+	height: 70px;
+	padding-top: 20px;
+}
+.topics-view a#link
+{
+	text-align: center;
+	display: inline-block;
+	width: 20%;
+	float: left;
+	margin-left: 40%;
+	margin-right: 40%;
+	padding-bottom: 30px;
+}
+.topics-view div.sub-block
+{
+	width: 120px;
+	float: left;
+	padding-left: 15px;
+	text-align: center;
+}
+.topics-view a.sub-img
+{
+	background-color: #6d6e71;
+	background-image: url("../images/white/physics.png");
+	background-size: 40px 40px;
+	height: 70px;
+	width: 70px;
+	background-repeat:no-repeat;
+	background-position: center;
+	border-radius: 50px;
+	display: inline-block;
+}
+.topics-view a#physics-img
+{
+	background-color: #1c75bc;
+}
+.topics-view a#physics-text
+{
+	color: #1c75bc;
+}
+.topics-view div#mathematics-block
+{
+	width: 120px;
+}
+.topics-view div#chemistry-block
+{
+	width: 120px;
+}
+.topics-view a#mathematics-img
+{
+	background-image: url("../images/white/maths.png");
+}
+.topics-view a#chemistry-img
+{
+	background-image: url("../images/white/chemistry.png");
+}
+.topics-view a#biology-img
+{
+	background-image: url("../images/white/biology.png");
+}
+.topics-view a#english-img
+{
+	background-image: url("../images/white/english.png");
+}
+.topics-view a#social-img
+{
+	background-image: url("../images/white/social.png");
+}
+.topics-view a.sub-text
+{
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #6d6e71;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	display: block;
+	padding-top: 5px;
+}
+.topics-view div#icons
+{
+	padding-top: 30px;
+	padding-left: 60px;
+	width: 900px;
+}
+.topics-view div#search
+{
+	padding-left: 1199px;
+	padding-top: 6px;
+}
+.topics-view input#search
+{
+	height: 50px;
+	width: 368px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font-size: 20px;
+	font-family: sans-serif;
+	border-top-color: #656467;
+	border-bottom-color: #656467;
+	border-left-color: #656467;
+	border-right-color: #656467;
+	padding-left: 10px;
+	border-style: solid;
+	border-width: 1px;
+
+}
+.topics-view button#search-icon
+{
+	background-image: url("../images/search.png");
+	background-size: 90px 60px;
+	vertical-align: bottom;
+	height: 54px;
+	width: 78px;
+	border:none;
+	background-position: -6px -2px;
+	border-radius: 0px 5px 5px 0px;
+	margin-left: -10px;
+}
+
+.topics-view a#motion
+{
+	background-image: url("../images/blue/b-motion.png");
+}
+
+.topics-view a#waves
+{
+	background-image: url("../images/grey/g-waves.png");
+}
+.topics-view a#planetarium
+{
+	background-image: url("../images/grey/g-planetarium.png");
+}
+.topics-view a#energy
+{
+	background-image: url("../images/grey/g-energy.png");
+}
+.topics-view a#sound
+{
+	background-image: url("../images/grey/g-sound.png");
+}
+.topics-view a#qphenomena
+{
+	background-image: url("../images/grey/g-qphenomena.png");
+}
+.topics-view a#heat
+{
+	background-image: url("../images/grey/g-heat.png");
+}
+.topics-view a#light
+{
+	background-image: url("../images/grey/g-light.png");
+}
+.topics-view a#radiation
+{
+	background-image: url("../images/grey/g-radiation.png");
+}
+.topics-view a#electricity
+{
+	background-image: url("../images/grey/g-electricity.png");
+}
+.topics-view a#magnet
+{
+	background-image: url("../images/grey/g-magnet.png");
+}
+.topics-view a#circuit
+{
+	background-image: url("../images/grey/g-circuit.png");
+}
+
+.topics-view div#right
+{
+	/*margin-top: -1770px;
+	margin-left: -116px;*/
+	width: 80%;
+	float: left;
+	margin: auto;
+}
+
+
+.topics-view label#text
+{
+	padding-left: 100px;
+	font-family: sans-serif;
+	font-size: 30px;
+	color: #6d6e71;
+	font-weight: bold;
+}
+/*div#topics
+{
+	margin-left: 280px;
+	margin-top: 50px;
+}
+div#sub-topics
+{
+	padding-top: 290px;
+	margin-left: 278px;
+}
+div#sub-topics-one
+{
+	padding-top: 290px;
+	margin-left: 278px;
+}
+div#sub-topics-two
+{
+	padding-top: 290px;
+	margin-left: 278px;
+}
+div#sub-topics-three
+{
+	padding-top: 290px;
+	margin-left: 278px;
+}
+div#sub-topics-four
+{
+	padding-top: 290px;
+	margin-left: 278px;
+}*/
+.topics-view div.app-block
+{
+	width: 200px;
+	float: left;
+	margin: 15px;
+	padding: 15px;
+}
+.topics-view a.app-img
+{
+	background-color: #1c75bc;
+	background-image: url("../images/physics/balancing-act.png");
+	background-size: 200px 200px;
+	height: 200px;
+	width: 200px;
+	background-repeat:no-repeat;
+	background-position: center;
+	border-radius: 15px;
+	border: 1px solid;
+	display: inline-block;
+}
+.topics-view a.app-text
+{
+	font-family: sans-serif;
+	font-size: 20px;
+	color: #1c75bc;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	padding-top: 5px;
+	height: 20px;
+}
+.topics-view a#cg-text
+{
+	width: 152px;
+}
+.topics-view a#esp-text
+{
+	width: 166px;
+}
+.topics-view a#espb-text
+{
+	width: 166px;
+}
+.topics-view a#fpf-text
+{
+	width: 212px;
+}
+.topics-view a#fam-text
+{
+	width: 164px;
+}
+.topics-view a#famb-text
+{
+	width: 174px;
+}
+.topics-view a#fiod-text
+{
+	width: 194px;
+}
+.topics-view a#buoyancy-img
+{
+	background-image: url("../images/physics/buoyancy.png");
+}
+.topics-view a#cg-img
+{
+	background-image: url("../images/physics/calculus-grapher.png");
+}
+.topics-view a#cl-img
+{
+	background-image: url("../images/physics/collision-lab.png");
+}
+.topics-view a#esp-img
+{
+	background-image: url("../images/physics/energy-skate-park.png");
+}
+.topics-view a#espb-img
+{
+	background-image: url("../images/physics/energy-skate-park-basics.png");
+}
+.topics-view a#fpf-img
+{
+	background-image: url("../images/physics/fluid pressure and flow.png");
+}
+.topics-view a#fam-img
+{
+	background-image: url("../images/physics/forces and motion.png");
+}
+.topics-view a#famb-img
+{
+	background-image: url("../images/physics/forces and motions basics.png");
+}
+.topics-view a#fiod-img
+{
+	background-image: url("../images/physics/forces in 1 dimension.png");
+}
+.topics-view a#friction-img
+{
+	background-image: url("../images/physics/friction.png");
+}
+
+.topics-view a#gao-img
+{
+	background-image: url("../images/physics/gravity and orbits.png");
+}
+
+.topics-view a#gfl-img
+{
+	background-image: url("../images/physics/gravity force lab.png");
+}
+
+.topics-view a#lbm-img
+{
+	background-image: url("../images/physics/ladybug motion 2d.png");
+}
+
+.topics-view a#lbr-img
+{
+	background-image: url("../images/physics/lady bug revolution.png");
+}
+.topics-view a#ll-img
+{
+	background-image: url("../images/physics/lunar lander.png");
+}
+
+.topics-view a#mas-img
+{
+	background-image: url("../images/physics/masses & springs.png");
+}
+
+.topics-view a#mg-img
+{
+	background-image: url("../images/physics/maze game.png");
+}
+
+.topics-view a#mi2-img
+{
+	background-image: url("../images/physics/motion in 2d.png");
+}
+
+.topics-view a#tmm-img
+{
+	background-image: url("../images/physics/moving man.png");
+}
+
+.topics-view a#mss-img
+{
+	background-image: url("../images/physics/my solar system.png");
+}
+.topics-view a#nm-img
+{
+	background-image: url("../images/physics/normal mode.png");
+}
+.topics-view a#pl-img
+{
+	background-image: url("../images/physics/pendulum lab.png");
+}
+.topics-view a#pm-img
+{
+	background-image: url("../images/physics/projectile motion.png");
+}
+.topics-view a#tr-img
+{
+	background-image: url("../images/physics/the ramp.png");
+}
+.topics-view a#rfm-img
+{
+	background-image: url("../images/physics/ramp forces and motion.png");
+}
+.topics-view a#res-img
+{
+	background-image: url("../images/physics/resonance.png");
+}
+.topics-view a#torque-img
+{
+	background-image: url("../images/physics/torque.png");
+}
+.topics-view a#density-img
+{
+	background-image: url("../images/physics/density.png");
+}
+.topics-view a#step-img
+{
+	background-image: url("../images/physics/my sloar system.png");
+}
+.topics-view a.selected-topic
+{
+	color: #1C75BC;
+}
+.topics-view div#select
+{
+	width: 100%;
+	padding: 50px;
+}
+.topics-view div#topics
+{
+	padding-left: 100px;
+}
