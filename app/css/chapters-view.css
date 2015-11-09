@@ -21,7 +21,7 @@
 /* subjects header styles */
 .chapter-page header.subject-header .selected-grade,
 section.chapter-section .chapter-list-wrapper {
-    width: 250px;
+    width: 249px;
     min-height: 100px;
     position: relative;
     z-index: 1;
@@ -88,7 +88,7 @@ section.chapter-section ul.chapter-list li a > div {
     vertical-align: middle;
 }
 section.chapter-section ul.chapter-list li .img-container {
-    width: 50px;
+    width: 49px;
     margin-right: 10px;
 }
 section.chapter-section ul.chapter-list li .chapter-name {
