@@ -13,7 +13,7 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader /manuals/acid-base-investigation.docx"
+        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
       }
     ]
   },
@@ -31,7 +31,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /manuals/ph-lesson.docx"
+        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
       }
     ]
   },

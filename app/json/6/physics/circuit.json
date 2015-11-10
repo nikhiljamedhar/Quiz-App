@@ -12,7 +12,7 @@
     "manuals": [
       {
         "title": "Using PhET in Electricity Unit",
-        "src": "pdf-reader \/manuals\/electricity-unit.pdf"
+        "src": "pdf-reader /var/www/manuals\/electricity-unit.pdf"
       }
     ]
   },
@@ -29,11 +29,11 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \/manuals\/circuit-directions.pdf"
+        "src": "pdf-reader /var/www/manuals\/circuit-directions.pdf"
       },
       {
         "title": "Series and Parallel",
-        "src": "doc-reader \/manuals\/circuit-series-parallel.doc"
+        "src": "doc-reader /var/www/manuals\/circuit-series-parallel.doc"
       }
     ]
   },
@@ -50,11 +50,11 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \/manuals\/circuit-directions.pdf"
+        "src": "pdf-reader /var/www/manuals\/circuit-directions.pdf"
       },
       {
         "title": "Series and Parallel",
-        "src": "doc-reader \/manuals\/circuit-series-parallel.doc"
+        "src": "doc-reader /var/www/manuals\/circuit-series-parallel.doc"
       }
     ]
   },
