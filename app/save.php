@@ -18,7 +18,7 @@ $fileName = "json/$grade/$subject/$chapter.json";
 if(file_exists($fileName)) {
     $existingJson = json_decode(file_get_contents($fileName));
 } else {
-    $existingJson = [];
+    $existingJson = array();
 }
 $quizJson['quiz']['type'] = 'quiz';
 array_push($existingJson, $quizJson['quiz']);
