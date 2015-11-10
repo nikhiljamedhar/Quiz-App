@@ -30,6 +30,7 @@
 }
 .app-button > a > *, .other-apps > a > * {
     display: inline-block;
+    font-weight: bold;
     vertical-align: middle;
 }
 .app-button > a .img-container, .other-apps > a .img-container {
