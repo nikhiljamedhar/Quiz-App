@@ -25,7 +25,7 @@
                 <div class="app-details" ng-click="selectApp(app)"
                      ng-repeat="app in apps | filter:{name:keyword, type:'apps'}">
                     <a>
-                        <img src="images/{{app.subject}}/{{app.id}}.png"/>
+                        <img src="images/{{app.id}}.png"/>
 
                         <div class="app-name">
                             {{app.name}}
@@ -43,7 +43,7 @@
             </header>
             <main class="modal-content app-modal">
                 <button class="image" ng-click="invokeCommand(selectedApp.exec)">
-                    <img src="images/{{selectedApp.subject}}/{{selectedApp.id}}.png" alt="app-icon"
+                    <img src="images/{{selectedApp.id}}.png" alt="app-icon"
                          class="subject-img">
                     <span>Launch App</span>
                 </button>
