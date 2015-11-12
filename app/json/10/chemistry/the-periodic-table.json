@@ -16,7 +16,7 @@
         "keywords":["",""],
         "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
         "manuals": [
-            {"title":"Activity", "src":"pdf-reader /var/www/manuals/Build An Atom Exercises.pdf" }
+            {"title":"Activity", "src":"pdf-reader \"/var/www/manuals/Build An Atom Exercises.pdf\"" }
         ]
     },
     {
@@ -28,7 +28,7 @@
         "keywords":["",""],
         "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
         "manuals": [
-            {"title":"Activity", "src":"pdf-reader /var/www/manuals/Build An Atom Exercises.pdf" }
+            {"title":"Activity", "src":"pdf-reader \"/var/www/manuals/Build An Atom Exercises.pdf\"" }
         ]
     },
     {
@@ -40,7 +40,7 @@
         "keywords":["",""],
         "description": "Are all atoms of an element the same? How can you tell one isotope from another? Use the sim to learn about isotopes and how abundance relates to the average atomic mass of an element.",
         "manuals": [
-            {"title":"Exploring Average Atomic Mass", "src":"doc-reader /var/www/manuals/Exploring Average Atomic Mass.docx"}
+            {"title":"Exploring Average Atomic Mass", "src":"doc-reader \"/var/www/manuals/Exploring Average Atomic Mass.docx\""}
         ]
     }
 ]

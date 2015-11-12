@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
     "manuals": [
-      {"title":"Questions", "src":"doc-reader /var/www/manuals/Forces and Motion.docx"}
+      {"title":"Questions", "src":"doc-reader \"/var/www/manuals/Forces and Motion.docx\""}
     ]
   },
   {
@@ -20,7 +20,7 @@
     "keywords":["",""],
     "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
     "manuals": [
-      {"title":"Work Energy on Ramp", "src":"doc-reader /var/www/manuals/work-energy-on-ramp.docx"}
+      {"title":"Work Energy on Ramp", "src":"doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""}
     ]
   },
   {
@@ -32,7 +32,7 @@
     "keywords":["",""],
     "description": "Learn about position, velocity, and acceleration graphs. Move the little man back and forth with the mouse and plot his motion. Set the position, velocity, or acceleration and let the simulation move the man for you.",
     "manuals": [
-      {"title":"The Moving Man : Velocity", "src":"doc-reader /var/www/manuals/technology lesson.doc"}
+      {"title":"The Moving Man : Velocity", "src":"doc-reader \"/var/www/manuals/technology lesson.doc\""}
     ]
   }
 ]
