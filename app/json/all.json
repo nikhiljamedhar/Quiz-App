@@ -1777,8 +1777,8 @@
   },
   {
     "name": "John Travoltage",
-    "id": "hohn-travoltage",
-    "exec": "java -jar /opt/phet/physics/balloons_en.jar",
+    "id": "john-travoltage",
+    "exec": "chromium-browser --new-window file:///opt/phet/physics/john-travoltage_en.html",
     "keywords": [
       "",
       ""
