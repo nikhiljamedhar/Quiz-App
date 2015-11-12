@@ -1,37 +1,28 @@
-'use strict';
+var pencilBoxApp = angular.module('pencilBoxApp',['ngResource', 'ngRoute']);
 
-/* App Module */
-
-var pencilboxApp = angular.module('pencilBoxApp', [
-  'ngRoute',
-  'pencilboxControllers',
-  'pencilboxServices'
-]);
-
-pencilboxApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/subjects', {
-        templateUrl: 'partials/subject-list.html',
-        controller: 'SubjectListCtrl'
-      }).
-      when('/subjects/:subjectId', {
-        templateUrl: 'partials/subject-detail.html',
-        controller: 'SubjectDetailCtrl'
-      }).
-      when('/subjects/single/:subjectId', {
-        templateUrl: 'partials/apps-list.html',
-        controller: 'AppListCtrl'
-      }).
-      when('/subjects/:subjectId/:topicId', {
-        templateUrl: 'partials/topic-detail.html',
-        controller: 'TopicDetailCtrl'
-      }).
-      when('/search/:keyword', {
-        templateUrl: 'partials/search-results.html',
-        controller: 'SearchResultCtrl'
-      }).
-      otherwise({
-        redirectTo: '/subjects'
-      });
-  }]);
+pencilBoxApp.config(['$routeProvider',function($routeProvider){
+  "use strict";
+  $routeProvider.when('/subjects',{
+    templateUrl : 'partials/home-view.html',
+    controller: 'SubjectListController'
+  })
+  .when('/subjects/:subjectId/subsections', {
+    templateUrl: 'partials/subsections-view.html',
+    controller: 'SubSectionListController'
+  })
+  .when('/subjects/:subjectId', {
+    templateUrl: 'partials/apps-view.html',
+    controller: 'AppListController'
+  })
+  .when('/subjects/:subjectId/:topicId', {
+    templateUrl: 'partials/topics-view.html',
+    controller: 'TopicListController'
+  })
+  .when('/search/:keyword', {
+    templateUrl: 'partials/search-results-view.html',
+    controller: 'SearchResultController'
+  })
+  .otherwise({
+    redirectTo: '/subjects'
+  });
+}]);

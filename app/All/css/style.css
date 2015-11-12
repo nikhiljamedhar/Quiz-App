@@ -1,109 +1,118 @@
-div.home-view
-{
-	width: 1024px;
-	height: 800px;
-	background-color: #ffffff;
-	margin: auto;
-	border-radius: 20px 20px 20px 20px;
+.view {
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
-.home-view img#logo
-{
-width: 280px;
-height: 90px;
-padding-left: 327px;
-padding-top: 5px;
+.header-content {
+    margin: auto;
 }
-.home-view div#search
-{
-	padding-left: 176px;
-	padding-top: 70px;
+.main-content {
+    height: auto;
 }
-.home-view div#blocks
-{
-	padding-top: 70px;
+.clearfix {
+    clear: both;
 }
-.home-view label#text
-{
-	padding-left: 16px;
-	font-family: sans-serif;
-	font-size: 25px;
+
+.logo-header {
+    margin: auto;
+    width: 300px;
+    padding: 20px;
 }
-.home-view div#subject
-{
-	margin-bottom: 10px;
+
+.logo-header img {
+    width: 280px;
 }
-.home-view input#search
-{
-	height: 50px;
-	width: 500px;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
-	font-size: 20px;
-	font-family: sans-serif;
-	border-top-color: #656467;
-	border-bottom-color: #656467;
-	border-left-color: #656467;
-	border-right-color: #656467;
-	padding-left: 10px;
-	border-style: solid;
-	border-width: 1px;
+
+.header-icon {
+    display: block;
+    float: left;
+    text-align: center;
 }
-.home-view button#search-icon
-{
-	background-image: url("../images/search.png");
-	background-size: 90px 60px;
-	vertical-align: bottom;
-	height: 54px;
-	width: 80px;
-	border:none;
-	background-position: -5px -1px;
-	border-radius: 0px 5px 5px 0px;
-	margin-left: -10px;
+
+.header-icon .icon {
+    display: inline-block;
+    float: left;
+    background-color: #6d6e71;
+    background-repeat:no-repeat;
+    background-position: center;
 }
-.home-view .phy
-{
-	padding: 220px 10px 10px 10px;
-	background-color: #1c75bc;
-	width: 250px;
-	height: 40px;
-	margin: 20px 40px 20px 10px;
-	display: inline-block;
-	float: left;
-	background-repeat: no-repeat;
-	/*background-repeat-x: no-repeat;
-	background-repeat-y: no-repeat;*/
-	text-align: center;
-	background-image: url("../images/white/physics.png");
-	border-radius: 20px;
-	background-position: center;
-	background-size: 110px 110px;
-	font-family: sans-serif;
-	font-size: 25px;
-	color: white;
-	text-decoration: none;
+
+.header-icon .icon-text {
+    font-family: sans-serif;
+    color: #6d6e71;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 5px;
 }
-.home-view a#mathematics
-{
-	background-color: #be1e2d;
-	background-image: url("../images/white/mathematics.png");
+
+.home-view .header-content .search {
+    width: 620px;
+    margin: auto;
+    display: block;
+    padding: 20px;
 }
-.home-view a#chemistry
-{
-	background-color: #f8941e;
-	background-image: url("../images/white/chemistry.png");
+
+.home-view .header-content .search input {
+    display: inline-block;
+    float: left;
+    width: 500px;
+    height: 56px;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 20px;
+    font-family: sans-serif;
+    border: 1px solid #656467;
+    padding-left: 10px;
 }
-.home-view a#biology
-{
-	background-color: #00a14b;
-	background-image: url("../images/white/biology.png");
+
+.home-view .header-content .search button {
+    display: inline-block;
+    float: left;
+    background-image: url("../images/search.png");
+    background-size: 85px 60px;
+    width: 80px;
+    height: 60px;
+    border:none;
+    background-position: -5px -1px;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -10px;
 }
-.home-view a#english
-{
-	background-color: #b51465;
-	background-image: url("../images/white/english.png");
+
+.home-view .main-content .subjects-container {
+    width: 900px;
+    margin: auto;
+    display: block;
 }
-.home-view a#social
-{
-	background-color: #a97c50;
-	background-image: url("../images/white/social.png");
+
+.main-content .subjects-container h2 {
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    text-decoration: none;
+    padding: 20px 0px 0px 20px;
+}
+
+.main-content .blocks {
+    float: left;
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: 120px 120px;
+    background-position: center;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-content .blocks label {
+    display: inline-block;
+    padding-top: 205px;
+    cursor: auto;
 }

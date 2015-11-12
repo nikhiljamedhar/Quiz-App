@@ -1,69 +1,85 @@
-'use strict';
-
-/* Controllers */
-
-var pencilboxControllers = angular.module('pencilboxControllers', []);
-
-pencilboxControllers.controller('SubjectListCtrl', ['$scope', 'Subjects',
-  function($scope, Subjects) {
+"use strict";
+pencilBoxApp.controller('SubjectListController',['$scope','Subjects',
+  function($scope, Subjects){
     $scope.subjects = Subjects.query();
-    //$scope.orderProp = 'age';
   }]);
 
-pencilboxControllers.controller('SubjectDetailCtrl', ['$scope', '$routeParams', 'Subjects',
+pencilBoxApp.controller('SubSectionListController', ['$scope', '$routeParams', 'Subjects',
   function($scope, $routeParams, Subjects) {
     $scope.subjects = Subjects.query();
-    $scope.subject = Subjects.query({ Subject: $routeParams.subjectId });
+    $scope.topics = Subjects.query({ subject: $routeParams.subjectId });
     $scope.current_subject = $routeParams.subjectId;
     $scope.isCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() == subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() === subject.toLowerCase();
     };
     $scope.isNotCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() != subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() !== subject.toLowerCase();
+    };
+    $scope.getSubjectColor = function() {
+      for(var index=0; index < $scope.subjects.length; index++){
+        if( $scope.subjects[index].id === $scope.current_subject){
+          return $scope.subjects[index].color;
+        }
+      }
     };
   }]);
 
-pencilboxControllers.controller('AppListCtrl', ['$scope', '$routeParams', 'Subjects',
+pencilBoxApp.controller('AppListController', ['$scope', '$routeParams', 'Subjects',
   function($scope, $routeParams, Subjects) {
     $scope.subjects = Subjects.query();
-    $scope.apps = Subjects.query({ Subject: $routeParams.subjectId });
+    $scope.apps = Subjects.query({ subject: $routeParams.subjectId });
     $scope.current_subject = $routeParams.subjectId;
     $scope.invokeCommand = function(command) {
       CommandApi.invokeCommand(command);
     };
     $scope.isCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() == subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() === subject.toLowerCase();
     };
     $scope.isNotCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() != subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() !== subject.toLowerCase();
+    };
+    $scope.getSubjectColor = function() {
+      for(var index=0; index < $scope.subjects.length; index++){
+        if( $scope.subjects[index].id === $scope.current_subject){
+          return $scope.subjects[index].color;
+        }
+      }
     };
   }]);
 
-pencilboxControllers.controller('TopicDetailCtrl', ['$scope', '$routeParams', 'Subjects',
+pencilBoxApp.controller('TopicListController', ['$scope', '$routeParams', 'Subjects',
   function($scope, $routeParams, Subjects) {
     $scope.subjects = Subjects.query();
-    $scope.subject = Subjects.query({ Subject: $routeParams.subjectId });
-    $scope.apps = Subjects.query({ Subject: $routeParams.subjectId, Topic: $routeParams.topicId });
+    $scope.topics = Subjects.query({ subject: $routeParams.subjectId });
+    $scope.apps = Subjects.query({ subject: $routeParams.subjectId, topic: $routeParams.topicId });
     $scope.current_subject = $routeParams.subjectId;
     $scope.current_topic = $routeParams.topicId;
     $scope.isCurrentTopic = function(topic) {
-      return $scope.current_topic.toLowerCase() == topic.toLowerCase();
+      return $scope.current_topic.toLowerCase() === topic.toLowerCase();
     };
     $scope.isNotCurrentTopic = function(topic) {
-      return $scope.current_topic.toLowerCase() != topic.toLowerCase();
+      return $scope.current_topic.toLowerCase() !== topic.toLowerCase();
     };
     $scope.isCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() == subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() === subject.toLowerCase();
     };
     $scope.isNotCurrentSubject = function(subject) {
-      return $scope.current_subject.toLowerCase() != subject.toLowerCase();
+      return $scope.current_subject.toLowerCase() !== subject.toLowerCase();
     };
+    $scope.getSubjectColor = function() {
+      for(var index=0; index < $scope.subjects.length; index++){
+        if( $scope.subjects[index].id === $scope.current_subject){
+          return $scope.subjects[index].color;
+        }
+      }
+    };
+    //QtProcess API calling
     $scope.invokeCommand = function(command) {
       CommandApi.invokeCommand(command);
     };
   }]);
 
-pencilboxControllers.controller('SearchResultCtrl', ['$scope', '$routeParams', 'Subjects', 'Apps',
+pencilBoxApp.controller('SearchResultController', ['$scope', '$routeParams', 'Subjects', 'Apps',
   function($scope, $routeParams, Subjects, Apps) {
     $scope.subjects = Subjects.query();
     $scope.apps = Apps.query();
