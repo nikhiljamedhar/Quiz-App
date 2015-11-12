@@ -203,7 +203,9 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
             var answer;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
             $scope.promptDialog(null, null, function (inputText) {
+                if(!inputText){return;}
                 answer = inputText;
+                console.log(answer);
                 $timeout(function () {
                     $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
                 }, 0);
@@ -412,6 +414,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 callback: function (event) {
                     callbackFn(event.context.inputText);
                     event.context.disposeOverlay();
+                    event.context.inputText = undefined;
                 },
                 inputCheck: true,
                 placeholder: 'Enter correct answer'
