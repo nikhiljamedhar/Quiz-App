@@ -190,6 +190,11 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.downloadQuiz = function (index) {
             ﻿var fileName = $scope.contents[index]['name'] + '.bsquiz';
             CommandApi.invokeCommand("/var/www/download.sh '" + JSON.stringify($scope.contents[index]) + "' " + fileName);
+            new CustomDialog($q, {
+                title: "Alert",
+                description: "The quiz has been saved as " + fileName + " on the Desktop.",
+                buttons: ["ok"]
+            });
         };
 
         $scope.handleModalContentClick = function (e) {
@@ -200,7 +205,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return contents.filter(function (content) {
                         return (content.type === 'apps');
                     }).length > 0;
-        }
+        };
 
         $scope.hasVideos = function (contents) {
             return contents.filter(function (content) {
