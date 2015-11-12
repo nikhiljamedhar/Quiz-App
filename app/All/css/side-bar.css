@@ -34,7 +34,7 @@
 .lines
 {
     color: #a7a9ac;
-    margin-left: 10%;
-    width: 80%;
+    float:left;
+    width: 100%;
     margin-right: 10%;
 }
