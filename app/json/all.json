@@ -3,7 +3,7 @@
     "name": "Cell Structure",
     "id": "cell-structure",
     "type": "apps",
-    "exec": "",
+    "exec": "chromium-browser --new-window http:localhost/phetsims/cell-structure/cell-structure_en.html",
     "subject": "Biology",
     "keywords": [
       "",
@@ -1768,7 +1768,7 @@
     "name": "Electrolysis",
     "id": "electrolysis",
     "type": "apps",
-    "exec": "chromium-browser --new-window file:///opt/phet/physics/phet-electrolysis/electrolyis.html",
+    "exec": "chromium-browser --new-window http:localhost/phetsims/electrolysis/electrolysis_en.html",
     "subject": "physics",
     "keywords": [
       "",

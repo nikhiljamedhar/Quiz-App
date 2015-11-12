@@ -3,7 +3,7 @@
     "name": "Cell Structure",
     "id": "cell-structure",
     "type": "apps",
-		"exec":"chromium-browser --new-window file:///opt/phet/biology/phet-cellStructure/cell_structure.html",
+        "exec": "chromium-browser --new-window http:localhost/phetsims/cell-structure/cell-structure_en.html",
     "keywords": [
         "",
         ""
