@@ -100,7 +100,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.adminPasswordDialog = function ($event, redirect, callback) {
-            if($event) {
+            if ($event) {
                 $event.preventDefault();
             }
             var options = {
@@ -109,20 +109,20 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 className: "master-password",
                 buttons: ["ok", "cancel"],
                 closeHandler: true,
-                callback: function(event) {
-                    if(event.context.inputText === "admin") {
+                callback: function (event) {
+                    if (event.context.inputText === "admin") {
                         event.context.disposeOverlay();
                         if (redirect) {
                             var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
                             window.open(url, "_self");
                         }
-                        if(callback) callback();
+                        if (callback) callback();
                     } else {
                         var error = document.createElement('p');
                         error.className = 'error';
-                        error.innerHTML="Incorrect password";
+                        error.innerHTML = "Incorrect password";
                         var container = event.context.input.parentElement.parentElement;
-                        if(!container.querySelector('.error')) {
+                        if (!container.querySelector('.error')) {
                             container.appendChild(error);
                         }
                     }
@@ -155,16 +155,16 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                 chapter: $scope.current_chapter,
                 quiz: data
             };
-            if($scope.contents.filter(function(c) {
+            if ($scope.contents.filter(function (c) {
                         return c.type === 'quiz' && (c.name || '').toLowerCase().trim() === data.name.toLowerCase().trim();
                     }).length > 0) {
                 var options = {
-                                title: "Alert",
-                                description: "Quiz with same name already present cannot upload the quiz.",
-                                buttons: ["ok"]
-                            };
-                            new CustomDialog($q, options);
-            } else{
+                    title: "Alert",
+                    description: "Quiz with same name already present cannot upload the quiz.",
+                    buttons: ["ok"]
+                };
+                new CustomDialog($q, options);
+            } else {
                 $http.post('/save.php', requestJson).then(function () {
                     window.location.reload();
                 });
@@ -172,7 +172,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.deleteQuiz = function (index) {
-            $scope.adminPasswordDialog(null, null, function() {
+            $scope.adminPasswordDialog(null, null, function () {
                 var requestJson = {
                     data: {
                         grade: $scope.current_grade,
@@ -187,24 +187,25 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             });
         };
 
-        $scope.downloadQuiz = function(index){
-            document.getElementById("quiz-download-"+index).href = window.URL.createObjectURL(new Blob([JSON.stringify($scope.contents[index])], {type: "application/json"}));
+        $scope.downloadQuiz = function (index) {
+            ﻿var fileName = $scope.contents[index]['name'] + '.bsquiz';
+            CommandApi.invokeCommand("/var/www/download.sh '" + JSON.stringify($scope.contents[index]) + "' " + fileName);
         };
 
-        $scope.handleModalContentClick =function(e) {
+        $scope.handleModalContentClick = function (e) {
             e.stopPropagation();
         };
 
-        $scope.hasApplications = function(contents){
-            return contents.filter(function(content){
-                return (content.type === 'apps');
-            }).length > 0;
+        $scope.hasApplications = function (contents) {
+            return contents.filter(function (content) {
+                        return (content.type === 'apps');
+                    }).length > 0;
         }
 
-        $scope.hasVideos = function(contents){
-            return contents.filter(function(content){
-                return (content.type === 'videos');
-            }).length > 0;
+        $scope.hasVideos = function (contents) {
+            return contents.filter(function (content) {
+                        return (content.type === 'videos');
+                    }).length > 0;
         }
     }]);
 
