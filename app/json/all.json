@@ -1855,7 +1855,7 @@
   {
     "name": "Pulleys",
     "id": "pulleys",
-    "exec": "chromium-browser --app=file:///opt/phet/chemistry/Pulleys/index.html",
+    "exec": "firefox --new-window file:///opt/applications-bin/pulley/index.html",
     "subject": "physics",
     "keywords": [
       "",
