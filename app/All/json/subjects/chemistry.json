@@ -2,7 +2,7 @@
     {
         "name": "Element Builder",
         "id": "element-builder",
-        "exec": "chromium-browser --app=file:///opt/phet/chemistry/ElementBuilder/index.html",
+        "exec": "firefox --new-window file:///opt/phet/chemistry/ElementBuilder/index.html",
         "keywords":["",""]
     },
     {
