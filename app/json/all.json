@@ -1018,7 +1018,7 @@
   {
     "name": "Freefall Tower",
     "id": "freefall-tower",
-    "exec": "/opt/applications-bin/freefalltower",
+    "exec": "firefox --new-window /opt/applications-bin/freefalltower/index.html",
     "keywords": [
       "",
       ""

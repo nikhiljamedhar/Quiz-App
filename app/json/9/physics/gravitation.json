@@ -27,7 +27,7 @@
     "name": "Freefall Tower",
     "id": "freefall-tower",
     "type":"apps",
-    "exec": "/opt/applications-bin/freefalltower",
+    "exec": "firefox --new-window file:///opt/applications-bin/freefalltower/index.html",
     "subject": "physics",
     "keywords":["",""]
   }
