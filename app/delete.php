@@ -5,7 +5,7 @@ function redirect($url = '/')
     header("Location: $url");
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'DELETE') {
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect();
     exit;
 }

@@ -174,14 +174,12 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         $scope.deleteQuiz = function (index) {
             $scope.adminPasswordDialog(null, null, function () {
                 var requestJson = {
-                    data: {
-                        grade: $scope.current_grade,
-                        subject: $scope.current_subject,
-                        chapter: $scope.current_chapter,
-                        name: $scope.contents[index].name
-                    }
+                    grade: $scope.current_grade,
+                    subject: $scope.current_subject,
+                    chapter: $scope.current_chapter,
+                    name: $scope.contents[index].name
                 };
-                $http.delete('/delete.php', requestJson).then(function () {
+                $http.post('/delete.php', requestJson).then(function () {
                     window.location.reload();
                 });
             });
