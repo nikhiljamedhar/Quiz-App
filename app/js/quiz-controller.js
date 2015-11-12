@@ -1,4 +1,4 @@
-pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Contents','CreateQuiz', '$http', '$q','$timeout',
+pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Contents', 'CreateQuiz', '$http', '$q', '$timeout',
     function ($scope, $routeParams, Contents, CreateQuiz, $http, $q, $timeout) {
         $scope.hasChange = false;
         $scope.hasError = false;
@@ -75,7 +75,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
             $scope.overlay = new Overlay(element, {closeHandler: true});
         };
 
-        $scope.closeQuiz = function($event) {
+        $scope.closeQuiz = function ($event) {
             $event.preventDefault();
             var options = {
                 title: "Changes not saved",
@@ -86,8 +86,8 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 closeHandler: true
             };
             new CustomDialog($q, options).show().then(function () {
-                $scope.saveQuiz();
-            }).catch(function() {
+                $scope.verifySaveQuiz();
+            }).catch(function () {
                 $scope.closeOverlay();
             });
         };
@@ -202,12 +202,12 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
         $scope.addBlank = function () {
             var answer;
             var caretPosition = document.getElementById('fill-in-the-blank-question').selectionStart;
-            $scope.promptDialog(null, null, function(inputText){
+            $scope.promptDialog(null, null, function (inputText) {
                 answer = inputText;
-                $timeout(function() {
+                $timeout(function () {
                     $scope.currentQuestion.question = insertAt($scope.currentQuestion.question, ' __' + answer + '__ ', caretPosition);
-                },0);
-                
+                }, 0);
+
             });
         };
 
@@ -306,37 +306,41 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
 
         $scope.saveQuiz = function () {
             var data = {
-                    grade: $scope.current_grade,
-                    subject: $scope.current_subject,
-                    chapter: $scope.current_chapter,
-                    quiz: $scope.quizJson
-                };
+                grade: $scope.current_grade,
+                subject: $scope.current_subject,
+                chapter: $scope.current_chapter,
+                quiz: $scope.quizJson
+            };
             $http.post('/save.php', data, {headers: {'Content-Type': 'application/json'}}).
-                then(function () {
-                    $scope.hasChange = false;
-                    $scope.closeOverlay();
-                    var options = {
-                        title: "Success",
-                        description: "Successfully saved the quiz.",
-                        buttons: ["ok"]
-                    };
-                    new CustomDialog($q, options);
-                }, function () {
-                    console.log(arguments);
-                });
+                    then(function () {
+                        $scope.hasChange = false;
+                        $scope.closeOverlay();
+                        var options = {
+                            title: "Success",
+                            description: "Successfully saved the quiz.",
+                            buttons: ["ok"]
+                        };
+                        new CustomDialog($q, options);
+                    }, function () {
+                        console.log(arguments);
+                    });
         };
 
-        $scope.verifySaveQuiz = function(){
+        $scope.verifySaveQuiz = function () {
             var error = "";
             if (!$scope.quizJson.name) {
                 error = "Please give a name to the Quiz";
-            } else if($scope.contents.filter(function(c) {
+            } else if ($scope.contents.filter(function (c) {
                         return c.type === 'quiz' && (c.name || '').toLowerCase().trim() === $scope.quizJson.name.toLowerCase().trim();
                     }).length > 0) {
                 error = "Another quiz exists with this name, please choose another name.";
             } else {
-                var firstInvalidQuestionIndex = $scope.quizJson.questions.findIndex(function (question) {
-                    return $scope.errorsForQuestion(question) !== undefined;
+                var firstInvalidQuestionIndex;
+                $scope.quizJson.questions.some(function (question, i) {
+                    if($scope.errorsForQuestion(question) === undefined) return false;
+
+                    firstInvalidQuestionIndex = i;
+                    return true;
                 });
 
                 if (firstInvalidQuestionIndex !== undefined && firstInvalidQuestionIndex !== -1) {
@@ -357,10 +361,13 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                     title: "Alert",
                     description: "Once you save the quiz you cannot make any changes. Do you want to continue?",
                     buttons: ["ok", "cancel"],
-                    buttonName: ["yes","no"]
+                    buttonName: ["yes", "no"]
                 }).show();
-                dialogInstance.then(function () {$scope.saveQuiz();}).catch(function (e) {});  
-            }            
+                dialogInstance.then(function () {
+                    $scope.saveQuiz();
+                }).catch(function (e) {
+                });
+            }
         };
 
         $scope.validateInput = function (obj, limit) {
@@ -393,7 +400,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
         }
 
         $scope.promptDialog = function ($event, redirect, callbackFn) {
-            if($event) {
+            if ($event) {
                 $event.preventDefault();
             }
             var options = {
@@ -402,7 +409,7 @@ pencilBoxApp.controller('CreateQuizController', ['$scope', '$routeParams', 'Cont
                 plainText: true,
                 buttons: ["ok", "cancel"],
                 closeHandler: true,
-                callback: function(event){
+                callback: function (event) {
                     callbackFn(event.context.inputText);
                     event.context.disposeOverlay();
                 },
