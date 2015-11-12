@@ -186,9 +186,9 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
         };
 
         $scope.downloadQuiz = function (index) {
-            ﻿var fileName = $scope.contents[index]['name'] + '.bsquiz';
+            var fileName = $scope.contents[index]['name'] + '.bsquiz';
             var fileContents = JSON.stringify($scope.contents[index]).replace('"','&QUOT');
-            CommandApi.invokeCommand("/var/www/download.sh " + fileContents + " " + fileName);
+            CommandApi.invokeCommand("/var/www/download.py " + fileContents + " " + fileName);
             new CustomDialog($q, {
                 title: "Alert",
                 description: "The quiz has been saved as " + fileName + " on the Desktop.",
