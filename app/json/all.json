@@ -53,7 +53,7 @@
     "manuals": [
       {
         "title": "Salts and Solubility Activities",
-        "src": "pdf-reader \"/manuals/Salts and Solubility.pdf\""
+        "src": "pdf-reader \"/var/www/manuals/Salts and Solubility.pdf\""
       }
     ]
   },
