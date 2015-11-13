@@ -752,7 +752,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/manuals/states-of-matter-basics.pptx\""
+        "src": "doc-reader \"/var/www/manuals/states-of-matter-basics.pptx\""
       }
     ]
   },
