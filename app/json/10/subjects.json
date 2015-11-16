@@ -22,10 +22,5 @@
         "id":"biology",
         "color": "#f8941e",
         "topics_present" : false
-    },
-    {
-        "name":"Social",
-        "id":"social",
-        "topic_present":"false"
     }
 ]
