@@ -1435,7 +1435,7 @@
     ]
   },
   {
-    "name": "Density",
+    "name": "Density Problem",
     "id": "Density",
     "exec": "/opt/applications-bin/Density",
     "keywords": [
