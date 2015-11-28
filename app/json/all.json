@@ -25,7 +25,7 @@
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/ph-scale-basics_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
