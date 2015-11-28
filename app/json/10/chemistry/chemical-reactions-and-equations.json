@@ -11,7 +11,7 @@
     "name": "Balancing Chemical Equations",
     "id": "balancing-chemical-equations",
     "type":"apps",
-    "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/balancing-chemical-equations_en.html",
     "subject": "chemistry",
     "keywords":["",""],
     "description": "How do you know if a chemical equation is balanced? What can you change to balance an equation? Play a game to test your ideas!",

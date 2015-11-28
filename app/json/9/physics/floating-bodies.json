@@ -28,7 +28,7 @@
     "name": "Under Pressure",
     "id": "under-pressure",
     "type":"apps",
-    "exec": "java -jar /opt/phet/chemistry/under-pressure_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/under-pressure_en.html",
     "subject": "chemistry",
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",

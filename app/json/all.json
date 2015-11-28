@@ -25,7 +25,7 @@
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
+    "exec": "java -jar /opt/phet/chemistry/ph-scale-basics_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -61,7 +61,7 @@
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/acid-base-solutions_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/acid-base-solutions_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -90,7 +90,7 @@
     "name": "Balancing Chemical Equations",
     "id": "balancing-chemical-equations",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/balancing-chemical-equations_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/balancing-chemical-equations_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -143,7 +143,7 @@
     "name": "Build an Atom",
     "id": "build-an-atom",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/build-an-atom_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/build-an-atom_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -161,7 +161,7 @@
     "name": "Element Builder",
     "id": "element-builder",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ElementBuilder/index.html",
+    "exec": "chromium-browser --new-window file:///opt/phet/chemistry/ElementBuilder/index.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -219,7 +219,7 @@
     "name": "Reactants, Products and Leftovers",
     "id": "reactants-products-leftovers",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/reactants-products-and-leftovers_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -236,7 +236,7 @@
   {
     "name": "Color Vision",
     "id": "color-vision",
-    "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/color-vision_en.html",
     "keywords": [
       "",
       ""
@@ -305,7 +305,7 @@
     "name": "Ohm's Law",
     "id": "ohms-law",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/ohms-law_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/ohms-law_en.html",
     "keywords": [
       "",
       ""
@@ -565,7 +565,7 @@
     "name": "Energy stake Park:Basics",
     "id": "energy-skate-park-basics",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park-basics_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/energy-skate-park-basics_en.html",
     "keywords": [
       "",
       ""
@@ -657,7 +657,7 @@
   {
     "name": "Friction",
     "id": "friction",
-    "exec": "java -jar /opt/phet/physics/friction_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/friction_en.html",
     "keywords": [
       "",
       ""
@@ -778,9 +778,9 @@
     ]
   },
   {
-    "name": "Molecules and Light",
+    "name": "Molecules and Lights",
     "id": "molecules-and-lights",
-    "exec": "java -jar /opt/phet/physics/molecules-and-light_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/molecules-and-light_en.html",
     "keywords": [
       "",
       ""
@@ -999,6 +999,17 @@
     ]
   },
   {
+    "name": "Balloons and Static Electricity",
+    "id": "balloons-static-energy",
+    "exec": "firefox --new-window file:///opt/phet/physics/balloons_en.html",
+    "keywords":["",""],
+    "type":"apps",
+    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
+    "manuals": [
+      {"title":"Introduction", "src":"pdf-reader \"/var/www/manuals/magnets.pdf\"" }
+    ]
+  },
+  {
     "name": "Magnet and Compass",
     "id": "magnets-and- compass",
     "exec": "java -jar /opt/phet/physics/magnet-and-compass_en.jar",
@@ -1035,7 +1046,7 @@
   {
     "name": "Balancing Act",
     "id": "balancing-act",
-    "exec": "java -jar /opt/phet/physics/balancing-act_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/balancing-act_en.html",
     "keywords": [
       "",
       ""
@@ -1120,7 +1131,7 @@
   {
     "name": "Forces and Motion: Basics",
     "id": "forces-and-motions-basics",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/forces-and-motion-basics_en.jar",
     "keywords": [
       "",
       ""
@@ -1171,7 +1182,7 @@
   {
     "name": "Gravity Force Lab",
     "id": "gravity-force-lab",
-    "exec": "java -jar /opt/phet/physics/gravity-force-lab_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/gravity-force-lab_en.html",
     "keywords": [
       "",
       ""
@@ -1681,7 +1692,7 @@
   {
     "name": "Wave on a String",
     "id": "wave-on-a-string",
-    "exec": "java -jar /opt/phet/physics/wave-on-a-string_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/wave-on-a-string_en.html",
     "keywords": [
       "",
       ""
@@ -1838,7 +1849,7 @@
     "name": "Concentration",
     "id": "concentration",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/concentration_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/concentration_en.html",
     "subject": "chemistry",
     "keywords": [
       "",

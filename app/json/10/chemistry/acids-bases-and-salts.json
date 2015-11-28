@@ -33,7 +33,7 @@
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/acid-base-solutions_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/acid-base-solutions_en.html",
     "subject": "chemistry",
     "keywords": [
       "",

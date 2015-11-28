@@ -1,7 +1,7 @@
 [
   {
     "name": "Ramp: Forces and Motion",
-    "id": "ramp-forces-and -motion",
+    "id": "ramp-forces-and-motion",
     "type":"apps",
     "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
     "subject": "physics",
@@ -15,7 +15,7 @@
     "name": "Gravity Force Lab",
     "id": "gravity-force-lab",
     "type":"apps",
-    "exec": "java -jar /opt/phet/physics/gravity-force-lab_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/gravity-force-lab_en.html",
     "subject": "physics",
     "keywords":["",""],
     "description": "Visualize the gravitational force that two objects exert on each other. Adjust properties of the objects to see how changing the properties affects the gravitational attraction.",

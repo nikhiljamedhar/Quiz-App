@@ -47,7 +47,7 @@
     "name": "Ohm's Law",
     "id": "ohms-law",
     "type":"apps",
-    "exec": "java -jar /opt/phet/physics/ohms-law_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/physics/ohms-law_en.html",
     "keywords":["",""],
     "description": "See how the equation form of Ohm's law relates to a simple circuit. Adjust the voltage and resistance, and see the current change according to Ohm's law.",
     "manuals": [

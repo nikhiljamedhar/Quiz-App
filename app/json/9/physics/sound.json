@@ -15,7 +15,7 @@
     "name": "Wave on a String",
     "id": "wave-on-a-string",
     "type":"apps",
-    "exec": "java -jar /opt/phet/chemistry/wave-on-a-string_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/wave-on-a-string_en.html",
     "subject": "chemistry",
     "keywords":["",""],
     "description": "Explore the wonderful world of waves! Even observe a string vibrate in slow motion. Wiggle the end of the string and make waves, or adjust the frequency and amplitude of an oscillator.",

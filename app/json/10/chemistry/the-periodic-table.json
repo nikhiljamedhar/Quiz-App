@@ -11,7 +11,7 @@
         "name": "Build an Atom",
         "id": "build-an-atom",
         "type":"apps",
-        "exec": "java -jar /opt/phet/chemistry/build-an-atom_en.jar",
+        "exec": "firefox --new-window file:///opt/phet/chemistry/build-an-atom_en.html",
         "subject": "chemistry",
         "keywords":["",""],
         "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
