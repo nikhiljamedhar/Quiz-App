@@ -13,7 +13,7 @@
   {
     "name": "John Travoltage",
     "id": "john-travoltage",
-    "exec": "firefox --new-window file:///opt/phet/physics/balloons_en.html",
+    "exec": "firefox --new-window file:///opt/phet/physics/john-travoltage_en.html",
     "keywords":["",""],
     "type":"apps",
     "description": "Make sparks fly with John Travoltage. Explore how charging Johnnie up and moving his hand changes how he gets shocked!",
