@@ -114,7 +114,7 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
                         event.context.disposeOverlay();
                         if (redirect) {
                             var url = window.location.origin + window.location.pathname + window.location.hash + "create-quiz";
-                            window.open(url, "_self");
+                            window.location = url;
                         }
                         if (callback) callback();
                     } else {
