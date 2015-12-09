@@ -219,7 +219,7 @@
     "name": "Reactants, Products and Leftovers",
     "id": "reactants-products-leftovers",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/reactants-products-and-leftovers_en.html",
+    "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -236,7 +236,7 @@
   {
     "name": "Color Vision",
     "id": "color-vision",
-    "exec": "firefox --new-window file:///opt/phet/physics/color-vision_en.html",
+    "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
     "keywords": [
       "",
       ""
@@ -467,1243 +467,16 @@
     "keywords": [
       "",
       ""
-    ],
-    "description": "Explore how a capacitor works! Change the size of the plates and add a dielectric to see how it affects capacitance. Change the voltage and see charges built up on the plates. Shows the electric field in the capacitor. Measure voltage and electric field.",
-    "manuals": [
-      {
-        "title": "Using PhET in Electricity Unit",
-        "src": "pdf-reader \"/var/www/manuals/electricity-unit.pdf\""
-      }
     ]
   },
   {
-    "name": "Balloons and Static Electricity",
-    "id": "balloons-static-energy",
-    "exec": "java -jar /opt/phet/physics/balloons_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/magnets.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Generator",
-    "id": "generator",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/generator_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Generate electricity with a bar magnet! Discover the physics behind the phenomena by exploring magnets and how you can use them to make a bulb light.",
-    "manuals": [
-      {
-        "title": "Introduction to Induction",
-        "src": "pdf-reader \"/var/www/manuals/induction.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Battery Voltage",
-    "id": "battery-voltage",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/battery-voltage_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Look inside a battery to see how it works. Select the battery voltage and little stick figures move charges from one end of the battery to the other. A voltmeter tells you the resulting battery voltage.",
-    "manuals": [
-      {
-        "title": "Introduction to Batteries",
-        "src": "doc-reader \"/var/www/manuals/batteries.doc\""
-      }
-    ]
-  },
-  {
-    "name": "Energy Forms and Changes",
-    "id": "energy-froms-and- charges",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/energy-forms-and-changes_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Explore how heating and cooling iron, brick, and water adds or removes energy. See how energy is transferred between objects. Build your own system, with energy sources, changers, and users. Track and visualize how energy flows and changes through your system.",
-    "manuals": [
-      {
-        "title": "Introduction to Batteries",
-        "src": "doc-reader \"/var/www/manuals/energy-forms-and-changes.docx\""
-      }
-    ]
-  },
-  {
-    "name": "Energy stake Park",
-    "id": "energy-skate-park",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Learn about conservation of energy with a skater dude! Build tracks, ramps and jumps for the skater and view the kinetic energy, potential energy and friction as he moves. You can also take the skater to different planets or even space!",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/energy-forms-and-changes.docx\""
-      }
-    ]
-  },
-  {
-    "name": "Energy stake Park:Basics",
-    "id": "energy-skate-park-basics",
-    "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/energy-skate-park-basics_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Learn about conservation of energy with a skater gal! Explore different tracks and view the kinetic energy, potential energy and friction as she moves. Build your own tracks, ramps, and jumps for the skater.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/energy-skate-park-basics.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Masses & Springs",
-    "id": "masses-springs",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/mass-spring-lab_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "A realistic mass and spring laboratory. Hang masses from springs and adjust the spring stiffness and damping. You can even slow time. Transport the lab to different planets. A chart shows the kinetic, potential, and thermal energy for each spring.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/masses-and-springs.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "The Ramp",
-    "id": "the-ramp",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Explore forces, energy and work as you push household objects up and down a ramp. Lower and raise the ramp to see how the angle of inclination affects the parallel forces acting on the file cabinet. Graphs show forces, energy and work.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/the-ramp-intro.docx\""
-      },
-      {
-        "title": "Work Energy on Ramp",
-        "src": "doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""
-      }
-    ]
-  },
-  {
-    "name": "Nuclear Fission",
-    "id": "nuclear-fission",
-    "type": "apps",
-    "exec": "java -jar /opt/phet/physics/nuclear-fission_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      },
-      {
-        "title": "Questions 2",
-        "src": "doc-reader \"/var/www/manuals/nuclear-fission-questions-2.doc\""
-      }
-    ]
-  },
-  {
-    "name": "Ballons & Buoyancy",
-    "id": "buoyancy",
+    "name": "Balloons & Buoyancy",
+    "id": "balloons-buoyancy",
     "type": "apps",
     "exec": "java -jar /opt/phet/physics/balloons-and-buoyancy_en.jar",
     "keywords": [
       "",
       ""
-    ],
-    "description": "Experiment with a helium balloon, a hot air balloon, or a rigid sphere filled with different gases. Discover what makes some balloons float and others sink.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/balloon-introduction.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Friction",
-    "id": "friction",
-    "exec": "firefox --new-window file:///opt/phet/physics/friction_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Learn how friction causes a material to heat up and melt. What happens on an atomic level when you rub two objects together?",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/friction.doc\""
-      }
-    ]
-  },
-  {
-    "name": "The Greenhouse Effect",
-    "id": "greenhouse",
-    "exec": "java -jar /opt/phet/chemistry/greenhouse_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "How do greenhouse gases affect the climate? Explore the atmosphere during the ice age and today. What happens when you add clouds? Change the greenhouse gas concentration and see how the temperature changes. Then compare to the effect of glass panes. Zoom in and see how light interacts with molecules. Do all atmospheric gases contribute to the greenhouse effect?",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/greenhouse-effect.doc\""
-      }
-    ]
-  },
-  {
-    "name": "Microwaves",
-    "id": "microwaves",
-    "exec": "java -jar /opt/phet/physics/microwaves_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "How do microwaves heat up your coffee? Adjust the frequency and amplitude of microwaves. Watch water molecules rotating and bouncing around. View the microwave field as a wave, a single line of vectors, or the entire field.",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/microwaves.doc\""
-      }
-    ]
-  },
-  {
-    "name": "Reversible Reactions",
-    "id": "reversable-reactions",
-    "exec": "java -jar /opt/phet/chemistry/reversible-reactions_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Watch a reaction proceed over time. How does total energy affect a reaction rate? Vary temperature, barrier height, and potential energies. Record concentrations and time in order to extract rate coefficients. Do temperature dependent studies to extract Arrhenius parameters. This simulation is best used with teacher guidance because it presents an analogy of chemical reactions.",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/reversible-reactions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "States of Matter",
-    "id": "states-of-matter",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Watch different types of molecules form a solid, liquid, or gas. Add or remove heat and watch the phase change. Change the temperature or volume of a container and see a pressure-temperature diagram respond in real time. Relate the interaction potential to the forces between molecules.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/states-of-matter.doc\""
-      }
-    ]
-  },
-  {
-    "name": "States of Matter: Basics",
-    "id": "states-of-matter-basics",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Heat, cool and compress atoms and molecules and watch as they change between solid, liquid and gas phases.",
-    "manuals": [
-      {
-        "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/states-of-matter-basics.pptx\""
-      }
-    ]
-  },
-  {
-    "name": "Gas Properties",
-    "id": "gas-properties",
-    "exec": "java -jar /opt/phet/physics/gas-properties_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Pump gas molecules to a box and see what happens as you change the volume, add or remove heat, change gravity, and more. Measure the temperature and pressure, and discover how the properties of the gas vary in relation to each other.",
-    "manuals": [
-      {
-        "title": "Collision Theory",
-        "src": "pdf-reader \"/var/www/manuals/collision-theory.pdf\""
-      },
-      {
-        "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/gas-properties.doc\""
-      }
-    ]
-  },
-  {
-    "name": "Molecules and Lights",
-    "id": "molecules-and-lights",
-    "exec": "firefox --new-window file:///opt/phet/physics/molecules-and-light_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Do you ever wonder how a greenhouse gas affects the climate, or why the ozone layer is important? Use the sim to explore how light interacts with molecules in our atmosphere.",
-    "manuals": [
-      {
-        "title": "Reflection of Light",
-        "src": "pdf-reader \"/var/www/manuals/refraction-of-light.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Stretching DNA",
-    "id": "stretching-dna",
-    "exec": "java -jar /opt/phet/biology/stretching-dna_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Explore stretching just a single strand of DNA using optical tweezers or fluid flow. Experiment with the forces involved and measure the relationship between the stretched DNA length and the force required to keep it stretched. Is DNA more like a rope or like a spring?",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/natural-selection.docx\""
-      }
-    ]
-  },
-  {
-    "name": "Molecular Motors",
-    "id": "molecular-motors",
-    "exec": "java -jar /opt/phet/physics/molecular-motors_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Discover what controls how fast tiny molecular motors in our body pull through a single strand of DNA. How hard can the motor pull in a tug of war with the optical tweezers? Discover what helps it pull harder. Do all molecular motors behave the same?",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Optical Tweezers and Applications",
-    "id": "quantum-tunneling- wave",
-    "exec": "java -jar /opt/phet/physics/quantum-tunneling_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Fourier: Making Waves",
-    "id": "fourier",
-    "exec": "java -jar /opt/phet/physics/fourier_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Lasers",
-    "id": "lasers",
-    "exec": "java -jar /opt/phet/physics/lasers_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Neon Lights & Other Discharge Lamps",
-    "id": "neon-lights-and-other-discharge-lamps",
-    "exec": "java -jar /opt/phet/chemistry/discharge-lamps_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Photoelectric Effect",
-    "id": "photoelectric-effect",
-    "exec": "java -jar /opt/phet/chemistry/photoelectric_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Radio Waves & Electromagnetic Fields",
-    "id": "radio-waves",
-    "exec": "java -jar /opt/phet/physics/radio-waves_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Wave Interference",
-    "id": "wave-interference",
-    "exec": "java -jar /opt/phet/physics/wave-interference_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Simplified MRI",
-    "id": "mri",
-    "exec": "java -jar /opt/phet/biology/mri_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Beta Decay",
-    "id": "beta-decay",
-    "exec": "java -jar /opt/phet/chemistry/beta-decay_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Alpha Decay",
-    "id": "alpha-decay",
-    "exec": "java -jar /opt/phet/chemistry/alpha-decay_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Balloons and Static Electricity",
-    "id": "balloons-static-energy",
-    "exec": "firefox --new-window file:///opt/phet/physics/balloons_en.html",
-    "keywords":["",""],
-    "type":"apps",
-    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
-    "manuals": [
-      {"title":"Introduction", "src":"pdf-reader \"/var/www/manuals/magnets.pdf\"" }
-    ]
-  },
-  {
-    "name": "Magnet and Compass",
-    "id": "magnets-and- compass",
-    "exec": "java -jar /opt/phet/physics/magnet-and-compass_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Freefall Tower",
-    "id": "freefall-tower",
-    "exec": "firefox --new-window /opt/applications-bin/freefalltower/index.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Balancing Act",
-    "id": "balancing-act",
-    "exec": "firefox --new-window file:///opt/phet/physics/balancing-act_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Calculus Grapher",
-    "id": "calculus-grapher",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-calculus-grapher/calculus-grapher_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Collision Lab",
-    "id": "collision-lab",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Fluid Pressure and Flow",
-    "id": "fluid-pressure-and-flow",
-    "exec": "java -jar /opt/phet/physics/fluid-pressure-and-flow_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Forces and Motion",
-    "id": "forces-and-motion",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Forces and Motion: Basics",
-    "id": "forces-and-motions-basics",
-    "exec": "firefox --new-window file:///opt/phet/physics/forces-and-motion-basics_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Forces in 1 Dimension",
-    "id": "forces-in-1-dimension",
-    "exec": "java -jar /opt/phet/physics/forces-1d_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Gravity and Orbits",
-    "id": "gravity-and-orbits",
-    "exec": "java -jar /opt/phet/physics/gravity-and-orbits_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Gravity Force Lab",
-    "id": "gravity-force-lab",
-    "exec": "firefox --new-window file:///opt/phet/physics/gravity-force-lab_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Ladybug Motion 2D",
-    "id": "ladybug-motion-2d",
-    "exec": "java -jar /opt/phet/physics/ladybug-motion-2d_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Ladybug Revolution",
-    "id": "lady-bug-revolution",
-    "exec": "java -jar /opt/phet/physics/rotation_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Lunar Lander",
-    "id": "lunar-lander",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-lunar-lander/lunar-lander_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Maze Game",
-    "id": "maze-game",
-    "exec": "java -jar /opt/phet/physics/maze-game_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Motion in 2D",
-    "id": "motion-in-2d",
-    "exec": "java -jar /opt/phet/physics/motion-2d_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "The Moving Man",
-    "id": "moving-man",
-    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "My Solar System",
-    "id": "my-solar-system",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-my-solar-system/my-solar-system_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Normal Modes",
-    "id": "normal-mode",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-normal-modes/normal-modes_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Pendulum Lab",
-    "id": "pendulum-lab",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-pendulum-lab/pendulum-lab_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Projectile Motion",
-    "id": "projectile-motion",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-projectile-motion/projectile-motion_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Ramp: Forces and Motion",
-    "id": "ramp-forces-and -motion",
-    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Resonance",
-    "id": "resonance",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-resonance/resonance_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Torque",
-    "id": "torque",
-    "exec": "java -jar /opt/phet/physics/torque_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Density",
-    "id": "density",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-density/density_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Density Problem",
-    "id": "Density",
-    "exec": "/opt/applications-bin/Density",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Step",
-    "id": "step",
-    "exec": "step",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Stellarium",
-    "id": "stellarium",
-    "exec": "stellarium",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Celestia",
-    "id": "celestia",
-    "exec": "celestia",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Quantum Bound States",
-    "id": "quantum-bound-states",
-    "exec": "java -jar /opt/phet/physics/bound-states_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Stern-Gerlach Experiment",
-    "id": "stern-gerlach",
-    "exec": "java -jar /opt/phet/physics/stern-gerlach_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Conductivity",
-    "id": "conductivity",
-    "exec": "java -jar /opt/phet/physics/conductivity_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Semiconductors ",
-    "id": "semi-conductors",
-    "exec": "java -jar /opt/phet/physics/semiconductor_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Davisson-Germer: Electron Diffraction",
-    "id": "davission-germer",
-    "exec": "java -jar /opt/phet/chemistry/davisson-germer_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Rutherford Scattering",
-    "id": "rutherfford-scattering",
-    "exec": "java -jar /opt/phet/chemistry/rutherford-scattering_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Double Wells and Covalent Bonds",
-    "id": "covalent-bonds",
-    "exec": "java -jar /opt/phet/chemistry/covalent-bonds_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Band Structure",
-    "id": "band-structure",
-    "exec": "java -jar /opt/phet/physics/band-structure_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Radiating Charge",
-    "id": "radiating-charge",
-    "exec": "java -jar /opt/phet/physics/radiating-charge_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Sound",
-    "id": "sound",
-    "exec": "java -jar /opt/phet/chemistry/sound_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Optical Tweezers and Applications",
-    "id": "optical-tweezers",
-    "exec": "java -jar /opt/phet/physics/optical-tweezers_en.jar",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
-    ]
-  },
-  {
-    "name": "Wave on a String",
-    "id": "wave-on-a-string",
-    "exec": "firefox --new-window file:///opt/phet/physics/wave-on-a-string_en.html",
-    "keywords": [
-      "",
-      ""
-    ],
-    "type": "apps",
-    "description": "Start a chain reaction, or introduce non-radioactive isotopes to prevent one. Control energy production in a nuclear reactor! (Previously part of the Nuclear Physics simulation - now there are separate Alpha Decay and Nuclear Fission sims.)",
-    "manuals": [
-      {
-        "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/nuclear-fission-questions.pdf\""
-      }
     ]
   },
   {
@@ -1725,6 +498,24 @@
       {
         "title": "Exercises",
         "src": "doc-reader \"/var/www/manuals/eating-and-exercise-simulation-project-exercises.docx\""
+      }
+    ]
+  },
+  {
+    "name": "Forces and Motion",
+    "id": "forces-and-motion",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/forces-and-motion_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore the forces at work when you try to push a filing cabinet. Create an applied force and see the resulting friction force and total force acting on the cabinet. Charts show the forces, position, velocity, and acceleration vs. time. View a Free Body Diagram of all the forces (including gravitational and normal forces).",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader \"/var/www/manuals/Forces and Motion.docx\""
       }
     ]
   },
@@ -1787,9 +578,98 @@
     ]
   },
   {
+    "name": "The Moving Man",
+    "id": "moving-man",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Learn about position, velocity, and acceleration graphs. Move the little man back and forth with the mouse and plot his motion. Set the position, velocity, or acceleration and let the simulation move the man for you.",
+    "manuals": [
+      {
+        "title": "The Moving Man : Velocity",
+        "src": "doc-reader \"/var/www/manuals/technology lesson.doc\""
+      }
+    ]
+  },
+  {
+    "name": "Friction",
+    "id": "friction",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-friction/friction_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Learn how friction causes a material to heat up and melt. What happens on an atomic level when you rub two objects together?",
+    "manuals": [
+      {
+        "title": "Lesson",
+        "src": "doc-reader \"/var/www/manuals/Lesson plan for friction demo.doc\""
+      }
+    ]
+  },
+  {
+    "name": "Ramp: Forces and Motion",
+    "id": "ramp-forces-and -motion",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
+    "manuals": [
+      {
+        "title": "Lesson Plan",
+        "src": "pdf-reader \"/var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf\""
+      }
+    ]
+  },
+  {
+    "name": "Conductivity",
+    "id": "conductivity",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/conductivity_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Experiment with conductivity in metals, plastics and photoconductors. See why metals conduct and plastics don't, and why some materials conduct only when you shine a flashlight on them.",
+    "manuals": [
+      {
+        "title": "Conductivity",
+        "src": "doc-reader \"/var/www/manuals/Phet conductivity.doc\""
+      }
+    ]
+  },
+  {
+    "name": "Balloons and Static Electricity",
+    "id": "balloons-static-energy",
+    "exec": "firefox --new-window file:///opt/phet/physics/balloons_en.html",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "An electronics kit in your computer! Build circuits with resistors, light bulbs, batteries, and switches. Take measurements with the realistic ammeter and voltmeter. View the circuit as a schematic diagram, or switch to a life-like view.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader \"/var/www/manuals/magnets.pdf\""
+      }
+    ]
+  },
+  {
     "name": "John Travoltage",
     "id": "john-travoltage",
-    "exec": "chromium-browser --new-window file:///opt/phet/physics/john-travoltage_en.html",
+    "exec": "firefox --new-window file:///opt/phet/physics/john-travoltage_en.html",
     "keywords": [
       "",
       ""
@@ -1797,6 +677,46 @@
     "type": "apps",
     "description": "Make sparks fly with John Travoltage. Explore how charging Johnnie up and moving his hand changes how he gets shocked!",
     "manuals": []
+  },
+  {
+    "name": "Sound",
+    "id": "sound",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/sound_en.jar",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "This simulation lets you see sound waves. Adjust the frequency or volume and you can see and hear how the wave changes. Move the listener around and hear what she hears.",
+    "manuals": [
+      {
+        "title": "Sound and Wave Basics",
+        "src": "pdf-reader \"/var/www/manuals/Sound and Wave Basics.pdf\""
+      }
+    ]
+  },
+  {
+    "name": "Stellarium",
+    "id": "stellarium",
+    "type": "apps",
+    "exec": "stellarium",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ]
+  },
+  {
+    "name": "Celestia",
+    "id": "celestia",
+    "type": "apps",
+    "exec": "celestia",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ]
   },
   {
     "name": "K Geography",
@@ -1828,10 +748,50 @@
     ]
   },
   {
+    "name": "Density",
+    "id": "density",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-density/density_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Why do objects like wood float in water? Does it depend on size? Create a custom object to explore the effects of mass and volume on density. Can you discover the relationship? Use the scale to measure the mass of an object, then hold the object under water to measure its volume. Can you identify all the mystery objects?",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "pdf-reader \"/var/www/manuals/Density_SimActivity.pdf\""
+      }
+    ]
+  },
+  {
+    "name": "Buoyancy",
+    "id": "buoyancy",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-buoyancy/buoyancy_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "When will objects float and when will they sink? Learn how buoyancy works with blocks. Arrows show the applied forces, and you can modify the properties of the blocks and the fluid.",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "pdf-reader \"/var/www/manuals/Buoyancy_student_directions.pdf\""
+      },
+      {
+        "title": "Activity 2",
+        "src": "doc-reader \"/var/www/manuals/Buoyancy Activity.docx\""
+      }
+    ]
+  },
+  {
     "name": "Under Pressure",
     "id": "under-pressure",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/under-pressure_en.jar",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/under-pressure_en.html",
     "subject": "chemistry",
     "keywords": [
       "",
@@ -1843,6 +803,53 @@
         "title": "Activity",
         "src": "pdf-reader \"/var/www/manuals/UnderPressure_Student_directions.pdf\""
       }
+    ]
+  },
+  {
+    "name": "Gravity and Orbits",
+    "id": "gravity-and-orbits",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/gravity-and-orbits_en.jar",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Move the sun, earth, moon and space station to see how it affects their gravitational forces and orbital paths. Visualize the sizes and distances between different heavenly bodies, and turn off gravity to see what would happen without it!",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader \"/var/www/manuals/GravityAndOrbits-StudentActivity.doc\""
+      }
+    ]
+  },
+  {
+    "name": "Gravity Force Lab",
+    "id": "gravity-force-lab",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/gravity-force-lab_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Visualize the gravitational force that two objects exert on each other. Adjust properties of the objects to see how changing the properties affects the gravitational attraction.",
+    "manuals": [
+      {
+        "title": "Exploring Gravity",
+        "src": "pdf-reader \"/var/www/manuals/Exploring_Gravity.pdf\""
+      }
+    ]
+  },
+  {
+    "name": "Freefall Tower",
+    "id": "freefall-tower",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/applications-bin/freefalltower/index.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
     ]
   },
   {
@@ -1864,6 +871,153 @@
     ]
   },
   {
+    "name": "Ramp: Forces and Motion",
+    "id": "ramp-forces-and-motion",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
+    "manuals": [
+      {
+        "title": "Work Energy on Ramp",
+        "src": "doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""
+      }
+    ]
+  },
+  {
+    "name": "Collision Lab",
+    "id": "collision-lab",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Use an air hockey table to investigate simple collisions in 1D and more complex collisions in 2D. Experiment with the number of discs, masses, and initial conditions. Vary the elasticity and see how the total momentum and kinetic energy changes during collisions.",
+    "manuals": [
+      {
+        "title": "Collision Lab",
+        "src": "pdf-reader \"/var/www/manuals/Collision Lab.pdf\""
+      }
+    ]
+  },
+  {
+    "name": "States of Matter: Basics",
+    "id": "states-of-matter-basics",
+    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
+    "keywords": [
+      "",
+      ""
+    ],
+    "type": "apps",
+    "description": "Heat, cool and compress atoms and molecules and watch as they change between solid, liquid and gas phases.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader \"/var/www/manuals/states-of-matter-basics.pptx\""
+      }
+    ]
+  },
+  {
+    "name": "Forces and Motion: Basics",
+    "id": "forces-and-motions-basics",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
+    "manuals": [
+      {
+        "title": "Questions",
+        "src": "doc-reader \"/var/www/manuals/Forces and Motion.docx\""
+      }
+    ]
+  },
+  {
+    "name": "Wave on a String",
+    "id": "wave-on-a-string",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/chemistry/wave-on-a-string_en.html",
+    "subject": "chemistry",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore the wonderful world of waves! Even observe a string vibrate in slow motion. Wiggle the end of the string and make waves, or adjust the frequency and amplitude of an oscillator.",
+    "manuals": [
+      {
+        "title": "Activity",
+        "src": "doc-reader \"/var/www/manuals/student directions for waves on a string.doc\""
+      }
+    ]
+  },
+  {
+    "name": "Rutherford Scattering",
+    "id": "rutherfford-scattering",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/chemistry/rutherford-scattering_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "How did Rutherford figure out the structure of the atom without being able to see it? Simulate the famous experiment in which he disproved the Plum Pudding model of the atom by observing alpha particles bouncing off atoms and determining that they must have a small core.",
+    "manuals": [
+      {
+        "title": "Exercises",
+        "src": "doc-reader \"/var/www/manuals/rutherford scattering.doc\""
+      }
+    ]
+  },
+  {
+    "name": "The Ramp",
+    "id": "the-ramp",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "doc-reader \"/var/www/manuals/the-ramp-intro.docx\""
+      },
+      {
+        "title": "Work Energy on Ramp",
+        "src": "doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""
+      }
+    ]
+  },
+  {
+    "name": "Energy stake Park",
+    "id": "energy-skate-park",
+    "type": "apps",
+    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
+    "manuals": [
+      {
+        "title": "Introduction",
+        "src": "pdf-reader \"/var/www/manuals/energy-skate-park-basics.pdf\""
+      }
+    ]
+  },
+  {
     "name": "Pulleys",
     "id": "pulleys",
     "exec": "firefox --new-window file:///opt/applications-bin/pulley/index.html",
@@ -1873,5 +1027,27 @@
       ""
     ],
     "type": "apps"
+  },
+  {
+    "name": "Masses & Springs",
+    "id": "masses-springs",
+    "type": "apps",
+    "exec": "firefox --new-window file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html",
+    "subject": "physics",
+    "keywords": [
+      "",
+      ""
+    ],
+    "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
+    "manuals": [
+      {
+        "title": "Conservation of Energy",
+        "src": "doc-reader \"/var/www/manuals/conservation of energy.doc\""
+      },
+      {
+        "title": "Hooke's Law",
+        "src": "doc-reader \"/var/www/manuals/MassesandSpringsAP_Student.docx\""
+      }
+    ]
   }
 ]

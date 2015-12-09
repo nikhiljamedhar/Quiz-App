@@ -12,8 +12,9 @@
         "keywords":["",""] 
     },
     {
-        "name": "Ballons & Buoyancy",
-        "id": "ballons-buoyancy",
+        "name": "Balloons & Buoyancy",
+        "id": "balloons-buoyancy",
+        "type": "apps",
         "exec": "java -jar /opt/phet/physics/balloons-and-buoyancy_en.jar",
         "keywords":["",""]
     },
