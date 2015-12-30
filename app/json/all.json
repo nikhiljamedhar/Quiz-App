@@ -35,7 +35,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader \"/var/www/manuals/ph-lesson.docx\""
+        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
       }
     ]
   },
@@ -53,7 +53,7 @@
     "manuals": [
       {
         "title": "Salts and Solubility Activities",
-        "src": "pdf-reader \"/var/www/manuals/Salts and Solubility.pdf\""
+        "src": "pdf-reader /var/www/manuals/Salts and Solubility.pdf"
       }
     ]
   },
@@ -71,7 +71,7 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader \"/var/www/manuals/acid-base-investigation.docx\""
+        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
       }
     ]
   },
@@ -100,7 +100,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/BalancingChemicalEquations_Student.docx\""
+        "src": "doc-reader /var/www/manuals/BalancingChemicalEquations_Student.docx"
       }
     ]
   },
@@ -117,7 +117,7 @@
     "manuals": [
       {
         "title": "Collision Theory",
-        "src": "pdf-reader \"/var/www/manuals/collision-theory.pdf\""
+        "src": "pdf-reader /var/www/manuals/collision-theory.pdf"
       }
     ]
   },
@@ -135,7 +135,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/Models of the Hydrogen Atom Handout.doc\""
+        "src": "doc-reader /var/www/manuals/Models of the Hydrogen Atom Handout.doc"
       }
     ]
   },
@@ -153,7 +153,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader \"/var/www/manuals/Build An Atom Exercises.pdf\""
+        "src": "pdf-reader /var/www/manuals/Build An Atom Exercises.pdf"
       }
     ]
   },
@@ -171,7 +171,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader \"/var/www/manuals/Build An Atom Exercises.pdf\""
+        "src": "pdf-reader /var/www/manuals/Build An Atom Exercises.pdf"
       }
     ]
   },
@@ -189,7 +189,7 @@
     "manuals": [
       {
         "title": "Exploring Average Atomic Mass",
-        "src": "doc-reader \"/var/www/manuals/Exploring Average Atomic Mass.docx\""
+        "src": "doc-reader /var/www/manuals/Exploring Average Atomic Mass.docx"
       }
     ]
   },
@@ -229,7 +229,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/RPAL-Student_directions1_intro.pdf\""
+        "src": "pdf-reader /var/www/manuals/RPAL-Student_directions1_intro.pdf"
       }
     ]
   },
@@ -246,7 +246,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/seeing-colors-activity.docx\""
+        "src": "doc-reader /var/www/manuals/seeing-colors-activity.docx"
       }
     ]
   },
@@ -263,7 +263,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/electric-field-hockey-lesson-plan.doc\""
+        "src": "doc-reader /var/www/manuals/electric-field-hockey-lesson-plan.doc"
       }
     ]
   },
@@ -280,7 +280,7 @@
     "manuals": [
       {
         "title": "Assignments",
-        "src": "doc-reader \"/var/www/manuals/field-of-dreams-tasks.doc\""
+        "src": "doc-reader /var/www/manuals/field-of-dreams-tasks.doc"
       }
     ]
   },
@@ -297,7 +297,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/electric-field-lab.doc\""
+        "src": "doc-reader /var/www/manuals/electric-field-lab.doc"
       }
     ]
   },
@@ -314,7 +314,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/ohms-law.pdf\""
+        "src": "pdf-reader /var/www/manuals/ohms-law.pdf"
       }
     ]
   },
@@ -331,7 +331,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/ResistanceWireAP_Student.docx\""
+        "src": "doc-reader /var/www/manuals/ResistanceWireAP_Student.docx"
       }
     ]
   },
@@ -348,11 +348,11 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/circuit-directions.pdf\""
+        "src": "pdf-reader /var/www/manuals/circuit-directions.pdf"
       },
       {
         "title": "Series and Parallel",
-        "src": "doc-reader \"/var/www/manuals/circuit-series-parallel.doc\""
+        "src": "doc-reader /var/www/manuals/circuit-series-parallel.doc"
       }
     ]
   },
@@ -369,7 +369,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/Energy - Faraday.pdf\""
+        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
       }
     ]
   },
@@ -386,7 +386,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/Energy - Faraday.pdf\""
+        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
       }
     ]
   },
@@ -403,7 +403,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader \"/var/www/manuals/Energy - Faraday.pdf\""
+        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
       }
     ]
   },
@@ -420,7 +420,7 @@
     "manuals": [
       {
         "title": "Reflection of Light",
-        "src": "pdf-reader \"/var/www/manuals/refraction-of-light.pdf\""
+        "src": "pdf-reader /var/www/manuals/refraction-of-light.pdf"
       }
     ]
   },
@@ -438,7 +438,7 @@
     "manuals": [
       {
         "title": "Reflection of Light",
-        "src": "doc-reader \"/var/www/manuals/geometric optics_phet.doc\""
+        "src": "doc-reader /var/www/manuals/geometric optics_phet.doc"
       }
     ]
   },
@@ -455,7 +455,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/blackbody-lab.docx\""
+        "src": "doc-reader /var/www/manuals/blackbody-lab.docx"
       }
     ]
   },
@@ -493,11 +493,11 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader \"/var/www/manuals/eating-and-exercise-simulation-project-lesson.docx\""
+        "src": "doc-reader /var/www/manuals/eating-and-exercise-simulation-project-lesson.docx"
       },
       {
         "title": "Exercises",
-        "src": "doc-reader \"/var/www/manuals/eating-and-exercise-simulation-project-exercises.docx\""
+        "src": "doc-reader /var/www/manuals/eating-and-exercise-simulation-project-exercises.docx"
       }
     ]
   },
@@ -515,7 +515,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/Forces and Motion.docx\""
+        "src": "doc-reader /var/www/manuals/Forces and Motion.docx"
       }
     ]
   },
@@ -533,7 +533,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/Activity Natural Selection.docx\""
+        "src": "doc-reader /var/www/manuals/Activity Natural Selection.docx"
       }
     ]
   },
@@ -551,7 +551,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/AreaBuilder.docx\""
+        "src": "doc-reader /var/www/manuals/AreaBuilder.docx"
       }
     ]
   },
@@ -591,7 +591,7 @@
     "manuals": [
       {
         "title": "The Moving Man : Velocity",
-        "src": "doc-reader \"/var/www/manuals/technology lesson.doc\""
+        "src": "doc-reader /var/www/manuals/technology lesson.doc"
       }
     ]
   },
@@ -609,7 +609,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader \"/var/www/manuals/Lesson plan for friction demo.doc\""
+        "src": "doc-reader /var/www/manuals/Lesson plan for friction demo.doc"
       }
     ]
   },
@@ -627,7 +627,7 @@
     "manuals": [
       {
         "title": "Lesson Plan",
-        "src": "pdf-reader \"/var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf\""
+        "src": "pdf-reader /var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf"
       }
     ]
   },
@@ -645,7 +645,7 @@
     "manuals": [
       {
         "title": "Conductivity",
-        "src": "doc-reader \"/var/www/manuals/Phet conductivity.doc\""
+        "src": "doc-reader /var/www/manuals/Phet conductivity.doc"
       }
     ]
   },
@@ -662,7 +662,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/magnets.pdf\""
+        "src": "pdf-reader /var/www/manuals/magnets.pdf"
       }
     ]
   },
@@ -692,7 +692,7 @@
     "manuals": [
       {
         "title": "Sound and Wave Basics",
-        "src": "pdf-reader \"/var/www/manuals/Sound and Wave Basics.pdf\""
+        "src": "pdf-reader /var/www/manuals/Sound and Wave Basics.pdf"
       }
     ]
   },
@@ -743,7 +743,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/BuildAMolecule-Activity.doc\""
+        "src": "doc-reader /var/www/manuals/BuildAMolecule-Activity.doc"
       }
     ]
   },
@@ -761,7 +761,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader \"/var/www/manuals/Density_SimActivity.pdf\""
+        "src": "pdf-reader /var/www/manuals/Density_SimActivity.pdf"
       }
     ]
   },
@@ -779,11 +779,11 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader \"/var/www/manuals/Buoyancy_student_directions.pdf\""
+        "src": "pdf-reader /var/www/manuals/Buoyancy_student_directions.pdf"
       },
       {
         "title": "Activity 2",
-        "src": "doc-reader \"/var/www/manuals/Buoyancy Activity.docx\""
+        "src": "doc-reader /var/www/manuals/Buoyancy Activity.docx"
       }
     ]
   },
@@ -801,7 +801,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader \"/var/www/manuals/UnderPressure_Student_directions.pdf\""
+        "src": "pdf-reader /var/www/manuals/UnderPressure_Student_directions.pdf"
       }
     ]
   },
@@ -819,7 +819,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/GravityAndOrbits-StudentActivity.doc\""
+        "src": "doc-reader /var/www/manuals/GravityAndOrbits-StudentActivity.doc"
       }
     ]
   },
@@ -837,7 +837,7 @@
     "manuals": [
       {
         "title": "Exploring Gravity",
-        "src": "pdf-reader \"/var/www/manuals/Exploring_Gravity.pdf\""
+        "src": "pdf-reader /var/www/manuals/Exploring_Gravity.pdf"
       }
     ]
   },
@@ -866,7 +866,7 @@
     "manuals": [
       {
         "title": "Saturated solutions",
-        "src": "pdf-reader \"/var/www/manuals/Saturated solutions-Lecture Demo Guide.pdf\""
+        "src": "pdf-reader /var/www/manuals/Saturated solutions-Lecture Demo Guide.pdf"
       }
     ]
   },
@@ -884,7 +884,7 @@
     "manuals": [
       {
         "title": "Work Energy on Ramp",
-        "src": "doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""
+        "src": "doc-reader /var/www/manuals/work-energy-on-ramp.docx"
       }
     ]
   },
@@ -902,7 +902,7 @@
     "manuals": [
       {
         "title": "Collision Lab",
-        "src": "pdf-reader \"/var/www/manuals/Collision Lab.pdf\""
+        "src": "pdf-reader /var/www/manuals/Collision Lab.pdf"
       }
     ]
   },
@@ -919,7 +919,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/states-of-matter-basics.pptx\""
+        "src": "doc-reader /var/www/manuals/states-of-matter-basics.pptx"
       }
     ]
   },
@@ -937,7 +937,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader \"/var/www/manuals/Forces and Motion.docx\""
+        "src": "doc-reader /var/www/manuals/Forces and Motion.docx"
       }
     ]
   },
@@ -955,7 +955,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader \"/var/www/manuals/student directions for waves on a string.doc\""
+        "src": "doc-reader /var/www/manuals/student directions for waves on a string.doc"
       }
     ]
   },
@@ -973,7 +973,7 @@
     "manuals": [
       {
         "title": "Exercises",
-        "src": "doc-reader \"/var/www/manuals/rutherford scattering.doc\""
+        "src": "doc-reader /var/www/manuals/rutherford scattering.doc"
       }
     ]
   },
@@ -991,11 +991,11 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader \"/var/www/manuals/the-ramp-intro.docx\""
+        "src": "doc-reader /var/www/manuals/the-ramp-intro.docx"
       },
       {
         "title": "Work Energy on Ramp",
-        "src": "doc-reader \"/var/www/manuals/work-energy-on-ramp.docx\""
+        "src": "doc-reader /var/www/manuals/work-energy-on-ramp.docx"
       }
     ]
   },
@@ -1013,7 +1013,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader \"/var/www/manuals/energy-skate-park-basics.pdf\""
+        "src": "pdf-reader /var/www/manuals/energy-skate-park-basics.pdf"
       }
     ]
   },
@@ -1042,11 +1042,11 @@
     "manuals": [
       {
         "title": "Conservation of Energy",
-        "src": "doc-reader \"/var/www/manuals/conservation of energy.doc\""
+        "src": "doc-reader /var/www/manuals/conservation of energy.doc"
       },
       {
         "title": "Hooke's Law",
-        "src": "doc-reader \"/var/www/manuals/MassesandSpringsAP_Student.docx\""
+        "src": "doc-reader /var/www/manuals/MassesandSpringsAP_Student.docx"
       }
     ]
   }

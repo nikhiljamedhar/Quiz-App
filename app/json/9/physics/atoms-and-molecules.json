@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Starting from atoms, see how many molecules you can build. Collect your molecules and see them in 3D!",
     "manuals": [
-      {"title":"Activity", "src":"doc-reader \"/var/www/manuals/BuildAMolecule-Activity.doc\""}
+      {"title":"Activity", "src":"doc-reader /var/www/manuals/BuildAMolecule-Activity.doc"}
     ]
   },
   {
@@ -20,7 +20,7 @@
     "keywords":["",""],
     "description": "Build an atom out of protons, neutrons, and electrons, and see how the element, charge, and mass change. Then play a game to test your ideas!",
     "manuals": [
-      {"title":"Activity", "src":"pdf-reader \"/var/www/manuals/Build An Atom Exercises.pdf\"" }
+      {"title":"Activity", "src":"pdf-reader /var/www/manuals/Build An Atom Exercises.pdf" }
     ]
   }
 ]

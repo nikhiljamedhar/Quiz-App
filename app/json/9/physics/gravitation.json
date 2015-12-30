@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Move the sun, earth, moon and space station to see how it affects their gravitational forces and orbital paths. Visualize the sizes and distances between different heavenly bodies, and turn off gravity to see what would happen without it!",
     "manuals": [
-      {"title":"Activity", "src":"doc-reader \"/var/www/manuals/GravityAndOrbits-StudentActivity.doc\""}
+      {"title":"Activity", "src":"doc-reader /var/www/manuals/GravityAndOrbits-StudentActivity.doc"}
     ]
   },
   {
@@ -20,7 +20,7 @@
     "keywords":["",""],
     "description": "Visualize the gravitational force that two objects exert on each other. Adjust properties of the objects to see how changing the properties affects the gravitational attraction.",
     "manuals": [
-      {"title":"Exploring Gravity", "src":"pdf-reader \"/var/www/manuals/Exploring_Gravity.pdf\"" }
+      {"title":"Exploring Gravity", "src":"pdf-reader /var/www/manuals/Exploring_Gravity.pdf" }
     ]
   },
   {

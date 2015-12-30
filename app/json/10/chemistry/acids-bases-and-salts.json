@@ -13,7 +13,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader \"/var/www/manuals/ph-lesson.docx\""
+        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
       }
     ]
   },
@@ -26,7 +26,7 @@
     "keywords":["",""],
     "description": "Add different salts to water, then watch them dissolve and achieve a dynamic equilibrium with solid precipitate. Compare the number of ions in solution for highly soluble NaCl to other slightly soluble salts. Relate the charges on ions to the number of ions in the formula of a salt. Calculate Ksp values.",
     "manuals": [
-      {"title":"Salts and Solubility Activities", "src":"pdf-reader \"/var/www/manuals/Salts and Solubility.pdf\""}
+      {"title":"Salts and Solubility Activities", "src":"pdf-reader /var/www/manuals/Salts and Solubility.pdf"}
     ]
   },
   {
@@ -43,7 +43,7 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader \"/var/www/manuals/acid-base-investigation.docx\""
+        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
       }
     ]
   }

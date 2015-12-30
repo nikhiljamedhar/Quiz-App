@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Learn how friction causes a material to heat up and melt. What happens on an atomic level when you rub two objects together?",
     "manuals": [
-      {"title":"Lesson", "src":"doc-reader \"/var/www/manuals/Lesson plan for friction demo.doc\""}
+      {"title":"Lesson", "src":"doc-reader /var/www/manuals/Lesson plan for friction demo.doc"}
     ]
   },
   {
@@ -20,7 +20,7 @@
     "keywords":["",""],
     "description": "Explore the forces at work when pulling against a cart,and pushing a refrigerator, crate, or person. Create an applied force and see how it makes objects move. Change friction and see how it affects the motion of objects.",
     "manuals": [
-      {"title":"Lesson Plan", "src":"pdf-reader \"/var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf\"" }
+      {"title":"Lesson Plan", "src":"pdf-reader /var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf" }
     ]
   }
 ]

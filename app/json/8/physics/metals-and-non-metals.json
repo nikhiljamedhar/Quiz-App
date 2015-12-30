@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Experiment with conductivity in metals, plastics and photoconductors. See why metals conduct and plastics don't, and why some materials conduct only when you shine a flashlight on them.",
     "manuals": [
-      {"title":"Conductivity", "src":"doc-reader \"/var/www/manuals/Phet conductivity.doc\""}
+      {"title":"Conductivity", "src":"doc-reader /var/www/manuals/Phet conductivity.doc"}
     ]
   }
 ]

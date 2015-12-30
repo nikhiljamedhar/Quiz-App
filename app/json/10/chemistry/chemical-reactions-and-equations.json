@@ -16,7 +16,7 @@
     "keywords":["",""],
     "description": "How do you know if a chemical equation is balanced? What can you change to balance an equation? Play a game to test your ideas!",
     "manuals": [
-      {"title":"Activity", "src":"doc-reader \"/var/www/manuals/BalancingChemicalEquations_Student.docx\""}
+      {"title":"Activity", "src":"doc-reader /var/www/manuals/BalancingChemicalEquations_Student.docx"}
     ]
   },
   {
@@ -27,7 +27,7 @@
     "type": "apps",
     "description": "Explore what makes a reaction happen by colliding atoms and molecules. Design experiments with different reactions, concentrations, and temperatures. When are reactions reversible? What affects the rate of a reaction?",
     "manuals": [
-      {"title":"Collision Theory", "src":"pdf-reader \"/var/www/manuals/collision-theory.pdf\"" }
+      {"title":"Collision Theory", "src":"pdf-reader /var/www/manuals/collision-theory.pdf" }
     ]
   }
 ]

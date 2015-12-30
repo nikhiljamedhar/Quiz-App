@@ -7,7 +7,7 @@
     "type": "apps",
     "description": "Heat, cool and compress atoms and molecules and watch as they change between solid, liquid and gas phases.",
     "manuals": [
-      {"title":"Introduction", "src":"doc-reader \"/var/www/manuals/states-of-matter-basics.pptx\""}
+      {"title":"Introduction", "src":"doc-reader /var/www/manuals/states-of-matter-basics.pptx"}
     ]
   }
 ]

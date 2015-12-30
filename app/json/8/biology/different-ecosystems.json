@@ -8,7 +8,7 @@
     "keywords":["",""],
     "description": "Explore natural selection by controlling the environment and causing mutations in bunnies.",
     "manuals": [
-      {"title":"Activity", "src":"doc-reader \"/var/www/manuals/Activity Natural Selection.docx\""}
+      {"title":"Activity", "src":"doc-reader /var/www/manuals/Activity Natural Selection.docx"}
     ]
   },
   {
