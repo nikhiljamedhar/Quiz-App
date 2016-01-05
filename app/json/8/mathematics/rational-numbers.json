@@ -3,7 +3,7 @@
         "name": "KBruch",
         "id": "KBruch",
         "type":"apps",
-        "exec": "kbruch",
+        "exec": {"command": "kbruch", "args": []},
         "subject": "mathematics",
         "keywords":["",""]
     },

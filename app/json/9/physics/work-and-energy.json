@@ -3,31 +3,31 @@
     "name": "The Ramp",
     "id": "the-ramp",
     "type":"apps",
-    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/the-ramp_en.jar"]},
     "subject": "physics",
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Introduction", "src":"doc-reader /var/www/manuals/the-ramp-intro.docx"},
-      {"title":"Work Energy on Ramp", "src":"doc-reader /var/www/manuals/work-energy-on-ramp.docx"}
+      {"title":"Introduction", "src":{"command": "doc-reader", "args":["/var/www/manuals/the-ramp-intro.docx"]}},
+      {"title":"Work Energy on Ramp", "src":{"command": "doc-reader", "args":["/var/www/manuals/work-energy-on-ramp.docx"]}}
     ]
   },
   {
     "name": "Energy stake Park",
     "id": "energy-skate-park",
     "type":"apps",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/energy-skate-park_en.jar"]},
     "subject": "physics",
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Introduction", "src":"pdf-reader /var/www/manuals/energy-skate-park-basics.pdf" }
+      {"title":"Introduction", "src":{"command": "pdf-reader", "args":["/var/www/manuals/energy-skate-park-basics.pdf"]} }
     ]
   },
   {
     "name": "Pulleys",
     "id": "pulleys",
-    "exec": "firefox --new-window file:///opt/applications-bin/pulley/index.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/applications-bin/pulley/index.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -39,13 +39,13 @@
     "name": "Masses & Springs",
     "id": "masses-springs",
     "type":"apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html"]},
     "subject": "physics",
     "keywords":["",""],
     "description": "Explore pressure under and above water. See how pressure changes as you change fluids, gravity, container shapes, and volume.",
     "manuals": [
-      {"title":"Conservation of Energy", "src":"doc-reader /var/www/manuals/conservation of energy.doc"},
-      {"title":"Hooke's Law", "src":"doc-reader /var/www/manuals/MassesandSpringsAP_Student.docx"}
+      {"title":"Conservation of Energy", "src":{"command": "doc-reader", "args":["/var/www/manuals/conservation of energy.doc"]}},
+      {"title":"Hooke's Law", "src":{"command": "doc-reader", "args":["/var/www/manuals/MassesandSpringsAP_Student.docx"]}}
     ]
   }
 ]

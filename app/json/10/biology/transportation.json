@@ -3,7 +3,7 @@
     "name": "Human Atlas",
     "id": "human-atlas",
     "type":"apps",
-    "exec": "/opt/applications-bin/humanatlas",
+    "exec": {"command": "/opt/applications-bin/humanatlas", "args": []},
     "subject": "Biology",
     "keywords":["",""]
   }

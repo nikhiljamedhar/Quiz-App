@@ -3,7 +3,7 @@
     "name": "Cell Structure",
     "id": "cell-structure",
     "type": "apps",
-    "exec": "chromium-browser --new-window http:localhost/phetsims/cell-structure/cell-structure_en.html",
+    "exec": {"command": "chromium-browser --new-window http:localhost/phetsims/cell-structure/cell-structure_en.html", "args": []},
     "subject": "Biology",
     "keywords": [
       "",
@@ -14,7 +14,7 @@
     "name": "Human Atlas",
     "id": "human-atlas",
     "type": "apps",
-    "exec": "/opt/applications-bin/humanatlas",
+    "exec": {"command": "/opt/applications-bin/humanatlas", "args": []},
     "subject": "Biology",
     "keywords": [
       "",
@@ -25,7 +25,7 @@
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/ph-scale-basics_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -35,7 +35,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/ph-lesson.docx"]}
       }
     ]
   },
@@ -43,7 +43,7 @@
     "name": "Salts & Solubility",
     "id": "salts-solubility",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/soluble-salts_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/soluble-salts_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -53,7 +53,7 @@
     "manuals": [
       {
         "title": "Salts and Solubility Activities",
-        "src": "pdf-reader /var/www/manuals/Salts and Solubility.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Salts and Solubility.pdf"]}
       }
     ]
   },
@@ -61,7 +61,7 @@
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/acid-base-solutions_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/acid-base-solutions_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -71,14 +71,14 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/acid-base-investigation.docx"]}
       }
     ]
   },
   {
     "name": "Kalzium",
     "id": "kalzium",
-    "exec": "kalzium",
+    "exec": {"command": "kalzium", "args": []},
     "type": "apps",
     "subject": "chemistry",
     "keywords": [
@@ -90,7 +90,7 @@
     "name": "Balancing Chemical Equations",
     "id": "balancing-chemical-equations",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/balancing-chemical-equations_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/balancing-chemical-equations_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -100,14 +100,14 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/BalancingChemicalEquations_Student.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/BalancingChemicalEquations_Student.docx"]}
       }
     ]
   },
   {
     "name": "Reactions & Rates",
     "id": "reactions-and-rates",
-    "exec": "java -jar /opt/phet/chemistry/reactions-and-rates_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/reactions-and-rates_en.jar"]},
     "keywords": [
       "",
       ""
@@ -117,7 +117,7 @@
     "manuals": [
       {
         "title": "Collision Theory",
-        "src": "pdf-reader /var/www/manuals/collision-theory.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/collision-theory.pdf"]}
       }
     ]
   },
@@ -125,7 +125,7 @@
     "name": "Models of the Hydrogen Atom",
     "id": "models-of-hydrogen-atom",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/hydrogen-atom_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/hydrogen-atom_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -135,7 +135,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/Models of the Hydrogen Atom Handout.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Models of the Hydrogen Atom Handout.doc"]}
       }
     ]
   },
@@ -143,7 +143,7 @@
     "name": "Build an Atom",
     "id": "build-an-atom",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/build-an-atom_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/build-an-atom_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -153,7 +153,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader /var/www/manuals/Build An Atom Exercises.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Build An Atom Exercises.pdf"]}
       }
     ]
   },
@@ -161,7 +161,7 @@
     "name": "Element Builder",
     "id": "element-builder",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ElementBuilder/index.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/ElementBuilder/index.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -171,7 +171,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader /var/www/manuals/Build An Atom Exercises.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Build An Atom Exercises.pdf"]}
       }
     ]
   },
@@ -179,7 +179,7 @@
     "name": "Isotopes & Atomic Mass",
     "id": "isotopes-and-atomic mass",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/isotopes-and-atomic-mass_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/isotopes-and-atomic-mass_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -189,7 +189,7 @@
     "manuals": [
       {
         "title": "Exploring Average Atomic Mass",
-        "src": "doc-reader /var/www/manuals/Exploring Average Atomic Mass.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Exploring Average Atomic Mass.docx"]}
       }
     ]
   },
@@ -197,7 +197,7 @@
     "name": "Geo Gebra",
     "id": "geo-gebra",
     "type": "apps",
-    "exec": "geogebra",
+    "exec": {"command": "geogebra", "args": []},
     "subject": "Mathematics",
     "keywords": [
       "",
@@ -207,7 +207,7 @@
   {
     "name": "Radioactive Dating Game",
     "id": "radio-active-dating-game",
-    "exec": "java -jar /opt/phet/chemistry/radioactive-dating-game_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/radioactive-dating-game_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -219,7 +219,7 @@
     "name": "Reactants, Products and Leftovers",
     "id": "reactants-products-leftovers",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/reactants-products-and-leftovers_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/reactants-products-and-leftovers_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -229,14 +229,14 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader /var/www/manuals/RPAL-Student_directions1_intro.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/RPAL-Student_directions1_intro.pdf"]}
       }
     ]
   },
   {
     "name": "Color Vision",
     "id": "color-vision",
-    "exec": "java -jar /opt/phet/physics/color-vision_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/color-vision_en.jar"]},
     "keywords": [
       "",
       ""
@@ -246,7 +246,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader /var/www/manuals/seeing-colors-activity.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/seeing-colors-activity.docx"]}
       }
     ]
   },
@@ -254,7 +254,7 @@
     "name": "Electric Field Hockey",
     "id": "electric-field-hockey",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/electric-hockey_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/electric-hockey_en.jar"]},
     "keywords": [
       "",
       ""
@@ -263,7 +263,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader /var/www/manuals/electric-field-hockey-lesson-plan.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/electric-field-hockey-lesson-plan.doc"]}
       }
     ]
   },
@@ -271,7 +271,7 @@
     "name": "Electric Field of Dreams",
     "id": "electric-field-of- dreams",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/efield_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/efield_en.jar"]},
     "keywords": [
       "",
       ""
@@ -280,7 +280,7 @@
     "manuals": [
       {
         "title": "Assignments",
-        "src": "doc-reader /var/www/manuals/field-of-dreams-tasks.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/field-of-dreams-tasks.doc"]}
       }
     ]
   },
@@ -288,7 +288,7 @@
     "name": "Charges and Fields",
     "id": "charges-and-fields",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/charges-and-fields_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/charges-and-fields_en.jar"]},
     "keywords": [
       "",
       ""
@@ -297,7 +297,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader /var/www/manuals/electric-field-lab.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/electric-field-lab.doc"]}
       }
     ]
   },
@@ -305,7 +305,7 @@
     "name": "Ohm's Law",
     "id": "ohms-law",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/ohms-law_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/ohms-law_en.html"]},
     "keywords": [
       "",
       ""
@@ -314,14 +314,14 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader /var/www/manuals/ohms-law.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/ohms-law.pdf"]}
       }
     ]
   },
   {
     "name": "Resistance in a Wire",
     "id": "resistance-in-wire",
-    "exec": "firefox --new-window file:///opt/phet/physics/resistance-in-a-wire_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/resistance-in-a-wire_en.html"]},
     "keywords": [
       "",
       ""
@@ -331,14 +331,14 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader /var/www/manuals/ResistanceWireAP_Student.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/ResistanceWireAP_Student.docx"]}
       }
     ]
   },
   {
     "name": "Circuit Construction Kit (DC Only)",
     "id": "circuit-construction- kit",
-    "exec": "java -jar /opt/phet/physics/circuit-construction-kit-dc_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/circuit-construction-kit-dc_en.jar"]},
     "type": "apps",
     "keywords": [
       "",
@@ -348,18 +348,18 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader /var/www/manuals/circuit-directions.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/circuit-directions.pdf"]}
       },
       {
         "title": "Series and Parallel",
-        "src": "doc-reader /var/www/manuals/circuit-series-parallel.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/circuit-series-parallel.doc"]}
       }
     ]
   },
   {
     "name": "Faraday's Electromagnetic Lab",
     "id": "faradays-electromagnetic-lab",
-    "exec": "java -jar /opt/phet/physics/faraday_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/faraday_en.jar"]},
     "keywords": [
       "",
       ""
@@ -369,14 +369,14 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Energy - Faraday.pdf"]}
       }
     ]
   },
   {
     "name": "Magnets and Electromagnets",
     "id": "magnets-and-electromagnets",
-    "exec": "java -jar /opt/phet/physics/magnets-and-electromagnets_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/magnets-and-electromagnets_en.jar"]},
     "keywords": [
       "",
       ""
@@ -386,14 +386,14 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Energy - Faraday.pdf"]}
       }
     ]
   },
   {
     "name": "Faraday's Law",
     "id": "faradays-law",
-    "exec": "firefox --new-window file:///opt/phet/physics/faradays-law_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/faradays-law_en.html"]},
     "keywords": [
       "",
       ""
@@ -403,14 +403,14 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "pdf-reader /var/www/manuals/Energy - Faraday.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Energy - Faraday.pdf"]}
       }
     ]
   },
   {
     "name": "Bending Light",
     "id": "bending-light",
-    "exec": "java -jar /opt/phet/physics/bending-light_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/bending-light_en.jar"]},
     "keywords": [
       "",
       ""
@@ -420,7 +420,7 @@
     "manuals": [
       {
         "title": "Reflection of Light",
-        "src": "pdf-reader /var/www/manuals/refraction-of-light.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/refraction-of-light.pdf"]}
       }
     ]
   },
@@ -428,7 +428,7 @@
     "name": "Geometric Optics",
     "id": "geometric-optics",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/geometric-optics_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/geometric-optics_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -438,14 +438,14 @@
     "manuals": [
       {
         "title": "Reflection of Light",
-        "src": "doc-reader /var/www/manuals/geometric optics_phet.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/geometric optics_phet.doc"]}
       }
     ]
   },
   {
     "name": "Blackbody Spectrum",
     "id": "black-body-spectrum",
-    "exec": "java -jar /opt/phet/physics/blackbody-spectrum_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/blackbody-spectrum_en.jar"]},
     "keywords": [
       "",
       ""
@@ -455,14 +455,14 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader /var/www/manuals/blackbody-lab.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/blackbody-lab.docx"]}
       }
     ]
   },
   {
     "name": "Capacitor Lab",
     "id": "capacitor-lab",
-    "exec": "java -jar /opt/phet/physics/capacitor-lab_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/capacitor-lab_en.jar"]},
     "type": "apps",
     "keywords": [
       "",
@@ -473,7 +473,7 @@
     "name": "Balloons & Buoyancy",
     "id": "balloons-buoyancy",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/balloons-and-buoyancy_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/balloons-and-buoyancy_en.jar"]},
     "keywords": [
       "",
       ""
@@ -483,7 +483,7 @@
     "name": "Eating & Exercise",
     "id": "eating-exercise",
     "type": "apps",
-    "exec": "java -jar /opt/phet/biology/eating-and-exercise_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/biology/eating-and-exercise_en.jar"]},
     "subject": "biology",
     "keywords": [
       "",
@@ -493,11 +493,11 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/eating-and-exercise-simulation-project-lesson.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/eating-and-exercise-simulation-project-lesson.docx"]}
       },
       {
         "title": "Exercises",
-        "src": "doc-reader /var/www/manuals/eating-and-exercise-simulation-project-exercises.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/eating-and-exercise-simulation-project-exercises.docx"]}
       }
     ]
   },
@@ -505,7 +505,7 @@
     "name": "Forces and Motion",
     "id": "forces-and-motion",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/forces-and-motion_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -515,7 +515,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader /var/www/manuals/Forces and Motion.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Forces and Motion.docx"]}
       }
     ]
   },
@@ -523,7 +523,7 @@
     "name": "Natural Selection",
     "id": "natural-selection",
     "type": "apps",
-    "exec": "java -jar /opt/phet/biology/natural-selection_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/biology/natural-selection_en.jar"]},
     "subject": "biology",
     "keywords": [
       "",
@@ -533,7 +533,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/Activity Natural Selection.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Activity Natural Selection.docx"]}
       }
     ]
   },
@@ -541,7 +541,7 @@
     "name": "Area Builder",
     "id": "area-builder",
     "type": "apps",
-    "exec": "firefox --new-window /opt/phet/maths/area-builder_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","/opt/phet/maths/area-builder_en.html"]},
     "subject": "mathematics",
     "keywords": [
       "",
@@ -551,7 +551,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader /var/www/manuals/AreaBuilder.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/AreaBuilder.docx"]}
       }
     ]
   },
@@ -559,7 +559,7 @@
     "name": "KBruch",
     "id": "KBruch",
     "type": "apps",
-    "exec": "kbruch",
+    "exec": {"command": "kbruch", "args": []},
     "subject": "mathematics",
     "keywords": [
       "",
@@ -570,7 +570,7 @@
     "name": "Electrolysis",
     "id": "electrolysis",
     "type": "apps",
-    "exec": "chromium-browser --new-window http:localhost/phetsims/electrolysis/electrolysis_en.html",
+    "exec": {"command": "chromium-browser --new-window http:localhost/phetsims/electrolysis/electrolysis_en.html", "args": []},
     "subject": "physics",
     "keywords": [
       "",
@@ -581,7 +581,7 @@
     "name": "The Moving Man",
     "id": "moving-man",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/moving-man_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/moving-man_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -591,7 +591,7 @@
     "manuals": [
       {
         "title": "The Moving Man : Velocity",
-        "src": "doc-reader /var/www/manuals/technology lesson.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/technology lesson.doc"]}
       }
     ]
   },
@@ -599,7 +599,7 @@
     "name": "Friction",
     "id": "friction",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-friction/friction_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-friction/friction_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -609,7 +609,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/Lesson plan for friction demo.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Lesson plan for friction demo.doc"]}
       }
     ]
   },
@@ -617,7 +617,7 @@
     "name": "Ramp: Forces and Motion",
     "id": "ramp-forces-and -motion",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/ramp-forces-and-motion_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -627,7 +627,7 @@
     "manuals": [
       {
         "title": "Lesson Plan",
-        "src": "pdf-reader /var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/2ForceMotionBasicsLessonPlan_TL.pdf"]}
       }
     ]
   },
@@ -635,7 +635,7 @@
     "name": "Conductivity",
     "id": "conductivity",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/conductivity_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/conductivity_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -645,14 +645,14 @@
     "manuals": [
       {
         "title": "Conductivity",
-        "src": "doc-reader /var/www/manuals/Phet conductivity.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Phet conductivity.doc"]}
       }
     ]
   },
   {
     "name": "Balloons and Static Electricity",
     "id": "balloons-static-energy",
-    "exec": "firefox --new-window file:///opt/phet/physics/balloons_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/balloons_en.html"]},
     "keywords": [
       "",
       ""
@@ -662,14 +662,14 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader /var/www/manuals/magnets.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/magnets.pdf"]}
       }
     ]
   },
   {
     "name": "John Travoltage",
     "id": "john-travoltage",
-    "exec": "firefox --new-window file:///opt/phet/physics/john-travoltage_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/john-travoltage_en.html"]},
     "keywords": [
       "",
       ""
@@ -682,7 +682,7 @@
     "name": "Sound",
     "id": "sound",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/sound_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/sound_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -692,7 +692,7 @@
     "manuals": [
       {
         "title": "Sound and Wave Basics",
-        "src": "pdf-reader /var/www/manuals/Sound and Wave Basics.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Sound and Wave Basics.pdf"]}
       }
     ]
   },
@@ -700,7 +700,7 @@
     "name": "Stellarium",
     "id": "stellarium",
     "type": "apps",
-    "exec": "stellarium",
+    "exec": {"command": "stellarium", "args": []},
     "subject": "physics",
     "keywords": [
       "",
@@ -711,7 +711,7 @@
     "name": "Celestia",
     "id": "celestia",
     "type": "apps",
-    "exec": "celestia",
+    "exec": {"command": "celestia", "args": []},
     "subject": "physics",
     "keywords": [
       "",
@@ -722,7 +722,7 @@
     "name": "K Geography",
     "id": "kgeography",
     "type": "apps",
-    "exec": "kgeography",
+    "exec": {"command": "kgeography", "args": []},
     "subject": "social",
     "keywords": [
       "",
@@ -733,7 +733,7 @@
     "name": "Build a Molecule",
     "id": "build-a-molecule",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/build-a-molecule_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/build-a-molecule_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -743,7 +743,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/BuildAMolecule-Activity.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/BuildAMolecule-Activity.doc"]}
       }
     ]
   },
@@ -751,7 +751,7 @@
     "name": "Density",
     "id": "density",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-density/density_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-density/density_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -761,7 +761,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader /var/www/manuals/Density_SimActivity.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Density_SimActivity.pdf"]}
       }
     ]
   },
@@ -769,7 +769,7 @@
     "name": "Buoyancy",
     "id": "buoyancy",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-buoyancy/buoyancy_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-buoyancy/buoyancy_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -779,11 +779,11 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader /var/www/manuals/Buoyancy_student_directions.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Buoyancy_student_directions.pdf"]}
       },
       {
         "title": "Activity 2",
-        "src": "doc-reader /var/www/manuals/Buoyancy Activity.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Buoyancy Activity.docx"]}
       }
     ]
   },
@@ -791,7 +791,7 @@
     "name": "Under Pressure",
     "id": "under-pressure",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/under-pressure_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/under-pressure_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -801,7 +801,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "pdf-reader /var/www/manuals/UnderPressure_Student_directions.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/UnderPressure_Student_directions.pdf"]}
       }
     ]
   },
@@ -809,7 +809,7 @@
     "name": "Gravity and Orbits",
     "id": "gravity-and-orbits",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/gravity-and-orbits_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/gravity-and-orbits_en.jar"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -819,7 +819,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/GravityAndOrbits-StudentActivity.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/GravityAndOrbits-StudentActivity.doc"]}
       }
     ]
   },
@@ -827,7 +827,7 @@
     "name": "Gravity Force Lab",
     "id": "gravity-force-lab",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/gravity-force-lab_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/gravity-force-lab_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -837,7 +837,7 @@
     "manuals": [
       {
         "title": "Exploring Gravity",
-        "src": "pdf-reader /var/www/manuals/Exploring_Gravity.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Exploring_Gravity.pdf"]}
       }
     ]
   },
@@ -845,7 +845,7 @@
     "name": "Freefall Tower",
     "id": "freefall-tower",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/applications-bin/freefalltower/index.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/applications-bin/freefalltower/index.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -856,7 +856,7 @@
     "name": "Concentration",
     "id": "concentration",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/concentration_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/concentration_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -866,7 +866,7 @@
     "manuals": [
       {
         "title": "Saturated solutions",
-        "src": "pdf-reader /var/www/manuals/Saturated solutions-Lecture Demo Guide.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Saturated solutions-Lecture Demo Guide.pdf"]}
       }
     ]
   },
@@ -874,7 +874,7 @@
     "name": "Ramp: Forces and Motion",
     "id": "ramp-forces-and-motion",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/ramp-forces-and-motion_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/ramp-forces-and-motion_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -884,7 +884,7 @@
     "manuals": [
       {
         "title": "Work Energy on Ramp",
-        "src": "doc-reader /var/www/manuals/work-energy-on-ramp.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/work-energy-on-ramp.docx"]}
       }
     ]
   },
@@ -892,7 +892,7 @@
     "name": "Collision Lab",
     "id": "collision-lab",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-collision-lab/collision-lab_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -902,14 +902,14 @@
     "manuals": [
       {
         "title": "Collision Lab",
-        "src": "pdf-reader /var/www/manuals/Collision Lab.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/Collision Lab.pdf"]}
       }
     ]
   },
   {
     "name": "States of Matter: Basics",
     "id": "states-of-matter-basics",
-    "exec": "java -jar /opt/phet/chemistry/states-of-matter-basics_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/states-of-matter-basics_en.jar"]},
     "keywords": [
       "",
       ""
@@ -919,7 +919,7 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader /var/www/manuals/states-of-matter-basics.pptx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/states-of-matter-basics.pptx"]}
       }
     ]
   },
@@ -927,7 +927,7 @@
     "name": "Forces and Motion: Basics",
     "id": "forces-and-motions-basics",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/forces-and-motion-basics_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/forces-and-motion-basics_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -937,7 +937,7 @@
     "manuals": [
       {
         "title": "Questions",
-        "src": "doc-reader /var/www/manuals/Forces and Motion.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/Forces and Motion.docx"]}
       }
     ]
   },
@@ -945,7 +945,7 @@
     "name": "Wave on a String",
     "id": "wave-on-a-string",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/wave-on-a-string_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/wave-on-a-string_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -955,7 +955,7 @@
     "manuals": [
       {
         "title": "Activity",
-        "src": "doc-reader /var/www/manuals/student directions for waves on a string.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/student directions for waves on a string.doc"]}
       }
     ]
   },
@@ -963,7 +963,7 @@
     "name": "Rutherford Scattering",
     "id": "rutherfford-scattering",
     "type": "apps",
-    "exec": "java -jar /opt/phet/chemistry/rutherford-scattering_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/rutherford-scattering_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -973,7 +973,7 @@
     "manuals": [
       {
         "title": "Exercises",
-        "src": "doc-reader /var/www/manuals/rutherford scattering.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/rutherford scattering.doc"]}
       }
     ]
   },
@@ -981,7 +981,7 @@
     "name": "The Ramp",
     "id": "the-ramp",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/the-ramp_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/the-ramp_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -991,11 +991,11 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "doc-reader /var/www/manuals/the-ramp-intro.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/the-ramp-intro.docx"]}
       },
       {
         "title": "Work Energy on Ramp",
-        "src": "doc-reader /var/www/manuals/work-energy-on-ramp.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/work-energy-on-ramp.docx"]}
       }
     ]
   },
@@ -1003,7 +1003,7 @@
     "name": "Energy stake Park",
     "id": "energy-skate-park",
     "type": "apps",
-    "exec": "java -jar /opt/phet/physics/energy-skate-park_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/physics/energy-skate-park_en.jar"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -1013,14 +1013,14 @@
     "manuals": [
       {
         "title": "Introduction",
-        "src": "pdf-reader /var/www/manuals/energy-skate-park-basics.pdf"
+        "src": {"command": "pdf-reader", "args":["/var/www/manuals/energy-skate-park-basics.pdf"]}
       }
     ]
   },
   {
     "name": "Pulleys",
     "id": "pulleys",
-    "exec": "firefox --new-window file:///opt/applications-bin/pulley/index.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/applications-bin/pulley/index.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -1032,7 +1032,7 @@
     "name": "Masses & Springs",
     "id": "masses-springs",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/physics/phet-mass-spring-lab/mass-spring-lab_en.html"]},
     "subject": "physics",
     "keywords": [
       "",
@@ -1042,11 +1042,11 @@
     "manuals": [
       {
         "title": "Conservation of Energy",
-        "src": "doc-reader /var/www/manuals/conservation of energy.doc"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/conservation of energy.doc"]}
       },
       {
         "title": "Hooke's Law",
-        "src": "doc-reader /var/www/manuals/MassesandSpringsAP_Student.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/MassesandSpringsAP_Student.docx"]}
       }
     ]
   }

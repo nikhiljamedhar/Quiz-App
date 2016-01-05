@@ -3,7 +3,7 @@
 	    "name": "K Geography",
 	    "id": "kgeography",
 	    "type":"apps",
-	    "exec": "kgeography",
+	    "exec": {"command": "kgeography", "args": []},
 	    "subject": "social",
 	    "keywords":["",""]
 	},

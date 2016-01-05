@@ -3,7 +3,7 @@
     "name": "Stellarium",
     "id": "stellarium",
     "type":"apps",
-    "exec": "stellarium",
+    "exec": {"command": "stellarium", "args": []},
     "subject": "physics",
     "keywords":["",""]
   },
@@ -11,7 +11,7 @@
     "name": "Celestia",
     "id": "celestia",
     "type":"apps",
-    "exec": "celestia",
+    "exec": {"command": "celestia", "args": []},
     "subject": "physics",
     "keywords":["",""]
   }

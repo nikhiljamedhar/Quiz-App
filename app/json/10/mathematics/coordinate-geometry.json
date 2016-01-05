@@ -3,7 +3,7 @@
     "name": "Geo Gebra",
     "id": "geo-gebra",
     "type":"apps",
-    "exec": "geogebra",
+    "exec": {"command": "geogebra", "args": []},
     "subject": "Mathematics",
     "keywords":["",""]
   }

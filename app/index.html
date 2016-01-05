@@ -40,13 +40,10 @@
     <script src="js/custom-alert.js"></script>
 
     <script>
-        var spawn = require('child_process').spawn;
+       var spawn = require('child_process').spawn;
         window.CommandApi = {
             invokeCommand: function (command) {
-                var split = command.split(' ');
-                var program = split[0];
-                var args = split.slice(1, split.length);
-                spawn(program, args);
+                spawn(command.command, command.args);
             }
         };
         function invokeCommand(command) {

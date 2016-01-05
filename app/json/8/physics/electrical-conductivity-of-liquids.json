@@ -3,7 +3,7 @@
     "name": "Electrolysis",
     "id": "electrolysis",
     "type":"apps",
-    "exec": "chromium-browser --new-window http:localhost/phetsims/electrolysis/electrolysis_en.html",
+    "exec": {"command": "chromium-browser --new-window http:localhost/phetsims/electrolysis/electrolysis_en.html", "args": []},
     "subject": "physics",
     "keywords":["",""]
   }

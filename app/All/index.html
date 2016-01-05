@@ -24,8 +24,13 @@
     <link rel="stylesheet" media="(min-width: 1600px)" href="css/very-large.css">
 
     <script>
+		var spawn = require('child_process').spawn;
+		window.CommandApi = {
+			invokeCommand: function (command) {
+				spawn(command.command, command.args);
+			}
+		};
         function invokeCommand(command) {
-            //alert("hello");
             CommandApi.invokeCommand(command);
         }
     </script>

@@ -3,7 +3,8 @@
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/acid-base-solutions_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/acid-base-solutions_en.html"]},
+    "exec": {"command": "firefox", "args": ["--new-window", "file:///opt/phet/chemistry/acid-base-solutions_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -13,7 +14,7 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/acid-base-investigation.docx"]}
       }
     ]
   },
@@ -21,7 +22,7 @@
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/ph-scale-basics_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -31,7 +32,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/ph-lesson.docx"]}
       }
     ]
   },

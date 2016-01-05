@@ -2,25 +2,25 @@
     {
         "name": "Stellarium ",
         "id": "stellarium",
-        "exec": "stellarium", 
+        "exec": {"command": "stellarium", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "Celestia",
         "id": "celestia",
-        "exec": "celestia",
+        "exec": {"command": "celestia", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "OpenTeacher",
         "id": "openteacher",
-        "exec": "openteacher",
+        "exec": {"command": "openteacher", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "K Geography",
         "id": "kgeography",
-        "exec": "kgeography",
+        "exec": {"command": "kgeography", "args": []},
         "keywords":["",""] 
     }
 ]

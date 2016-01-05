@@ -3,19 +3,19 @@
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type":"apps",
-    "exec": "java -jar /opt/phet/chemistry/acid-base-solutions_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/acid-base-solutions_en.jar"]},
     "subject": "chemistry",
     "keywords":["",""],
     "description": "How do strong and weak acids differ? Use lab tools on your computer to find out! Dip the paper or the probe into solution to measure the pH, or put in the electrodes to measure the conductivity. Then see how concentration and strength affect pH. Can a weak acid solution have the same pH as a strong acid solution?",
     "manuals": [
-      {"title":"Activity", "src":"pdf-reader /var/www/manuals/Acid_base_solutions_Student_directions.pdf" }
+      {"title":"Activity", "src":{"command": "pdf-reader", "args":["/var/www/manuals/Acid_base_solutions_Student_directions.pdf"]} }
     ]
   },
   {
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/ph-scale-basics_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -25,7 +25,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/ph-lesson.docx"]}
       }
     ]
   }

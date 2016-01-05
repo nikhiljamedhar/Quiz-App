@@ -2,25 +2,25 @@
     {
         "name": "Artha ",
         "id": "artha",
-        "exec": "artha", 
+        "exec": {"command": "artha", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "Hangman Game",
         "id": "khangman",
-        "exec": "khangman",
+        "exec": {"command": "khangman", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "Word Quiz",
         "id": "kwordquiz",
-        "exec": "kwordquiz",
+        "exec": {"command": "kwordquiz", "args": []},
         "keywords":["",""] 
     },
     {
         "name": "Stardict",
         "id": "stardict",
-        "exec": "stardict",
+        "exec": {"command": "stardict", "args": []},
         "keywords":["",""] 
     }
 ]

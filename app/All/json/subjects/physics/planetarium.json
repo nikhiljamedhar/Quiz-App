@@ -2,19 +2,19 @@
     {
         "name": "Stellarium",
         "id": "stellarium",
-        "exec": "stellarium",
+        "exec": {"command": "stellarium", "args": []},
         "keywords":["",""]
     },
     {
         "name": "Celestia",
         "id": "celestia",
-        "exec": "celestia",
+        "exec": {"command": "celestia", "args": []},
         "keywords":["",""]
     },
     {
         "name": "My Solar System",
         "id": "my-solar-system",
-        "exec": "java -jar /opt/phet/physics/my-solar-system_en.jar",
+        "exec": {"command": "java", "args":["-jar","/opt/phet/physics/my-solar-system_en.jar"]},
         "keywords":["",""]
     }
 ]

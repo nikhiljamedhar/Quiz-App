@@ -3,7 +3,7 @@
     "name": "pH Scale: Basics",
     "id": "ph-scale-basics",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/ph-scale-basics_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/ph-scale-basics_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -13,7 +13,7 @@
     "manuals": [
       {
         "title": "Lesson",
-        "src": "doc-reader /var/www/manuals/ph-lesson.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/ph-lesson.docx"]}
       }
     ]
   },
@@ -21,19 +21,19 @@
     "name": "Salts & Solubility",
     "id": "salts-solubility",
     "type":"apps",
-    "exec": "java -jar /opt/phet/chemistry/soluble-salts_en.jar",
+    "exec": {"command": "java", "args":["-jar","/opt/phet/chemistry/soluble-salts_en.jar"]},
     "subject": "chemistry",
     "keywords":["",""],
     "description": "Add different salts to water, then watch them dissolve and achieve a dynamic equilibrium with solid precipitate. Compare the number of ions in solution for highly soluble NaCl to other slightly soluble salts. Relate the charges on ions to the number of ions in the formula of a salt. Calculate Ksp values.",
     "manuals": [
-      {"title":"Salts and Solubility Activities", "src":"pdf-reader /var/www/manuals/Salts and Solubility.pdf"}
+      {"title":"Salts and Solubility Activities", "src":{"command": "pdf-reader", "args":["/var/www/manuals/Salts and Solubility.pdf"]}}
     ]
   },
   {
     "name": "Acid - Base Solutions",
     "id": "acid-base-solutions",
     "type": "apps",
-    "exec": "firefox --new-window file:///opt/phet/chemistry/acid-base-solutions_en.html",
+    "exec": {"command": "firefox", "args":["--new-window","file:///opt/phet/chemistry/acid-base-solutions_en.html"]},
     "subject": "chemistry",
     "keywords": [
       "",
@@ -43,7 +43,7 @@
     "manuals": [
       {
         "title": "Acid Base Investigation",
-        "src": "doc-reader /var/www/manuals/acid-base-investigation.docx"
+        "src": {"command": "doc-reader", "args":["/var/www/manuals/acid-base-investigation.docx"]}
       }
     ]
   }
