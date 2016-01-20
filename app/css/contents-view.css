@@ -142,7 +142,7 @@
     flex-direction: row;
 }
 
-.app-modal > .image {
+.app-modal > .launcher {
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -150,16 +150,16 @@
     cursor: pointer;
 }
 
-.app-modal > .image:hover {
+.app-modal > .launcher:hover {
     background-color: #ccc;
 }
 
-.app-modal > .image > img {
+.app-modal > .launcher > img {
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
-.app-modal > .image > span {
+.app-modal > .launcher > span {
     font-size: 1.2em;
 }
 
@@ -174,4 +174,26 @@
 .app-modal .manual-list li {
     list-style-type: disc;
     margin-left: 20px;
+}
+
+.materials {
+    display: flex;
+    justify-content: space-between;
+}
+
+.materials .audio, .materials .manuals {
+    width: 50%;
+}
+
+.materials .audio .audio-button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.materials .audio .audio-button:hover {
+    background-color: #ccc;
 }

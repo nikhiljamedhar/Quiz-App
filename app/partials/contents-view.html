@@ -198,7 +198,8 @@
                                             <p class="subject-name t-center border-top">{{content.name}}</p>
                                         </a>
                                         <button class="delete-quiz" ng-click="deleteQuiz($index)">×</button>
-                                        <a href="" download="{{content.name}}.bsquiz" ng-click="downloadQuiz($index)" id="quiz-download-{{$index}}">
+                                        <a href="" download="{{content.name}}.bsquiz" ng-click="downloadQuiz($index)"
+                                           id="quiz-download-{{$index}}">
                                             <button class="download-quiz">Download Quiz</button>
                                         </a>
                                     </li>
@@ -219,7 +220,7 @@
                 <button class="modal-close" ng-click="deselectApp()">×</button>
             </header>
             <main class="modal-content app-modal">
-                <button class="image" ng-click="invokeCommand(selectedApp.exec)">
+                <button class="launcher" ng-click="invokeCommand(selectedApp.exec)">
                     <img src="images/{{selectedApp.id}}.png" alt="app-icon"
                          class="subject-img">
                     <span>Launch App</span>
@@ -228,12 +229,26 @@
                     <p>
                         {{selectedApp.description}}
                     </p>
-                    <h3>Manuals</h3>
-                    <ul class="manual-list">
-                        <li ng-repeat="manual in selectedApp.manuals">
-                            <a href="#" ng-click="invokeCommand(manual.src)">{{manual.title}}</a>
-                        </li>
-                    </ul>
+                    <div class="materials">
+                        <div class="audio">
+                            <h3>Instructions</h3>
+                            <p>
+                                <button class="audio-button" ng-click="isPlaying = !isPlaying">
+                                    <img src="/image/audio-pause.svg" ng-show="isPlaying"/>
+                                    <img src="/image/audio-play.svg" ng-show="!isPlaying"/>
+                                </button>
+                                <audio src="{{selectedApp.audio}}" id="player"></audio>
+                            </p>
+                        </div>
+                        <div class="manuals">
+                            <h3>Manuals</h3>
+                            <ul class="manual-list">
+                                <li ng-repeat="manual in selectedApp.manuals">
+                                    <a href="#" ng-click="invokeCommand(manual.src)">{{manual.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>

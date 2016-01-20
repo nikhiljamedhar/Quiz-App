@@ -7,7 +7,6 @@
 pencilBoxApp.controller('GradeListController', ['$scope', 'Grades', '$http',
     function ($scope, Grades, $http) {
         $scope.grades = Grades.query();
-        console.log($scope.grades)
     }]);
 
 pencilBoxApp.controller('SubjectListController', ['$scope', '$routeParams', 'Subjects', 'Grades',
@@ -39,8 +38,8 @@ pencilBoxApp.controller('ChapterListController', ['$scope', '$routeParams', 'Cha
         };
     }]);
 
-pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location', '$http', '$q',
-    function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http, $q) {
+pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Contents', 'Chapters', 'Subjects', '$location', '$http', '$q', '$sce',
+    function ($scope, $routeParams, Contents, Chapters, Subjects, $location, $http, $q, $sce) {
         $scope.current_grade = $routeParams.gradeId;
         $scope.current_subject = $routeParams.subjectId;
         $scope.current_chapter = $routeParams.chapterId;
@@ -213,7 +212,17 @@ pencilBoxApp.controller('ContentListController', ['$scope', '$routeParams', 'Con
             return contents.filter(function (content) {
                         return (content.type === 'videos');
                     }).length > 0;
-        }
+        };
+
+        $scope.isPlaying = false;
+        $scope.$watch('isPlaying', function(isPlaying) {
+            var player = document.querySelector('#player');
+            if(isPlaying) {
+                player.play();
+            } else {
+                player.pause();
+            }
+        });
     }]);
 
 pencilBoxApp.controller('OtherAppController', ['$scope', 'OtherApps',
