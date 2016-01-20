@@ -3,6 +3,7 @@
         "name": "Stellarium",
         "id": "stellarium",
         "exec": {"command": "stellarium", "args": []},
+        "audio": "/audio/stellarium.wav",
         "keywords":["",""]
     },
     {

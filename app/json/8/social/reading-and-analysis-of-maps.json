@@ -5,7 +5,8 @@
 	    "type":"apps",
 	    "exec": {"command": "kgeography", "args": []},
 	    "subject": "social",
-	    "keywords":["",""]
+	    "keywords":["",""],
+		"audio": "/audio/kgeography.wav"
 	},
 	{
         "name": "Reading Map",

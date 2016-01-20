@@ -701,6 +701,7 @@
     "id": "stellarium",
     "type": "apps",
     "exec": {"command": "stellarium", "args": []},
+    "audio": "/audio/stellarium.wav",
     "subject": "physics",
     "keywords": [
       "",
@@ -712,6 +713,7 @@
     "id": "celestia",
     "type": "apps",
     "exec": {"command": "celestia", "args": []},
+    "audio": "/audio/celestia.wav",
     "subject": "physics",
     "keywords": [
       "",
@@ -724,6 +726,7 @@
     "type": "apps",
     "exec": {"command": "kgeography", "args": []},
     "subject": "social",
+    "audio": "/audio/kgeography.wav",
     "keywords": [
       "",
       ""

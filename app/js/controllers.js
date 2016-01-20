@@ -247,4 +247,14 @@ pencilBoxApp.controller('SearchResultController', ['$scope', '$routeParams', 'Ap
         $scope.handleModalContentClick = function (e) {
             e.stopPropagation();
         };
+
+        $scope.isPlaying = false;
+        $scope.$watch('isPlaying', function(isPlaying) {
+            var player = document.querySelector('#player');
+            if(isPlaying) {
+                player.play();
+            } else {
+                player.pause();
+            }
+        });
     }]);
