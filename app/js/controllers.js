@@ -244,4 +244,7 @@ pencilBoxApp.controller('SearchResultController', ['$scope', '$routeParams', 'Ap
         $scope.deselectApp = function () {
             $scope.selectedApp = null;
         };
+        $scope.handleModalContentClick = function (e) {
+            e.stopPropagation();
+        };
     }]);

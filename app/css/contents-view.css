@@ -148,6 +148,7 @@
     border-radius: 5px;
     background-color: #fff;
     cursor: pointer;
+    flex: 0 0 250px;
 }
 
 .app-modal > .launcher:hover {
