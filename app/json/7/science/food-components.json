@@ -10,8 +10,7 @@
     "manuals": [
       {"title":"Lesson", "src":{"command": "doc-reader", "args":["/var/www/manuals/eating-and-exercise-simulation-project-lesson.docx"]}},
       {"title":"Exercises", "src":{"command": "doc-reader", "args":["/var/www/manuals/eating-and-exercise-simulation-project-exercises.docx"]}}
-    ],
-    "audio": "tamacun.mp3"
+    ]
   },
   {
     "name": "Nutrition",
